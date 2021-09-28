@@ -1,5 +1,5 @@
 import Link from "./link";
-import Logo from "./logo";
+import { Logo } from "./logo";
 import { useRouter } from "next/router";
 import { Marker } from "@/icons/marker";
 import { Phone } from "@/icons/phone";

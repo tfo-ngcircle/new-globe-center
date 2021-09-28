@@ -1,9 +1,9 @@
-export default function Logo({
+export const Logo = ({
   className = "text-black",
   classNameFlag = "text-primary",
   height = 60,
   isFull,
-}) {
+}) => {
   return (
     <div className="space-y-3 fill-current">
       <svg viewBox="0 0 173.6 60" height={height}>
@@ -26,4 +26,4 @@ export default function Logo({
       ) : undefined}
     </div>
   );
-}
+};
