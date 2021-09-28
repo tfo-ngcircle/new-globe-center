@@ -41,6 +41,6 @@
   }
 
   .caption {
-    @apply text-xs font-body font-bold capitalize;
+    @apply text-xs font-body font-bold uppercase text-gray-500;
   }
 }

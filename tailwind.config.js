@@ -41,6 +41,13 @@ module.exports = {
     },
     container: {
       center: true,
+      padding: {
+        DEFAULT: "1.25rem",
+        sm: "2rem",
+        lg: "3rem",
+        xl: "3rem",
+        "2xl": "3rem",
+      },
     },
     extend: {},
   },
