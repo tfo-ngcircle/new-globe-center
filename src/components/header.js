@@ -43,11 +43,11 @@ export default function Header() {
           </ul>
           <div className="flex items-center space-x-8">
             <Link href="#">
-              <Phone className="rounded-full ring-1 ring-gray-300 hover:ring-primary hover:ring-opacity-50" />
+              <Phone className="rounded-full border border-gray-300 hover:border-primary hover:border-opacity-60" />
             </Link>
             <span className="h-14 w-px bg-gray-300" />
             <Link href="#">
-              <Marker className="rounded-full ring-1 ring-gray-300 hover:ring-primary hover:ring-opacity-50" />
+              <Marker className="rounded-full border border-gray-300 hover:border-primary hover:border-opacity-60" />
             </Link>
           </div>
         </div>
