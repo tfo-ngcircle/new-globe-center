@@ -6,9 +6,16 @@ module.exports = {
   purge: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     colors: {
+      primary: {
+        light: "#d63e42",
+        DEFAULT: "#c00000",
+      },
+      secondary: {
+        DEFAULT: "#1b3a61",
+      },
       transparent: "transparent",
       current: "currentColor",
-      black: colors.black,
+      black: "#03090f",
       red: colors.red,
       white: colors.white,
       gray: colors.trueGray,
@@ -31,6 +38,9 @@ module.exports = {
       "5xl": "3rem",
       "6xl": "3.375rem",
       "7xl": "4.625rem",
+    },
+    container: {
+      center: true,
     },
     extend: {},
   },
