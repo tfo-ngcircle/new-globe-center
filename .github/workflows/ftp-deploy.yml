@@ -37,4 +37,4 @@ jobs:
           server: sftp://access769798550.webspace-data.io
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: .next/
+          local-dir: ./out/
