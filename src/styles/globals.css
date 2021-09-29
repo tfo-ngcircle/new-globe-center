@@ -40,6 +40,10 @@
     @apply text-lg font-body;
   }
 
+  button {
+    @apply text-2xl font-display font-bold uppercase py-4;
+  }
+
   .caption {
     @apply text-xs font-body font-bold uppercase text-gray-500;
   }

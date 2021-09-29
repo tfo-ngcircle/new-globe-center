@@ -1,3 +1,4 @@
+import { Button } from "../button";
 import { Underline } from "../underline";
 
 export default function LandingSection() {
@@ -17,6 +18,7 @@ export default function LandingSection() {
             nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
             erat, sed diam voluptua.
           </p>
+          <Button label="book now" type="large" />
         </div>
       </div>
     </div>
