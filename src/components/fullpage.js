@@ -9,6 +9,7 @@ export const Fullpage = ({
   console.log(paddingTop);
   return (
     <ReactFullpage
+      navigation
       paddingTop={paddingTop + "px"}
       onLeave={onLeave}
       render={({ _, fullpageApi }) => {

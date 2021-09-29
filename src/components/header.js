@@ -17,7 +17,7 @@ const Header = React.forwardRef(({ className }, ref) => {
   return (
     <div
       ref={ref}
-      className="bg-white bg-opacity-20 fixed top-0 left-0 right-0"
+      className={`${className} bg-white bg-opacity-20 fixed top-0 left-0 right-0`}
     >
       <header className="container flex justify-between items-center py-7 ">
         <div>

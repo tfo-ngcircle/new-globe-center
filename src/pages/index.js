@@ -1,6 +1,7 @@
 import Footer from "@/components/footer";
 import { Fullpage } from "@/components/fullpage";
 import Header from "@/components/header";
+import LandingSection from "@/components/sections/landing";
 import useDimensions from "@/lib/utils/dimens";
 import { useRef } from "react";
 
@@ -10,10 +11,10 @@ export default function Home() {
 
   return (
     <>
-      <Header ref={headerRef} />
+      <Header ref={headerRef} className="z-50" />
       {size.height !== 0 ? (
         <Fullpage paddingTop={size.height}>
-          <div>{size.height}</div>
+          <LandingSection />
           <div>{size.width}</div>
           <div className="flex flex-col justify-between h-full">
             <div>fdsd</div>
