@@ -3,6 +3,7 @@ import { Logo } from "./logo";
 import { useRouter } from "next/router";
 import { Marker } from "@/icons/marker";
 import { Phone } from "@/icons/phone";
+import React from "react";
 
 const destinations = [
   { label: "Lorem", link: "" },
@@ -11,11 +12,13 @@ const destinations = [
   { label: "Consectutur", link: "consectutur" },
 ];
 
-export default function Header() {
+const Header = React.forwardRef(({ className }, ref) => {
   const router = useRouter();
-
   return (
-    <div className="bg-white bg-opacity-20">
+    <div
+      ref={ref}
+      className="bg-white bg-opacity-20 fixed top-0 left-0 right-0"
+    >
       <header className="container flex justify-between items-center py-7 ">
         <div>
           <Link>
@@ -54,4 +57,8 @@ export default function Header() {
       </header>
     </div>
   );
-}
+});
+
+Header.displayName = "Header";
+
+export default Header;
