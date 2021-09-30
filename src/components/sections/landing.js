@@ -11,7 +11,7 @@ export default function LandingSection() {
               Lorem ipsum dolor sit amet consectutur
               <span className="text-primary">.</span>
             </h1>
-            <Underline className="text-primary pr-4 w-full" />
+            <Underline className="text-primary pr-4 w-full h-3" />
           </div>
           <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam

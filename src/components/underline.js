@@ -1,10 +1,10 @@
-export const Underline = ({ className, height = 12, width = "100%" }) => {
+export const Underline = ({ className }) => {
   return (
-    <div className={className}>
-      <svg height={height} className="fill-current w-full">
+    <div className={`flex fill-current ${className}`}>
+      <svg viewBox="0 0 12.168 12">
         <path d="m0 0 11.4 12h.76V0Z" />
-        <rect x={11.4} height={height} width={width} />
       </svg>
+      <span className="bg-primary flex-grow" />
     </div>
   );
 };
