@@ -47,4 +47,9 @@
   .caption {
     @apply text-xs font-body font-bold uppercase text-gray-500;
   }
+
+  a,
+  svg {
+    @apply transition-colors duration-200;
+  }
 }
