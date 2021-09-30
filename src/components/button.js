@@ -1,4 +1,4 @@
-export const Button = ({ label, type = "default", ...props }) => {
+export const Button = ({ label, type = "default", className, ...props }) => {
   return (
     <button
       className={`${
@@ -7,7 +7,7 @@ export const Button = ({ label, type = "default", ...props }) => {
           : type === "large"
           ? "px-28" // large
           : "px-14" // default
-      } bg-primary transition-all ease-in text-white hover:shadow-primary active:shadow-primary-sm`}
+      } bg-primary transition-all ease-in text-white hover:shadow-primary active:shadow-primary-sm ${className}`}
       {...props}
     >
       {label}
