@@ -18,7 +18,14 @@ export default function Home() {
           <LandingSection />
           <FeaturesSection />
           <div className="flex flex-col justify-between h-full">
-            <div>fdsd</div>
+            <div className="container flex flex-grow items-center text-gray-500">
+              <p className="px-24">
+                * All prices shown are valid at the time of inquiry, based on
+                24-month contracts. Prices are subject to change and will vary
+                depending on the specifically selected products and services.
+                Terms and Conditions apply.
+              </p>
+            </div>
             <Footer />
           </div>
         </Fullpage>
