@@ -2,11 +2,12 @@ import { Button } from "../button";
 import { Underline } from "../underline";
 
 export default function LandingSection() {
+  console.log(process.env.BASE_PATH);
   return (
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-90 overflow-hidden">
         <img
-          src={require("../../../public/room.jpg")}
+          src={require("../../../public/images/room.jpg")}
           alt="room"
           className="object-cover !my-5"
         />

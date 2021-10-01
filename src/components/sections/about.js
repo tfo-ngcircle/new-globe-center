@@ -8,7 +8,7 @@ export default function AboutSection() {
       <div className="container relative h-full">
         <div className="flex h-full items-center">
           <img
-            src={require("../../../public/about.jpg")}
+            src={require("../../../public/images/about.jpg")}
             alt="about"
             className="relative w-2/5 h-full object-cover"
             style={{

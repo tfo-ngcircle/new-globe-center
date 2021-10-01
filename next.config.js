@@ -6,4 +6,6 @@ module.exports = withOptimizedImages({
     domains: ["res.cloudinary.com", "localhost"],
     disableStaticImages: true,
   },
+  basePath: `/dev`,
+  assetPrefix: `/dev/`,
 });
