@@ -34,10 +34,11 @@ jobs:
         run: npm run export
 
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
-        with:
-          ftp-server: sftp://access769798550.webspace-data.io
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: out/
-          git-ftp-args: --insecure --remote-root dev
+        uses: SamKirkland/FTP-Deploy-Action@2.0.0
+        env:
+          FTP_SERVER: sftp://access769798550.webspace-data.io
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          LOCAL_DIR: out
+          REMOTE_DIR: dev
+          ARGS: --insecure --delete
