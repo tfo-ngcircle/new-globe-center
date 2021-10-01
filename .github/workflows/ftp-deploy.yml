@@ -42,4 +42,4 @@ jobs:
           METHOD: sftp
           LOCAL_DIR: out
           REMOTE_DIR: dev
-          ARGS: --insecure --delete
+          ARGS: --delete
