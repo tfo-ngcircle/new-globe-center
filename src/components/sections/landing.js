@@ -16,14 +16,10 @@ export default function LandingSection() {
         />
       </div>
       <div className="absolute w-full h-full mix-blend-hard-light opacity-50">
+        <Underline className="absolute h-80 w-[500px] right-0 top-0 text-primary space-x-[-1px] drop-shadow-primary" />
         <Underline
-          className="absolute h-80 w-[500px] right-0 top-0 text-primary space-x-[-1px]"
-          shadow
-        />
-        <Underline
-          className="absolute h-full w-[1300px] left-0 bottom-0 text-secondary space-x-[-1px] rotate-180"
+          className="absolute h-full w-[1300px] left-0 bottom-0 text-secondary space-x-[-1px] drop-shadow-secondary rotate-180"
           classNameAlt="bg-secondary"
-          shadow
         />
       </div>
       <div className="container h-full flex items-center pt-24">

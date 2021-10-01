@@ -53,6 +53,12 @@ module.exports = {
       primary: "0 8px 20px 0 rgba(192, 0, 0, 0.3)",
       "primary-sm": "0 4px 10px 0 rgba(192, 0, 0, 0.3)",
     },
+    dropShadow: {
+      none: "none",
+      primary: "0 8px 20px rgba(192, 0, 0, 0.4)",
+      "primary-sm": "0 4px 10px rgba(192, 0, 0, 0.4)",
+      secondary: "0 8px 20px rgba(27, 58, 97, 0.4)",
+    },
     container: {
       center: true,
       padding: {
