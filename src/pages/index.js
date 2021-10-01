@@ -3,6 +3,7 @@ import { Fullpage } from "@/components/fullpage";
 import Header from "@/components/header";
 import AboutSection from "@/components/sections/about";
 import FeaturesSection from "@/components/sections/features";
+import GallerySection from "@/components/sections/gallery";
 import LandingSection from "@/components/sections/landing";
 import useDimensions from "@/lib/utils/dimens";
 import { useRef } from "react";
@@ -19,6 +20,7 @@ export default function Home() {
           <LandingSection />
           <FeaturesSection />
           <AboutSection />
+          <GallerySection />
           <div className="flex flex-col justify-between h-full">
             <div className="container flex flex-grow items-center text-gray-500">
               <p className="px-24">
