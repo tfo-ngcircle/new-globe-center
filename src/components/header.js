@@ -7,7 +7,7 @@ import React from "react";
 
 const destinations = [
   { label: "Haupt", link: "" },
-  { label: "Raums", link: "raums" },
+  { label: "Räume", link: "raums" },
   { label: "Über", link: "uber" },
   { label: "Kontakt", link: "kontakt" },
 ];
