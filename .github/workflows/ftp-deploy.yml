@@ -36,9 +36,10 @@ jobs:
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
-          FTP_SERVER: sftp://access769798550.webspace-data.io
+          FTP_SERVER: access769798550.webspace-data.io
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          METHOD: sftp
           LOCAL_DIR: out
           REMOTE_DIR: dev
           ARGS: --insecure --delete
