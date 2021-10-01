@@ -7,7 +7,7 @@ export const Button = ({ label, type = "default", className, ...props }) => {
           : type === "large"
           ? "px-28" // large
           : "px-14" // default
-      } bg-primary transition-all ease-in text-white hover:drop-shadow-primary active:drop-shadow-primary-sm ${className}`}
+      } bg-primary transition-all ease-in text-white hover:drop-shadow-primary active:drop-shadow-primary-sm whitespace-nowrap ${className}`}
       {...props}
     >
       {label}

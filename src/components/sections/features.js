@@ -16,13 +16,13 @@ export default function FeaturesSection() {
             <div className="space-y-4">
               <div className="max-w-max space-y-4">
                 <h2>
-                  Lorem ipsum
+                  Dein Meeting<span className="text-primary">.</span>
                   <br />
-                  dolor sit amet<span className="text-primary">.</span>
+                  Unsere Ausstattung<span className="text-primary">.</span>
                 </h2>
                 <Underline className="text-primary w-full h-3" />
               </div>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+              <p>Das bieten wir dir für dein Meeting.</p>
             </div>
             <div className="grid grid-cols-3 gap-x-16 gap-y-12">
               <FeatureItem

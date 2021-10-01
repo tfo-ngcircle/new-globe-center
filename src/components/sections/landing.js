@@ -23,20 +23,23 @@ export default function LandingSection() {
         />
       </div>
       <div className="container h-full flex items-center pt-24">
-        <div className="max-w-[727px] space-y-8 z-10 text-white">
-          <div className="space-y-4">
-            <h1>
-              Lorem ipsum dolor sit amet consectutur
+        <div className="space-y-8 z-10 text-white max-w-min">
+          <div className="space-y-5">
+            <h1 className="whitespace-nowrap">
+              Dein Raum<span className="text-primary">.</span>
+              <br />
+              Dein Meeting
               <span className="text-primary">.</span>
             </h1>
-            <Underline className="text-primary pr-4 w-full h-3" />
+            <Underline className="text-primary w-full h-3" />
           </div>
-          <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua.
+          <p className="w-[125%]">
+            Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche
+            modernste Ausstattung und digitalen Komfort für deine Schulung,
+            Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich
+            Prinzip sorgen wir für deine perfekte Kommunikation.
           </p>
-          <Button label="book now" type="large" />
+          <Button label="Über uns" type="large" />
         </div>
       </div>
     </div>

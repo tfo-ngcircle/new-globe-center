@@ -6,10 +6,10 @@ import { Phone } from "@/icons/phone";
 import React from "react";
 
 const destinations = [
-  { label: "Lorem", link: "" },
-  { label: "Ipsum", link: "ipsum" },
-  { label: "Dolor", link: "dolor" },
-  { label: "Consectutur", link: "consectutur" },
+  { label: "Haupt", link: "" },
+  { label: "Raums", link: "raums" },
+  { label: "Über", link: "uber" },
+  { label: "Kontakt", link: "kontakt" },
 ];
 
 const Header = React.forwardRef(({ className }, ref) => {

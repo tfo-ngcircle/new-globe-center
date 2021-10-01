@@ -23,22 +23,27 @@ export default function AboutSection() {
             <div className="relative flex">
               <div className="space-y-10">
                 <h2>
-                  Lorem ipsum dolor
+                  Wir vernetzen die Region
+                  <span className="text-primary">.</span>
                   <br />
-                  sit amet, consetetur<span className="text-primary">.</span>
+                  Wir schaffen Verbundenheit
+                  <span className="text-primary">.</span>
                 </h2>
                 <ul className="list-disc list-inside marker:text-primary space-y-4 pl-5">
-                  <li>Sed ut perspiciatis unde omnis iste natus.</li>
-                  <li>Lorem ipsum dolor sit amet, consetetur sadipscing.</li>
-                  <li>But I must explain to you how all this mistaken.</li>
-                  <li>Zwei flinke Boxer jagen.</li>
-                  <li>Quiere la boca exhausta vid, kiwi.</li>
+                  <li>Vermietung von Schulungs- und Konferenzräumen</li>
+                  <li>
+                    Perfekte Anbindung zur Autobahn, oder in die schöne
+                    Autostadt Wolfsburg
+                  </li>
+                  <li>Hochwertige und innovative Ausstattungstechnik</li>
+                  <li>Wunderschöne, ruhige Lage mit schöner Außenanlage</li>
+                  <li>Rund-Um-Glücklich Paket mit individuellem Catering</li>
                 </ul>
               </div>
               <Button
                 label="our story"
                 type="large"
-                className="-rotate-90 block whitespace-nowrap absolute right-20 top-0 origin-right"
+                className="-rotate-90 block absolute right-0 top-0 origin-right"
               />
             </div>
           </div>
