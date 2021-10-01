@@ -1,5 +1,3 @@
-import Image from "next/image";
-import about from "../../../public/about.jpg";
 import { Button } from "../button";
 import { Logo } from "../logo";
 
@@ -9,15 +7,15 @@ export default function AboutSection() {
       <span className="absolute bg-primary w-[29.35%] h-60 top-[125.5px]" />
       <div className="container relative h-full">
         <div className="flex h-full items-center">
-          <div
-            className="relative w-2/5 h-full"
+          <img
+            src={require("../../../public/about.jpg")}
+            alt="about"
+            className="relative w-2/5 h-full object-cover"
             style={{
               clipPath:
                 "path('M0 0h281v714.5H0V0zm324 125.5V852h281V397L324 125.5z')",
             }}
-          >
-            <Image src={about} alt="" layout="fill" objectFit="cover" />
-          </div>
+          />
           <div className="space-y-10 flex flex-col pl-20 flex-grow">
             <Logo isFull />
             <div className="relative flex">

@@ -1,18 +1,14 @@
 import { Button } from "../button";
 import { Underline } from "../underline";
-import Image from "next/image";
-import room from "../../../public/room.jpg";
 
 export default function LandingSection() {
   return (
     <div className="h-full relative">
-      <div className="w-full h-full absolute z-0 brightness-90">
-        <Image
-          src={room}
-          alt=""
-          layout="fill"
-          objectFit="cover"
-          className="!my-5"
+      <div className="w-full h-full absolute brightness-90 overflow-hidden">
+        <img
+          src={require("../../../public/room.jpg")}
+          alt="room"
+          className="object-cover !my-5"
         />
       </div>
       <div className="absolute w-full h-full mix-blend-hard-light opacity-50">

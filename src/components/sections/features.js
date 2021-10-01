@@ -1,17 +1,17 @@
 import { Underline } from "../underline";
 import { Phone } from "@/icons/phone";
 import { FeatureItem } from "../feature-item";
-import Image from "next/image";
-import ngc from "../../../public/facilities_main.jpg";
 
 export default function FeaturesSection() {
   return (
     <div className="relative">
       <div className="container">
         <div className="flex justify-between h-full items-center">
-          <div className="relative w-[510px] h-[720px]">
-            <Image src={ngc} alt="" layout="fill" objectFit="cover" />
-          </div>
+          <img
+            src={require("../../../public/facilities_main.jpg")}
+            alt="room"
+            className="object-cover relative w-[510px] h-[720px]"
+          />
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="max-w-max space-y-4">
