@@ -2,6 +2,7 @@ import Footer from "@/components/footer";
 import { Fullpage } from "@/components/fullpage";
 import Header from "@/components/header";
 import AboutSection from "@/components/sections/about";
+import ContactSection from "@/components/sections/contact";
 import FeaturesSection from "@/components/sections/features";
 import GallerySection from "@/components/sections/gallery";
 import LandingSection from "@/components/sections/landing";
@@ -22,6 +23,7 @@ export default function Home() {
           <FeaturesSection />
           <AboutSection />
           <GallerySection />
+          <ContactSection />
           <MapSection />
           <div className="flex flex-col justify-between h-full">
             <div className="container flex flex-grow items-center text-gray-500">
