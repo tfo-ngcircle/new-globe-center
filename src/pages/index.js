@@ -5,6 +5,7 @@ import AboutSection from "@/components/sections/about";
 import FeaturesSection from "@/components/sections/features";
 import GallerySection from "@/components/sections/gallery";
 import LandingSection from "@/components/sections/landing";
+import MapSection from "@/components/sections/map";
 import useDimensions from "@/lib/utils/dimens";
 import { useRef } from "react";
 
@@ -21,6 +22,7 @@ export default function Home() {
           <FeaturesSection />
           <AboutSection />
           <GallerySection />
+          <MapSection />
           <div className="flex flex-col justify-between h-full">
             <div className="container flex flex-grow items-center text-gray-500">
               <p className="px-24">
