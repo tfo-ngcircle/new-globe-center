@@ -1,4 +1,4 @@
-export const Phone = ({ size = 48, className }) => {
+export const Phone = ({ size = 48, className, dark }) => {
   return (
     <svg
       xmlSpace="preserve"
@@ -14,12 +14,12 @@ export const Phone = ({ size = 48, className }) => {
             strokeLinejoin: "round",
             strokeMiterlimit: 10,
           }}
-          className="text-black"
+          className={`${dark ? "text-white" : "text-black"}`}
         />
         <path
           d="M23.8 14.8c3.9 1.3 7 4.4 8.3 8.3M22.4 19c2.6.9 4.7 2.9 5.6 5.6"
           style={{ fill: "none" }}
-          className="text-primary"
+          className={`${dark ? "text-white" : "text-primary"}`}
         />
       </g>
     </svg>

@@ -9,7 +9,7 @@ export default function Footer() {
       <footer className="divide-y divide-gray-800">
         <div className="container flex justify-between py-16">
           <div>
-            <Logo isFull className="text-white" classNameFlag="text-white" />
+            <Logo isFull classNameFlag="text-white" />
           </div>
           <div>Hi</div>
         </div>

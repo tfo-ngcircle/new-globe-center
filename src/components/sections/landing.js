@@ -2,7 +2,6 @@ import { Button } from "../button";
 import { Underline } from "../underline";
 
 export default function LandingSection() {
-  console.log(process.env.BASE_PATH);
   return (
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-90 overflow-hidden">
