@@ -6,10 +6,8 @@ module.exports = withOptimizedImages({
     domains: ["res.cloudinary.com", "localhost"],
     disableStaticImages: true,
   },
-  basePath: `/dev`,
-  assetPrefix: `/dev/`,
-  env: {
-    NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN:
-      process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
-  },
+  basePath:
+    process.env.DEPLOY_DIR !== undefined ? `/${process.env.DEPLOY_DIR}` : "",
+  assetPrefix:
+    process.env.DEPLOY_DIR !== undefined ? `/${process.env.DEPLOY_DIR}/` : "",
 });
