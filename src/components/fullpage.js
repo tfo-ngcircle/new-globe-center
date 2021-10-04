@@ -12,6 +12,7 @@ export const Fullpage = ({
       navigation
       paddingTop={paddingTop + "px"}
       onLeave={onLeave}
+      anchors={["landing", "features", "about", "gallery", "map"]}
       render={({ _, fullpageApi }) => {
         return (
           <div id={`${className} fullpage-wrapper`}>

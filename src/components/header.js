@@ -21,7 +21,7 @@ const Header = React.forwardRef(({ className }, ref) => {
     >
       <header className="container flex justify-between items-center py-7 ">
         <div>
-          <Link>
+          <Link onClick={() => window.window.fullpage_api.moveTo("landing", 0)}>
             <Logo />
           </Link>
         </div>
@@ -49,7 +49,10 @@ const Header = React.forwardRef(({ className }, ref) => {
               <Phone className="rounded-full border border-gray-300 hover:border-primary hover:border-opacity-60" />
             </Link>
             <span className="h-14 w-px bg-gray-300" />
-            <Link href="#">
+            <Link
+              href="#"
+              onClick={() => window.window.fullpage_api.moveTo("map", 0)}
+            >
               <Marker className="rounded-full border border-gray-300 hover:border-primary hover:border-opacity-60" />
             </Link>
           </div>
