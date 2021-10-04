@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2.1.0
+        env:
+          NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN }}
 
       - name: Cache  💾
         uses: actions/cache@v2
