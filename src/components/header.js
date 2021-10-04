@@ -57,7 +57,10 @@ const Header = React.forwardRef(({ className, dark = true }, ref) => {
             ))}
           </ul>
           <div className="flex items-center space-x-8 text-gray-300">
-            <Link href="#">
+            <Link
+              href="#"
+              onClick={() => window.window.fullpage_api.moveTo("contact", 0)}
+            >
               <Phone
                 dark={dark}
                 className={`rounded-full border border-current ${
