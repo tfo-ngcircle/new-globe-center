@@ -1,6 +1,6 @@
 import { Underline } from "../underline";
-import { Phone } from "@/icons/phone";
 import { FeatureItem } from "../feature-item";
+import { Phone, Marker } from "@/components/icons";
 
 export default function FeaturesSection() {
   return (

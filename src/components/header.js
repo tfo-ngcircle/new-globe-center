@@ -1,8 +1,7 @@
 import Link from "./link";
 import { Logo } from "./logo";
 import { useRouter } from "next/router";
-import { Marker } from "@/icons/marker";
-import { Phone } from "@/icons/phone";
+import { Phone, Marker } from "@/components/icons";
 import React from "react";
 
 const destinations = [
