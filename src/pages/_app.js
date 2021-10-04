@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import "mapbox-gl/dist/mapbox-gl.css";
 import Head from "next/head";
 

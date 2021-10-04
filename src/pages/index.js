@@ -8,17 +8,23 @@ import GallerySection from "@/components/sections/gallery";
 import LandingSection from "@/components/sections/landing";
 import MapSection from "@/components/sections/map";
 import useDimensions from "@/lib/utils/dimens";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 export default function Home() {
   const headerRef = useRef();
   const size = useDimensions(headerRef);
+  const [dark, setDark] = useState(false);
 
   return (
     <>
-      <Header ref={headerRef} className="z-50" />
+      <Header ref={headerRef} className="z-50" dark={dark} />
       {size.height !== 0 ? (
-        <Fullpage paddingTop={size.height}>
+        <Fullpage
+          paddingTop={size.height}
+          onLeave={(_, dest, dir) => {
+            setDark(dest.anchor === "contact");
+          }}
+        >
           <LandingSection />
           <FeaturesSection />
           <AboutSection />
