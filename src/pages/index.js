@@ -29,7 +29,7 @@ export default function Home() {
           <FeaturesSection />
           <AboutSection />
           <GallerySection />
-          <ContactSection />
+          <ContactSection paddingTop={size.height} />
           <MapSection />
           <div className="flex flex-col justify-between h-full">
             <div className="container flex flex-grow items-center text-gray-500">
