@@ -9,6 +9,14 @@ const socialLinks = {
   twitter: "#",
 };
 
+const bottomLinks = [
+  { label: "Cookie Policy", destination: "" },
+  { label: "Governance, Conduct and Ethics", destination: "" },
+  { label: "Impressum", destination: "" },
+  { label: "Privacy Policy", destination: "" },
+  { label: "Terms and Conditions", destination: "" },
+];
+
 export default function Footer() {
   return (
     <div className="bg-black text-white">
@@ -39,12 +47,15 @@ export default function Footer() {
               )}
             </div>
             <div className="text-gray-500 flex space-x-8">
-              <Link href="">© 2021 New Globe Center - NgC GmbH</Link>
-              <Link href="">Cookie Policy</Link>
-              <Link href="">Governance, Conduct and Ethics</Link>
-              <Link href="">Impressum</Link>
-              <Link href="">Privacy Policy</Link>
-              <Link href="">Terms and Conditions</Link>
+              <span>
+                © {new Date().getFullYear()} New Globe Center - NgC GmbH
+              </span>
+              {bottomLinks &&
+                bottomLinks.map((link, i) => (
+                  <Link href={link.destination} key={i}>
+                    {link.label}
+                  </Link>
+                ))}
             </div>
           </div>
         </div>
