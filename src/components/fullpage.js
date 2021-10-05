@@ -3,6 +3,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 export const Fullpage = ({
   paddingTop,
   className,
+  anchors,
   onLeave = () => {},
   children,
 }) => {
@@ -12,15 +13,7 @@ export const Fullpage = ({
       navigation
       paddingTop={paddingTop + "px"}
       onLeave={onLeave}
-      anchors={[
-        "landing",
-        "features",
-        "about",
-        "gallery",
-        "contact",
-        "map",
-        "footer",
-      ]}
+      anchors={anchors}
       render={({ _, fullpageApi }) => {
         return (
           <div id={`${className} fullpage-wrapper`}>

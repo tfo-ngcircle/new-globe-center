@@ -24,6 +24,15 @@ export default function Home() {
           onLeave={(_, dest, dir) => {
             setDark(dest.anchor === "contact");
           }}
+          anchors={[
+            "landing",
+            "features",
+            "about",
+            "gallery",
+            "contact",
+            "map",
+            "footer",
+          ]}
         >
           <LandingSection />
           <FeaturesSection />
