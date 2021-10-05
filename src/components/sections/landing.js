@@ -29,17 +29,15 @@ export default function LandingSection() {
           <div className="space-y-5">
             <h1 className="whitespace-nowrap">
               {landing &&
-                landing.headline.split(".").map((part) => (
-                  <>
-                    {part}
-                    {part.length > 0 ? (
-                      <>
-                        <span className="text-primary">.</span>
-                        <br />
-                      </>
-                    ) : undefined}
-                  </>
-                ))}
+                landing.headline.split(".").map((part) =>
+                  part.length > 0 ? (
+                    <>
+                      {part}
+                      <span className="text-primary">.</span>
+                      <br />
+                    </>
+                  ) : undefined
+                )}
             </h1>
             <Underline className="text-primary w-full h-3" />
           </div>
