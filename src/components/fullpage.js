@@ -7,7 +7,6 @@ export const Fullpage = ({
   onLeave = () => {},
   children,
 }) => {
-  console.log(paddingTop);
   return (
     <ReactFullpage
       navigation
