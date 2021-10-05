@@ -1,6 +1,9 @@
-export const GaleryItem = ({ className }) => {
+export const GaleryItem = ({ className, ...props }) => {
   return (
-    <div className="transition filter ease-out duration-300 brightness-90 hover:drop-shadow-primary hover:scale-110 hover:brightness-100 hover:z-40 cursor-pointer">
+    <div
+      className="transition filter ease-out duration-300 brightness-90 hover:drop-shadow-primary hover:scale-110 hover:brightness-100 hover:z-40 cursor-pointer"
+      {...props}
+    >
       <div
         className={`${className} bg-primary h-[14rem]`}
         style={{
