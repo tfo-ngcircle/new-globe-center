@@ -9,11 +9,14 @@ import LandingSection from "@/components/sections/landing";
 import MapSection from "@/components/sections/map";
 import useDimensions from "@/lib/utils/dimens";
 import { useRef, useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const headerRef = useRef();
   const size = useDimensions(headerRef);
   const [dark, setDark] = useState(false);
+
+  const router = useRouter();
 
   return (
     <>
@@ -23,6 +26,8 @@ export default function Home() {
           paddingTop={size.height}
           onLeave={(_, dest, dir) => {
             setDark(dest.anchor === "contact");
+            if (router.asPath !== `/#${dest.anchor}`)
+              router.replace(`#${dest.anchor}`, undefined, { shallow: true });
           }}
           anchors={[
             "landing",
