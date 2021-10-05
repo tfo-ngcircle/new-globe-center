@@ -1,5 +1,17 @@
+import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
 import { Logo } from "../logo";
+
+const about = {
+  headline: "Wir vernetzen die Region. Wir schaffen Verbundenheit.",
+  description: [
+    "Vermietung von Schulungs- und Konferenzräumen",
+    "Perfekte Anbindung zur Autobahn, oder in die schöne Autostadt Wolfsburg",
+    "Hochwertige und innovative Ausstattungstechnik",
+    "Wunderschöne, ruhige Lage mit schöner Außenanlage",
+    "Rund-Um-Glücklich Paket mit individuellem Catering",
+  ],
+};
 
 export default function AboutSection() {
   return (
@@ -20,22 +32,11 @@ export default function AboutSection() {
             <Logo isFull />
             <div className="relative flex">
               <div className="space-y-10">
-                <h2>
-                  Wir vernetzen die Region
-                  <span className="text-primary">.</span>
-                  <br />
-                  Wir schaffen Verbundenheit
-                  <span className="text-primary">.</span>
-                </h2>
+                <h2>{formatHeadline(about.headline)}</h2>
                 <ul className="list-disc list-inside marker:text-primary space-y-4 pl-5">
-                  <li>Vermietung von Schulungs- und Konferenzräumen</li>
-                  <li>
-                    Perfekte Anbindung zur Autobahn, oder in die schöne
-                    Autostadt Wolfsburg
-                  </li>
-                  <li>Hochwertige und innovative Ausstattungstechnik</li>
-                  <li>Wunderschöne, ruhige Lage mit schöner Außenanlage</li>
-                  <li>Rund-Um-Glücklich Paket mit individuellem Catering</li>
+                  {about.description.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
               </div>
               <Button
