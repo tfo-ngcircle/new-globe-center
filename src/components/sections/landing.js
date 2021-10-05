@@ -1,6 +1,12 @@
 import { Button } from "../button";
 import { Underline } from "../underline";
 
+const landing = {
+  headline: "Dein Raum. Dein Meeting.",
+  description:
+    "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
+};
+
 export default function LandingSection() {
   return (
     <div className="h-full relative">
@@ -22,19 +28,22 @@ export default function LandingSection() {
         <div className="space-y-8 z-10 text-white max-w-min">
           <div className="space-y-5">
             <h1 className="whitespace-nowrap">
-              Dein Raum<span className="text-primary">.</span>
-              <br />
-              Dein Meeting
-              <span className="text-primary">.</span>
+              {landing &&
+                landing.headline.split(".").map((part) => (
+                  <>
+                    {part}
+                    {part.length > 0 ? (
+                      <>
+                        <span className="text-primary">.</span>
+                        <br />
+                      </>
+                    ) : undefined}
+                  </>
+                ))}
             </h1>
             <Underline className="text-primary w-full h-3" />
           </div>
-          <p className="w-[125%]">
-            Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche
-            modernste Ausstattung und digitalen Komfort für deine Schulung,
-            Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich
-            Prinzip sorgen wir für deine perfekte Kommunikation.
-          </p>
+          <p className="w-[125%]">{landing && landing.description}</p>
           <Button label="Über uns" type="large" />
         </div>
       </div>
