@@ -3,6 +3,12 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { SocialIcon } from "./socialIcon";
 import Link from "./link";
 
+const socialLinks = {
+  facebook: "#",
+  linkedin: "#",
+  twitter: "#",
+};
+
 export default function Footer() {
   return (
     <div className="bg-black text-white">
@@ -16,15 +22,21 @@ export default function Footer() {
         <div className="py-4">
           <div className="container flex justify-between items-center">
             <div className="flex space-x-8">
-              <SocialIcon>
-                <FaFacebookF />
-              </SocialIcon>
-              <SocialIcon>
-                <FaLinkedinIn />
-              </SocialIcon>
-              <SocialIcon>
-                <FaTwitter />
-              </SocialIcon>
+              {socialLinks.facebook && (
+                <SocialIcon href={socialLinks.facebook}>
+                  <FaFacebookF />
+                </SocialIcon>
+              )}
+              {socialLinks.linkedin && (
+                <SocialIcon href={socialLinks.linkedin}>
+                  <FaLinkedinIn />
+                </SocialIcon>
+              )}
+              {socialLinks.twitter && (
+                <SocialIcon href={socialLinks.twitter}>
+                  <FaTwitter />
+                </SocialIcon>
+              )}
             </div>
             <div className="text-gray-500 flex space-x-8">
               <Link href="">© 2021 New Globe Center - NgC GmbH</Link>
