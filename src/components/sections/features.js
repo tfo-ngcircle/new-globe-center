@@ -1,6 +1,44 @@
 import { Underline } from "../underline";
 import { FeatureItem } from "../feature-item";
-import { Phone, Marker } from "@/components/icons";
+import { getIcon } from "@/components/icons";
+import formatHeadline from "@/lib/utils/text";
+
+const features = {
+  headline: "Dein Meeting. Unsere Ausstattung.",
+  description: "Das bieten wir dir für dein Meeting.",
+  features: [
+    {
+      title: "Lorem ipsum.",
+      icon: "phone",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "marker",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "phone",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "marker",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "phone",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "marker",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+  ],
+};
 
 export default function FeaturesSection() {
   return (
@@ -15,46 +53,24 @@ export default function FeaturesSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="max-w-max space-y-4">
-                <h2>
-                  Dein Meeting<span className="text-primary">.</span>
-                  <br />
-                  Unsere Ausstattung<span className="text-primary">.</span>
-                </h2>
+                <h2>{formatHeadline(features.headline)}</h2>
                 <Underline className="text-primary w-full h-3" />
               </div>
-              <p>Das bieten wir dir für dein Meeting.</p>
+              <p>{features.description}</p>
             </div>
             <div className="grid grid-cols-3 gap-x-16 gap-y-12">
-              <FeatureItem
-                icon={<Phone className="rounded-full border border-gray-300" />}
-                title="Lorem ipsum."
-                description="Lorem ipsum dolor sit amet, consetetur."
-              />
-              <FeatureItem
-                icon={<Phone className="rounded-full border border-gray-300" />}
-                title="Lorem ipsum."
-                description="Lorem ipsum dolor sit amet, consetetur."
-              />
-              <FeatureItem
-                icon={<Phone className="rounded-full border border-gray-300" />}
-                title="Lorem ipsum."
-                description="Lorem ipsum dolor sit amet, consetetur."
-              />
-              <FeatureItem
-                icon={<Phone className="rounded-full border border-gray-300" />}
-                title="Lorem ipsum."
-                description="Lorem ipsum dolor sit amet, consetetur."
-              />
-              <FeatureItem
-                icon={<Phone className="rounded-full border border-gray-300" />}
-                title="Lorem ipsum."
-                description="Lorem ipsum dolor sit amet, consetetur."
-              />
-              <FeatureItem
-                icon={<Phone className="rounded-full border border-gray-300" />}
-                title="Lorem ipsum."
-                description="Lorem ipsum dolor sit amet, consetetur."
-              />
+              {features.features.map((item, i) => (
+                <FeatureItem
+                  key={i}
+                  title={item.title}
+                  description={item.description}
+                  icon={
+                    <span className="rounded-full border border-gray-300 inline-block">
+                      {getIcon(item.icon)}
+                    </span>
+                  }
+                />
+              ))}
             </div>
           </div>
         </div>

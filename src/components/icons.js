@@ -1,3 +1,14 @@
+export function getIcon(tag) {
+  switch (tag) {
+    case "phone":
+      return <Phone />;
+    case "marker":
+      return <Marker />;
+    default:
+      return undefined;
+  }
+}
+
 export const Marker = ({ size = 48, className, dark }) => {
   return (
     <svg viewBox="0 0 48 48" height={size} className={className}>
