@@ -1,3 +1,4 @@
+import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
 import { Underline } from "../underline";
 
@@ -28,16 +29,7 @@ export default function LandingSection() {
         <div className="space-y-8 z-10 text-white max-w-min">
           <div className="space-y-5">
             <h1 className="whitespace-nowrap">
-              {landing &&
-                landing.headline.split(".").map((part) =>
-                  part.length > 0 ? (
-                    <>
-                      {part}
-                      <span className="text-primary">.</span>
-                      <br />
-                    </>
-                  ) : undefined
-                )}
+              {landing && formatHeadline(landing.headline)}
             </h1>
             <Underline className="text-primary w-full h-3" />
           </div>
