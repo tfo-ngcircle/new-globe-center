@@ -25,6 +25,18 @@ export default function MapSection() {
       setLat(map.current.getCenter().lat.toFixed(4));
       setZoom(map.current.getZoom().toFixed(2));
     });
+
+    map.current.on("wheel", (event) => {
+      if (event.originalEvent.ctrlKey) {
+        // Check if CTRL key is pressed
+        event.originalEvent.preventDefault(); // Prevent chrome/firefox default behavior
+        if (!map.current.scrollZoom._enabled) map.current.scrollZoom.enable(); // Enable zoom only if it's disabled
+      } else {
+        if (map.current.scrollZoom._enabled) map.current.scrollZoom.disable(); // Disable zoom only if it's enabled
+      }
+    });
+
+    map.current.scrollZoom.disable();
   });
   return <div ref={mapContainer} className="w-full !h-screen absolute top-0" />;
 }
