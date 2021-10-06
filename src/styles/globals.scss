@@ -54,12 +54,12 @@
   }
 }
 
-.fp-viewing-contact #fp-nav ul li a span {
-  background: white;
-}
-
-.fp-viewing-landing #fp-nav ul li a span {
-  background: white;
+body[class*="fp-viewing-spaces-"],
+.fp-viewing-landing,
+.fp-viewing-contact {
+  #fp-nav ul li a span {
+    background: white;
+  }
 }
 
 $spaceFromWindow: 4rem;
