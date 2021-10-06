@@ -16,7 +16,7 @@ function navigateFullpage(e, path) {
   window.window.fullpage_api.moveTo(path, 0);
 }
 
-const Header = React.forwardRef(({ className, dark = true }, ref) => {
+const Header = React.forwardRef(({ className, dark }, ref) => {
   const router = useRouter();
   return (
     <div
