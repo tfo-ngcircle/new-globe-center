@@ -21,7 +21,7 @@ const Header = React.forwardRef(({ className, dark }, ref) => {
   return (
     <div
       ref={ref}
-      className={`${className} fixed top-0 left-0 right-0 text-gray-500`}
+      className={`${className} fixed top-0 left-0 right-0 text-gray-500 transition-colors duration-200`}
     >
       <header className="container flex justify-between items-center py-7 ">
         <Link
