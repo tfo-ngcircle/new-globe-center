@@ -7,6 +7,7 @@ import FeaturesSection from "@/components/sections/features";
 import GallerySection from "@/components/sections/gallery";
 import LandingSection from "@/components/sections/landing";
 import MapSection from "@/components/sections/map";
+import SpacesSection from "@/components/sections/spaces";
 import useDimensions from "@/lib/utils/dimens";
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
@@ -32,6 +33,7 @@ export default function Home() {
           anchors={[
             "landing",
             "features",
+            "spaces",
             "about",
             "gallery",
             "contact",
@@ -41,6 +43,7 @@ export default function Home() {
         >
           <LandingSection />
           <FeaturesSection />
+          <SpacesSection />
           <AboutSection />
           <GallerySection />
           <ContactSection paddingTop={size.height} />
