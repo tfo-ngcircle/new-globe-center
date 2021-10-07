@@ -18,7 +18,7 @@ module.exports = {
       black: "#03090f",
       red: colors.red,
       white: colors.white,
-      gray: colors.trueGray,
+      gray: colors.coolGray,
       rose: colors.rose,
     },
     fontFamily: {
