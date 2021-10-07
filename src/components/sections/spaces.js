@@ -27,9 +27,7 @@ const spaces = [
 export default function SpacesSection() {
   return (
     <>
-      <Space id="connect" />
-      <Space id="create" />
-      <Space id="inspire" />
+      {spaces && spaces.map((space) => <Space key={space.tag} space={space} />)}
     </>
   );
 }
