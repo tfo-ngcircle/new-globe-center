@@ -2,7 +2,7 @@ import { Space } from "../space";
 
 const spaces = [
   {
-    tag: "connect",
+    slug: "connect",
     title: "Connect.",
     subtitle: "Deine vernetzung.",
     description:
@@ -23,7 +23,7 @@ const spaces = [
     ],
   },
   {
-    tag: "create",
+    slug: "create",
     title: "Create.",
     subtitle: "Deine kreativität.",
     description:
@@ -44,7 +44,7 @@ const spaces = [
     ],
   },
   {
-    tag: "inspire",
+    slug: "inspire",
     title: "Inspire.",
     subtitle: "Deine inspiration.",
     description:
@@ -77,7 +77,8 @@ const spaces = [
 export default function SpacesSection() {
   return (
     <>
-      {spaces && spaces.map((space) => <Space key={space.tag} space={space} />)}
+      {spaces &&
+        spaces.map((space) => <Space key={space.slug} space={space} />)}
     </>
   );
 }
