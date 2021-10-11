@@ -1,9 +1,17 @@
-export function getIcon(tag) {
+import { BiArea, BiGroup, BiChair } from "react-icons/bi";
+
+export function getIcon(tag, className) {
   switch (tag) {
     case "phone":
       return <Phone />;
     case "marker":
       return <Marker />;
+    case "area":
+      return <BiArea className={className} />;
+    case "people":
+      return <BiGroup className={className} />;
+    case "seating":
+      return <BiChair className={className} />;
     default:
       return undefined;
   }
@@ -30,12 +38,7 @@ export const Marker = ({ size = 48, className, dark }) => {
 
 export const Phone = ({ size = 48, className, dark }) => {
   return (
-    <svg
-      xmlSpace="preserve"
-      viewBox="0 0 48 48"
-      height={size}
-      className={className}
-    >
+    <svg viewBox="0 0 48 48" height={size} className={className}>
       <g className="stroke-current stroke-2">
         <path
           d="M26.2 32.8c2.5.9 5.1 1.3 7.8 1.2v-4.4c-3.3 0-4.4-1.1-4.4-1.1l-3.4 4.3c-5.1-1.8-9.1-5.9-11-11l4.3-3.3s-1.1-1.1-1.1-4.4H14c0 2.6.4 5.3 1.2 7.8"
