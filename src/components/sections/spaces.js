@@ -21,6 +21,14 @@ const spaces = [
         alt: "",
       },
     ],
+    characteristics: {
+      key: [
+        { name: "area", label: "22m2" },
+        { name: "people", label: "Max 7 Persons" },
+        { name: "seating", label: "Variable Seating" },
+      ],
+      additional: ["Water", "Coffee", "High-speed fiber optic Internet"],
+    },
   },
   {
     slug: "create",
@@ -42,6 +50,14 @@ const spaces = [
         alt: "",
       },
     ],
+    characteristics: {
+      key: [
+        { name: "area", label: "22m<sup>2</sup>" },
+        { name: "people", label: "Max 7 Persons" },
+        { name: "seating", label: "Variable Seating" },
+      ],
+      additional: ["Water", "Coffee", "High-speed fiber optic Internet"],
+    },
   },
   {
     slug: "inspire",
@@ -71,6 +87,14 @@ const spaces = [
         alt: "",
       },
     ],
+    characteristics: {
+      key: [
+        { name: "area", label: "22m<sup>2</sup>" },
+        { name: "people", label: "Max 7 Persons" },
+        { name: "seating", label: "Variable Seating" },
+      ],
+      additional: ["Water", "Coffee", "High-speed fiber optic Internet"],
+    },
   },
 ];
 
