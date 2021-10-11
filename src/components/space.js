@@ -1,5 +1,6 @@
 import formatHeadline from "@/lib/utils/text";
 import { Button } from "./button";
+import { Carousel } from "./carousel";
 import { Underline } from "./underline";
 
 export const Space = ({ space }) => {
@@ -15,11 +16,10 @@ export const Space = ({ space }) => {
           <p>{space.description}</p>
           <Button label="learn more" />
         </div>
-        <div className="bg-white h-full brightness-90 col-span-4">
-          <img
-            src={require("../../public/images/room.jpg")}
-            alt="room"
-            className="object-cover h-full w-full"
+        <div className="col-span-4 h-full relative">
+          <Carousel
+            className="w-full h-full object-cover absolute"
+            images={space.images}
           />
         </div>
       </div>
