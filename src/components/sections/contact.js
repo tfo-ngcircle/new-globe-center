@@ -16,7 +16,10 @@ const contact = {
 export default function ContactSection({ paddingTop }) {
   return (
     <div className="absolute top-0 h-screen w-full bg-secondary text-white flex">
-      <div className="my-auto container" style={{ paddingTop: paddingTop }}>
+      <div
+        className="my-auto container"
+        style={{ paddingTop: paddingTop / 1.75 }}
+      >
         <div className="max-w-md space-y-10">
           <h2>{formatHeadline(contact.headline)}</h2>
           <Button label="enquire now" />
