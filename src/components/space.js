@@ -1,6 +1,7 @@
 import formatHeadline from "@/lib/utils/text";
 import { Button } from "./button";
 import { Carousel } from "./carousel";
+import { Characteristic } from "./characteristic";
 import { Underline } from "./underline";
 
 export const Space = ({ space }) => {
@@ -14,6 +15,14 @@ export const Space = ({ space }) => {
             <Underline className="text-primary w-full h-3 mt-3" />
           </div>
           <p>{space.description}</p>
+          <div className="space-y-4">
+            <h6>Characteristics</h6>
+            <div className="flex gap-4 flex-wrap">
+              {space.characteristics.key.map((kc) => (
+                <Characteristic it={kc} key={kc.name} />
+              ))}
+            </div>
+          </div>
           <Button label="learn more" />
         </div>
         <div className="col-span-4 h-full relative">
