@@ -16,16 +16,16 @@ function navigateFullpage(e, path) {
   window.window.fullpage_api.moveTo(path, 0);
 }
 
-const Header = React.forwardRef(({ className, dark }, ref) => {
+const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
   const router = useRouter();
   return (
     <div
       ref={ref}
-      className={`${className} fixed top-0 left-0 right-0 text-gray-500 transition-colors duration-200`}
+      className={`${className} top-0 left-0 right-0 text-gray-500 transition-colors duration-200`}
     >
       <header className="container flex justify-between items-center py-7 ">
         <Link
-          onClick={(e) => navigateFullpage(e, "landing")}
+          onClick={(e) => (isHome ? navigateFullpage(e, "landing") : undefined)}
           className={dark ? "text-white" : "text-black"}
         >
           <Logo />
@@ -46,7 +46,11 @@ const Header = React.forwardRef(({ className, dark }, ref) => {
                             dark ? "hover:text-white" : "hover:text-primary"
                           }`
                     }
-                    onClick={(e) => navigateFullpage(e, it.link.substr(2))}
+                    onClick={(e) =>
+                      isHome
+                        ? navigateFullpage(e, it.link.substr(2))
+                        : undefined
+                    }
                   >
                     {it.label}
                   </Link>
@@ -55,7 +59,12 @@ const Header = React.forwardRef(({ className, dark }, ref) => {
             ))}
           </ul>
           <div className="flex items-center space-x-8 text-gray-300">
-            <Link href="#" onClick={(e) => navigateFullpage(e, "contact")}>
+            <Link
+              href="/#contact"
+              onClick={(e) =>
+                isHome ? navigateFullpage(e, "contact") : undefined
+              }
+            >
               <Phone
                 dark={dark}
                 className={`rounded-full border border-current ${
@@ -66,7 +75,10 @@ const Header = React.forwardRef(({ className, dark }, ref) => {
               />
             </Link>
             <span className="h-14 w-px bg-current" />
-            <Link href="#" onClick={(e) => navigateFullpage(e, "map")}>
+            <Link
+              href="/#map"
+              onClick={(e) => (isHome ? navigateFullpage(e, "map") : undefined)}
+            >
               <Marker
                 dark={dark}
                 className={`rounded-full border border-current ${

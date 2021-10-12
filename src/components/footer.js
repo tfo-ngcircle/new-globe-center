@@ -10,11 +10,11 @@ const socialLinks = {
 };
 
 const bottomLinks = [
-  { label: "Cookie Policy", destination: "" },
-  { label: "Governance, Conduct and Ethics", destination: "" },
-  { label: "Impressum", destination: "" },
-  { label: "Privacy Policy", destination: "" },
-  { label: "Terms and Conditions", destination: "" },
+  { label: "Cookie Policy", destination: "#" },
+  { label: "Governance, Conduct and Ethics", destination: "#" },
+  { label: "Impressum", destination: "#" },
+  { label: "Privacy Policy", destination: "#" },
+  { label: "Terms and Conditions", destination: "#" },
 ];
 
 export default function Footer() {
