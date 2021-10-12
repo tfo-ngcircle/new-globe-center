@@ -2,6 +2,7 @@ import formatHeadline from "@/lib/utils/text";
 import { Button } from "./button";
 import { Carousel } from "./carousel";
 import { Characteristic } from "./characteristic";
+import Link from "./link";
 import { Underline } from "./underline";
 
 export const Space = ({ space }) => {
@@ -23,7 +24,11 @@ export const Space = ({ space }) => {
               ))}
             </div>
           </div>
-          <Button label="learn more" />
+          <div>
+            <Link href={`/space/${space.slug}`}>
+              <Button label="learn more" />
+            </Link>
+          </div>
         </div>
         <div className="col-span-4 h-full relative">
           <Carousel
