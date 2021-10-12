@@ -1,5 +1,6 @@
 import formatHeadline from "@/lib/utils/text";
-import { GaleryItem } from "../galery-item";
+import { Img } from "../image";
+import { Trapazoid } from "../trapazoid";
 import { Underline } from "../underline";
 
 export default function GallerySection({ gallery }) {
@@ -14,7 +15,12 @@ export default function GallerySection({ gallery }) {
       </div>
       <div className="grid grid-cols-5 my-8 2xl:my-16 space-x-[-4.3rem] gap-y-5 w-[104%]">
         {gallery.images.slice(0, 10).map((img, i) => (
-          <GaleryItem key={i} className={`${i === 0 ? "-ml-16" : ""}`} />
+          <Trapazoid
+            key={i}
+            className="first:-ml-16 h-[14rem] brightness-90 hover:drop-shadow-md hover:scale-110 hover:brightness-100 hover:z-40 cursor-pointer"
+          >
+            <Img image={img} />
+          </Trapazoid>
         ))}
       </div>
     </div>

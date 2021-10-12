@@ -54,6 +54,7 @@ module.exports = {
       "primary-sm": "0 4px 10px 0 rgba(192, 0, 0, 0.3)",
     },
     dropShadow: {
+      md: "0 8px 20px rgba(0, 0, 0, 0.4)",
       none: "none",
       primary: "0 8px 20px rgba(192, 0, 0, 0.4)",
       "primary-sm": "0 4px 10px rgba(192, 0, 0, 0.4)",
