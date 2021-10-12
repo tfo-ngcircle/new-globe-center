@@ -37,15 +37,11 @@ const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
                 <h6>
                   <Link
                     href={it.link}
-                    className={
+                    className={`${
                       router.asPath == it.link
-                        ? dark
-                          ? "text-white"
-                          : "text-primary"
-                        : `text-current ${
-                            dark ? "hover:text-white" : "hover:text-primary"
-                          }`
-                    }
+                        ? `${dark ? "text-white" : "text-primary"}`
+                        : "text-current"
+                    } ${dark ? "hover:text-white" : "hover:text-primary"}`}
                     onClick={(e) =>
                       isHome
                         ? navigateFullpage(e, it.link.substr(2))
