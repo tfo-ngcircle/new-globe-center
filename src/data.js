@@ -11,6 +11,17 @@ export const gallery = {
   images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
 };
 
+export const about = {
+  headline: "Wir vernetzen die Region. Wir schaffen Verbundenheit.",
+  description: [
+    "Vermietung von Schulungs- und Konferenzräumen",
+    "Perfekte Anbindung zur Autobahn, oder in die schöne Autostadt Wolfsburg",
+    "Hochwertige und innovative Ausstattungstechnik",
+    "Wunderschöne, ruhige Lage mit schöner Außenanlage",
+    "Rund-Um-Glücklich Paket mit individuellem Catering",
+  ],
+};
+
 export const contact = {
   headline: "Our team is ready to answer your questions.",
   email: "info@newglobecenter.com",

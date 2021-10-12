@@ -1,17 +1,7 @@
 import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
 import { Logo } from "../logo";
-
-const about = {
-  headline: "Wir vernetzen die Region. Wir schaffen Verbundenheit.",
-  description: [
-    "Vermietung von Schulungs- und Konferenzräumen",
-    "Perfekte Anbindung zur Autobahn, oder in die schöne Autostadt Wolfsburg",
-    "Hochwertige und innovative Ausstattungstechnik",
-    "Wunderschöne, ruhige Lage mit schöner Außenanlage",
-    "Rund-Um-Glücklich Paket mit individuellem Catering",
-  ],
-};
+import { about } from "../../data";
 
 export default function AboutSection() {
   return (
