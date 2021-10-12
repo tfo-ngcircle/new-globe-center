@@ -8,24 +8,24 @@ import GallerySection from "@/components/sections/gallery";
 import LandingSection from "@/components/sections/landing";
 import MapSection from "@/components/sections/map";
 import SpacesSection from "@/components/sections/spaces";
-import useDimensions from "@/lib/utils/dimens";
+import { useElementSize } from "usehooks-ts";
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { data } from "src/data";
 
 export default function Home() {
   const headerRef = useRef();
-  const size = useDimensions(headerRef);
   const [dark, setDark] = useState(false);
+  const { width, height } = useElementSize(headerRef);
 
   const router = useRouter();
 
   return (
     <>
       <Header ref={headerRef} className="z-50" dark={dark} />
-      {size.height !== 0 ? (
+      {height !== 0 ? (
         <Fullpage
-          paddingTop={size.height}
+          paddingTop={height}
           onLeave={(_, dest, dir) => {
             setDark(dest.anchor === "contact");
             if (router.asPath !== `/#${dest.anchor}`)
@@ -47,7 +47,7 @@ export default function Home() {
           <SpacesSection spaces={data.spaces} />
           <AboutSection about={data.about} />
           <GallerySection gallery={data.gallery} />
-          <ContactSection contact={data.contact} paddingTop={size.height} />
+          <ContactSection contact={data.contact} paddingTop={height} />
           <MapSection location={data.contact.location} />
           <div className="flex flex-col justify-between h-full">
             <div className="container flex flex-grow items-center text-gray-500">
