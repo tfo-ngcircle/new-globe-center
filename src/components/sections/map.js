@@ -3,11 +3,11 @@ import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-load
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
-export default function MapSection() {
+export default function MapSection({ location }) {
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setLng] = useState(10.747);
-  const [lat, setLat] = useState(52.371);
+  const [lng, setLng] = useState(location.lng);
+  const [lat, setLat] = useState(location.lat);
   const [zoom, setZoom] = useState(16);
 
   useEffect(() => {

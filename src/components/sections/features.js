@@ -2,9 +2,8 @@ import { Underline } from "../underline";
 import { FeatureItem } from "../feature-item";
 import { getIcon } from "@/components/icons";
 import formatHeadline from "@/lib/utils/text";
-import { features } from "../../data";
 
-export default function FeaturesSection() {
+export default function FeaturesSection({ features }) {
   return (
     <div className="relative">
       <div className="container">

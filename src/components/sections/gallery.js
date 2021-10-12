@@ -1,9 +1,8 @@
 import formatHeadline from "@/lib/utils/text";
 import { GaleryItem } from "../galery-item";
 import { Underline } from "../underline";
-import { gallery } from "../../data";
 
-export default function GallerySection() {
+export default function GallerySection({ gallery }) {
   return (
     <div className="h-full flex flex-col justify-end">
       <div className="container space-y-5">

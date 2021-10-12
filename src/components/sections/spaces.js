@@ -1,7 +1,6 @@
 import { Space } from "../space";
-import { spaces } from "../../data";
 
-export default function SpacesSection() {
+export default function SpacesSection({ spaces }) {
   return (
     <>
       {spaces &&

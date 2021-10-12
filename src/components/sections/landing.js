@@ -1,9 +1,8 @@
 import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
 import { Underline } from "../underline";
-import { landing } from "../../data";
 
-export default function LandingSection() {
+export default function LandingSection({ landing }) {
   return (
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-90 overflow-hidden">

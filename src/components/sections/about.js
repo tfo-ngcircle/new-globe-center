@@ -1,9 +1,8 @@
 import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
 import { Logo } from "../logo";
-import { about } from "../../data";
 
-export default function AboutSection() {
+export default function AboutSection({ about }) {
   return (
     <div className="relative h-full">
       <span className="absolute bg-primary w-[29.35%] h-60 top-[125.5px]" />

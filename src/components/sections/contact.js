@@ -2,9 +2,8 @@ import { Button } from "../button";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import { SocialIcon } from "../socialIcon";
 import formatHeadline from "@/lib/utils/text";
-import { contact } from "../../data";
 
-export default function ContactSection({ paddingTop }) {
+export default function ContactSection({ contact, paddingTop }) {
   return (
     <div className="absolute top-0 h-screen w-full bg-secondary text-white flex">
       <div
