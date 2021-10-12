@@ -7,9 +7,9 @@ export default function LandingSection({ landing }) {
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-90 overflow-hidden">
         <img
-          src={require("../../../public/images/room.jpg")}
-          alt="room"
-          className="object-cover !my-5"
+          src={landing.background.src}
+          alt={landing.background.alt}
+          className="object-cover !my-5 w-full h-full bg-center"
         />
       </div>
       <div className="absolute w-full h-full mix-blend-hard-light opacity-50">

@@ -3,6 +3,10 @@ export const data = {
     headline: "Dein Raum. Dein Meeting.",
     description:
       "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
+    background: {
+      src: require("../public/images/room.jpg"),
+      alt: "",
+    },
   },
   gallery: {
     headline: "Lorem ipsum.",
