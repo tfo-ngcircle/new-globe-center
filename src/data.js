@@ -11,6 +11,43 @@ export const gallery = {
   images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
 };
 
+export const features = {
+  headline: "Dein Meeting. Unsere Ausstattung.",
+  description: "Das bieten wir dir für dein Meeting.",
+  features: [
+    {
+      title: "Lorem ipsum.",
+      icon: "phone",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "marker",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "phone",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "marker",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "phone",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+    {
+      title: "Lorem ipsum.",
+      icon: "marker",
+      description: "Lorem ipsum dolor sit amet, consetetur.",
+    },
+  ],
+};
+
 export const spaces = [
   {
     slug: "connect",

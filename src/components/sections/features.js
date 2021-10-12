@@ -2,43 +2,7 @@ import { Underline } from "../underline";
 import { FeatureItem } from "../feature-item";
 import { getIcon } from "@/components/icons";
 import formatHeadline from "@/lib/utils/text";
-
-const features = {
-  headline: "Dein Meeting. Unsere Ausstattung.",
-  description: "Das bieten wir dir für dein Meeting.",
-  features: [
-    {
-      title: "Lorem ipsum.",
-      icon: "phone",
-      description: "Lorem ipsum dolor sit amet, consetetur.",
-    },
-    {
-      title: "Lorem ipsum.",
-      icon: "marker",
-      description: "Lorem ipsum dolor sit amet, consetetur.",
-    },
-    {
-      title: "Lorem ipsum.",
-      icon: "phone",
-      description: "Lorem ipsum dolor sit amet, consetetur.",
-    },
-    {
-      title: "Lorem ipsum.",
-      icon: "marker",
-      description: "Lorem ipsum dolor sit amet, consetetur.",
-    },
-    {
-      title: "Lorem ipsum.",
-      icon: "phone",
-      description: "Lorem ipsum dolor sit amet, consetetur.",
-    },
-    {
-      title: "Lorem ipsum.",
-      icon: "marker",
-      description: "Lorem ipsum dolor sit amet, consetetur.",
-    },
-  ],
-};
+import { features } from "../../data";
 
 export default function FeaturesSection() {
   return (
