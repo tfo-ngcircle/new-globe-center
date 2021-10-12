@@ -13,7 +13,7 @@ export default function GallerySection({ gallery }) {
         <p className="max-w-4xl">{gallery && gallery.description}</p>
       </div>
       <div className="grid grid-cols-5 my-8 2xl:my-16 space-x-[-4.3rem] gap-y-5 w-[104%]">
-        {gallery.images.map((img, i) => (
+        {gallery.images.slice(0, 10).map((img, i) => (
           <GaleryItem key={i} className={`${i === 0 ? "-ml-16" : ""}`} />
         ))}
       </div>
