@@ -1,12 +1,7 @@
 import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
 import { Underline } from "../underline";
-
-const landing = {
-  headline: "Dein Raum. Dein Meeting.",
-  description:
-    "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
-};
+import { landing } from "../../data";
 
 export default function LandingSection() {
   return (
