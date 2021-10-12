@@ -72,6 +72,10 @@ export const data = {
   features: {
     headline: "Dein Meeting. Unsere Ausstattung.",
     description: "Das bieten wir dir für dein Meeting.",
+    image: {
+      src: require("../public/images/facilities_main.jpg"),
+      alt: "",
+    },
     features: [
       {
         title: "Lorem ipsum.",

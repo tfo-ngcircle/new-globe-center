@@ -9,8 +9,8 @@ export default function FeaturesSection({ features }) {
       <div className="container">
         <div className="flex justify-between h-full items-center">
           <img
-            src={require("../../../public/images/facilities_main.jpg")}
-            alt="facilities"
+            src={features.image.src}
+            alt={features.image.alt}
             className="object-cover relative w-[510px] h-[720px]"
           />
           <div className="space-y-8">
