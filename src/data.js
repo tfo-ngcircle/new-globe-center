@@ -4,6 +4,13 @@ export const landing = {
     "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
 };
 
+export const gallery = {
+  headline: "Lorem ipsum.",
+  description:
+    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.",
+  images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
+};
+
 export const spaces = [
   {
     slug: "connect",

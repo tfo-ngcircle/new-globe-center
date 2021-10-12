@@ -1,13 +1,7 @@
 import formatHeadline from "@/lib/utils/text";
 import { GaleryItem } from "../galery-item";
 import { Underline } from "../underline";
-
-const gallery = {
-  headline: "Lorem ipsum.",
-  description:
-    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa.",
-  images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 0],
-};
+import { gallery } from "../../data";
 
 export default function GallerySection() {
   return (
