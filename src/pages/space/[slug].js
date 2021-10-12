@@ -1,3 +1,9 @@
+import { Page } from "@/components/page";
+
 export default function Space() {
-  return <div></div>;
+  return (
+    <Page>
+      <div>Hello</div>
+    </Page>
+  );
 }
