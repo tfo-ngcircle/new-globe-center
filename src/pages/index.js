@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <Header ref={headerRef} className="z-50" dark={dark} />
+      <Header ref={headerRef} className="z-50 fixed" dark={dark} isHome />
       {height !== 0 ? (
         <Fullpage
           paddingTop={height}
