@@ -2,16 +2,7 @@ import { Button } from "../button";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import { SocialIcon } from "../socialIcon";
 import formatHeadline from "@/lib/utils/text";
-
-const contact = {
-  headline: "Our team is ready to answer your questions.",
-  email: "info@newglobecenter.com",
-  phone: "+49 531 239 64 190",
-  background: {
-    src: "https://as2.ftcdn.net/v2/jpg/02/04/18/31/1000_F_204183167_eLpT1Fyt9egBbeJ6AXdWqhoiBRc9AREf.jpg",
-    alt: "About",
-  },
-};
+import { contact } from "../../data";
 
 export default function ContactSection({ paddingTop }) {
   return (
