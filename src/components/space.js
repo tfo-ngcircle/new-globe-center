@@ -7,7 +7,7 @@ import { Underline } from "./underline";
 
 export const Space = ({ space }) => {
   return (
-    <div className="slide w-full" data-anchor={space.id}>
+    <div className="slide w-full" data-anchor={space.slug}>
       <div className="grid grid-cols-7 w-full h-full items-center">
         <div className="pl-36 pr-20 space-y-10 col-span-3">
           <div className="max-w-min">
