@@ -1,14 +1,14 @@
 import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
+import { Img } from "../image";
 import { Underline } from "../underline";
 
 export default function LandingSection({ landing }) {
   return (
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-90 overflow-hidden">
-        <img
-          src={landing.background.src}
-          alt={landing.background.alt}
+        <Img
+          image={landing.background}
           className="object-cover !my-5 w-full h-full bg-center"
         />
       </div>

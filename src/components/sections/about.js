@@ -1,6 +1,7 @@
 import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
 import { Logo } from "../logo";
+import { Img } from "../image";
 
 export default function AboutSection({ about }) {
   return (
@@ -8,9 +9,8 @@ export default function AboutSection({ about }) {
       <span className="absolute bg-primary w-[29.35%] h-60 top-[125.5px]" />
       <div className="container relative h-full">
         <div className="flex h-full items-center">
-          <img
-            src={about.image.src}
-            alt={about.image.alt}
+          <Img
+            image={about.image}
             className="relative w-2/5 h-full object-cover"
             style={{
               clipPath:

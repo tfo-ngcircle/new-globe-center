@@ -2,15 +2,15 @@ import { Underline } from "../underline";
 import { FeatureItem } from "../feature-item";
 import { getIcon } from "@/components/icons";
 import formatHeadline from "@/lib/utils/text";
+import { Img } from "../image";
 
 export default function FeaturesSection({ features }) {
   return (
     <div className="relative">
       <div className="container">
         <div className="flex justify-between h-full items-center">
-          <img
-            src={features.image.src}
-            alt={features.image.alt}
+          <Img
+            image={features.image}
             className="object-cover relative w-[510px] h-[720px]"
           />
           <div className="space-y-8">
