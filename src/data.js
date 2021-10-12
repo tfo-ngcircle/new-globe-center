@@ -64,6 +64,10 @@ export const data = {
       "Wunderschöne, ruhige Lage mit schöner Außenanlage",
       "Rund-Um-Glücklich Paket mit individuellem Catering",
     ],
+    image: {
+      src: require("../public/images/about.jpg"),
+      alt: "",
+    },
   },
   features: {
     headline: "Dein Meeting. Unsere Ausstattung.",

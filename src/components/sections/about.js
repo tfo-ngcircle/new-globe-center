@@ -9,8 +9,8 @@ export default function AboutSection({ about }) {
       <div className="container relative h-full">
         <div className="flex h-full items-center">
           <img
-            src={require("../../../public/images/about.jpg")}
-            alt="about"
+            src={about.image.src}
+            alt={about.image.alt}
             className="relative w-2/5 h-full object-cover"
             style={{
               clipPath:
