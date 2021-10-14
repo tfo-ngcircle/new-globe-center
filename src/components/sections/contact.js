@@ -10,9 +10,9 @@ export default function ContactSection({ contact, paddingTop }) {
         className="my-auto container"
         style={{ paddingTop: paddingTop / 1.75 }}
       >
-        <div className="max-w-md space-y-10">
+        <div className="max-w-lg space-y-10">
           <h2>{formatHeadline(contact.headline)}</h2>
-          <Button label="enquire now" />
+          <Button label="jetzt anfragen" />
           <div className="flex space-x-4">
             <SocialIcon href={"mailto:" + contact.email}>
               <MdEmail />

@@ -29,8 +29,7 @@ export default function AboutSection({ about }) {
                 </ul>
               </div>
               <Button
-                label="our story"
-                type="large"
+                label="Mehr erfahren"
                 className="-rotate-90 block absolute right-0 top-0 origin-right"
               />
             </div>

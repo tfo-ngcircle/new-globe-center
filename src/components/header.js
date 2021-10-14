@@ -5,7 +5,7 @@ import { Phone, Marker } from "@/components/icons";
 import React from "react";
 
 const destinations = [
-  { label: "Haupt", link: "/#landing" },
+  { label: "Home", link: "/#landing" },
   { label: "Räume", link: "/#spaces" },
   { label: "Über", link: "/#about" },
   { label: "Kontakt", link: "/#contact" },
