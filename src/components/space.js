@@ -5,11 +5,11 @@ import { Characteristic } from "./characteristic";
 import Link from "./link";
 import { Underline } from "./underline";
 
-export const Space = ({ space }) => {
+export const Space = ({ space, ...props }) => {
   return (
-    <div className="slide w-full" data-anchor={space.slug}>
+    <div data-anchor={space.slug} {...props}>
       <div className="grid grid-cols-7 w-full h-full items-center">
-        <div className="pl-36 pr-20 space-y-10 col-span-3">
+        <div className="pr-20 space-y-10 col-span-3">
           <div className="max-w-min">
             <h5>{formatHeadline(space.subtitle)}</h5>
             <h1>{formatHeadline(space.title)}</h1>
