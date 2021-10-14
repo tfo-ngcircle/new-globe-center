@@ -21,7 +21,7 @@ export default function FeaturesSection({ features }) {
               </div>
               <p>{features.description}</p>
             </div>
-            <div className="grid grid-cols-3 gap-x-16 gap-y-12">
+            <div className="grid grid-cols-3 gap-x-10 gap-y-6">
               {features.features.map((item, i) => (
                 <FeatureItem
                   key={i}

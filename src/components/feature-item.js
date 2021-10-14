@@ -3,7 +3,7 @@ export const FeatureItem = ({ icon, title, description }) => {
     <div className="space-y-2">
       {icon}
       <h6>{title}</h6>
-      <p className="caption max-w-[185px]">{description}</p>
+      <p className="caption max-w-[200px]">{description}</p>
     </div>
   );
 };
