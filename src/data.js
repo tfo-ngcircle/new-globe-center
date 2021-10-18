@@ -145,6 +145,8 @@ export const data = {
           alt: "",
         },
       ],
+      availability: ["Mon - Fri • 8:00 - 18:00", "Mon - Fri • 8:00 - 18:00"],
+      price: ["Halbtagspauschale", "Ganztagspauschale", "Wochenendpauschale"],
       characteristics: {
         key: [
           { name: "area", label: "22m2" },
@@ -174,6 +176,8 @@ export const data = {
           alt: "",
         },
       ],
+      availability: ["Mon - Fri • 8:00 - 18:00", "Mon - Fri • 8:00 - 18:00"],
+      price: ["Halbtagspauschale", "Ganztagspauschale", "Wochenendpauschale"],
       characteristics: {
         key: [
           { name: "area", label: "46m2" },
@@ -211,6 +215,8 @@ export const data = {
           alt: "",
         },
       ],
+      availability: ["Mon - Fri • 8:00 - 18:00", "Mon - Fri • 8:00 - 18:00"],
+      price: ["Halbtagspauschale", "Ganztagspauschale", "Wochenendpauschale"],
       characteristics: {
         key: [
           { name: "area", label: "30m2" },
