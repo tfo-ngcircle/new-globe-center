@@ -17,6 +17,7 @@
     "framer-motion": "^4.1.17",
     "imagemin-mozjpeg": "^9.0.0",
     "mapbox-gl": "^2.5.0",
+    "moment": "^2.29.1",
     "next": "11.1.2",
     "next-optimized-images": "^2.6.2",
     "popmotion": "^10.0.1",
