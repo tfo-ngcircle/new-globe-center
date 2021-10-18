@@ -34,11 +34,13 @@ export const Space = ({ space, isFull, ...props }) => {
               className="pt-4"
             />
           </div>
-          <div>
-            <Link href={`/space/${space.slug}`}>
-              <Button label="Mehr erfahren" />
-            </Link>
-          </div>
+          {!isFull ? (
+            <div>
+              <Link href={`/space/${space.slug}`}>
+                <Button label="Mehr erfahren" />
+              </Link>
+            </div>
+          ) : undefined}
         </div>
         <div className="col-span-4 h-full relative">
           <Carousel
