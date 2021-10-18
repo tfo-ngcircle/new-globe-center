@@ -16,10 +16,9 @@ module.exports = {
       transparent: "transparent",
       current: "currentColor",
       black: "#03090f",
-      red: colors.red,
       white: colors.white,
       gray: colors.coolGray,
-      rose: colors.rose,
+      yellow: colors.amber,
     },
     fontFamily: {
       display: ["sofia-pro", "sans-serif"],
