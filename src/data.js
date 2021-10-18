@@ -151,9 +151,7 @@ export const data = {
         key: [
           { name: "area", label: "22m2" },
           { name: "people", label: "Max 7 Persons" },
-          { name: "seating", label: "Variable Seating" },
         ],
-        additional: ["Water", "Coffee", "High-speed fiber optic Internet"],
       },
     },
     {
