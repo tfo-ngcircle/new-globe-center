@@ -2,6 +2,7 @@ import Link from "./link";
 import { Logo } from "./logo";
 import { useRouter } from "next/router";
 import { Phone, Marker } from "@/components/icons";
+import { useWindowSize } from "usehooks-ts";
 import React from "react";
 
 const destinations = [
@@ -18,20 +19,22 @@ function navigateFullpage(e, path) {
 
 const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
   const router = useRouter();
+  const screen = useWindowSize();
+
   return (
     <div
       ref={ref}
       className={`${className} top-0 left-0 right-0 text-gray-500 transition-colors duration-200`}
     >
-      <header className="container flex justify-between items-center py-7 ">
+      <header className="container flex justify-between items-center py-5 md:py-7">
         <Link
           onClick={(e) => (isHome ? navigateFullpage(e, "landing") : undefined)}
           className={dark ? "text-white" : "text-black"}
         >
-          <Logo />
+          <Logo height={screen.width < 1024 ? 40 : 60} />
         </Link>
-        <div className="flex space-x-24 items-center">
-          <ul className="flex space-x-12">
+        <div className="hidden md:flex space-x-12 md:space-x-24 items-center">
+          <ul className="flex space-x-6 md:space-x-12">
             {destinations.map((it) => (
               <li key={it.link}>
                 <h6>
