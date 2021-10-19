@@ -5,7 +5,7 @@ import { Space } from "@/components/space";
 import formatHeadline from "@/lib/utils/text";
 import { data } from "src/data";
 
-export default function Room({ space = data.spaces[0] }) {
+export default function Room({ space }) {
   return (
     <Page>
       <div className="container space-y-20 mb-9">
@@ -68,3 +68,23 @@ export const CharacteristicsGroup = ({ items }) => {
     </div>
   );
 };
+
+export async function getStaticPaths() {
+  const spaces = data.spaces;
+  return {
+    paths: spaces.map((space) => ({
+      params: {
+        slug: space.slug,
+      },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const space = data.spaces.find((it) => it.slug == params.slug);
+  return {
+    props: { space: space },
+    revalidate: 30,
+  };
+}
