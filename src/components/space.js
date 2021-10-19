@@ -17,7 +17,7 @@ export const Space = ({ space, isFull, ...props }) => {
             <h1>{formatHeadline(space.title)}</h1>
             <Underline className="text-primary w-full h-3 mt-3" />
           </div>
-          <p>{space.description}</p>
+          <p>{space.description[isFull ? 1 : 0]}</p>
           <div className="flex gap-4 flex-wrap">
             {space.characteristics.key.map((kc) => (
               <Characteristic it={kc} key={kc.name} />

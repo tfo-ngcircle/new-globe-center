@@ -9,7 +9,7 @@ export default function Room({ space = data.spaces[0] }) {
   return (
     <Page>
       <div className="container space-y-20 mb-9">
-        <Space space={space} className="h-[40rem]" isFull />
+        <Space space={space} className="h-[50rem]" isFull />
         <div className="space-y-6">
           <h3>{formatHeadline("Die Technik.")}</h3>
           <p>

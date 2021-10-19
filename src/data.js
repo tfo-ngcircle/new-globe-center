@@ -129,8 +129,10 @@ export const data = {
       slug: "connect",
       title: "Connect.",
       subtitle: "Deine Vernetzung.",
-      description:
+      description: [
         "Für deine digitale Zusammenarbeit über alle Grenzen hinaus bieten wir dir im Raum CONNECT hochmoderne Konferenzsysteme. Verbinde dich mit der Welt und genieße den volldigital ausgestatteten Besprechungsraum.",
+        "Der Konferenzraum CONNECT vernetzt dich stressfrei mit deinen Kunden, Mitarbeitern oder Partnern. Hochmoderne Konferenzsysteme sorgen für einen reibungslosen Ablauf deiner Meetings. Ob mit zwei Teilnehmern oder mit dem ganzen Team – CONNECT bietet dir ein stressfreies und bequemes Erlebnis. Verbinde dich mit der Welt und genieße unseren volldigital ausgestatteten Konferenzraum. Für deine digitale Zusammenarbeit.",
+      ],
       images: [
         {
           src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9761_1280.jpg",
@@ -192,8 +194,10 @@ export const data = {
       slug: "create",
       title: "Create.",
       subtitle: "Deine Kreativität.",
-      description:
+      description: [
         "Effizientes Arbeiten in anregender Umgebung, natürliches Tageslicht und ein traumhaftes Ambiente – das bieten wir dir mit dem Raum CREATE. Um beste Ergebnisse zu erzielen arbeitet ihr gemeinsam, schafft effektive Workflows und könnt gemeinsam Grenzen überwinden.",
+        "Im Schulungsraum CREATE steht dir die Welt offen. Egal ob Meetings mit deinem ganzen Team, Schulungen oder Workshops. Der großzügige Tageslicht durchflutete Raum bietet dir ungeahnte Flexibilität. Mit dem Blick auf unsere traumhafte Grünanlage und der Möglichkeit zur Terrassennutzung bietet CREATE die beste Umgebung, um kreativ zu arbeiten, Dinge zu schaffen und Ergebnisse zu erzielen. Der Raum ist so flexibel wie du – durch die eingebaute Trennwand kann schnell ein Rückzugsort für kleinere Gruppen geschaffen werden. Schafft gemeinsam effektive Workflows und überwindet Grenzen. Für das Arbeiten der Zukunft.",
+      ],
       images: [
         {
           src: "https://media.spacebase.com/media/cache/spaces/12383/640a6691_1280.jpg",
@@ -223,8 +227,10 @@ export const data = {
       slug: "inspire",
       title: "Inspire.",
       subtitle: "Deine Inspiration.",
-      description:
+      description: [
         "Wir setzen Grenzen nur um Sie zu überwinden. Im Raum INSPIRE erwartet dich eine Premium Ausstattung für deine Meetings. Für eine inspirierende Umgebung für berauschende Erfolge.",
+        "Der Konferenzraum INSPIRE ist deine Wahl, wenn du deine Meetings professionell und in inspirierender Atmosphäre abhalten willst. Hier hast du die Möglichkeit, zusammen mit deinen Kollegen, Kunden oder Partnern große Dinge zu schaffen. Überzeuge dich selbst von INSPIRE schaffe innovative Ansätze. Für deinen grenzenlosen Erfolg.",
+      ],
       images: [
         {
           src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8068_df_1280.jpg",
