@@ -13,6 +13,7 @@ export const Fullpage = ({
       paddingTop={paddingTop + "px"}
       onLeave={onLeave}
       anchors={anchors}
+      responsiveWidth={1024}
       render={({ _, fullpageApi }) => {
         return (
           <div id={`${className} fullpage-wrapper`}>
