@@ -33,11 +33,11 @@
   }
 
   h6 {
-    @apply text-lg xl:text-xl;
+    @apply text-base xl:text-xl;
   }
 
   body {
-    @apply text-lg font-body;
+    @apply text-base lg:text-lg font-body;
   }
 
   button {
@@ -45,7 +45,7 @@
   }
 
   .caption {
-    @apply text-xxs xl:text-xs font-body font-bold uppercase text-gray-500;
+    @apply text-xs font-body font-bold uppercase text-gray-500;
   }
 
   a,
