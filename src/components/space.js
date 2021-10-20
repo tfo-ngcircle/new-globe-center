@@ -10,20 +10,20 @@ import { Underline } from "./underline";
 export const Space = ({ space, isFull, ...props }) => {
   return (
     <div data-anchor={space.slug} {...props}>
-      <div className="grid grid-cols-7 w-full h-full items-center">
-        <div className="pr-20 space-y-8 col-span-3">
-          <div className="max-w-min">
+      <div className="md:grid md:grid-cols-7 w-full lg:h-full xl:items-center lg:space-y-0 space-y-6">
+        <div className="pr-5 lg:pr-10 xl:pr-20 space-y-4 lg:space-y-6 xl:space-y-8 col-span-3">
+          <div className="lg:max-w-min max-w-max">
             <h5>{formatHeadline(space.subtitle)}</h5>
             <h1>{formatHeadline(space.title)}</h1>
             <Underline className="text-primary w-full h-3 mt-3" />
           </div>
           <p>{space.description[isFull ? 1 : 0]}</p>
-          <div className="flex gap-4 flex-wrap">
+          <div className="flex gap-2 xl:gap-4 flex-wrap">
             {space.characteristics.key.map((kc) => (
               <Characteristic it={kc} key={kc.name} />
             ))}
           </div>
-          <div className="space-y-4 divide-y">
+          <div className="space-y-2 xl:space-y-4 divide-y">
             <TagRow
               head={<HiOutlineClock className="text-3xl text-primary" />}
               items={space.availability}
@@ -31,7 +31,7 @@ export const Space = ({ space, isFull, ...props }) => {
             <TagRow
               head={<HiOutlineCurrencyEuro className="text-3xl text-primary" />}
               items={space.price}
-              className="pt-4"
+              className="pt-2 xl:pt-4"
             />
           </div>
           {!isFull ? (
@@ -42,7 +42,7 @@ export const Space = ({ space, isFull, ...props }) => {
             </div>
           ) : undefined}
         </div>
-        <div className="col-span-4 h-full relative">
+        <div className="col-span-4 h-96 lg:h-full relative mr-4 lg:mr-0">
           <Carousel
             className="w-full h-full object-cover absolute"
             images={space.images}

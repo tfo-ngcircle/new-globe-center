@@ -8,7 +8,7 @@ export default function SpacesSection({ spaces }) {
           <Space
             key={space.slug}
             space={space}
-            className="slide w-full pl-36"
+            className="slide w-full pl-5 lg:pl-12 xl:pl-36"
           />
         ))}
     </>
