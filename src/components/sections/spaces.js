@@ -1,6 +1,6 @@
 import { Space } from "../space";
 
-export default function SpacesSection({ spaces }) {
+export default function SpacesSection({ spaces, width }) {
   return (
     <>
       {spaces &&
@@ -8,7 +8,7 @@ export default function SpacesSection({ spaces }) {
           <Space
             key={space.slug}
             space={space}
-            className="slide w-full pl-5 lg:pl-12 xl:pl-36"
+            className={`${width >= 1024 ? "slide" : "pt-6"}`}
           />
         ))}
     </>

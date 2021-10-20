@@ -14,6 +14,8 @@ export const Fullpage = ({
       onLeave={onLeave}
       anchors={anchors}
       responsiveWidth={1024}
+      responsiveHeight={768}
+      responsiveSlides={true}
       render={({ _, fullpageApi }) => {
         return (
           <div id={`${className} fullpage-wrapper`}>
