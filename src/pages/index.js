@@ -8,7 +8,7 @@ import GallerySection from "@/components/sections/gallery";
 import LandingSection from "@/components/sections/landing";
 import MapSection from "@/components/sections/map";
 import SpacesSection from "@/components/sections/spaces";
-import { useElementSize } from "usehooks-ts";
+import { useElementSize, useWindowSize } from "usehooks-ts";
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { data } from "src/data";
@@ -19,6 +19,7 @@ export default function Home() {
   const { width, height } = useElementSize(headerRef);
 
   const router = useRouter();
+  const window = useWindowSize();
 
   return (
     <>
@@ -44,14 +45,16 @@ export default function Home() {
         >
           <LandingSection landing={data.landing} />
           <FeaturesSection features={data.features} />
-          <SpacesSection spaces={data.spaces} />
-          <AboutSection about={data.about} />
-          <GallerySection gallery={data.gallery} />
+          <SpacesSection spaces={data.spaces} width={width} />
+          <AboutSection about={data.about} width={width} />
+          <GallerySection gallery={data.gallery} width={window.width} />
           <ContactSection contact={data.contact} paddingTop={height} />
-          <MapSection location={data.contact.location} />
+          {window.width >= 1024 ? (
+            <MapSection location={data.contact.location} />
+          ) : undefined}
           <div className="flex flex-col justify-between h-full">
             <div className="container flex flex-grow items-center text-gray-500">
-              <p className="px-24">
+              <p className="px-8 lg:px-24">
                 * All prices shown are valid at the time of inquiry, based on
                 24-month contracts. Prices are subject to change and will vary
                 depending on the specifically selected products and services.
