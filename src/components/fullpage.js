@@ -21,7 +21,7 @@ export const Fullpage = ({
           <div id={`${className} fullpage-wrapper`}>
             {children &&
               children.map((child, index) => (
-                <div key={index} className="section">
+                <div key={index} className="section fp-auto-height-responsive">
                   {child}
                 </div>
               ))}

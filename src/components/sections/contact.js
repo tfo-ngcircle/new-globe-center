@@ -7,13 +7,13 @@ export default function ContactSection({ contact, paddingTop }) {
   return (
     <div className="absolute top-0 h-screen w-full bg-secondary text-white flex">
       <div
-        className="my-auto container"
+        className="lg:my-auto container"
         style={{ paddingTop: paddingTop / 1.75 }}
       >
         <div className="max-w-lg space-y-10">
           <h2>{formatHeadline(contact.headline)}</h2>
           <Button label="jetzt anfragen" />
-          <div className="flex space-x-4">
+          <div className="flex flex-wrap gap-4">
             <SocialIcon href={"mailto:" + contact.email}>
               <MdEmail />
               <span className="text-sm opacity-70 pr-1">{contact.email}</span>
@@ -25,7 +25,7 @@ export default function ContactSection({ contact, paddingTop }) {
           </div>
         </div>
       </div>
-      <div className="absolute h-full right-0 w-4/6">
+      <div className="absolute bottom-40 right-0 w-[90%]">
         <img
           src={contact.background.src}
           alt={contact.background.alt}
