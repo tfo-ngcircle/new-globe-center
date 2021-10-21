@@ -5,10 +5,13 @@ import formatHeadline from "@/lib/utils/text";
 
 export default function ContactSection({ contact, paddingTop }) {
   return (
-    <div className="absolute top-0 h-screen w-full bg-secondary text-white flex">
+    <div className="lg:absolute top-0 h-full lg:h-screen w-full bg-secondary text-white flex">
       <div
         className="lg:my-auto container"
-        style={{ paddingTop: paddingTop / 1.75 }}
+        style={{
+          paddingTop: paddingTop / 1.75,
+          paddingBottom: paddingTop / 1.75,
+        }}
       >
         <div className="max-w-lg space-y-10">
           <h2>{formatHeadline(contact.headline)}</h2>
@@ -25,7 +28,7 @@ export default function ContactSection({ contact, paddingTop }) {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-40 right-0 w-[90%]">
+      <div className="hidden lg:block h-full lg:absolute bottom-0 right-0 w-4/6">
         <img
           src={contact.background.src}
           alt={contact.background.alt}
