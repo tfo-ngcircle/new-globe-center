@@ -20,9 +20,9 @@ export default function AboutSection({ about, width }) {
             }}
           />
         </div>
-        <div className="space-y-10 flex flex-col col-span-5 2xl:col-span-1">
+        <div className="space-y-6 md:space-y-10 flex flex-col col-span-5 2xl:col-span-1">
           <Logo isFull />
-          <div className="space-y-10">
+          <div className="space-y-6 md:space-y-10">
             <h3>{formatHeadline(about.headline)}</h3>
             <ul className="list-disc list-outside marker:text-primary 2xl:space-y-4 pl-5">
               {about.description.map((item, i) => (

@@ -36,7 +36,7 @@ export default function GallerySection({ gallery, width }) {
         <div className="relative h-96 mt-8">
           <Carousel
             images={gallery.images}
-            className="absolute h-full object-cover"
+            className="absolute h-full w-full object-cover"
           />
         </div>
       )}

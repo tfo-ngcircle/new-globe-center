@@ -12,7 +12,11 @@ export const Space = ({ space, isFull, ...props }) => {
   return (
     <div data-anchor={space.slug} {...props}>
       <div className="md:grid md:grid-cols-7 w-full lg:h-full xl:items-center lg:space-y-0 space-y-6">
-        <div className="pl-5 lg:pl-12 xl:pl-36 pr-5 lg:pr-10 xl:pr-20 space-y-4 lg:space-y-6 xl:space-y-8 col-span-3">
+        <div
+          className={`${
+            isFull ? undefined : "px-5 lg:pl-12 xl:pl-36"
+          } lg:pr-10 xl:pr-20 space-y-4 lg:space-y-6 xl:space-y-8 col-span-3`}
+        >
           <div className="lg:max-w-min max-w-max">
             <h5>{formatHeadline(space.subtitle)}</h5>
             <HeadingBox>
