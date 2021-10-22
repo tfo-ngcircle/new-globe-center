@@ -7,7 +7,7 @@ import { Underline } from "../underline";
 export default function LandingSection({ landing }) {
   return (
     <div className="h-full relative">
-      <div className="w-full h-full absolute brightness-90 overflow-hidden">
+      <div className="w-full h-full absolute brightness-75 md:brightness-90 overflow-hidden">
         <Img
           image={landing.background}
           className="object-cover md:!my-5 w-full h-full bg-center"

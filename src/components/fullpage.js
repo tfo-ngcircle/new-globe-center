@@ -13,15 +13,19 @@ export const Fullpage = ({
       paddingTop={paddingTop + "px"}
       onLeave={onLeave}
       anchors={anchors}
-      responsiveWidth={1024}
-      responsiveHeight={768}
+      responsiveWidth={768}
       responsiveSlides={true}
       render={({ _, fullpageApi }) => {
         return (
           <div id={`${className} fullpage-wrapper`}>
             {children &&
               children.map((child, index) => (
-                <div key={index} className="section fp-auto-height-responsive">
+                <div
+                  key={index}
+                  className={`section ${
+                    index != 0 ? "fp-auto-height-responsive" : undefined
+                  }`}
+                >
                   {child}
                 </div>
               ))}

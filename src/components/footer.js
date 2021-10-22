@@ -46,7 +46,7 @@ export default function Footer() {
                 </SocialIcon>
               )}
             </div>
-            <div className="text-gray-500 flex space-x-8">
+            <div className="text-gray-500 flex space-x-8 hidden">
               <span>
                 © {new Date().getFullYear()} New Globe Center - NgC GmbH
               </span>
