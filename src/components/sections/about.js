@@ -7,7 +7,7 @@ export default function AboutSection({ about, width }) {
   return (
     <div className="container">
       <div className="relative md:grid grid-cols-10 2xl:grid-cols-2 items-center gap-12">
-        <div className="h-full col-span-4 2xl:col-span-1 py-6 md:py-0">
+        <div className="h-full col-span-4 2xl:col-span-1 py-6 md:py-2">
           <span className="absolute left-[-24.1%] 2xl:left-[-27.25%] bg-primary w-[44.4%] 2xl:w-1/2 h-[30%] top-[16.1%] hidden md:block" />
           <Img
             image={about.image}

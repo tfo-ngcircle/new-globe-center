@@ -17,7 +17,7 @@ export const Fullpage = ({
       responsiveSlides={true}
       render={({ _, fullpageApi }) => {
         return (
-          <div id={`${className} fullpage-wrapper`}>
+          <div className={`${className} fullpage-wrapper`}>
             {children &&
               children.map((child, index) => (
                 <div
@@ -26,6 +26,7 @@ export const Fullpage = ({
                     index != 0 ? "fp-auto-height-responsive" : undefined
                   }`}
                 >
+                  {console.log(child)}
                   {child}
                 </div>
               ))}

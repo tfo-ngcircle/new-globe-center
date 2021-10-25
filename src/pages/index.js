@@ -23,10 +23,11 @@ export default function Home() {
 
   return (
     <>
-      <Header ref={headerRef} className="z-50 fixed" dark={dark} isHome />
+      <Header ref={headerRef} className="z-40 fixed" dark={dark} isHome />
       {height !== 0 ? (
         <Fullpage
-          paddingTop={height}
+          className="space-y-20 md:space-y-0"
+          paddingTop={window.width < 768 ? 0 : height}
           onLeave={(_, dest, dir) => {
             setDark(dest.anchor === "contact");
             if (router.asPath !== `/#${dest.anchor}`)
@@ -54,7 +55,7 @@ export default function Home() {
           ) : undefined}
           <div className="flex flex-col justify-between h-full">
             <div className="container flex flex-grow items-center text-gray-500">
-              <p className="px-8 lg:px-24">
+              <p className="px-8 lg:px-24 pb-32 md:pb-0">
                 * All prices shown are valid at the time of inquiry, based on
                 24-month contracts. Prices are subject to change and will vary
                 depending on the specifically selected products and services.
