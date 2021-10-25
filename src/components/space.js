@@ -49,7 +49,7 @@ export const Space = ({ space, isFull, ...props }) => {
             </div>
           ) : undefined}
         </div>
-        <div className="col-span-4 h-[500px] lg:h-full relative bg-secondary">
+        <div className="col-span-4 h-80 lg:h-full relative bg-secondary">
           <Carousel
             className="w-full h-full object-cover absolute"
             images={space.images}
