@@ -37,7 +37,7 @@ const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
         >
           <Logo height={screen.width < 1024 ? 40 : 60} />
         </Link>
-        <div className="flex space-x-8 md:space-x-24 items-center">
+        <div className="flex space-x-2 md:space-x-24 items-center">
           <ul className="hidden md:flex space-x-6 md:space-x-12">
             {destinations.map((it) => (
               <li key={it.link}>
@@ -94,7 +94,7 @@ const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
           </div>
           <Menu as="div" className="md:hidden relative inline-block text-left">
             <Menu.Button>
-              <AiOutlineMenu />
+              <AiOutlineMenu className="mx-4" />
             </Menu.Button>
             <Menu.Items
               as="ul"
