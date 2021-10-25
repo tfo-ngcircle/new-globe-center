@@ -1,5 +1,5 @@
 import formatHeadline from "@/lib/utils/text";
-import { Carousel } from "../carousel";
+import Carousel from "../carousel";
 import { Img } from "../image";
 import { Trapazoid } from "../trapazoid";
 import { Underline } from "../underline";
@@ -33,10 +33,11 @@ export default function GallerySection({ gallery, width }) {
           ))}
         </div>
       ) : (
-        <div className="relative h-96 mt-8">
+        <div className="relative h-96 mt-8 flex w-screen items-center justify-center overflow-hidden">
           <Carousel
             images={gallery.images}
-            className="absolute h-full w-full object-cover"
+            className="absolute h-full max-w-screen object-cover"
+            swipeable
           />
         </div>
       )}
