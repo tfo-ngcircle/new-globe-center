@@ -26,7 +26,6 @@ export const Fullpage = ({
                     index != 0 ? "fp-auto-height-responsive" : undefined
                   }`}
                 >
-                  {console.log(child)}
                   {child}
                 </div>
               ))}
