@@ -29,7 +29,7 @@ const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
 
-export const Carousel = ({ images, className }) => {
+export default function Carousel({ images, className, swipeable }) {
   const [[page, direction], setPage] = useState([0, 0]);
   const imageIndex = wrap(0, images.length, page);
 

@@ -1,7 +1,7 @@
 import formatHeadline from "@/lib/utils/text";
 import { HiOutlineClock, HiOutlineCurrencyEuro } from "react-icons/hi";
 import { Button } from "./button";
-import { Carousel } from "./carousel";
+import Carousel from "./carousel";
 import { Characteristic } from "./characteristic";
 import { HeadingBox } from "./heading";
 import Link from "./link";
