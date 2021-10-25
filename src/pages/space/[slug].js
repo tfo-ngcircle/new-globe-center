@@ -1,5 +1,6 @@
 import { Characteristic } from "@/components/characteristic";
 import { Img } from "@/components/image";
+import { Md } from "@/components/md";
 import { Page } from "@/components/page";
 import { Space } from "@/components/space";
 import formatHeadline from "@/lib/utils/text";
@@ -12,19 +13,13 @@ export default function Room({ space }) {
         <Space space={space} className="h-full" isFull />
         <div className="space-y-6">
           <h3>{formatHeadline("Die Technik.")}</h3>
-          <p>
-            Im CONNECT erwartet dich ein vollausgestattetes Tagungssystem mit 2
-            xx“ Bildschirmen, auf denen du deine Ideen teilen und alle deine
-            Partner virtuell begrüßen kannst. Das System beinhaltet eine
-            hochauflösende Kamera sowie Lautsprecher und eine
-            Jabra-Mikrofonanlage.
-          </p>
-          <div className="grid grid-cols-4 gap-4">
+          <Md>{space.technology}</Md>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             {data.gallery.images.slice(0, 4).map((img, i) => (
               <Img
                 key={i}
                 image={img}
-                className="object-cover w-full h-full inline"
+                className="object-cover w-full h-32 md:h-full inline"
               />
             ))}
           </div>
@@ -45,7 +40,7 @@ export default function Room({ space }) {
             Für dein erfolgreiches Meeting bieten wir zusätzlich noch folgende
             Leistungen an.
           </p>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
               <CharacteristicsGroup items={space.extras.catering} />
             </div>
