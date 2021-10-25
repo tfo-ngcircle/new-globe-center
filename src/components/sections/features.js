@@ -22,7 +22,7 @@ export default function FeaturesSection({ features }) {
               </HeadingBox>
               <p>{features.description}</p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-10 gap-y-4 xl:gap-y-6">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 xl:gap-y-6">
               {features.features.map((item, i) => (
                 <FeatureItem
                   key={i}
