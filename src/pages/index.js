@@ -16,6 +16,7 @@ import { data } from "src/data";
 export default function Home() {
   const headerRef = useRef();
   const [dark, setDark] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(true);
   const { width, height } = useElementSize(headerRef);
 
   const router = useRouter();
@@ -23,13 +24,21 @@ export default function Home() {
 
   return (
     <>
-      <Header ref={headerRef} className="z-40 fixed" dark={dark} isHome />
+      <Header
+        ref={headerRef}
+        className={`z-40 fixed ${
+          isTransparent ? "bg-transparent" : "bg-white shadow-md md:shadow-none"
+        }`}
+        dark={dark & (window.width >= 768)}
+        isHome
+      />
       {height !== 0 ? (
         <Fullpage
           className="space-y-20 md:space-y-0"
           paddingTop={window.width < 768 ? 0 : height}
           onLeave={(_, dest, dir) => {
             setDark(dest.anchor === "contact");
+            setIsTransparent(dest.anchor === "landing");
             if (router.asPath !== `/#${dest.anchor}`)
               router.replace(`#${dest.anchor}`, undefined, { shallow: true });
           }}

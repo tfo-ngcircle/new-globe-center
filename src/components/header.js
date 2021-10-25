@@ -3,6 +3,8 @@ import { Logo } from "./logo";
 import { useRouter } from "next/router";
 import { Phone, Marker } from "@/components/icons";
 import { useWindowSize } from "usehooks-ts";
+import { Menu } from "@headlessui/react";
+import { AiOutlineMenu } from "react-icons/ai";
 import React from "react";
 
 const destinations = [
@@ -24,7 +26,9 @@ const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
   return (
     <div
       ref={ref}
-      className={`${className} top-0 left-0 right-0 text-gray-500 transition-colors duration-200`}
+      className={`transition-all duration-200 ${className} top-0 left-0 right-0 text-gray-500 ${
+        dark ? "!bg-transparent" : undefined
+      }`}
     >
       <header className="container flex justify-between items-center py-5 md:py-7">
         <Link
@@ -33,8 +37,8 @@ const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
         >
           <Logo height={screen.width < 1024 ? 40 : 60} />
         </Link>
-        <div className="hidden md:flex space-x-12 md:space-x-24 items-center">
-          <ul className="flex space-x-6 md:space-x-12">
+        <div className="flex space-x-8 md:space-x-24 items-center">
+          <ul className="hidden md:flex space-x-6 md:space-x-12">
             {destinations.map((it) => (
               <li key={it.link}>
                 <h6>
@@ -57,7 +61,7 @@ const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
               </li>
             ))}
           </ul>
-          <div className="flex items-center space-x-8 text-gray-300">
+          <div className="flex items-center space-x-3 md:space-x-8 text-gray-300">
             <Link
               href="/#contact"
               onClick={(e) =>
@@ -73,7 +77,7 @@ const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
                 }`}
               />
             </Link>
-            <span className="h-14 w-px bg-current" />
+            <span className="h-14 md:w-px bg-current" />
             <Link
               href="/#map"
               onClick={(e) => (isHome ? navigateFullpage(e, "map") : undefined)}
@@ -88,6 +92,39 @@ const Header = React.forwardRef(({ className, dark, isHome }, ref) => {
               />
             </Link>
           </div>
+          <Menu as="div" className="md:hidden relative inline-block text-left">
+            <Menu.Button>
+              <AiOutlineMenu />
+            </Menu.Button>
+            <Menu.Items
+              as="ul"
+              className="absolute right-0 top-[4.635rem] w-56 origin-top-right bg-white shadow-xl p-6 divide-y divide-gray-100 ring-1 ring-black ring-opacity-5"
+            >
+              {destinations.map((it) => (
+                <Menu.Item
+                  as="li"
+                  key={it.link}
+                  className={`${
+                    router.asPath == it.link ? "bg-primary text-white" : ""
+                  } p-4 rounded-sm transition-all`}
+                >
+                  <h6>
+                    <Link
+                      href={it.link}
+                      className="w-full block"
+                      onClick={(e) =>
+                        isHome
+                          ? navigateFullpage(e, it.link.substr(2))
+                          : undefined
+                      }
+                    >
+                      {it.label}
+                    </Link>
+                  </h6>
+                </Menu.Item>
+              ))}
+            </Menu.Items>
+          </Menu>
         </div>
       </header>
     </div>
