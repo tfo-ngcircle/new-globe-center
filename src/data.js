@@ -83,22 +83,22 @@ export const data = {
     features: [
       {
         title: "Getränke und Catering.",
-        icon: "phone",
+        icon: "catering",
         description: "Nach deinen Wünschen zusammengestellt.",
       },
       {
         title: "E-Ladesäulen.",
-        icon: "marker",
+        icon: "charging",
         description: "Um das nachhaltige Fahren der Zukunft zu ermöglichen.",
       },
       {
         title: "Erlebnispakete.",
-        icon: "phone",
+        icon: "diamond",
         description: "Für dein ganz besonderes Meeting.",
       },
       {
         title: "Barrierefreiheit.",
-        icon: "marker",
+        icon: "accessibility",
         description: "Lorem ipsum dolor sit amet, consetetur.",
       },
       {
@@ -108,18 +108,18 @@ export const data = {
       },
       {
         title: "Gartennutzung.",
-        icon: "marker",
+        icon: "tree",
         description: "Wohlfühlen und Work-Life-Balance in Einklang bringen.",
       },
       {
         title: "Parkmöglichkeiten.",
-        icon: "phone",
+        icon: "parking",
         description:
           "47 Parkplätze und eine großzügige Stellfläche für Fahrräder.",
       },
       {
         title: "Technik und Ausstattung.",
-        icon: "marker",
+        icon: "presentation",
         description: "Hochmoderne Konferenzsysteme für stressfreies Arbeiten.",
       },
     ],
