@@ -26,11 +26,10 @@ export default function Home() {
     <>
       <Header
         ref={headerRef}
-        className={`z-40 fixed ${
-          isTransparent ? "bg-transparent" : "bg-white shadow-md md:shadow-none"
-        }`}
+        className={`z-40 fixed`}
         dark={dark & (window.width >= 768)}
         isHome
+        isTransparent={isTransparent}
       />
       {height !== 0 ? (
         <Fullpage
