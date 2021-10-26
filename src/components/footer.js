@@ -28,7 +28,7 @@ const footerItems = [
   [
     {
       heading: "Contact",
-      body: "[Email Us](/#contact)\n\n[Gallery](/gallery)",
+      body: "[Email Us](/#contact)\n\n[Gallery](/#gallery)",
     },
   ],
   [
@@ -43,7 +43,7 @@ export default function Footer() {
   return (
     <div className="bg-black text-white">
       <footer className="divide-y divide-gray-800">
-        <div className="container flex flex-wrap  py-16 gap-8 lg:gap-16">
+        <div className="container flex flex-wrap  py-16 gap-8 lg:gap-16 xl:gap-24">
           <div className="pr-12">
             <Logo isFull classNameFlag="text-white" />
           </div>

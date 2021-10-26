@@ -13,7 +13,7 @@ export default function ContactSection({ contact, paddingTop }) {
           paddingBottom: paddingTop / 1.75,
         }}
       >
-        <div className="max-w-lg space-y-10 py-16 lg:py-0">
+        <div className="max-w-lg space-y-10 py-16 lg:mt-16">
           <h2>{formatHeadline(contact.headline)}</h2>
           <Button label="jetzt anfragen" />
           <div className="flex flex-wrap gap-4">
