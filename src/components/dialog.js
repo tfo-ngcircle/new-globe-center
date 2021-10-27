@@ -6,7 +6,7 @@ export default function MyDialog({ className, children, isOpen, onClose }) {
     <Dialog
       open={isOpen}
       onClose={onClose}
-      className="fixed inset-0 overflow-y-auto z-[999]"
+      className="fixed inset-0 overflow-y-auto z-[999] flex items-center justify-center"
     >
       <Dialog.Overlay className={`fixed inset-0 ${className}`} />
       {children}
