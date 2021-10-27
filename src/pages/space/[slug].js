@@ -57,8 +57,8 @@ export default function Room({ space }) {
 export const CharacteristicsGroup = ({ items }) => {
   return (
     <div className="flex gap-4 flex-wrap">
-      {items.map((kc) => (
-        <Characteristic it={kc} key={kc.name} />
+      {items.map((kc, i) => (
+        <Characteristic it={kc} key={kc.name + i} />
       ))}
     </div>
   );
