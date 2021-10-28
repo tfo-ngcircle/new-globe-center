@@ -5,6 +5,7 @@ import { Phone, Marker } from "@/components/icons";
 import { useWindowSize } from "usehooks-ts";
 import { Menu, Transition } from "@headlessui/react";
 import { AiOutlineMenu } from "react-icons/ai";
+import { navigateFullpage } from "../lib/utils/utils";
 import React from "react";
 
 const destinations = [
@@ -13,11 +14,6 @@ const destinations = [
   { label: "Über", link: "/#about" },
   { label: "Kontakt", link: "/#contact" },
 ];
-
-function navigateFullpage(e, path) {
-  e.preventDefault();
-  window.window.fullpage_api.moveTo(path, 0);
-}
 
 const Header = React.forwardRef(
   ({ className, dark, isHome, isTransparent = false }, ref) => {
