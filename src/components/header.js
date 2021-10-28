@@ -3,7 +3,7 @@ import { Logo } from "./logo";
 import { useRouter } from "next/router";
 import { Phone, Marker } from "@/components/icons";
 import { useWindowSize } from "usehooks-ts";
-import { Menu } from "@headlessui/react";
+import { Menu, Transition } from "@headlessui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import React from "react";
 
@@ -108,34 +108,43 @@ const Header = React.forwardRef(
                   className={`${isTransparent ? "text-white" : undefined} mx-4`}
                 />
               </Menu.Button>
-              <Menu.Items
-                as="ul"
-                className="absolute right-0 top-[4.635rem] w-56 origin-top-right bg-white shadow-xl p-6 divide-y divide-gray-100 ring-1 ring-black ring-opacity-5"
+              <Transition
+                enter="transition duration-100 ease-in-out"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition duration-75 ease-in"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
               >
-                {destinations.map((it) => (
-                  <Menu.Item
-                    as="li"
-                    key={it.link}
-                    className={`${
-                      router.asPath == it.link ? "bg-primary text-white" : ""
-                    } p-4 rounded-sm transition-all`}
-                  >
-                    <h6>
-                      <Link
-                        href={it.link}
-                        className="w-full block"
-                        onClick={(e) =>
-                          isHome
-                            ? navigateFullpage(e, it.link.substr(2))
-                            : undefined
-                        }
-                      >
-                        {it.label}
-                      </Link>
-                    </h6>
-                  </Menu.Item>
-                ))}
-              </Menu.Items>
+                <Menu.Items
+                  as="ul"
+                  className="absolute right-0 top-[4.635rem] w-56 origin-top-right bg-white shadow-xl p-6 divide-y divide-gray-100 ring-1 ring-black ring-opacity-5"
+                >
+                  {destinations.map((it) => (
+                    <Menu.Item
+                      as="li"
+                      key={it.link}
+                      className={`${
+                        router.asPath == it.link ? "bg-primary text-white" : ""
+                      } p-4 rounded-sm transition-all`}
+                    >
+                      <h6>
+                        <Link
+                          href={it.link}
+                          className="w-full block"
+                          onClick={(e) =>
+                            isHome
+                              ? navigateFullpage(e, it.link.substr(2))
+                              : undefined
+                          }
+                        >
+                          {it.label}
+                        </Link>
+                      </h6>
+                    </Menu.Item>
+                  ))}
+                </Menu.Items>
+              </Transition>
             </Menu>
           </div>
         </header>
