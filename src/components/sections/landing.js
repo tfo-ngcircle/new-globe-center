@@ -1,8 +1,10 @@
 import formatHeadline from "@/lib/utils/text";
+import { navigateFullpage } from "@/lib/utils/utils";
 import { Button } from "../button";
 import { HeadingBox } from "../heading";
 import { Img } from "../image";
 import { Underline } from "../underline";
+import Link from "../link";
 
 export default function LandingSection({ landing }) {
   return (
@@ -29,7 +31,11 @@ export default function LandingSection({ landing }) {
             <Underline className="text-primary w-full h-3" />
           </HeadingBox>
           <p className="md:w-[125%]">{landing && landing.description}</p>
-          <Button label="Über uns" type="large" />
+          <Button
+            label="Über uns"
+            type="large"
+            onClick={(e) => navigateFullpage(e, "about")}
+          />
         </div>
       </div>
     </div>
