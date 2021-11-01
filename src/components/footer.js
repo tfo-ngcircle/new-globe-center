@@ -20,20 +20,20 @@ const bottomLinks = [
 
 const footerItems = [
   [
-    { heading: "Headquarters", body: "Wolfsacker 8\n\n38444 Wolfsburg" },
-    { heading: "Phone", body: "+49 531 239 64 190" },
+    { heading: "Adresse", body: "Wolfsacker 8\n\n38444 Wolfsburg" },
+    { heading: "Telefon", body: "+49 5308 5231220" },
     { heading: "E-Mail", body: "info@ngcircle.com" },
   ],
-  [{ heading: "About", body: "[About NGC](/about)\n\n[Gallery](/gallery)" }],
+  [{ heading: "Über", body: "[Über NGC](/about)\n\n[Galerie](/gallery)" }],
   [
     {
-      heading: "Contact",
-      body: "[Email Us](/#contact)\n\n[Gallery](/#gallery)",
+      heading: "Kontakt",
+      body: "[Schreibt uns](/#contact)\n\n[Galerie](/#gallery)",
     },
   ],
   [
     {
-      heading: "Ways to work",
+      heading: "Räume",
       body: "[Create](/space/create)\n\n[Connect](/space/connect)\n\n[Inspire](/space/inspire)",
     },
   ],
