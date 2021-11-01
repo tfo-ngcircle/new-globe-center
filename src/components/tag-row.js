@@ -1,3 +1,4 @@
+import { Md } from "./md";
 import { Tag } from "./tag";
 
 export const TagRow = ({ head, items, className }) => {
@@ -8,7 +9,9 @@ export const TagRow = ({ head, items, className }) => {
       {head}
       <div className="grid lg:flex items-center gap-2 xl:gap-4 lg:flex-wrap pl-2 xl:pl-4">
         {items.map((it, i) => (
-          <Tag key={i}>{it}</Tag>
+          <Tag key={i}>
+            <Md>{it}</Md>
+          </Tag>
         ))}
       </div>
     </div>
