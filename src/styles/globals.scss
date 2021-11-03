@@ -53,7 +53,7 @@
     @apply transition-colors duration-200;
   }
 
-  input:focus + label,
+  input[type="text"]:focus + label,
   textarea:focus + label {
     @apply text-primary transform -translate-y-4 -translate-x-1;
   }

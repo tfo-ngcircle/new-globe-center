@@ -2,11 +2,15 @@ import React from "react";
 import { useState } from "react";
 
 const Input = React.forwardRef(
-  ({ onChange, onBlur, id, label, rows, type = "text" }, ref) => {
+  ({ onChange, onBlur, id, label, rows, type = "text", className }, ref) => {
     let [isEmpty, setIsEmpty] = useState(true);
 
     return (
-      <div className="relative">
+      <div
+        className={`${
+          type == "checkbox" ? "inline-flex items-center" : "relative"
+        }`}
+      >
         {type === "textarea" ? (
           <textarea
             type={type}
@@ -19,7 +23,17 @@ const Input = React.forwardRef(
               onchange && onChange(event);
               setIsEmpty(event.target.value.trim().length <= 0);
             }}
-            className="bg-transparent outline-none focus:outline-none border-b-2 focus:border-primary w-full transition-all duration-150"
+            className="border-0 bg-transparent outline-none focus:ring-0 border-b-2 focus:border-primary w-full transition-all duration-150 px-0"
+          />
+        ) : type == "checkbox" ? (
+          <input
+            className="!text-secondary w-6 h-6 mr-4 focus:ring-secondary focus:ring-opacity-25 border border-gray-300 rounded"
+            type={type}
+            name={id}
+            id={id}
+            ref={ref}
+            onBlur={onBlur}
+            onChange={onChange}
           />
         ) : (
           <input
@@ -32,14 +46,14 @@ const Input = React.forwardRef(
               onchange && onChange(event);
               setIsEmpty(event.target.value.trim().length <= 0);
             }}
-            className="bg-transparent outline-none focus:outline-none border-b-2 focus:border-primary w-full transition-all duration-150"
+            className="border-0 bg-transparent outline-none focus:ring-0 border-b-2 focus:border-primary w-full transition-all duration-150 px-0"
           />
         )}
         <label
           htmlFor={id}
-          className={`absolute left-1 top-0 tracking-wider caption transition-all duration-150 hover:cursor-text ${
-            !isEmpty ? "-translate-y-4 -translate-x-1" : undefined
-          }`}
+          className={`tracking-wider caption transition-all duration-150 hover:cursor-text ${
+            type == "checkbox" ? undefined : "absolute left-1 top-0"
+          } ${!isEmpty ? "-translate-y-4 -translate-x-1" : undefined}`}
         >
           {label}
         </label>
