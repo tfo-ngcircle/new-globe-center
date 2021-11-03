@@ -1,4 +1,5 @@
-import { BiArea, BiGroup, BiChair } from "react-icons/bi";
+import { BiArea, BiGroup, BiChair, BiCoffee } from "react-icons/bi";
+import { GiWaterBottle } from "react-icons/gi";
 
 export function getIcon(tag, className) {
   switch (tag) {
@@ -26,6 +27,10 @@ export function getIcon(tag, className) {
       return <BiGroup className={className} />;
     case "seating":
       return <BiChair className={className} />;
+    case "coffee":
+      return <BiCoffee className={className} />;
+    case "water":
+      return <GiWaterBottle className={className} />;
     default:
       return undefined;
   }
