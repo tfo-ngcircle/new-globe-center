@@ -153,7 +153,7 @@ export const data = {
       price: ["Halbtagspauschale **449,00 €**", "Wochenendpauschale"],
       characteristics: {
         key: [
-          { name: "area", label: "22m2" },
+          { name: "area", label: "22 m^2" },
           { name: "people", label: "Max 7 Personen" },
           { name: "seating", label: "Tischinsel" },
         ],
@@ -216,7 +216,7 @@ export const data = {
       ],
       characteristics: {
         key: [
-          { name: "area", label: "46m2" },
+          { name: "area", label: "46 m^2" },
           { name: "people", label: "Max 22 Personen" },
           { name: "seating", label: "Variable Stellmöglichkeiten" },
         ],
@@ -287,7 +287,7 @@ export const data = {
       ],
       characteristics: {
         key: [
-          { name: "area", label: "30m2" },
+          { name: "area", label: "30 m^2" },
           { name: "people", label: "Max 12 Personen" },
           { name: "seating", label: "Tischinsel" },
         ],

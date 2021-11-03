@@ -1,6 +1,16 @@
 import { getIcon } from "./icons";
 
 export const Characteristic = ({ it }) => {
+  const sup = String(it.label).indexOf("^");
+
+  if (sup > 0)
+    it.label = (
+      <>
+        {it.label.substring(0, sup)}
+        <sup>{it.label.substring(sup + 1)}</sup>
+      </>
+    );
+
   return (
     <div
       className={`${
