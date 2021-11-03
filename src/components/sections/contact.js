@@ -31,8 +31,6 @@ export default function ContactSection({ contact, paddingTop, leftContact }) {
 
   isOpen ? sequence() : sequence();
 
-  console.log(leftContact, isOpen);
-
   if (leftContact && isOpen) setIsOpen(false);
 
   return (
