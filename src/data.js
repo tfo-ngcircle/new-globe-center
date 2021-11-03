@@ -99,7 +99,7 @@ export const data = {
       {
         title: "Barrierefreiheit.",
         icon: "accessibility",
-        description: "Lorem ipsum dolor sit amet, consetetur.",
+        description: "Rollstuhltaugliche Rampe am Vordereingang.",
       },
       {
         title: "Location.",
@@ -161,8 +161,8 @@ export const data = {
           { name: "area", label: "Parkmöglichkeiten" },
           { name: "people", label: "Tagungsutensilien" },
           { name: "seating", label: "Highspeed Internet" },
-          { name: "area", label: "Wasser" },
-          { name: "people", label: "Kaffee" },
+          { name: "water", label: "Wasser" },
+          { name: "coffee", label: "Kaffee" },
           { name: "seating", label: "Kekse" },
         ],
       },
