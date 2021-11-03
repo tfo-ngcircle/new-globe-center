@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import { Logo } from "../logo";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -19,6 +20,13 @@ export default function MapSection({ location }) {
       center: [lng, lat],
       zoom: zoom,
     });
+
+    new mapboxgl.Marker({ color: "#c00000", scale: 1.5 })
+      .setLngLat([lng, lat])
+      .setPopup(
+        new mapboxgl.Popup({ offset: 25 }).setHTML(`<h5>New Globe Center<h5/>`)
+      )
+      .addTo(map.current);
 
     map.current.on("move", () => {
       setLng(map.current.getCenter().lng.toFixed(4));
