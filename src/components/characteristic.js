@@ -3,13 +3,16 @@ import { getIcon } from "./icons";
 export const Characteristic = ({ it }) => {
   const sup = String(it.label).indexOf("^");
 
-  if (sup > 0)
-    it.label = (
-      <>
-        {it.label.substring(0, sup)}
-        <sup>{it.label.substring(sup + 1)}</sup>
-      </>
-    );
+  let newLabel;
+
+  sup > 0
+    ? (newLabel = (
+        <>
+          {String(it.label).substring(0, sup)}
+          <sup>{String(it.label).substring(sup + 1)}</sup>
+        </>
+      ))
+    : (newLabel = it.label);
 
   return (
     <div
@@ -28,7 +31,7 @@ export const Characteristic = ({ it }) => {
           it.premium ? "text-yellow-600" : "text-gray-500"
         }`}
       >
-        {it.label}
+        {newLabel}
       </div>
     </div>
   );
