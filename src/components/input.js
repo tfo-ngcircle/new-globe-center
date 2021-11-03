@@ -23,7 +23,7 @@ const Input = React.forwardRef(
               onchange && onChange(event);
               setIsEmpty(event.target.value.trim().length <= 0);
             }}
-            className="border-0 bg-transparent outline-none focus:ring-0 border-b-2 focus:border-primary w-full transition-all duration-150 px-0"
+            className="border-0 bg-transparent outline-none focus:ring-0 border-b-2 focus:border-primary w-full transition-all duration-150 p-0"
           />
         ) : type == "checkbox" ? (
           <input
@@ -46,7 +46,7 @@ const Input = React.forwardRef(
               onchange && onChange(event);
               setIsEmpty(event.target.value.trim().length <= 0);
             }}
-            className="border-0 bg-transparent outline-none focus:ring-0 border-b-2 focus:border-primary w-full transition-all duration-150 px-0"
+            className="border-0 bg-transparent outline-none focus:ring-0 border-b-2 focus:border-primary w-full transition-all duration-150 p-0"
           />
         )}
         <label
