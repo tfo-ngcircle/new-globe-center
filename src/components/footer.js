@@ -3,6 +3,46 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { SocialIcon } from "./socialIcon";
 import Link from "./link";
 import { Md } from "./md";
+import { Img } from "./image";
+
+const partners = [
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_80,c_scale/v1635943722/ngc/digital-solutions_kysjh8.png",
+    alt: "",
+  },
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_120,c_scale/v1635943721/ngc/ngcircle_zxn73k.png",
+    alt: "",
+  },
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_90,c_scale/v1635943720/ngc/1tnc_obe1pv.png",
+    alt: "",
+  },
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_80,c_scale/v1635943722/ngc/digital-solutions_kysjh8.png",
+    alt: "",
+  },
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_120,c_scale/v1635943721/ngc/ngcircle_zxn73k.png",
+    alt: "",
+  },
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_90,c_scale/v1635943720/ngc/1tnc_obe1pv.png",
+    alt: "",
+  },
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_80,c_scale/v1635943722/ngc/digital-solutions_kysjh8.png",
+    alt: "",
+  },
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_120,c_scale/v1635943721/ngc/ngcircle_zxn73k.png",
+    alt: "",
+  },
+  {
+    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_90,c_scale/v1635943720/ngc/1tnc_obe1pv.png",
+    alt: "",
+  },
+];
 
 const socialLinks = {
   facebook: "#",
@@ -41,49 +81,60 @@ const footerItems = [
 
 export default function Footer() {
   return (
-    <div className="bg-black text-white">
-      <footer className="divide-y divide-gray-800">
-        <div className="container flex flex-wrap  py-16 gap-8 lg:gap-16 xl:gap-24">
-          <div className="pr-12">
-            <Logo isFull classNameFlag="text-white" />
-          </div>
-          {footerItems.map((item, i) => (
-            <FooterGroup key={i} items={item} />
-          ))}
-        </div>
-        <div className="py-4">
-          <div className="container flex flex-wrap justify-between items-center gap-3 pb-5 md:pb-0">
-            <div className="flex gap-3 md:gap-8">
-              {socialLinks.facebook && (
-                <SocialIcon href={socialLinks.facebook}>
-                  <FaFacebookF />
-                </SocialIcon>
-              )}
-              {socialLinks.linkedin && (
-                <SocialIcon href={socialLinks.linkedin}>
-                  <FaLinkedinIn />
-                </SocialIcon>
-              )}
-              {socialLinks.twitter && (
-                <SocialIcon href={socialLinks.twitter}>
-                  <FaTwitter />
-                </SocialIcon>
-              )}
+    <div className="flex flex-col h-full justify-between gap-10 lg:gap-16">
+      <div className="container flex flex-wrap items-center justify-center gap-8 xl:gap-x-20 my-auto">
+        {partners.map((partner, i) => (
+          <Img
+            image={partner}
+            key={i}
+            className="object-contain filter contrast-0 opacity-40 hover:opacity-100 grayscale hover:filter-none transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+          />
+        ))}
+      </div>
+      <div className="bg-black text-white">
+        <footer className="divide-y divide-gray-800">
+          <div className="container flex flex-wrap  py-16 gap-8 lg:gap-16 xl:gap-24">
+            <div className="pr-12">
+              <Logo isFull classNameFlag="text-white" />
             </div>
-            <div className="text-gray-500 flex flex-wrap gap-3 md:gap-6">
-              <span>
-                © {new Date().getFullYear()} New Globe Center - NgC GmbH
-              </span>
-              {bottomLinks &&
-                bottomLinks.map((link, i) => (
-                  <Link href={link.destination} key={i}>
-                    {link.label}
-                  </Link>
-                ))}
+            {footerItems.map((item, i) => (
+              <FooterGroup key={i} items={item} />
+            ))}
+          </div>
+          <div className="py-4">
+            <div className="container flex flex-wrap justify-between items-center gap-3 pb-5 md:pb-0">
+              <div className="flex gap-3 md:gap-8">
+                {socialLinks.facebook && (
+                  <SocialIcon href={socialLinks.facebook}>
+                    <FaFacebookF />
+                  </SocialIcon>
+                )}
+                {socialLinks.linkedin && (
+                  <SocialIcon href={socialLinks.linkedin}>
+                    <FaLinkedinIn />
+                  </SocialIcon>
+                )}
+                {socialLinks.twitter && (
+                  <SocialIcon href={socialLinks.twitter}>
+                    <FaTwitter />
+                  </SocialIcon>
+                )}
+              </div>
+              <div className="text-gray-500 flex flex-wrap gap-3 md:gap-6">
+                <span>
+                  © {new Date().getFullYear()} New Globe Center - NgC GmbH
+                </span>
+                {bottomLinks &&
+                  bottomLinks.map((link, i) => (
+                    <Link href={link.destination} key={i}>
+                      {link.label}
+                    </Link>
+                  ))}
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
   );
 }

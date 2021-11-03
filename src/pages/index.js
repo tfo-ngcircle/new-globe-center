@@ -67,17 +67,7 @@ export default function Home() {
           {window.width >= 1024 ? (
             <MapSection location={data.contact.location} />
           ) : undefined}
-          <div className="flex flex-col justify-between h-full">
-            <div className="container flex flex-grow items-center text-gray-500">
-              <p className="px-8 lg:px-24 pb-32 md:pb-0">
-                * All prices shown are valid at the time of inquiry, based on
-                24-month contracts. Prices are subject to change and will vary
-                depending on the specifically selected products and services.
-                Terms and Conditions apply.
-              </p>
-            </div>
-            <Footer />
-          </div>
+          <Footer />
         </Fullpage>
       ) : undefined}
     </>
