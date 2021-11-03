@@ -18,7 +18,7 @@ const variantsForm = {
   close: { x: 250 },
 };
 
-export default function ContactSection({ contact, paddingTop }) {
+export default function ContactSection({ contact, paddingTop, leftContact }) {
   let [isOpen, setIsOpen] = useState(false);
 
   const clipControls = useAnimation();
@@ -30,6 +30,10 @@ export default function ContactSection({ contact, paddingTop }) {
   };
 
   isOpen ? sequence() : sequence();
+
+  console.log(leftContact, isOpen);
+
+  if (leftContact && isOpen) setIsOpen(false);
 
   return (
     <div className="lg:absolute top-0 h-full lg:h-screen w-full bg-secondary text-white flex">

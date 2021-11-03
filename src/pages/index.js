@@ -16,6 +16,7 @@ import { data } from "src/data";
 export default function Home() {
   const headerRef = useRef();
   const [dark, setDark] = useState(false);
+  const [leftContact, setLeftContact] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
   const { width, height } = useElementSize(headerRef);
 
@@ -35,9 +36,10 @@ export default function Home() {
         <Fullpage
           className="space-y-20 md:space-y-0"
           paddingTop={window.width < 768 ? 0 : height}
-          onLeave={(_, dest, dir) => {
+          onLeave={(ori, dest, dir) => {
             setDark(dest.anchor === "contact");
             setIsTransparent(dest.anchor === "landing");
+            setLeftContact(ori.anchor === "contact");
             if (router.asPath !== `/#${dest.anchor}`)
               router.replace(`#${dest.anchor}`, undefined, { shallow: true });
           }}
@@ -57,7 +59,11 @@ export default function Home() {
           <SpacesSection spaces={data.spaces} width={width} />
           <AboutSection about={data.about} width={width} />
           <GallerySection gallery={data.gallery} width={window.width} />
-          <ContactSection contact={data.contact} paddingTop={height} />
+          <ContactSection
+            contact={data.contact}
+            paddingTop={height}
+            leftContact={leftContact}
+          />
           {window.width >= 1024 ? (
             <MapSection location={data.contact.location} />
           ) : undefined}
