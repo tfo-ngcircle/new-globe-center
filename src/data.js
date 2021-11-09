@@ -7,6 +7,52 @@ export const data = {
       src: require("../public/images/room.jpg"),
       alt: "",
     },
+    images: [
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9761_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9758_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_8772_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8068_df_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8008_df_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8001_df_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8003_df_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8093_df_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/12383/640a6691_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/12383/img_4403_1280.jpg",
+        alt: "",
+      },
+      {
+        src: "https://media.spacebase.com/media/cache/spaces/12383/small-space-taunusanlage-layouts_1280.jpg",
+        alt: "",
+      },
+    ],
   },
   gallery: {
     headline: "Unsere Galerie.",

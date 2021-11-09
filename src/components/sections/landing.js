@@ -2,17 +2,16 @@ import formatHeadline from "@/lib/utils/text";
 import { navigateFullpage } from "@/lib/utils/utils";
 import { Button } from "../button";
 import { HeadingBox } from "../heading";
-import { Img } from "../image";
 import { Underline } from "../underline";
-import Link from "../link";
+import Carousel from "../carousel";
 
 export default function LandingSection({ landing }) {
   return (
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-75 md:brightness-90 overflow-hidden">
-        <Img
-          image={landing.background}
-          className="object-cover md:!my-5 w-full h-full bg-center"
+        <Carousel
+          images={landing.images}
+          className="absolute object-cover md:!my-5 w-full h-full bg-center"
         />
       </div>
       <div className="absolute w-full h-full mix-blend-hard-light opacity-50">
