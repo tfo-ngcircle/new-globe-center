@@ -68,16 +68,15 @@ body[class*="fp-viewing-spaces-"],
 }
 
 $spaceFromWindow: 4rem;
-$arrowThickness: 6px;
-$arrowSize: 0.75rem;
+$arrowThickness: 0.75rem;
+$arrowSize: 1rem;
 
 .fp-controlArrow {
   top: 55% !important;
 
-  border: solid #03090f !important;
+  border: solid #c00000 !important;
   border-width: 0 $arrowThickness $arrowThickness 0 !important;
   padding: $arrowSize;
-  opacity: 50%;
 
   &.fp-prev {
     left: $spaceFromWindow !important;
