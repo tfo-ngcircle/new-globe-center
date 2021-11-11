@@ -12,6 +12,7 @@ export default function LandingSection({ landing }) {
         <Carousel
           images={landing.images}
           className="absolute object-cover md:!my-5 w-full h-full bg-center"
+          swipeable
         />
       </div>
       <div className="absolute w-full h-full mix-blend-hard-light opacity-50">
