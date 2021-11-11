@@ -33,7 +33,7 @@ export default function AboutSection({ about, width }) {
         </div>
         <Button
           label="Mehr erfahren"
-          className="lg:-rotate-90 block md:absolute lg:right-[-8%] xl:-right-4 2xl:-right-32 md:top-full lg:top-[60%] origin-top mt-4 w-full lg:w-auto"
+          className="lg:!-rotate-90 block md:absolute lg:right-[-8%] xl:-right-4 2xl:-right-32 md:top-full lg:top-[60%] origin-top mt-4 w-full lg:w-auto"
         />
       </div>
     </div>
