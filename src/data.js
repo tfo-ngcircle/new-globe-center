@@ -375,3 +375,21 @@ export const data = {
     },
   },
 };
+
+export const about = `
+# DEIN RAUM. DEINE KOMUNIKATION. DEINE MEETINGS.
+
+Moderne Ausstattung, komfortable Technik und perfekter Service – im NEW GLOBE CENTER
+
+Du suchst einen Ort, an dem du deine Schulungen, Meetings und Konferenzen in stilvollem Ambiente mit hochmodernen Technologien abhalten kannst. Dabei willst du dich voll und ganz auf deine Arbeit konzentrieren und nicht auch noch Kaffee kochen.
+
+Bei uns finden deine Ideen Platz. Wir bieten dir Raum für Digitalisierung, Raum für Wissensaustausch und Raum für nachhaltige Arbeitsweisen.
+
+## Wer wir sind.
+
+Wir sind die NgC GmbH. Wir bieten seit 2012 Services in verschiedenen Kommunikationsbereichen. Kommunikation findet nicht nur im Alltag statt, sondern ist ein wichtiger Begleiter, besonders in den technischen Komponenten unseres Lebens – Deswegen haben wir sie zu unserem Geschäftsmodell gemacht. Mit der Eröffnung des NEW GLOBE CENTERS können wir unsere Dienstleistung ausweiten – indem wir Raum für deine Digitalisierung, Nachhaltigkeit und Wissenssicherung schaffen.
+
+## Das Gebäude.
+
+Wir bieten dir drei individuelle Schulungs- und Konferenzräume mit hervorragender technischer Ausstattung und modernen Büromöbeln. Tageslichtdurchflutet, ruhig gelegen und mit wunderschöner Außenanlage, ist das NGC nicht nur zum Arbeiten gemacht, sondern lädt auch zum persönlichen Austausch und zur Gemeinsamkeit ein. Jeder Raum bietet einen besonderen Aspekt, den es zu entdecken lohnt. Abgerundet durch unser Rund-um-Glücklich Prinzip bieten wir nicht nur Schulungsräume – sondern ein Erlebnis für deine individuelle Tagung.
+`;
