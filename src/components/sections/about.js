@@ -2,6 +2,7 @@ import formatHeadline from "@/lib/utils/text";
 import { Button } from "../button";
 import { Logo } from "../logo";
 import { Img } from "../image";
+import Link from "next/link";
 
 export default function AboutSection({ about, width }) {
   return (
@@ -31,10 +32,12 @@ export default function AboutSection({ about, width }) {
             </ul>
           </div>
         </div>
-        <Button
-          label="Mehr erfahren"
-          className="lg:!-rotate-90 block md:absolute lg:right-[-8%] xl:-right-4 2xl:-right-32 md:top-full lg:top-[60%] origin-top mt-4 w-full lg:w-auto"
-        />
+        <Link href="/about" passHref>
+          <Button
+            label="Mehr erfahren"
+            className="lg:!-rotate-90 block md:absolute lg:right-[-8%] xl:-right-4 2xl:-right-32 md:top-full lg:top-[60%] origin-top mt-4 w-full lg:w-auto"
+          />
+        </Link>
       </div>
     </div>
   );
