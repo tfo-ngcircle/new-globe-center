@@ -32,7 +32,7 @@ export const Characteristic = ({ it }) => {
         leaveFrom="opacity-100 translate-y-0"
         leaveTo="opacity-0 translate-y-1"
       >
-        <Popover.Panel className="absolute z-10 shadow-xl bg-white right-0 py-2 px-4 mt-1">
+        <Popover.Panel className="absolute z-10 shadow-xl bg-white right-0 py-2 px-4 mt-1 text-base">
           <Md>{it.details}</Md>
         </Popover.Panel>
       </Transition>
