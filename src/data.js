@@ -5,47 +5,43 @@ export const data = {
       "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
     images: [
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9761_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9758_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_8772_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0622-web_vw4n2v.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8068_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8008_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636968825/ngc/IMG_0585-web_vmpxse.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8001_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636968825/ngc/IMG_0587-web_jrahtg.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8003_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969815/ngc/IMG_0420_zzgych.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8093_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/12383/640a6691_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/12383/img_4403_1280.jpg",
-        alt: "",
-      },
-      {
-        src: "https://media.spacebase.com/media/cache/spaces/12383/small-space-taunusanlage-layouts_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
         alt: "",
       },
     ],
@@ -56,47 +52,43 @@ export const data = {
       "Stöbere in unserer Galerie und überzeuge dich selbst von modernem Design und toller Ausstattung.",
     images: [
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9761_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9758_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_8772_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0622-web_vw4n2v.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8068_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8008_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636968825/ngc/IMG_0585-web_vmpxse.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8001_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636968825/ngc/IMG_0587-web_jrahtg.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8003_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969815/ngc/IMG_0420_zzgych.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8093_df_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/12383/640a6691_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.jpg",
         alt: "",
       },
       {
-        src: "https://media.spacebase.com/media/cache/spaces/12383/img_4403_1280.jpg",
-        alt: "",
-      },
-      {
-        src: "https://media.spacebase.com/media/cache/spaces/12383/small-space-taunusanlage-layouts_1280.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
         alt: "",
       },
     ],
@@ -111,7 +103,7 @@ export const data = {
       "Rund-Um-Glücklich Paket mit individuellem Catering",
     ],
     image: {
-      src: require("../public/images/about.jpg"),
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_auto_color,g_north,h_1920,w_1025,x_56,y_0/v1636963991/ngc/IMG_0665-web_wqibq4.jpg",
       alt: "",
     },
   },
@@ -119,7 +111,7 @@ export const data = {
     headline: "Dein Meeting. Unsere Ausstattung.",
     description: "Das bieten wir dir für dein Meeting.",
     image: {
-      src: require("../public/images/facilities_main.jpg"),
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,dpr_auto,e_auto_brightness,h_1333,q_auto:good,w_1000,x_650/v1636968825/ngc/IMG_0585-web_vmpxse.jpg",
       alt: "",
     },
     features: [
@@ -146,7 +138,7 @@ export const data = {
       {
         title: "Location.",
         icon: "marker",
-        description: "Lorem ipsum dolor sit amet, consetetur.",
+        description: "Perfekte Anbindung an die Autobahn",
       },
       {
         title: "Gartennutzung.",
@@ -175,19 +167,31 @@ export const data = {
         "Für deine digitale Zusammenarbeit über alle Grenzen hinaus bieten wir dir im Raum CONNECT hochmoderne Konferenzsysteme. Verbinde dich mit der Welt und genieße den volldigital ausgestatteten Besprechungsraum.",
         "Der Konferenzraum CONNECT vernetzt dich stressfrei mit deinen Kunden, Mitarbeitern oder Partnern. Hochmoderne Konferenzsysteme sorgen für einen reibungslosen Ablauf deiner Meetings. Ob mit zwei Teilnehmern oder mit dem ganzen Team – CONNECT bietet dir ein stressfreies und bequemes Erlebnis. Verbinde dich mit der Welt und genieße unseren volldigital ausgestatteten Konferenzraum. Für deine digitale Zusammenarbeit.",
       ],
-      technology:
-        "Im CONNECT erwartet dich ein vollausgestattetes Tagungssystem mit 2 xx“ Bildschirmen, auf denen du deine Ideen teilen und alle deine Partner virtuell begrüßen kannst. Das System beinhaltet eine hochauflösende Kamera sowie Lautsprecher und eine Jabra-Mikrofonanlage.",
+      technology: {
+        description:
+          "Im CONNECT erwartet dich ein vollausgestattetes Tagungssystem mit zwei 65 Zoll Bildschirmen, auf denen du deine Ideen teilen und alle deine Partner virtuell begrüßen kannst. Das System beinhaltet eine hochauflösende Kamera sowie Lautsprecher und eine Jabra-Mikrofonanlage.",
+        images: [
+          {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.jpg",
+            alt: "",
+          },
+          {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.jpg",
+            alt: "",
+          },
+          {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
+            alt: "",
+          },
+        ],
+      },
       images: [
         {
-          src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9761_1280.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.jpg",
           alt: "",
         },
         {
-          src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_9758_1280.jpg",
-          alt: "",
-        },
-        {
-          src: "https://media.spacebase.com/media/cache/spaces/7472/dsc_8772_1280.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
           alt: "",
         },
       ],
@@ -210,19 +214,66 @@ export const data = {
       },
       extras: {
         catering: [
-          { name: "area", label: "Getränkepauschale", premium: false },
-          { name: "area", label: "Fingerfood Catering", premium: false },
-          { name: "area", label: "Brötchenfrühstück", premium: false },
-          { name: "area", label: "Obst und Kuchen", premium: false },
-          { name: "area", label: "Mundo Vinum", premium: true },
-          { name: "people", label: "Vivre la France", premium: true },
-          { name: "seating", label: "Habano de Cuba", premium: true },
+          {
+            name: "area",
+            label: "Getränkepauschale",
+            premium: false,
+            details: `Halbtagespauschale **6,00€**
+          Ganztagespauschale **12,00€**`,
+          },
+          {
+            name: "area",
+            label: "Fingerfood Catering",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Brötchenfrühstück",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Obst und Kuchen",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Mundo Vinum",
+            premium: true,
+            details: "Weine aus aller Welt",
+          },
+          {
+            name: "people",
+            label: "Vivre la France",
+            premium: true,
+            details: "Ein kleines Stück Frankreich",
+          },
+          {
+            name: "seating",
+            label: "Habano de Cuba",
+            premium: true,
+            details: "Spezialitäten aus Kuba",
+          },
         ],
         equipment: [
-          { name: "area", label: "Moderationskoffer" },
-          { name: "people", label: "E-Ladesäulen" },
-          { name: "area", label: "Flipchart" },
-          { name: "people", label: "Shuttleservice" },
+          { name: "area", label: "Moderationskoffer", details: "**30,00€**" },
+          {
+            name: "people",
+            label: "E-Ladesäulen",
+            details: `Kleines Auto **12 - 14,00€**
+
+Großes Auto **24 - 28,00€**
+`,
+          },
+          { name: "area", label: "Flipchart", details: "**12,00€**" },
+          {
+            name: "people",
+            label: "Shuttleservice",
+            details: "Preise auf Anfrage",
+          },
         ],
       },
     },
@@ -234,19 +285,22 @@ export const data = {
         "Effizientes Arbeiten in anregender Umgebung, natürliches Tageslicht und ein traumhaftes Ambiente – das bieten wir dir mit dem Raum CREATE. Um beste Ergebnisse zu erzielen arbeitet ihr gemeinsam, schafft effektive Workflows und könnt gemeinsam Grenzen überwinden.",
         "Im Schulungsraum CREATE steht dir die Welt offen. Egal ob Meetings mit deinem ganzen Team, Schulungen oder Workshops. Der großzügige Tageslicht durchflutete Raum bietet dir ungeahnte Flexibilität. Mit dem Blick auf unsere traumhafte Grünanlage und der Möglichkeit zur Terrassennutzung bietet CREATE die beste Umgebung, um kreativ zu arbeiten, Dinge zu schaffen und Ergebnisse zu erzielen. Der Raum ist so flexibel wie du – durch die eingebaute Trennwand kann schnell ein Rückzugsort für kleinere Gruppen geschaffen werden. Schafft gemeinsam effektive Workflows und überwindet Grenzen. Für das Arbeiten der Zukunft.",
       ],
-      technology:
-        "Im CREATE erwartet dich ein großzügig geschnittener Konferenzraum, den wir genau nach deinen Vorstellungen vorbereiten. Für deine volldigital stattfindenden Meetings nutzt du das im Raum befindliche Smartboard, mit dem du dich, deine Partner und Kunden komplett digital vernetzen kannst. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.",
+      technology: {
+        description:
+          "Im CREATE erwartet dich ein großzügig geschnittener Konferenzraum, den wir genau nach deinen Vorstellungen vorbereiten. Für deine volldigital stattfindenden Meetings nutzt du das im Raum befindliche Smartboard, mit dem du dich, deine Partner und Kunden komplett digital vernetzen kannst. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.",
+        images: [],
+      },
       images: [
         {
-          src: "https://media.spacebase.com/media/cache/spaces/12383/640a6691_1280.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.jpg",
           alt: "",
         },
         {
-          src: "https://media.spacebase.com/media/cache/spaces/12383/img_4403_1280.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0751-web_js4hpq.jpg",
           alt: "",
         },
         {
-          src: "https://media.spacebase.com/media/cache/spaces/12383/small-space-taunusanlage-layouts_1280.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0744-web_iv4lcf.jpg",
           alt: "",
         },
       ],
@@ -273,19 +327,66 @@ export const data = {
       },
       extras: {
         catering: [
-          { name: "area", label: "Getränkepauschale", premium: false },
-          { name: "area", label: "Fingerfood Catering", premium: false },
-          { name: "area", label: "Brötchenfrühstück", premium: false },
-          { name: "area", label: "Obst und Kuchen", premium: false },
-          { name: "area", label: "Mundo Vinum", premium: true },
-          { name: "people", label: "Vivre la France", premium: true },
-          { name: "seating", label: "Habano de Cuba", premium: true },
+          {
+            name: "area",
+            label: "Getränkepauschale",
+            premium: false,
+            details: `Halbtagespauschale **6,00€**
+          Ganztagespauschale **12,00€**`,
+          },
+          {
+            name: "area",
+            label: "Fingerfood Catering",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Brötchenfrühstück",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Obst und Kuchen",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Mundo Vinum",
+            premium: true,
+            details: "Weine aus aller Welt",
+          },
+          {
+            name: "people",
+            label: "Vivre la France",
+            premium: true,
+            details: "Ein kleines Stück Frankreich",
+          },
+          {
+            name: "seating",
+            label: "Habano de Cuba",
+            premium: true,
+            details: "Spezialitäten aus Kuba",
+          },
         ],
         equipment: [
-          { name: "area", label: "Moderationskoffer" },
-          { name: "people", label: "E-Ladesäulen" },
-          { name: "area", label: "Flipchart" },
-          { name: "people", label: "Shuttleservice" },
+          { name: "area", label: "Moderationskoffer", details: "**30,00€**" },
+          {
+            name: "people",
+            label: "E-Ladesäulen",
+            details: `Kleines Auto **12 - 14,00€**
+            
+Großes Auto **24 - 28,00€**
+`,
+          },
+          { name: "area", label: "Flipchart", details: "**12,00€**" },
+          {
+            name: "people",
+            label: "Shuttleservice",
+            details: "Preise auf Anfrage",
+          },
         ],
       },
     },
@@ -297,27 +398,35 @@ export const data = {
         "Wir setzen Grenzen nur um Sie zu überwinden. Im Raum INSPIRE erwartet dich eine Premium Ausstattung für deine Meetings. Für eine inspirierende Umgebung für berauschende Erfolge.",
         "Der Konferenzraum INSPIRE ist deine Wahl, wenn du deine Meetings professionell und in inspirierender Atmosphäre abhalten willst. Hier hast du die Möglichkeit, zusammen mit deinen Kollegen, Kunden oder Partnern große Dinge zu schaffen. Überzeuge dich selbst von INSPIRE schaffe innovative Ansätze. Für deinen grenzenlosen Erfolg.",
       ],
-      technology:
-        "INSPIRE bietet dir mit dem hochmodernen Smartboard den höchsten Standard für deine volldigitalen Meetings. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.",
+      technology: {
+        description:
+          "INSPIRE bietet dir mit dem hochmodernen Smartboard den höchsten Standard für deine volldigitalen Meetings. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.",
+        images: [
+          {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.jpg",
+            alt: "",
+          },
+          {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.jpg",
+            alt: "",
+          },
+          {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
+            alt: "",
+          },
+        ],
+      },
       images: [
         {
-          src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8068_df_1280.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.jpg",
           alt: "",
         },
         {
-          src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8008_df_1280.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.jpg",
           alt: "",
         },
         {
-          src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8001_df_1280.jpg",
-          alt: "",
-        },
-        {
-          src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8003_df_1280.jpg",
-          alt: "",
-        },
-        {
-          src: "https://media.spacebase.com/media/cache/spaces/7994/2376_8093_df_1280.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0638-web_selpqq.jpg",
           alt: "",
         },
       ],
@@ -344,19 +453,66 @@ export const data = {
       },
       extras: {
         catering: [
-          { name: "area", label: "Getränkepauschale", premium: false },
-          { name: "area", label: "Fingerfood Catering", premium: false },
-          { name: "area", label: "Brötchenfrühstück", premium: false },
-          { name: "area", label: "Obst und Kuchen", premium: false },
-          { name: "area", label: "Mundo Vinum", premium: true },
-          { name: "people", label: "Vivre la France", premium: true },
-          { name: "seating", label: "Habano de Cuba", premium: true },
+          {
+            name: "area",
+            label: "Getränkepauschale",
+            premium: false,
+            details: `Halbtagespauschale **6,00€**
+          Ganztagespauschale **12,00€**`,
+          },
+          {
+            name: "area",
+            label: "Fingerfood Catering",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Brötchenfrühstück",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Obst und Kuchen",
+            premium: false,
+            details: "Preise auf Anfrage",
+          },
+          {
+            name: "area",
+            label: "Mundo Vinum",
+            premium: true,
+            details: "Weine aus aller Welt",
+          },
+          {
+            name: "people",
+            label: "Vivre la France",
+            premium: true,
+            details: "Ein kleines Stück Frankreich",
+          },
+          {
+            name: "seating",
+            label: "Habano de Cuba",
+            premium: true,
+            details: "Spezialitäten aus Kuba",
+          },
         ],
         equipment: [
-          { name: "area", label: "Moderationskoffer" },
-          { name: "people", label: "E-Ladesäulen" },
-          { name: "area", label: "Flipchart" },
-          { name: "people", label: "Shuttleservice" },
+          { name: "area", label: "Moderationskoffer", details: "**30,00€**" },
+          {
+            name: "people",
+            label: "E-Ladesäulen",
+            details: `Kleines Auto **12 - 14,00€**
+            
+Großes Auto **24 - 28,00€**
+`,
+          },
+          { name: "area", label: "Flipchart", details: "**12,00€**" },
+          {
+            name: "people",
+            label: "Shuttleservice",
+            details: "Preise auf Anfrage",
+          },
         ],
       },
     },
@@ -366,7 +522,7 @@ export const data = {
     email: "info@newglobecenter.com",
     phone: "+49 5308 5231220",
     background: {
-      src: "https://as2.ftcdn.net/v2/jpg/02/04/18/31/1000_F_204183167_eLpT1Fyt9egBbeJ6AXdWqhoiBRc9AREf.jpg",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_960,c_scale/v1636962944/ngc/IMG_0695-web_hxcl6m.jpg",
       alt: "About",
     },
     location: {

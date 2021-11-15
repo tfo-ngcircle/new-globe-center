@@ -13,9 +13,9 @@ export default function Room({ space }) {
         <Space space={space} className="h-full" isFull />
         <div className="space-y-6">
           <h3>{formatHeadline("Die Technik.")}</h3>
-          <Md>{space.technology}</Md>
+          <Md>{space.technology.description}</Md>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
-            {data.gallery.images.slice(0, 4).map((img, i) => (
+            {space.technology.images.slice(0, 4).map((img, i) => (
               <Img
                 key={i}
                 image={img}
