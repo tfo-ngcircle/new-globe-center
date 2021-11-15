@@ -18,30 +18,6 @@ const partners = [
     src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_90,c_scale/v1635943720/ngc/1tnc_obe1pv.png",
     alt: "",
   },
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_80,c_scale/v1635943722/ngc/digital-solutions_kysjh8.png",
-    alt: "",
-  },
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_120,c_scale/v1635943721/ngc/ngcircle_zxn73k.png",
-    alt: "",
-  },
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_90,c_scale/v1635943720/ngc/1tnc_obe1pv.png",
-    alt: "",
-  },
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_80,c_scale/v1635943722/ngc/digital-solutions_kysjh8.png",
-    alt: "",
-  },
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_120,c_scale/v1635943721/ngc/ngcircle_zxn73k.png",
-    alt: "",
-  },
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_90,c_scale/v1635943720/ngc/1tnc_obe1pv.png",
-    alt: "",
-  },
 ];
 
 const socialLinks = {
