@@ -12,7 +12,7 @@ export default function FeaturesSection({ features }) {
         <div className="md:flex space-y-4 lg:space-x-8 md:space-y-0 justify-between h-full items-center">
           <Img
             image={features.image}
-            className="object-cover relative h-[400px] w-full lg:w-[368px] lg:h-full xl:w-[510px] xl:h-[720px]"
+            className="object-cover relative h-[400px] w-full lg:w-[368px] lg:h-full xl:w-[510px] xl:h-[720px] shadow-lg"
           />
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
@@ -39,7 +39,12 @@ export default function FeaturesSection({ features }) {
           </div>
         </div>
       </div>
-      <Underline className="absolute text-primary opacity-70 mix-blend-multiply space-x-[-1px] scale-x-[-1] top-0 mt-4 lg:mt-20 w-48 lg:w-60 xl:w-[500px] h-20 lg:h-40 xl:h-80" />
+      <Underline
+        initial={{ scaleX: -1, x: 200 }}
+        animate={{ x: 0 }}
+        transition={{ ease: "easeOut", duration: 1 }}
+        className="absolute text-primary opacity-70 mix-blend-multiply space-x-[-1px] sale-x-[-1] top-0 mt-4 lg:mt-20 w-48 lg:w-60 xl:w-[500px] h-20 lg:h-40 xl:h-80"
+      />
     </div>
   );
 }
