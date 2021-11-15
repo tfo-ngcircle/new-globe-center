@@ -111,7 +111,7 @@ export const data = {
     headline: "Dein Meeting. Unsere Ausstattung.",
     description: "Das bieten wir dir für dein Meeting.",
     image: {
-      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,dpr_auto,e_auto_brightness,h_1333,q_auto:good,w_1000,x_650/v1636968825/ngc/IMG_0585-web_vmpxse.jpg",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,q_auto:good/v1636972712/ngc/IMG_0387_t4t40x.jpg",
       alt: "",
     },
     features: [
