@@ -4,8 +4,37 @@ import { getIcon } from "@/components/icons";
 import formatHeadline from "@/lib/utils/text";
 import { Img } from "../image";
 import { HeadingBox } from "../heading";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+const underlineVariants = {
+  visible: { x: 0, scaleX: -1 },
+  hidden: { x: -300, scaleX: -1 },
+};
+
+const listVariants = {
+  hidden: {
+    transition: {
+      staggerChildren: 0.1,
+      staggerDirection: -1,
+    },
+  },
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
 
 export default function FeaturesSection({ features }) {
+  const underlineControls = useAnimation();
+  const [underLineRef, underlineInView] = useInView();
+
+  useEffect(() => {
+    underlineControls.start(underlineInView ? "visible" : "hidden");
+  }, [underlineControls, underlineInView]);
+
   return (
     <div className="relative">
       <div className="container">
@@ -17,12 +46,17 @@ export default function FeaturesSection({ features }) {
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
               <HeadingBox>
-                <h2>{formatHeadline(features.headline)}</h2>
+                <h2 ref={underLineRef}>{formatHeadline(features.headline)}</h2>
                 <Underline className="text-primary w-full h-3" />
               </HeadingBox>
               <p>{features.description}</p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 xl:gap-y-6">
+            <motion.div
+              initial="hidden"
+              variants={listVariants}
+              animate={underlineControls}
+              className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 xl:gap-y-6 overflow-hidden"
+            >
               {features.features.map((item, i) => (
                 <FeatureItem
                   key={i}
@@ -35,14 +69,15 @@ export default function FeaturesSection({ features }) {
                   }
                 />
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
       <Underline
-        initial={{ scaleX: -1, x: 200 }}
-        animate={{ x: 0 }}
-        transition={{ ease: "easeOut", duration: 1 }}
+        initial="hidden"
+        animate={underlineControls}
+        variants={underlineVariants}
+        transition={{ duration: 0.6 }}
         className="absolute text-primary opacity-70 mix-blend-multiply space-x-[-1px] sale-x-[-1] top-0 mt-4 lg:mt-20 w-48 lg:w-60 xl:w-[500px] h-20 lg:h-40 xl:h-80"
       />
     </div>
