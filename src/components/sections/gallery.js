@@ -2,7 +2,7 @@ import formatHeadline from "@/lib/utils/text";
 import Carousel from "../carousel";
 import { Img } from "../image";
 import { Trapazoid } from "../trapazoid";
-import { Underline } from "../underline";
+import Underline from "@/components/underline";
 
 export default function GallerySection({ gallery, width }) {
   var device = 1;

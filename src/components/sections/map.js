@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
-import { Logo } from "../logo";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 

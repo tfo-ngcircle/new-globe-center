@@ -6,7 +6,7 @@ import { Characteristic } from "./characteristic";
 import { HeadingBox } from "./heading";
 import Link from "./link";
 import { TagRow } from "./tag-row";
-import { Underline } from "./underline";
+import Underline from "@/components/underline";
 
 export const Space = ({ space, isFull, ...props }) => {
   return (

@@ -1,4 +1,4 @@
-import { Underline } from "../underline";
+import Underline from "@/components/underline";
 import { FeatureItem } from "../feature-item";
 import { getIcon } from "@/components/icons";
 import formatHeadline from "@/lib/utils/text";

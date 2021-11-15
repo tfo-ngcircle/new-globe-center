@@ -2,7 +2,7 @@ import formatHeadline from "@/lib/utils/text";
 import { navigateFullpage } from "@/lib/utils/utils";
 import { Button } from "../button";
 import { HeadingBox } from "../heading";
-import { Underline } from "../underline";
+import Underline from "@/components/underline";
 import Carousel from "../carousel";
 
 export default function LandingSection({ landing }) {
