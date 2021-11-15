@@ -5,12 +5,11 @@ import { Trapazoid } from "../trapazoid";
 import { Underline } from "../underline";
 
 export default function GallerySection({ gallery, width }) {
-  var device = 0;
+  var device = 1;
   if (width >= 1536) device = 5;
-  if (width >= 1280) device = 4;
+  else if (width >= 1280) device = 4;
   else if (width >= 1024) device = 3;
   else if (width >= 768) device = 2;
-  else device = 1;
 
   return (
     <div className="h-full flex flex-col justify-end">
