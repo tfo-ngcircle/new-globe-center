@@ -7,12 +7,12 @@ import Link from "next/link";
 export default function AboutSection({ about, width }) {
   return (
     <div className="container">
-      <div className="relative md:grid grid-cols-10 2xl:grid-cols-2 items-center gap-12">
-        <div className="h-full col-span-4 2xl:col-span-1 py-6 md:py-2">
-          <span className="absolute left-[-24.1%] 2xl:left-[-27.25%] bg-primary w-[44.4%] 2xl:w-1/2 h-[30%] top-[16.1%] hidden md:block" />
+      <div className="relative md:grid grid-cols-10 2xl:grid-cols-7 items-center gap-12">
+        <div className="h-full col-span-4 2xl:col-span-3 py-6 md:py-2">
+          <span className="absolute left-[-24.1%] 2xl:left-[-30.8%] bg-primary w-[44.4%] 2xl:w-1/2 h-[30%] top-[16.1%] hidden md:block" />
           <Img
             image={about.image}
-            className="object-cover"
+            className="object-cover 2xl:max-h-[800px] 2xl:w-[86.5%]"
             style={{
               clipPath:
                 width >= 768
@@ -21,7 +21,7 @@ export default function AboutSection({ about, width }) {
             }}
           />
         </div>
-        <div className="space-y-6 md:space-y-10 flex flex-col col-span-5 2xl:col-span-1">
+        <div className="space-y-6 md:space-y-10 flex flex-col col-span-5 2xl:col-span-4">
           <Logo isFull />
           <div className="space-y-6 md:space-y-10">
             <h3>{formatHeadline(about.headline)}</h3>
