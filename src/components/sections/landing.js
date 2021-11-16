@@ -4,8 +4,38 @@ import { Button } from "../button";
 import { HeadingBox } from "../heading";
 import Underline from "@/components/underline";
 import Carousel from "../carousel";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+
+const bluelineVariants = {
+  hidden: {
+    rotate: 180,
+    x: -500,
+  },
+  visible: {
+    rotate: 180,
+    x: 0,
+  },
+};
+
+const redlineVariants = {
+  hidden: {
+    x: 400,
+  },
+  visible: {
+    x: 0,
+  },
+};
 
 export default function LandingSection({ landing }) {
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    controls.start(inView ? "visible" : "hidden");
+  }, [controls, inView]);
+
   return (
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-75 md:brightness-90 overflow-hidden">
@@ -16,9 +46,19 @@ export default function LandingSection({ landing }) {
           canMaximize={false}
         />
       </div>
-      <div className="absolute w-full h-full mix-blend-hard-light opacity-50">
-        <Underline className="absolute h-80 w-[500px] right-0 top-0 text-primary space-x-[-1px] drop-shadow-primary" />
+      <div className="absolute w-full h-full mix-blend-hard-light opacity-50 overflow-hidden">
         <Underline
+          initial="hidden"
+          animate={controls}
+          variants={redlineVariants}
+          transition={{ duration: 0.5, type: "tween", ease: "easeOut" }}
+          className="absolute h-80 w-[500px] right-0 top-0 text-primary space-x-[-1px] drop-shadow-primary"
+        />
+        <Underline
+          initial="hidden"
+          animate={controls}
+          variants={bluelineVariants}
+          transition={{ duration: 0.4, type: "tween", ease: "easeOut" }}
           className="absolute w-full md:h-full lg:w-[768px] xl:w-[960px] 2xl:w-[1300px] left-0 bottom-0 text-secondary space-x-[-1px] drop-shadow-secondary rotate-180"
           classNameAlt="bg-secondary"
         />
@@ -31,7 +71,9 @@ export default function LandingSection({ landing }) {
             </h1>
             <Underline className="text-primary w-full h-3" />
           </HeadingBox>
-          <p className="md:w-[125%]">{landing && landing.description}</p>
+          <p className="md:w-[125%]" ref={ref}>
+            {landing && landing.description}
+          </p>
           <Button
             label="Über uns"
             type="large"
