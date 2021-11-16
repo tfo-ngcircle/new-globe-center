@@ -5,43 +5,43 @@ export const data = {
       "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
     images: [
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color,q_auto:eco/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0622-web_vw4n2v.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969621/ngc/IMG_0622-web_vw4n2v.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636968825/ngc/IMG_0585-web_vmpxse.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636968825/ngc/IMG_0587-web_jrahtg.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969815/ngc/IMG_0420_zzgych.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969815/ngc/IMG_0420_zzgych.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969818/ngc/IMG_0422_hqwflh.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
         alt: "",
       },
     ],
@@ -52,43 +52,43 @@ export const data = {
       "Stöbere in unserer Galerie und überzeuge dich selbst von modernem Design und toller Ausstattung.",
     images: [
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969625/ngc/IMG_0757-web_bmnzgs.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0622-web_vw4n2v.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969621/ngc/IMG_0622-web_vw4n2v.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636968825/ngc/IMG_0585-web_vmpxse.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636968825/ngc/IMG_0587-web_jrahtg.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969815/ngc/IMG_0420_zzgych.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969815/ngc/IMG_0420_zzgych.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969818/ngc/IMG_0422_hqwflh.webp",
         alt: "",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
         alt: "",
       },
     ],
@@ -103,7 +103,7 @@ export const data = {
       "Rund-Um-Glücklich Paket mit individuellem Catering",
     ],
     image: {
-      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_auto_color,g_north,h_1920,w_1025,x_56,y_0/v1636963991/ngc/IMG_0665-web_wqibq4.jpg",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_auto_color,g_north,h_1920,w_1025,x_56,y_0/v1636963991/ngc/IMG_0665-web_wqibq4.webp",
       alt: "",
     },
   },
@@ -111,7 +111,7 @@ export const data = {
     headline: "Dein Meeting. Unsere Ausstattung.",
     description: "Das bieten wir dir für dein Meeting.",
     image: {
-      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,q_auto:good/v1636972712/ngc/IMG_0387_t4t40x.jpg",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,q_auto:good/v1636972712/ngc/IMG_0387_t4t40x.webp",
       alt: "",
     },
     features: [
@@ -172,26 +172,26 @@ export const data = {
           "Im CONNECT erwartet dich ein vollausgestattetes Tagungssystem mit zwei 65 Zoll Bildschirmen, auf denen du deine Ideen teilen und alle deine Partner virtuell begrüßen kannst. Das System beinhaltet eine hochauflösende Kamera sowie Lautsprecher und eine Jabra-Mikrofonanlage.",
         images: [
           {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.jpg",
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.webp",
             alt: "",
           },
           {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.jpg",
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.webp",
             alt: "",
           },
           {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
             alt: "",
           },
         ],
       },
       images: [
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.webp",
           alt: "",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
           alt: "",
         },
       ],
@@ -292,15 +292,15 @@ Großes Auto **24 - 28,00€**
       },
       images: [
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
           alt: "",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0751-web_js4hpq.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0751-web_js4hpq.webp",
           alt: "",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0744-web_iv4lcf.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0744-web_iv4lcf.webp",
           alt: "",
         },
       ],
@@ -403,30 +403,30 @@ Großes Auto **24 - 28,00€**
           "INSPIRE bietet dir mit dem hochmodernen Smartboard den höchsten Standard für deine volldigitalen Meetings. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.",
         images: [
           {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.jpg",
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.webp",
             alt: "",
           },
           {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.jpg",
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.webp",
             alt: "",
           },
           {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.jpg",
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
             alt: "",
           },
         ],
       },
       images: [
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.webp",
           alt: "",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.webp",
           alt: "",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0638-web_selpqq.jpg",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0638-web_selpqq.webp",
           alt: "",
         },
       ],
@@ -522,7 +522,7 @@ Großes Auto **24 - 28,00€**
     email: "info@newglobecenter.com",
     phone: "+49 5308 5231220",
     background: {
-      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_960,c_scale/v1636962944/ngc/IMG_0695-web_hxcl6m.jpg",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_960,c_scale/v1636962944/ngc/IMG_0695-web_hxcl6m.webp",
       alt: "About",
     },
     location: {
