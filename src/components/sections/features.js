@@ -46,12 +46,13 @@ export default function FeaturesSection({ features }) {
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
               <HeadingBox>
-                <h2 ref={ref}>{formatHeadline(features.headline)}</h2>
+                <h2>{formatHeadline(features.headline)}</h2>
                 <Underline className="text-primary w-full h-3" />
               </HeadingBox>
               <p>{features.description}</p>
             </div>
             <motion.div
+              ref={ref}
               initial="hidden"
               variants={listVariants}
               animate={controls}
