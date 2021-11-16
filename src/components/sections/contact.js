@@ -5,6 +5,8 @@ import { SocialIcon } from "../socialIcon";
 import { motion, useAnimation } from "framer-motion";
 import Input from "@/components/input";
 import formatHeadline from "@/lib/utils/text";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const variantsClip = {
   open: {
@@ -13,9 +15,39 @@ const variantsClip = {
   close: { clipPath: "polygon(100% 0%,95% 0%,95% 100%,100% 100%)" },
 };
 
+const variantsRight = {
+  hidden: { width: "80%" },
+  visible: { width: "66.666667%" },
+};
+
 const variantsForm = {
   open: { x: 0 },
   close: { x: 250 },
+};
+
+const variantsText = {
+  hidden: { x: 200, opacity: 0 },
+  visible: { x: 0, opacity: 1 },
+};
+
+const listVariants = {
+  hidden: {
+    transition: {
+      staggerDirection: -1,
+    },
+  },
+  visible: {
+    transition: {
+      staggerChildren: 0.06,
+    },
+  },
+};
+
+const transition = {
+  duration: 0.5,
+  type: "tween",
+  ease: "easeOut",
+  delay: 0.2,
 };
 
 export default function ContactSection({ contact, paddingTop, leftContact }) {
@@ -33,8 +65,14 @@ export default function ContactSection({ contact, paddingTop, leftContact }) {
 
   if (leftContact && isOpen) setIsOpen(false);
 
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    clipControls.start(inView ? "visible" : "hidden");
+  }, [clipControls, inView]);
+
   return (
-    <div className="lg:absolute top-0 h-full lg:h-screen w-full bg-secondary text-white flex">
+    <div className="lg:absolute top-0 h-full lg:h-screen w-full bg-secondary text-white flex overflow-hidden">
       <div
         className="lg:my-auto container"
         style={{
@@ -42,10 +80,27 @@ export default function ContactSection({ contact, paddingTop, leftContact }) {
           paddingBottom: paddingTop / 1.75,
         }}
       >
-        <div className="max-w-lg space-y-10 py-16 lg:mt-16">
-          <h2>{formatHeadline(contact.headline)}</h2>
-          <Button label="jetzt anfragen" onTap={(e, i) => setIsOpen(!isOpen)} />
-          <div className="flex flex-wrap gap-4">
+        <motion.div
+          className="max-w-lg space-y-10 py-16 lg:mt-16"
+          ref={ref}
+          initial="hidden"
+          variants={listVariants}
+          animate={clipControls}
+        >
+          <motion.h2 variants={variantsText} transition={transition}>
+            {formatHeadline(contact.headline)}
+          </motion.h2>
+          <motion.div variants={variantsText} transition={transition}>
+            <Button
+              label="jetzt anfragen"
+              onTap={(e, i) => setIsOpen(!isOpen)}
+            />
+          </motion.div>
+          <motion.div
+            className="flex flex-wrap gap-4"
+            variants={variantsText}
+            transition={transition}
+          >
             <SocialIcon href={"mailto:" + contact.email}>
               <MdEmail />
               <span className="text-sm opacity-70 pr-1">{contact.email}</span>
@@ -54,10 +109,15 @@ export default function ContactSection({ contact, paddingTop, leftContact }) {
               <MdLocalPhone />
               <span className="text-sm opacity-70 pr-1">{contact.phone}</span>
             </SocialIcon>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-      <div className="hidden lg:block h-full lg:absolute bottom-0 right-0 w-4/6">
+      <motion.div
+        className="hidden lg:block h-full lg:absolute bottom-0 right-0 w-4/6"
+        animate={clipControls}
+        variants={variantsRight}
+        transition={transition}
+      >
         <div className="absolute right-0 px-10 flex items-center h-full w-full justify-center">
           <motion.div
             initial="close"
@@ -94,7 +154,7 @@ export default function ContactSection({ contact, paddingTop, leftContact }) {
             duration: 0.5,
           }}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
