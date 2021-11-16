@@ -4,6 +4,7 @@ import { wrap } from "popmotion";
 import { useInterval } from "usehooks-ts";
 import { MdFullscreen } from "react-icons/md";
 import MyDialog from "./dialog";
+import { useInView } from "react-intersection-observer";
 
 const variants = {
   enter: (direction) => {
@@ -38,21 +39,26 @@ export default function Carousel({
   canMaximize = true,
   maximized = false,
 }) {
+  const [ref, inView] = useInView();
   const [[page, direction], setPage] = useState([0, 0]);
-  const imageIndex = wrap(0, images.length, page);
-
-  let [isMaximised, setIsMaximised] = useState(maximized);
+  const [isMaximised, setIsMaximised] = useState(maximized);
 
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
   };
 
-  useInterval(() => {
-    if (!isMaximised) paginate(1);
-  }, 5000);
+  const imageIndex = wrap(0, images.length, page);
+
+  useInterval(
+    () => {
+      paginate(1);
+    },
+    !isMaximised && inView ? 5000 : null
+  );
 
   const slider = (
     <AnimatePresence initial={false} custom={direction}>
+      <div ref={ref} className="w-full h-[90%] absolute" />
       <motion.img
         key={page}
         src={images[imageIndex].src}
