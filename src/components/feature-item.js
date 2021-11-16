@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const itemVariants = {
   hidden: {
     opacity: 0,
-    x: 30,
+    x: 60,
   },
   visible: {
     opacity: 1,

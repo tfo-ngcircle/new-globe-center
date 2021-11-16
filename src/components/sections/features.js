@@ -16,13 +16,13 @@ const underlineVariants = {
 const listVariants = {
   hidden: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.06,
       staggerDirection: -1,
     },
   },
   visible: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.06,
     },
   },
 };
