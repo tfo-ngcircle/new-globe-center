@@ -28,12 +28,12 @@ const listVariants = {
 };
 
 export default function FeaturesSection({ features }) {
-  const underlineControls = useAnimation();
-  const [underLineRef, underlineInView] = useInView();
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
 
   useEffect(() => {
-    underlineControls.start(underlineInView ? "visible" : "hidden");
-  }, [underlineControls, underlineInView]);
+    controls.start(inView ? "visible" : "hidden");
+  }, [controls, inView]);
 
   return (
     <div className="relative">
@@ -46,7 +46,7 @@ export default function FeaturesSection({ features }) {
           <div className="space-y-6 lg:space-y-8">
             <div className="space-y-4">
               <HeadingBox>
-                <h2 ref={underLineRef}>{formatHeadline(features.headline)}</h2>
+                <h2 ref={ref}>{formatHeadline(features.headline)}</h2>
                 <Underline className="text-primary w-full h-3" />
               </HeadingBox>
               <p>{features.description}</p>
@@ -54,7 +54,7 @@ export default function FeaturesSection({ features }) {
             <motion.div
               initial="hidden"
               variants={listVariants}
-              animate={underlineControls}
+              animate={controls}
               className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 xl:gap-y-6 overflow-hidden"
             >
               {features.features.map((item, i) => (
@@ -75,7 +75,7 @@ export default function FeaturesSection({ features }) {
       </div>
       <Underline
         initial="hidden"
-        animate={underlineControls}
+        animate={controls}
         variants={underlineVariants}
         transition={{ duration: 0.6 }}
         className="absolute text-primary opacity-70 mix-blend-multiply space-x-[-1px] sale-x-[-1] top-0 mt-4 lg:mt-20 w-48 lg:w-60 xl:w-[500px] h-20 lg:h-40 xl:h-80"
