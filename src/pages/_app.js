@@ -18,6 +18,10 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="stylesheet" href="https://use.typekit.net/edt7kka.css" />
+        <link
+          rel="shortcut icon"
+          href="https://res.cloudinary.com/ngc-gmbh/image/upload/f_ico/v1637160501/ngc/favicon_qyrde1.ico"
+        />
       </Head>
       <Component {...pageProps} />
     </>
