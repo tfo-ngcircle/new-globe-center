@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
+import { useInView } from "react-intersection-observer";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN;
 
@@ -9,6 +10,11 @@ export default function MapSection({ location }) {
   const [lng, setLng] = useState(location.lng);
   const [lat, setLat] = useState(location.lat);
   const [zoom, setZoom] = useState(16);
+  const [ref, inView] = useInView();
+
+  useEffect(() => {
+    map.current && map.current.zoomTo(inView ? 16 : 17, { duration: 1500 });
+  }, [inView]);
 
   useEffect(() => {
     if (map.current) return; // initialize map only once
@@ -45,5 +51,9 @@ export default function MapSection({ location }) {
 
     map.current.scrollZoom.disable();
   });
-  return <div ref={mapContainer} className="w-full !h-screen absolute top-0" />;
+  return (
+    <div ref={mapContainer} className="w-full !h-screen absolute top-0">
+      <div ref={ref} className="h-1/2 w-4 relative translate-y-1/2" />
+    </div>
+  );
 }
