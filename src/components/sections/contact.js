@@ -47,7 +47,6 @@ const transition = {
   duration: 0.5,
   type: "tween",
   ease: "easeOut",
-  delay: 0.2,
 };
 
 export default function ContactSection({ contact, paddingTop, leftContact }) {
