@@ -1,5 +1,6 @@
 import formatHeadline from "@/lib/utils/text";
 import ReactMarkdown from "react-markdown";
+import MyLink from "./link";
 
 export const Md = ({ children, ...props }) => {
   return (
@@ -17,6 +18,7 @@ export const Md = ({ children, ...props }) => {
         h3: ({ node, ...props }) => (
           <h3 {...props}>{formatHeadline(props.children[0])}</h3>
         ),
+        a: ({ node, ...props }) => <MyLink {...props} />,
       }}
     >
       {children}
