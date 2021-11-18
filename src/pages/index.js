@@ -12,6 +12,7 @@ import { useElementSize, useWindowSize } from "usehooks-ts";
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { data } from "src/data";
+import Seo from "@/components/seo";
 
 export default function Home() {
   const headerRef = useRef();
@@ -25,6 +26,7 @@ export default function Home() {
 
   return (
     <>
+      <Seo />
       <Header
         ref={headerRef}
         className={`z-40 fixed`}
