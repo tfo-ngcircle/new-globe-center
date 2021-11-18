@@ -8,7 +8,7 @@ import { data } from "src/data";
 
 export default function Room({ space }) {
   return (
-    <Page>
+    <Page seo={space.seo}>
       <div className="container space-y-10 md:space-y-20">
         <Space space={space} className="h-full" isFull />
         <div className="space-y-6">
@@ -78,6 +78,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const space = data.spaces.find((it) => it.slug == params.slug);
+  space.seo = {
+    metaTitle: space.title,
+    metaDescription: space.description,
+    shareImage: space.images[0],
+  };
   return {
     props: { space: space },
     revalidate: 30,
