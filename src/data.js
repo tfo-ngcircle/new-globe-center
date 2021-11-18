@@ -549,3 +549,13 @@ Wir sind die NgC GmbH. Wir bieten seit 2012 Services in verschiedenen Kommunikat
 
 Wir bieten dir drei individuelle Schulungs- und Konferenzräume mit hervorragender technischer Ausstattung und modernen Büromöbeln. Tageslichtdurchflutet, ruhig gelegen und mit wunderschöner Außenanlage, ist das NGC nicht nur zum Arbeiten gemacht, sondern lädt auch zum persönlichen Austausch und zur Gemeinsamkeit ein. Jeder Raum bietet einen besonderen Aspekt, den es zu entdecken lohnt. Abgerundet durch unser Rund-um-Glücklich Prinzip bieten wir nicht nur Schulungsräume – sondern ein Erlebnis für deine individuelle Tagung.
 `;
+
+export const global = {
+  siteName: "New Globe Center",
+  defaultSeo: {
+    metaTitle: "Dein Raum.",
+    metaDescription:
+      "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
+    shareImage: "",
+  },
+};
