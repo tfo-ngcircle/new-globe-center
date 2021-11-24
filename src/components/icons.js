@@ -1,5 +1,7 @@
-import { BiArea, BiGroup, BiChair, BiCoffee } from "react-icons/bi";
-import { GiWaterBottle } from "react-icons/gi";
+import { BiArea, BiGroup, BiChair, BiCoffee, BiCookie } from "react-icons/bi";
+import { GiWaterBottle, GiNetworkBars } from "react-icons/gi";
+import { RiParkingBoxLine } from "react-icons/ri";
+import { HiOutlinePresentationChartBar } from "react-icons/hi";
 
 export function getIcon(tag, className) {
   switch (tag) {
@@ -31,6 +33,14 @@ export function getIcon(tag, className) {
       return <BiCoffee className={className} />;
     case "water":
       return <GiWaterBottle className={className} />;
+    case "speed":
+      return <GiNetworkBars className={className} />;
+    case "park":
+      return <RiParkingBoxLine className={className} />;
+    case "cookie":
+      return <BiCookie className={className} />;
+    case "present":
+      return <HiOutlinePresentationChartBar className={className} />;
     default:
       return undefined;
   }

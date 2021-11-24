@@ -204,12 +204,12 @@ export const data = {
           { name: "seating", label: "Tischinsel" },
         ],
         equipment: [
-          { name: "area", label: "Parkmöglichkeiten" },
-          { name: "people", label: "Tagungsutensilien" },
-          { name: "seating", label: "Highspeed Internet" },
+          { name: "park", label: "Parkmöglichkeiten" },
+          { name: "present", label: "Tagungsutensilien" },
+          { name: "speed", label: "Highspeed Internet" },
           { name: "water", label: "Wasser" },
           { name: "coffee", label: "Kaffee" },
-          { name: "seating", label: "Kekse" },
+          { name: "cookie", label: "Kekse" },
         ],
       },
       extras: {
