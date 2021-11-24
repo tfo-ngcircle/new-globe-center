@@ -10,8 +10,9 @@ import React from "react";
 
 const destinations = [
   { label: "Home", link: "/#landing" },
+  { label: "Ausstattung", link: "/#features" },
   { label: "Räume", link: "/#spaces" },
-  { label: "Über", link: "/#about" },
+  { label: "Über uns", link: "/#about" },
   { label: "Kontakt", link: "/#contact" },
 ];
 
