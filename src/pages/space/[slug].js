@@ -54,6 +54,27 @@ export default function Room({ space }) {
   );
 }
 
+export const VipPackage = ({ image, title, description }) => {
+  return (
+    <div className="border-[3px] rounded border-primary p-4 flex items-center gap-2 bg-white">
+      <Img image={image} className="w-32 h-32" />
+      <div className="space-y-3">
+        <h4>{title}</h4>
+        <Md>{description}</Md>
+      </div>
+    </div>
+  );
+};
+
+export const Section = ({ title, children }) => {
+  return (
+    <div className="space-y-6">
+      <h3>{formatHeadline(title)}</h3>
+      {children}
+    </div>
+  );
+};
+
 export const CharacteristicsGroup = ({ items }) => {
   return (
     <div className="flex gap-4 flex-wrap">
