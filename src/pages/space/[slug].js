@@ -31,9 +31,19 @@ export default function Room({ space }) {
             versorgen wir dich mit Kaffee, Tee, Wasser und ein paar Knabbereien.
           </p>
           <CharacteristicsGroup items={space.characteristics.equipment} />
-        </div>
-        <div className="space-y-6">
-          <h4>Extras</h4>
+        </Section>
+        <Section title="VIP.">
+          <div className="grid grid-cols-3 gap-7">
+            {space.vip.map((it) => (
+              <VipPackage
+                key={it.title}
+                title={it.title}
+                description={it.description}
+                image={it.image}
+              />
+            ))}
+          </div>
+        </Section>
         <Section title="Extras.">
           <p>
             Für dein erfolgreiches Meeting bieten wir zusätzlich noch folgende
