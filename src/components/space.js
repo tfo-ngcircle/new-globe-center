@@ -48,7 +48,7 @@ export const Space = ({ space, isFull, ...props }) => {
 
   return (
     <div data-anchor={space.slug} {...props}>
-      <div className="md:grid md:grid-cols-7 w-full lg:h-full xl:items-center lg:space-y-0 space-y-6 overflow-hidden">
+      <div className="lg:grid lg:grid-cols-7 w-full xl:h-full xl:items-center xl:space-y-0 space-y-6 overflow-hidden">
         <motion.div
           ref={ref}
           initial="hidden"
@@ -56,12 +56,12 @@ export const Space = ({ space, isFull, ...props }) => {
           animate={controls}
           className={`${
             isFull ? undefined : "px-5 lg:pl-12 xl:pl-36"
-          } lg:pr-10 xl:pr-20 space-y-4 lg:space-y-6 xl:space-y-8 col-span-3 overflow-hidden`}
+          } lg:pr-10 xl:pr-20 space-y-4 lg:space-y-6 xl:space-y-8 col-span-3 overflow-hidden py-2`}
         >
           <motion.div
             variants={itemVariants}
             transition={transision}
-            className="lg:max-w-min max-w-max"
+            className="xl:max-w-min max-w-max"
           >
             <h5>{formatHeadline(space.subtitle)}</h5>
             <HeadingBox>
@@ -75,7 +75,7 @@ export const Space = ({ space, isFull, ...props }) => {
           <motion.div
             variants={itemVariants}
             transition={transision}
-            className="flex gap-2 xl:gap-4 flex-wrap"
+            className="flex gap-2 lg:gap-4 flex-wrap"
           >
             {space.characteristics.key.map((kc) => (
               <Characteristic it={kc} key={kc.name} />
@@ -84,7 +84,7 @@ export const Space = ({ space, isFull, ...props }) => {
           <motion.div
             variants={itemVariants}
             transition={transision}
-            className="space-y-2 xl:space-y-4 divide-y"
+            className="space-y-2 lg:space-y-4 divide-y"
           >
             <TagRow
               head={<HiOutlineClock className="text-3xl text-primary" />}
@@ -93,7 +93,7 @@ export const Space = ({ space, isFull, ...props }) => {
             <TagRow
               head={<HiOutlineCurrencyEuro className="text-3xl text-primary" />}
               items={space.price}
-              className="pt-2 xl:pt-4"
+              className="pt-2 lg:pt-4"
             />
           </motion.div>
           {!isFull ? (
@@ -108,7 +108,7 @@ export const Space = ({ space, isFull, ...props }) => {
           animate={controls}
           variants={imageVariants}
           transition={{ duration: 0.8, type: "tween", ease: "easeOut" }}
-          className="col-span-4 h-80 lg:h-full relative bg-secondary"
+          className="col-span-4 h-80 md:h-[30rem] xl:h-full relative bg-secondary"
         >
           <Carousel
             className="w-full h-full object-cover absolute"

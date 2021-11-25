@@ -13,7 +13,7 @@ export const Fullpage = ({
       paddingTop={paddingTop + "px"}
       onLeave={onLeave}
       anchors={anchors}
-      responsiveWidth={768}
+      responsiveWidth={1024}
       responsiveSlides={true}
       render={({ _, fullpageApi }) => {
         return (

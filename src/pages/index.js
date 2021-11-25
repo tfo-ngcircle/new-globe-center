@@ -30,14 +30,14 @@ export default function Home() {
       <Header
         ref={headerRef}
         className={`z-40 fixed`}
-        dark={dark & (window.width >= 768)}
+        dark={dark & (window.width >= 1024)}
         isHome
         isTransparent={isTransparent}
       />
       {height !== 0 ? (
         <Fullpage
-          className="space-y-20 md:space-y-0"
-          paddingTop={window.width < 768 ? 0 : height}
+          className="space-y-20 lg:space-y-0"
+          paddingTop={window.width < 1024 ? 0 : height}
           onLeave={(ori, dest, dir) => {
             setDark(dest.anchor === "contact");
             setIsTransparent(dest.anchor === "landing");

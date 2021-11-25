@@ -35,7 +35,7 @@ export default function GallerySection({ gallery, width }) {
   }, [controls, inView]);
 
   return (
-    <div className="h-full flex flex-col justify-end">
+    <div className="h-full flex flex-col justify-end mt-0 md:mt-20 lg:mt-0">
       <div className="container space-y-5">
         <div className="max-w-max space-y-4">
           <h2>{formatHeadline(gallery.headline)}</h2>
@@ -67,7 +67,7 @@ export default function GallerySection({ gallery, width }) {
           ))}
         </motion.div>
       ) : (
-        <div className="relative h-96 mt-8 flex w-screen items-center justify-center overflow-hidden">
+        <div className="relative h-96 md:h-[32rem] mt-8 flex w-screen items-center justify-center overflow-hidden">
           <Carousel
             images={gallery.images}
             className="absolute h-full max-w-screen object-cover"

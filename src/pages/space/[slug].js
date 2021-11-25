@@ -50,7 +50,7 @@ export default function Room({ space }) {
             Für dein erfolgreiches Meeting bieten wir zusätzlich noch folgende
             Leistungen an.
           </p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             <div>
               <CharacteristicsGroup items={space.extras.catering} />
             </div>

@@ -38,7 +38,7 @@ export default function FeaturesSection({ features }) {
   return (
     <div className="relative">
       <div className="container">
-        <div className="md:flex space-y-4 lg:space-x-8 md:space-y-0 justify-between h-full items-center">
+        <div className="lg:flex space-y-4 xl:space-x-8 lg:space-y-0 justify-between h-full items-center">
           <Img
             image={features.image}
             className="object-cover relative h-[400px] w-full lg:w-[368px] lg:h-full xl:w-[510px] xl:h-[720px] shadow-lg"
@@ -56,7 +56,7 @@ export default function FeaturesSection({ features }) {
               initial="hidden"
               variants={listVariants}
               animate={controls}
-              className="grid grid-cols-2 lg:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 xl:gap-y-6 overflow-hidden"
+              className="grid grid-cols-2 md:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 xl:gap-y-6 overflow-hidden"
             >
               {features.features.map((item, i) => (
                 <FeatureItem
@@ -79,7 +79,7 @@ export default function FeaturesSection({ features }) {
         animate={controls}
         variants={underlineVariants}
         transition={{ duration: 0.6 }}
-        className="absolute text-primary opacity-70 mix-blend-multiply space-x-[-1px] sale-x-[-1] top-0 mt-4 lg:mt-20 w-48 lg:w-60 xl:w-[500px] h-20 lg:h-40 xl:h-80"
+        className="absolute text-primary opacity-70 mix-blend-multiply space-x-[-1px] sale-x-[-1] top-0 mt-4 lg:mt-20 w-52 lg:w-60 xl:w-[500px] h-40 lg:h-60 xl:h-80"
       />
     </div>
   );
