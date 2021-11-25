@@ -212,50 +212,54 @@ export const data = {
           { name: "cookie", label: "Kekse" },
         ],
       },
+      vip: [
+        {
+          title: "Mundo Vinum",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Hubano de Cuba",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Vivre la France",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
+            alt: "",
+          },
+        },
+      ],
       extras: {
         catering: [
           {
             name: "area",
             label: "Getränkepauschale",
-            premium: false,
             details: `Halbtagespauschale **6,00€**
           Ganztagespauschale **12,00€**`,
           },
           {
             name: "area",
             label: "Fingerfood Catering",
-            premium: false,
             details: "Preise auf Anfrage",
           },
           {
             name: "area",
             label: "Brötchenfrühstück",
-            premium: false,
             details: "Preise auf Anfrage",
           },
           {
             name: "area",
             label: "Obst und Kuchen",
-            premium: false,
             details: "Preise auf Anfrage",
-          },
-          {
-            name: "area",
-            label: "Mundo Vinum",
-            premium: true,
-            details: "Weine aus aller Welt",
-          },
-          {
-            name: "people",
-            label: "Vivre la France",
-            premium: true,
-            details: "Ein kleines Stück Frankreich",
-          },
-          {
-            name: "seating",
-            label: "Habano de Cuba",
-            premium: true,
-            details: "Spezialitäten aus Kuba",
           },
         ],
         equipment: [
@@ -325,50 +329,54 @@ Großes Auto **24 - 28,00€**
           { name: "seating", label: "Kekse" },
         ],
       },
+      vip: [
+        {
+          title: "Mundo Vinum",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Hubano de Cuba",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Vivre la France",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
+            alt: "",
+          },
+        },
+      ],
       extras: {
         catering: [
           {
             name: "area",
             label: "Getränkepauschale",
-            premium: false,
             details: `Halbtagespauschale **6,00€**
           Ganztagespauschale **12,00€**`,
           },
           {
             name: "area",
             label: "Fingerfood Catering",
-            premium: false,
             details: "Preise auf Anfrage",
           },
           {
             name: "area",
             label: "Brötchenfrühstück",
-            premium: false,
             details: "Preise auf Anfrage",
           },
           {
             name: "area",
             label: "Obst und Kuchen",
-            premium: false,
             details: "Preise auf Anfrage",
-          },
-          {
-            name: "area",
-            label: "Mundo Vinum",
-            premium: true,
-            details: "Weine aus aller Welt",
-          },
-          {
-            name: "people",
-            label: "Vivre la France",
-            premium: true,
-            details: "Ein kleines Stück Frankreich",
-          },
-          {
-            name: "seating",
-            label: "Habano de Cuba",
-            premium: true,
-            details: "Spezialitäten aus Kuba",
           },
         ],
         equipment: [
@@ -451,50 +459,54 @@ Großes Auto **24 - 28,00€**
           { name: "seating", label: "Kekse" },
         ],
       },
+      vip: [
+        {
+          title: "Mundo Vinum",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Hubano de Cuba",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
+            alt: "",
+          },
+        },
+        {
+          title: "Vivre la France",
+          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          image: {
+            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
+            alt: "",
+          },
+        },
+      ],
       extras: {
         catering: [
           {
             name: "area",
             label: "Getränkepauschale",
-            premium: false,
             details: `Halbtagespauschale **6,00€**
           Ganztagespauschale **12,00€**`,
           },
           {
             name: "area",
             label: "Fingerfood Catering",
-            premium: false,
             details: "Preise auf Anfrage",
           },
           {
             name: "area",
             label: "Brötchenfrühstück",
-            premium: false,
             details: "Preise auf Anfrage",
           },
           {
             name: "area",
             label: "Obst und Kuchen",
-            premium: false,
             details: "Preise auf Anfrage",
-          },
-          {
-            name: "area",
-            label: "Mundo Vinum",
-            premium: true,
-            details: "Weine aus aller Welt",
-          },
-          {
-            name: "people",
-            label: "Vivre la France",
-            premium: true,
-            details: "Ein kleines Stück Frankreich",
-          },
-          {
-            name: "seating",
-            label: "Habano de Cuba",
-            premium: true,
-            details: "Spezialitäten aus Kuba",
           },
         ],
         equipment: [
