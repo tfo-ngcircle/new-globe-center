@@ -34,7 +34,7 @@ export default function Room({ space }) {
           <CharacteristicsGroup items={space.characteristics.equipment} />
         </Section>
         <Section title="VIP.">
-          <div className="grid grid-cols-3 gap-7">
+          <div className="grid lg:grid-cols-3 gap-7">
             {space.vip.map((it) => (
               <VipPackage
                 key={it.title}
