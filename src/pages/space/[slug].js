@@ -11,8 +11,7 @@ export default function Room({ space }) {
     <Page seo={space.seo}>
       <div className="container space-y-10 md:space-y-20">
         <Space space={space} className="h-full" isFull />
-        <div className="space-y-6">
-          <h3>{formatHeadline("Die Technik.")}</h3>
+        <Section title="Die Technik.">
           <Md>{space.technology.description}</Md>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
             {space.technology.images.slice(0, 4).map((img, i) => (
@@ -23,9 +22,8 @@ export default function Room({ space }) {
               />
             ))}
           </div>
-        </div>
-        <div className="space-y-6">
-          <h3>{formatHeadline("Unsere Ausstattung.")}</h3>
+        </Section>
+        <Section title="Unsere Ausstattung.">
           <p>
             Bei uns findest du 47 Parkplätze und einen großzügigen Stellplatz
             für Fahrräder. Für deine Tagung bekommst du von uns natürlich die
@@ -36,6 +34,7 @@ export default function Room({ space }) {
         </div>
         <div className="space-y-6">
           <h4>Extras</h4>
+        <Section title="Extras.">
           <p>
             Für dein erfolgreiches Meeting bieten wir zusätzlich noch folgende
             Leistungen an.
@@ -48,7 +47,7 @@ export default function Room({ space }) {
               <CharacteristicsGroup items={space.extras.equipment} />
             </div>
           </div>
-        </div>
+        </Section>
       </div>
     </Page>
   );
