@@ -27,7 +27,7 @@ const Header = React.forwardRef(
         className={`transition-all duration-200 ${className} top-0 left-0 right-0 text-gray-500 ${
           dark ? "!bg-transparent" : undefined
         } ${
-          isTransparent ? "bg-transparent" : "bg-white shadow-md md:shadow-none"
+          isTransparent ? "bg-transparent" : "bg-white shadow-md lg:shadow-none"
         }`}
       >
         <header className="container flex justify-between items-center py-5 md:py-7">
@@ -39,8 +39,8 @@ const Header = React.forwardRef(
           >
             <Logo height={screen.width < 1024 ? 40 : 60} />
           </Link>
-          <div className="flex space-x-2 md:space-x-24 items-center">
-            <ul className="hidden md:flex space-x-6 md:space-x-12">
+          <div className="flex space-x-2 lg:space-x-24 items-center">
+            <ul className="hidden lg:flex space-x-6">
               {destinations.map((it) => (
                 <li key={it.link}>
                   <h6>
@@ -63,7 +63,7 @@ const Header = React.forwardRef(
                 </li>
               ))}
             </ul>
-            <div className="flex items-center space-x-3 md:space-x-8 text-gray-300">
+            <div className="flex items-center space-x-3 lg:space-x-8 text-gray-300">
               <Link
                 href="/#contact"
                 onClick={(e) =>
@@ -79,7 +79,7 @@ const Header = React.forwardRef(
                   }`}
                 />
               </Link>
-              <span className="h-14 md:w-px bg-current" />
+              <span className="h-14 lg:w-px bg-current" />
               <Link
                 href="/#map"
                 onClick={(e) =>
@@ -98,7 +98,7 @@ const Header = React.forwardRef(
             </div>
             <Menu
               as="div"
-              className="md:hidden relative inline-block text-left"
+              className="lg:hidden relative inline-block text-left"
             >
               <Menu.Button>
                 <AiOutlineMenu
