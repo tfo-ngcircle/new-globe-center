@@ -168,8 +168,15 @@ export const data = {
         "Der Konferenzraum CONNECT vernetzt dich stressfrei mit deinen Kunden, Mitarbeitern oder Partnern. Hochmoderne Konferenzsysteme sorgen für einen reibungslosen Ablauf deiner Meetings. Ob mit zwei Teilnehmern oder mit dem ganzen Team – CONNECT bietet dir ein stressfreies und bequemes Erlebnis. Verbinde dich mit der Welt und genieße unseren volldigital ausgestatteten Konferenzraum. Für deine digitale Zusammenarbeit.",
       ],
       technology: {
-        description:
-          "Im CONNECT erwartet dich ein vollausgestattetes Tagungssystem mit zwei 65 Zoll Bildschirmen, auf denen du deine Ideen teilen und alle deine Partner virtuell begrüßen kannst. Das System beinhaltet eine hochauflösende Kamera sowie Lautsprecher und eine Jabra-Mikrofonanlage.",
+        description: `Im CONNECT erwartet dich ein vollausgestattetes Tagungssystem mit zwei 65 Zoll Bildschirmen, auf denen du deine Ideen teilen und alle deine Partner virtuell begrüßen kannst. Das System beinhaltet eine hochauflösende Kamera sowie Lautsprecher und eine Jabra-Mikrofonanlage.
+          
+- 2 65 Zoll große Bildschirme
+- Kamerasystem
+- Hochwertige Lautsprecher
+- Jabra Mikrofon-Anlage
+- Highspeed Glasfaser-Internet
+          `,
+        items: [],
         images: [
           {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.webp",
@@ -304,8 +311,18 @@ Großes Auto **24 - 28,00€**
         "Im Schulungsraum CREATE steht dir die Welt offen. Egal ob Meetings mit deinem ganzen Team, Schulungen oder Workshops. Der großzügige Tageslicht durchflutete Raum bietet dir ungeahnte Flexibilität. Mit dem Blick auf unsere traumhafte Grünanlage und der Möglichkeit zur Terrassennutzung bietet CREATE die beste Umgebung, um kreativ zu arbeiten, Dinge zu schaffen und Ergebnisse zu erzielen. Der Raum ist so flexibel wie du – durch die eingebaute Trennwand kann schnell ein Rückzugsort für kleinere Gruppen geschaffen werden. Schafft gemeinsam effektive Workflows und überwindet Grenzen. Für das Arbeiten der Zukunft.",
       ],
       technology: {
-        description:
-          "Im CREATE erwartet dich ein großzügig geschnittener Konferenzraum, den wir genau nach deinen Vorstellungen vorbereiten. Für deine volldigital stattfindenden Meetings nutzt du das im Raum befindliche Smartboard, mit dem du dich, deine Partner und Kunden komplett digital vernetzen kannst. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.",
+        description: `Im CREATE erwartet dich ein großzügig geschnittener Konferenzraum, den wir genau nach deinen Vorstellungen vorbereiten. Für deine volldigital stattfindenden Meetings nutzt du das im Raum befindliche Smartboard, mit dem du dich, deine Partner und Kunden komplett digital vernetzen kannst. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.
+          
+- Schreiben, Skizzieren und Zeichnen per Finger oder speziellen Stiften
+- Kompatibel mit allen gängigen Betriebssystemen
+- Auch ohne PC oder Tablet nutzbar
+- Ergebnisse lassen sich schnell und einfach teilen
+- Intuitive Bedienung
+- 4K-Ultra HD-Kamera mit 5-fach-HD-Zoom
+- Beamforming-Mikrofonanordung
+- KI-gesteuerter Blickwinkel
+- Alternativ verfügbar: Beamer und Leinwand
+- Highspeed Glasfaser-Internet`,
         images: [],
       },
       images: [
@@ -346,15 +363,25 @@ Großes Auto **24 - 28,00€**
       vip: [
         {
           title: "Mundo Vinum",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          description: `Gehen Sie auf eine Reise um die Welt und erleben Sie den Geschmack der Vielfalt. Mit unserem Erlebnispaket Mundo Vinum bieten wir Ihnen die besten Weine für einen garantiert besonderen Ausklang Ihrer Veranstaltung.
+            
+Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, unser Weinpaket führt Sie durch die luxuriösesten Weinorte der Welt. Abgerundet wird das Erlebnis mit passendem Käse, Antipasti oder Knabbereien. Jedes Paket wird individuell und auf Ihre Wünsche zugeschnitten.
+
+
+##### Ab 13,95€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
             alt: "",
           },
         },
         {
-          title: "Hubano de Cuba",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          title: "Habano de Cuba",
+          description: `Am Strand die Seele baumeln lassen, tropische Welten genießen und Erfolge gebührend feiern – Das erwartet Sie mit dem Erlebnispaket Habano de Cuba.
+
+Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosphärischen Gartenanlage. Feiern Sie Ihre Definition von Erfolg stilvoll und klassisch mit unserem Luxuspaket. Führen Sie tiefgründige Gespräche und stecken Sie inspirierende Ziele mit Habano de Cuba. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+
+##### Ab 16,65€ p.P.
+`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
             alt: "",
@@ -362,7 +389,11 @@ Großes Auto **24 - 28,00€**
         },
         {
           title: "Vivre la France",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la france. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
+            
+Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la france gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
+
+##### Ab 19,35€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
             alt: "",
@@ -421,22 +452,19 @@ Großes Auto **24 - 28,00€**
         "Der Konferenzraum INSPIRE ist deine Wahl, wenn du deine Meetings professionell und in inspirierender Atmosphäre abhalten willst. Hier hast du die Möglichkeit, zusammen mit deinen Kollegen, Kunden oder Partnern große Dinge zu schaffen. Überzeuge dich selbst von INSPIRE schaffe innovative Ansätze. Für deinen grenzenlosen Erfolg.",
       ],
       technology: {
-        description:
-          "INSPIRE bietet dir mit dem hochmodernen Smartboard den höchsten Standard für deine volldigitalen Meetings. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.",
-        images: [
-          {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.webp",
-            alt: "",
-          },
-          {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.webp",
-            alt: "",
-          },
-          {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
-            alt: "",
-          },
-        ],
+        description: `INSPIRE bietet dir mit dem hochmodernen Smartboard den höchsten Standard für deine volldigitalen Meetings. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.
+
+- Schreiben, Skizzieren und Zeichnen per Finger oder speziellen Stiften
+- Kompatibel mit allen gängigen Betriebssystemen
+- Auch ohne PC oder Tablet nutzbar
+- Ergebnisse lassen sich schnell und einfach teilen
+- Intuitive Bedienung
+- 4K-Ultra-HD-Kamera mit 5-fach-HD-Zoom
+- Beamforming-Mikrofonanordung
+- KI-gesteuerter Blickwinkel
+- Alternativ verfügbar: Beamer und Leinwand
+- Highspeed Glasfaser-Internet`,
+        images: [],
       },
       images: [
         {
@@ -476,15 +504,25 @@ Großes Auto **24 - 28,00€**
       vip: [
         {
           title: "Mundo Vinum",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          description: `Gehen Sie auf eine Reise um die Welt und erleben Sie den Geschmack der Vielfalt. Mit unserem Erlebnispaket Mundo Vinum bieten wir Ihnen die besten Weine für einen garantiert besonderen Ausklang Ihrer Veranstaltung.
+            
+Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, unser Weinpaket führt Sie durch die luxuriösesten Weinorte der Welt. Abgerundet wird das Erlebnis mit passendem Käse, Antipasti oder Knabbereien. Jedes Paket wird individuell und auf Ihre Wünsche zugeschnitten.
+
+
+##### Ab 13,95€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
             alt: "",
           },
         },
         {
-          title: "Hubano de Cuba",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          title: "Habano de Cuba",
+          description: `Am Strand die Seele baumeln lassen, tropische Welten genießen und Erfolge gebührend feiern – Das erwartet Sie mit dem Erlebnispaket Habano de Cuba.
+
+Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosphärischen Gartenanlage. Feiern Sie Ihre Definition von Erfolg stilvoll und klassisch mit unserem Luxuspaket. Führen Sie tiefgründige Gespräche und stecken Sie inspirierende Ziele mit Habano de Cuba. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+
+##### Ab 16,65€ p.P.
+`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
             alt: "",
@@ -492,7 +530,11 @@ Großes Auto **24 - 28,00€**
         },
         {
           title: "Vivre la France",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la france. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
+            
+Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la france gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
+
+##### Ab 19,35€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
             alt: "",
