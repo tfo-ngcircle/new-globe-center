@@ -215,15 +215,25 @@ export const data = {
       vip: [
         {
           title: "Mundo Vinum",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          description: `Gehen Sie auf eine Reise um die Welt und erleben Sie den Geschmack der Vielfalt. Mit unserem Erlebnispaket Mundo Vinum bieten wir Ihnen die besten Weine für einen garantiert besonderen Ausklang Ihrer Veranstaltung.
+            
+Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, unser Weinpaket führt Sie durch die luxuriösesten Weinorte der Welt. Abgerundet wird das Erlebnis mit passendem Käse, Antipasti oder Knabbereien. Jedes Paket wird individuell und auf Ihre Wünsche zugeschnitten.
+
+
+##### Ab 13,95€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
             alt: "",
           },
         },
         {
-          title: "Hubano de Cuba",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          title: "Habano de Cuba",
+          description: `Am Strand die Seele baumeln lassen, tropische Welten genießen und Erfolge gebührend feiern – Das erwartet Sie mit dem Erlebnispaket Habano de Cuba.
+
+Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosphärischen Gartenanlage. Feiern Sie Ihre Definition von Erfolg stilvoll und klassisch mit unserem Luxuspaket. Führen Sie tiefgründige Gespräche und stecken Sie inspirierende Ziele mit Habano de Cuba. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+
+##### Ab 16,65€ p.P.
+`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
             alt: "",
@@ -231,7 +241,11 @@ export const data = {
         },
         {
           title: "Vivre la France",
-          description: "Lorem ipsum dolor sit amet consectutur adispacing",
+          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la france. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
+            
+Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la france gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
+
+##### Ab 19,35€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
             alt: "",

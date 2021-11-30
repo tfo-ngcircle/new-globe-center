@@ -33,7 +33,14 @@ export default function Room({ space }) {
           </p>
           <CharacteristicsGroup items={space.characteristics.equipment} />
         </Section>
-        <Section title="VIP.">
+        <Section title="Erlebnispaket.">
+          <p>
+            Wir bieten Ihnen die Möglichkeit, Ihre Konferenz, Schulung oder Ihr
+            Businessmeeting angemessen ausklingen zu lassen. Nutzen Sie unsere
+            Erlebnispakete für ein gemeinsames Zusammensein nach der Arbeit.
+            Dafür bereiten wir für Sie unser Foyer Spectrum oder nach Wunsch
+            unsere Terrasse für ein Genusserlebnis vor.
+          </p>
           <div className="grid lg:grid-cols-3 gap-7">
             {space.vip.map((it) => (
               <VipPackage
