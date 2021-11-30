@@ -1,8 +1,8 @@
 export const data = {
   landing: {
-    headline: "Dein Raum. Dein Meeting.",
+    headline: "Ihr Raum. Ihr Meeting.",
     description:
-      "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
+      "Entdecken Sie unsere Schulungs- und Konferenzräume in Wolfsburg. Buchen Sie modernste Ausstattung und digitalen Komfort für Ihre Schulung, Tagung oder Businessmeeting. Wir bieten Ihnen Raum für sorgloses und stressfreies Arbeiten im NEW GLOBE CENTER. Genießen Sie inspirierende Atmosphäre mit hochwertigem Service, der Sie in den Mittelpunkt stellt. Wir machen Ihre Veranstaltung zum Erlebnis und freuen uns darauf, Sie kennen zu lernen.",
     images: [
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.webp",
@@ -65,7 +65,7 @@ export const data = {
   gallery: {
     headline: "Unsere Galerie.",
     description:
-      "Stöbere in unserer Galerie und überzeuge dich selbst von modernem Design und toller Ausstattung.",
+      "Stöbern Sie in unserer Galerie und überzeugen Sie sich von modernem Design und toller Ausstattung.",
     images: [
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969625/ngc/IMG_0757-web_bmnzgs.webp",
@@ -140,8 +140,8 @@ export const data = {
     },
   },
   features: {
-    headline: "Dein Meeting. Unsere Ausstattung.",
-    description: "Das bieten wir dir für dein Meeting.",
+    headline: "Ihr Meeting. Unsere Ausstattung.",
+    description: "Das bieten wir für Ihr Meeting.",
     image: {
       src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,q_auto:good/v1636972712/ngc/IMG_0387_t4t40x.webp",
       alt: "",
@@ -150,7 +150,7 @@ export const data = {
       {
         title: "Getränke und Catering.",
         icon: "catering",
-        description: "Nach deinen Wünschen zusammengestellt.",
+        description: "Nach Ihren Wünschen zusammengestellt.",
       },
       {
         title: "E-Ladesäulen.",
@@ -160,7 +160,7 @@ export const data = {
       {
         title: "Erlebnispakete.",
         icon: "diamond",
-        description: "Für dein ganz besonderes Meeting.",
+        description: "Für Ihr ganz besonderes Meeting.",
       },
       {
         title: "Barrierefreiheit.",
@@ -194,13 +194,13 @@ export const data = {
     {
       slug: "connect",
       title: "Connect.",
-      subtitle: "Deine Vernetzung.",
+      subtitle: "Ihre Vernetzung.",
       description: [
-        "Für deine digitale Zusammenarbeit über alle Grenzen hinaus bieten wir dir im Raum CONNECT hochmoderne Konferenzsysteme. Verbinde dich mit der Welt und genieße den volldigital ausgestatteten Besprechungsraum.",
-        "Der Konferenzraum CONNECT vernetzt dich stressfrei mit deinen Kunden, Mitarbeitern oder Partnern. Hochmoderne Konferenzsysteme sorgen für einen reibungslosen Ablauf deiner Meetings. Ob mit zwei Teilnehmern oder mit dem ganzen Team – CONNECT bietet dir ein stressfreies und bequemes Erlebnis. Verbinde dich mit der Welt und genieße unseren volldigital ausgestatteten Konferenzraum. Für deine digitale Zusammenarbeit.",
+        "Für Ihre digitale Zusammenarbeit über alle Grenzen hinaus bieten wir Ihnen im Raum CONNECT hochmoderne Konferenzsysteme. Verbinden Sie sich mit der Welt und genießen Sie den volldigital ausgestatteten Besprechungsraum.",
+        "Der Konferenzraum CONNECT vernetzt Sie stressfrei mit Ihren Kunden, Mitarbeitern oder Partnern. Hochmoderne Konferenzsysteme sorgen für einen reibungslosen Ablauf Ihrer Meetings. Ob mit zwei Teilnehmern oder mit dem ganzen Team – CONNECT bietet Ihnen ein entspanntes und bequemes Erlebnis. Verbinden Sie sich mit der Welt und genießen Sie unseren volldigital ausgestatteten Konferenzraum. Für Ihre digitale Zusammenarbeit.",
       ],
       technology: {
-        description: `Im CONNECT erwartet dich ein vollausgestattetes Tagungssystem mit zwei 65 Zoll Bildschirmen, auf denen du deine Ideen teilen und alle deine Partner virtuell begrüßen kannst. Das System beinhaltet eine hochauflösende Kamera sowie Lautsprecher und eine Jabra-Mikrofonanlage.
+        description: `Im CONNECT erwartet Sie ein vollausgestattetes Tagungssystem mit 2 Bildschirmen, auf denen Sie Ihre Ideen teilen und alle Ihre Partner virtuell begrüßen können. Das System beinhaltet eine hochauflösende Kamera sowie Lautsprecher und eine Mikrofonanlage.
           
 - 2 65 Zoll große Bildschirme
 - Kamerasystem
@@ -235,7 +235,10 @@ export const data = {
         },
       ],
       availability: ["Mo - Fr • 15:30 - 18:00", "Sa - So • 8:00 - 18:00"],
-      price: ["Halbtagspauschale **449,00 €**", "Wochenendpauschale"],
+      price: [
+        "Halbtagspauschale **249,00 €**",
+        "Wochenendpauschale **439,00 €**",
+      ],
       characteristics: {
         key: [
           { name: "area", label: "22 m^2" },
@@ -280,9 +283,9 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
         },
         {
           title: "Vivre la France",
-          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la france. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
+          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la France. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
             
-Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la france gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
+Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la France gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
 
 ##### Ab 19,35€ p.P.`,
           image: {
@@ -326,24 +329,19 @@ Großes Auto **24 - 28,00€**
 `,
           },
           { name: "area", label: "Flipchart", details: "**12,00€**" },
-          {
-            name: "people",
-            label: "Shuttleservice",
-            details: "Preise auf Anfrage",
-          },
         ],
       },
     },
     {
       slug: "create",
       title: "Create.",
-      subtitle: "Deine Kreativität.",
+      subtitle: "Ihre Kreativität.",
       description: [
-        "Effizientes Arbeiten in anregender Umgebung, natürliches Tageslicht und ein traumhaftes Ambiente – das bieten wir dir mit dem Raum CREATE. Um beste Ergebnisse zu erzielen arbeitet ihr gemeinsam, schafft effektive Workflows und könnt gemeinsam Grenzen überwinden.",
-        "Im Schulungsraum CREATE steht dir die Welt offen. Egal ob Meetings mit deinem ganzen Team, Schulungen oder Workshops. Der großzügige Tageslicht durchflutete Raum bietet dir ungeahnte Flexibilität. Mit dem Blick auf unsere traumhafte Grünanlage und der Möglichkeit zur Terrassennutzung bietet CREATE die beste Umgebung, um kreativ zu arbeiten, Dinge zu schaffen und Ergebnisse zu erzielen. Der Raum ist so flexibel wie du – durch die eingebaute Trennwand kann schnell ein Rückzugsort für kleinere Gruppen geschaffen werden. Schafft gemeinsam effektive Workflows und überwindet Grenzen. Für das Arbeiten der Zukunft.",
+        "Effizientes Arbeiten in anregender Umgebung, natürliches Tageslicht und ein traumhaftes Ambiente – das bieten wir Ihnen mit dem Raum CREATE. Um beste Ergebnisse zu erzielen arbeiten Sie gemeinsam, schaffen effektive Workflows und können gemeinsam Grenzen überwinden.",
+        "Im Schulungsraum CREATE steht Ihnen die Welt offen. Egal ob Meetings mit dem ganzen Team, Schulungen oder Workshops. Der großzügige, Tageslicht durchflutete Raum bietet Ihnen ungeahnte Flexibilität. Mit dem Blick auf unsere traumhafte Grünanlage und der Möglichkeit zur Terrassennutzung bietet CREATE die beste Umgebung, um kreativ zu arbeiten, Dinge zu schaffen und Ergebnisse zu erzielen. Der Raum ist so flexibel wie Sie – durch eine eingebaute Trennwand kann der Raum geteilt und schnell ein Rückzugsort für kleinere Gruppen geschaffen werden. Kreieren Sie gemeinsam effektive Workflows und überwinden Sie Grenzen. Für das Arbeiten der Zukunft.",
       ],
       technology: {
-        description: `Im CREATE erwartet dich ein großzügig geschnittener Konferenzraum, den wir genau nach deinen Vorstellungen vorbereiten. Für deine volldigital stattfindenden Meetings nutzt du das im Raum befindliche Smartboard, mit dem du dich, deine Partner und Kunden komplett digital vernetzen kannst. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.
+        description: `Im CREATE erwartet Sie ein großzügig geschnittener Konferenzraum, den wir genau nach Ihren Vorstellungen vorbereiten. Für Ihre volldigital stattfindenden Meetings nutzen Sie das im Raum befindliche Smartboard, mit dem Sie sich, Ihre Partner und Kunden komplett digital vernetzen können. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet die Möglichkeit, gemeinsam an Ihren Projekten zu arbeiten, auch wenn das Team in der ganzen Welt verteilt ist.
           
 - Schreiben, Skizzieren und Zeichnen per Finger oder speziellen Stiften
 - Kompatibel mit allen gängigen Betriebssystemen
@@ -377,9 +375,9 @@ Großes Auto **24 - 28,00€**
       ],
       availability: ["Mo - So • 8:00 - 18:00"],
       price: [
-        "Halbtagspauschale **399,00 €**",
-        "Ganztagspauschale **599,00 €**",
-        "Wochenendpauschale",
+        "Halbtagspauschale **299,00 €**",
+        "Ganztagspauschale **499,00 €**",
+        "Meetingpauschale **149,00 €**",
       ],
       characteristics: {
         key: [
@@ -425,9 +423,9 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
         },
         {
           title: "Vivre la France",
-          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la france. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
+          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la France. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
             
-Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la france gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
+Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la France gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
 
 ##### Ab 19,35€ p.P.`,
           image: {
@@ -471,20 +469,15 @@ Großes Auto **24 - 28,00€**
 `,
           },
           { name: "area", label: "Flipchart", details: "**12,00€**" },
-          {
-            name: "people",
-            label: "Shuttleservice",
-            details: "Preise auf Anfrage",
-          },
         ],
       },
     },
     {
       slug: "inspire",
       title: "Inspire.",
-      subtitle: "Deine Inspiration.",
+      subtitle: "Ihre Inspiration.",
       description: [
-        "Wir setzen Grenzen nur um Sie zu überwinden. Im Raum INSPIRE erwartet dich eine Premium Ausstattung für deine Meetings. Für eine inspirierende Umgebung für berauschende Erfolge.",
+        "Wir setzen Grenzen nur um sie zu überwinden. Im Raum INSPIRE erwartet Sie eine Premium Ausstattung für Ihre Meetings. Für eine inspirierende Umgebung für berauschende Erfolge.",
         "Der Konferenzraum INSPIRE ist deine Wahl, wenn du deine Meetings professionell und in inspirierender Atmosphäre abhalten willst. Hier hast du die Möglichkeit, zusammen mit deinen Kollegen, Kunden oder Partnern große Dinge zu schaffen. Überzeuge dich selbst von INSPIRE schaffe innovative Ansätze. Für deinen grenzenlosen Erfolg.",
       ],
       technology: {
@@ -566,9 +559,9 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
         },
         {
           title: "Vivre la France",
-          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la france. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
+          description: `Frankreich erleben und genießen. Ganz einfach bei uns vor Ort mit dem Erlebnispaket Vivre la France. Um den Ausklang Ihrer Veranstaltung zu etwas ganz Besonderem zu machen, bieten wir Ihnen besten Champagner und feine französische Kostbarkeiten. 
             
-Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la france gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
+Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la France gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
 
 ##### Ab 19,35€ p.P.`,
           image: {
@@ -612,11 +605,6 @@ Großes Auto **24 - 28,00€**
 `,
           },
           { name: "area", label: "Flipchart", details: "**12,00€**" },
-          {
-            name: "people",
-            label: "Shuttleservice",
-            details: "Preise auf Anfrage",
-          },
         ],
       },
     },
@@ -637,21 +625,18 @@ Großes Auto **24 - 28,00€**
 };
 
 export const about = `
-# DEIN RAUM. DEINE KOMUNIKATION. DEINE MEETINGS.
+# IHR RAUM. IHRE KOMUNIKATION. IHRE MEETINGS.
 
-Moderne Ausstattung, komfortable Technik und perfekter Service – im NEW GLOBE CENTER
+Moderne Ausstattung, komfortable Technik und perfekt auf Sie zugeschnittener Service – im NEW GLOBE CENTER stellen wir Sie in den Mittelpunkt.
 
-Du suchst einen Ort, an dem du deine Schulungen, Meetings und Konferenzen in stilvollem Ambiente mit hochmodernen Technologien abhalten kannst. Dabei willst du dich voll und ganz auf deine Arbeit konzentrieren und nicht auch noch Kaffee kochen.
+In unseren Schulungsräumen finden Ihre Ideen Platz. Wir bieten Ihnen Raum für Digitalisierung, Raum für Wissensaustausch und Raum für nachhaltige Arbeitsweisen. Bei uns finden Sie nicht nur großzügige Räume für Ihre Tagung, Schulung oder Ihr Businessmeeting. Unser Anspruch ist Ihre individuellen Wünsche wahr zu machen. Von saisonaler Dekoration, angepasst an Ihre Vorstellungen, über unsere vielfältigen Erlebnispakete bis hin zu unserem exklusiven Shuttleservice. Wir bieten Ihnen ein breites Angebot, welches Ihre persönliche Note wiederspiegelt. Erleben Sie eine kulturelle Rundreise in unseren Räumen oder lassen Sie sich stilvoll von einem Chauffeur abholen – Wir zeigen Ihnen den Unterschied zwischen Service und premium Betreuung. Gerne beraten wir Sie bei der Auswahl und stellen Ihnen ein ganz individuelles Paket zusammen, dass Ihre Veranstaltung unvergesslich macht. 
 
-Bei uns finden deine Ideen Platz. Wir bieten dir Raum für Digitalisierung, Raum für Wissensaustausch und Raum für nachhaltige Arbeitsweisen.
+## Das NEW GLOBE CENTER.
 
-## Wer wir sind.
-
-Wir sind die NgC GmbH. Wir bieten seit 2012 Services in verschiedenen Kommunikationsbereichen. Kommunikation findet nicht nur im Alltag statt, sondern ist ein wichtiger Begleiter, besonders in den technischen Komponenten unseres Lebens – Deswegen haben wir sie zu unserem Geschäftsmodell gemacht. Mit der Eröffnung des NEW GLOBE CENTERS können wir unsere Dienstleistung ausweiten – indem wir Raum für deine Digitalisierung, Nachhaltigkeit und Wissenssicherung schaffen.
-
-## Das Gebäude.
-
-Wir bieten dir drei individuelle Schulungs- und Konferenzräume mit hervorragender technischer Ausstattung und modernen Büromöbeln. Tageslichtdurchflutet, ruhig gelegen und mit wunderschöner Außenanlage, ist das NGC nicht nur zum Arbeiten gemacht, sondern lädt auch zum persönlichen Austausch und zur Gemeinsamkeit ein. Jeder Raum bietet einen besonderen Aspekt, den es zu entdecken lohnt. Abgerundet durch unser Rund-um-Glücklich Prinzip bieten wir nicht nur Schulungsräume – sondern ein Erlebnis für deine individuelle Tagung.
+Das NEW GLOBE CENTER befindet sich im Heinenkamp II in Wolfsburg mit direkter Anbindung an die Autobahn und an die Erlebnisstadt Wolfsburg. Tageslichtdurchflutet, ruhig gelegen und mit wunderschöner Außenanlage ist das NEW GLOBE CENTER nicht nur zum Arbeiten gemacht, sondern lädt auch zum persönlichen Austausch und zur Gemeinsamkeit ein. 
+Wir bieten Ihnen drei individuelle Schulungs- und Konferenzräume mit hervorragender technischer Ausstattung und modernen Büromöbeln. Wir setzen vermehrt auf digitales Arbeiten und die hybride Arbeitsweise, um Produktivität und Motivation zu steigern. Deswegen bieten wir hochmoderne Ausstattung für Ihre Veranstaltung und definieren so die digitale Nachhaltigkeit der Region. 
+Das NEW GLOBE CENTER selbst dient dabei nicht nur als Schulungsort sondern auch als Bürogebäude der Firmen NgC GmbH und 1TNC GmbH. Angelehnt an die digitale Nachhaltigkeit der Dienstleistungen ist das Gebäude mit E-Ladesäulen für das Fahren der Zukunft ausgestattet. Auch architektonisch wird der Nachhaltigkeitsgedanke des NEW GLOBE CENTERS aufgegriffen. Das Gebäude ist mit einem begrünten Flachdach ausgestattet – dieses dient der Reintegration von Brutplätzen, die sonst mit dem Bau zerstört wären. Zusätzlich dient die üppige Gartenanlage als Kinderzimmer der Natur. Sie ist aber auch ein hervorragender Ort, um sich zwischen Meetings oder in Pausen die Beine zu vertreten.
+Wir stellen Ihnen gerne ein persönliches Angebot zusammen. Kontaktieren Sie uns jetzt, oder kommen Sie vorbei und überzeugen sich selbst vom NEW GLOBE CENTER.
 `;
 
 export const global = {

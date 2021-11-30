@@ -71,7 +71,7 @@ export default function LandingSection({ landing }) {
             </h1>
             <Underline className="text-primary w-full h-3" />
           </HeadingBox>
-          <p className="md:w-[125%]" ref={ref}>
+          <p className="md:w-[130%]" ref={ref}>
             {landing && landing.description}
           </p>
           <Button
