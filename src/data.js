@@ -478,17 +478,17 @@ Großes Auto **24 - 28,00€**
       subtitle: "Ihre Inspiration.",
       description: [
         "Wir setzen Grenzen nur um sie zu überwinden. Im Raum INSPIRE erwartet Sie eine Premium Ausstattung für Ihre Meetings. Für eine inspirierende Umgebung für berauschende Erfolge.",
-        "Der Konferenzraum INSPIRE ist deine Wahl, wenn du deine Meetings professionell und in inspirierender Atmosphäre abhalten willst. Hier hast du die Möglichkeit, zusammen mit deinen Kollegen, Kunden oder Partnern große Dinge zu schaffen. Überzeuge dich selbst von INSPIRE schaffe innovative Ansätze. Für deinen grenzenlosen Erfolg.",
+        "Der Konferenzraum INSPIRE ist Ihre Wahl, wenn Sie Ihre Meetings professionell und in inspirierender Atmosphäre abhalten wollen. Hier haben Sie die Möglichkeit, zusammen mit Ihren Kollegen, Kunden oder Partnern große Dinge zu schaffen. Es erwartet Sie eine Premium Ausstattung in Form von zwei hochmoderne Smartboards, mit denen Sie grenzenlos kommunizieren können. Verbinden Sie sich mit Ihrem Team und arbeiten Sie gemeinsam und in Echtzeit – und überwinden Sie auch die größten Hürden. Kreieren Sie eine inspirierende Atmosphäre für berauschende Erfolge, schaffen Sie innovative Ansätze und überzeugen Sie sich von INSPIRE. Für Ihren grenzenlosen Erfolg.",
       ],
       technology: {
-        description: `INSPIRE bietet dir mit dem hochmodernen Smartboard den höchsten Standard für deine volldigitalen Meetings. Das Smartboard unterstützt alle gängigen Programme und Apps und bietet dir die Möglichkeit, gemeinsam an deinen Projekten zu arbeiten, auch wenn das Team auf der ganzen Welt verteilt ist.
+        description: `INSPIRE bietet Ihnen den höchsten Standard für Ihre volldigitalen Meetings. Das hochmoderne Smartboard unterstützt alle gängigen Programme und Apps und bietet Ihnen die Möglichkeit, gemeinsam an Projekten zu arbeiten, auch wenn das Team in der ganzen Welt verteilt ist.
 
 - Schreiben, Skizzieren und Zeichnen per Finger oder speziellen Stiften
 - Kompatibel mit allen gängigen Betriebssystemen
 - Auch ohne PC oder Tablet nutzbar
 - Ergebnisse lassen sich schnell und einfach teilen
 - Intuitive Bedienung
-- 4K-Ultra-HD-Kamera mit 5-fach-HD-Zoom
+- 4K-Ultra HD-Kamera mit 5-fach-HD-Zoom
 - Beamforming-Mikrofonanordung
 - KI-gesteuerter Blickwinkel
 - Alternativ verfügbar: Beamer und Leinwand
@@ -511,9 +511,8 @@ Großes Auto **24 - 28,00€**
       ],
       availability: ["Mo - So • 8:00 - 18:00"],
       price: [
-        "Halbtagspauschale **429,00 €**",
+        "Halbtagspauschale **399,00 €**",
         "Ganztagspauschale **749,00 €**",
-        "Wochenendpauschale",
       ],
       characteristics: {
         key: [
@@ -576,7 +575,7 @@ Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die
             name: "area",
             label: "Getränkepauschale",
             details: `Halbtagespauschale **6,00€**
-          Ganztagespauschale **12,00€**`,
+          Ganztagespauschale **inklusive**`,
           },
           {
             name: "area",

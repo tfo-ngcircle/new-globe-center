@@ -26,10 +26,8 @@ export default function Room({ space }) {
         </Section>
         <Section title="Unsere Ausstattung.">
           <p>
-            Bei uns findest du 47 Parkplätze und einen großzügigen Stellplatz
-            für Fahrräder. Für deine Tagung bekommst du von uns natürlich die
-            Basics gestellt: Notizzettel, Stifte und Blöcke. Zusätzlich
-            versorgen wir dich mit Kaffee, Tee, Wasser und ein paar Knabbereien.
+            Bei uns finden Sie 47 Parkplätze und einen großzügigen Stellplatz
+            für Fahrräder. In Ihrer Tagung sind die Basics inkludiert.
           </p>
           <CharacteristicsGroup items={space.characteristics.equipment} />
         </Section>
@@ -54,7 +52,7 @@ export default function Room({ space }) {
         </Section>
         <Section title="Extras.">
           <p>
-            Für dein erfolgreiches Meeting bieten wir zusätzlich noch folgende
+            Für Ihr erfolgreiches Meeting bieten wir zusätzlich noch folgende
             Leistungen an.
           </p>
           <div className="grid lg:grid-cols-2 gap-8">
