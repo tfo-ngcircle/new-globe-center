@@ -383,7 +383,12 @@ Großes Auto **24 - 28,00€**
         key: [
           { name: "area", label: "46 m^2" },
           { name: "people", label: "Max 22 Personen" },
-          { name: "seating", label: "Variable Stellmöglichkeiten" },
+          {
+            name: "seating",
+            label: "Stellmöglichkeiten",
+            details:
+              "U-Form, Stuhlkreis, Stuhlreihen, Blockform, Einzeltische, uvm",
+          },
         ],
         equipment: [
           { name: "area", label: "Parkmöglichkeiten" },
