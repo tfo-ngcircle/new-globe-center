@@ -38,7 +38,7 @@ const footerItems = [
   [
     { heading: "Adresse", body: "Wolfsacker 8\n\n38444 Wolfsburg" },
     { heading: "Telefon", body: "+49 5308 5231220" },
-    { heading: "E-Mail", body: "info@ngcircle.com" },
+    { heading: "E-Mail", body: "info@newglobecenter.com" },
   ],
   [{ heading: "Über", body: "[Über NGC](/about)\n\n[Galerie](/gallery)" }],
   [

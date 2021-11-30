@@ -641,14 +641,16 @@ Das NEW GLOBE CENTER befindet sich im Heinenkamp II in Wolfsburg mit direkter An
 Wir bieten Ihnen drei individuelle Schulungs- und Konferenzräume mit hervorragender technischer Ausstattung und modernen Büromöbeln. Wir setzen vermehrt auf digitales Arbeiten und die hybride Arbeitsweise, um Produktivität und Motivation zu steigern. Deswegen bieten wir hochmoderne Ausstattung für Ihre Veranstaltung und definieren so die digitale Nachhaltigkeit der Region. 
 Das NEW GLOBE CENTER selbst dient dabei nicht nur als Schulungsort sondern auch als Bürogebäude der Firmen NgC GmbH und 1TNC GmbH. Angelehnt an die digitale Nachhaltigkeit der Dienstleistungen ist das Gebäude mit E-Ladesäulen für das Fahren der Zukunft ausgestattet. Auch architektonisch wird der Nachhaltigkeitsgedanke des NEW GLOBE CENTERS aufgegriffen. Das Gebäude ist mit einem begrünten Flachdach ausgestattet – dieses dient der Reintegration von Brutplätzen, die sonst mit dem Bau zerstört wären. Zusätzlich dient die üppige Gartenanlage als Kinderzimmer der Natur. Sie ist aber auch ein hervorragender Ort, um sich zwischen Meetings oder in Pausen die Beine zu vertreten.
 Wir stellen Ihnen gerne ein persönliches Angebot zusammen. Kontaktieren Sie uns jetzt, oder kommen Sie vorbei und überzeugen sich selbst vom NEW GLOBE CENTER.
+
+[Zurück](/)
 `;
 
 export const global = {
   siteName: "New Globe Center",
   defaultSeo: {
-    metaTitle: "Dein Raum.",
+    metaTitle: "Ihr Raum.",
     metaDescription:
-      "Entdecke unsere Schulungs- und Konferenzräume in Wolfsburg. Buche modernste Ausstattung und digitalen Komfort für deine Schulung, Tagung oder dein Businessmeeting. Mit unserem Rund-Um-Glücklich Prinzip sorgen wir für deine perfekte Kommunikation.",
+      "Entdecken Sie unsere Schulungs- und Konferenzräume in Wolfsburg. Buchen Sie modernste Ausstattung und digitalen Komfort für Ihre Schulung, Tagung oder Businessmeeting. Wir bieten Ihnen Raum für sorgloses und stressfreies Arbeiten im NEW GLOBE CENTER. Genießen Sie inspirierende Atmosphäre mit hochwertigem Service, der Sie in den Mittelpunkt stellt. Wir machen Ihre Veranstaltung zum Erlebnis und freuen uns darauf, Sie kennen zu lernen.",
     shareImage: "",
   },
 };
