@@ -37,7 +37,7 @@ const Header = React.forwardRef(
             }
             className={dark ? "text-white" : "text-black"}
           >
-            <Logo height={screen.width < 1024 ? 40 : 60} />
+            <Logo height={screen.width < 1024 ? 40 : 40} isFull={true} />
           </Link>
           <div className="flex space-x-2 lg:space-x-24 items-center">
             <ul className="hidden lg:flex space-x-6">
