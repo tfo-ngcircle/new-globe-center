@@ -50,7 +50,7 @@ const footerItems = [
   [
     {
       heading: "Räume",
-      body: "[Create](/space/create)\n\n[Connect](/space/connect)\n\n[Inspire](/space/inspire)",
+      body: "[Connect](/space/connect)\n\n[Create](/space/create)\n\n[Inspire](/space/inspire)",
     },
   ],
 ];
