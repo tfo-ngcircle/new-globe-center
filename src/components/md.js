@@ -19,6 +19,15 @@ export const Md = ({ children, ...props }) => {
           <h3 {...props}>{formatHeadline(props.children[0])}</h3>
         ),
         a: ({ node, ...props }) => <MyLink {...props} />,
+        ul: ({ node, ...props }) => (
+          <ul className="list-disc pl-5 lg:pl-6 space-y-2" {...props} />
+        ),
+        ol: ({ node, ...props }) => (
+          <ol className="list-decimal pl-5 lg:pl-6" {...props} />
+        ),
+        li: ({ node, ...props }) => (
+          <li className="pl-1 marker:text-primary" {...props} />
+        ),
       }}
     >
       {children}
