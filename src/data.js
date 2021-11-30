@@ -370,6 +370,10 @@ Großes Auto **24 - 28,00€**
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0744-web_iv4lcf.webp",
           alt: "",
         },
+        {
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
+          alt: "",
+        },
       ],
       availability: ["Mo - So • 8:00 - 18:00"],
       price: [
