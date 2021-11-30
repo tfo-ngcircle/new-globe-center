@@ -44,6 +44,22 @@ export const data = {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
         alt: "",
       },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
+        alt: "",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
+        alt: "",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
+        alt: "",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262848/ngc/IMG_0409_grfors.webp",
+        alt: "",
+      },
     ],
   },
   gallery: {
