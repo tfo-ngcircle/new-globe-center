@@ -50,6 +50,15 @@ export default function Room({ space }) {
             ))}
           </div>
         </Section>
+        <Section title="Fahrservice.">
+          <Md>{`Wir bieten Ihnen die exklusive Möglichkeit, stilgerecht zu Ihrer Schulung zu erscheinen. Als Extra für Ihre Kunden, Partner oder Ihr Team können Sie unseren Shuttleservice mieten und können sich vollends auf Ihre Schulung konzentrieren.
+            
+- ###### Shuttletransfer mit einem hochwertigen Audi A8: 50,00€ inklusive 50km
+
+- ###### Shuttletransfer mit einem geräumigen VW Multivan: 45,00€ inklusive 50km
+
+Zwischen Stadt-und Landfahrten wird unterschieden. Sprechen Sie uns an für ein ausführliches Angebot`}</Md>
+        </Section>
         <Section title="Extras.">
           <p>
             Für Ihr erfolgreiches Meeting bieten wir zusätzlich noch folgende
