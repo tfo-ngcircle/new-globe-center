@@ -135,7 +135,7 @@ export const data = {
       "Rund-Um-Glücklich Paket mit individuellem Catering",
     ],
     image: {
-      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_auto_color,g_north,h_1920,w_1025,x_56,y_0/v1636963991/ngc/IMG_0665-web_wqibq4.webp",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_bgremoval,f_webp,g_auto:faces,h_4000,q_auto:good,w_4078/v1638432252/ngc/IMG_1056_ua2duu.webp",
       alt: "",
     },
   },
