@@ -188,6 +188,11 @@ export const data = {
         icon: "presentation",
         description: "Hochmoderne Konferenzsysteme für stressfreies Arbeiten.",
       },
+      {
+        title: "Fahrservice.",
+        icon: "chauffeur",
+        description: "Individuelle Fahrdienste für Business Events.",
+      },
     ],
   },
   spaces: [

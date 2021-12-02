@@ -23,6 +23,8 @@ export function getIcon(tag, className) {
       return <Tree />;
     case "diamond":
       return <Diamond />;
+    case "chauffeur":
+      return <Chauffeur />;
     case "area":
       return <BiArea className={className} />;
     case "people":
@@ -208,6 +210,28 @@ export const Diamond = ({ size = 48, className, dark }) => {
         <>
           <path d="M24 34 13 20l5-6h12l5 6z" />
           <path d="m27 14 3 6-6 14m-3-20-3 6 6 14M13 20h22" />
+        </>
+      }
+    />
+  );
+};
+
+export const Chauffeur = ({ size = 48, className, dark }) => {
+  return (
+    <Icon
+      size={size}
+      className={className}
+      dark={dark}
+      black={
+        <>
+          <path d="m23 18 2-2m0 2-2-2" />
+          <path d="M17 24v9l3 3h8l3-3v-9" />
+          <path d="m23 18 2-2m0 2-2-2" />
+        </>
+      }
+      red={
+        <>
+          <path d="M19 18h-3l-3-3 11-4 11 4-3 3h-3m-13 0v3h16v-3m-13 3c1 3 5 3 5 3s4 0 5-3" />
         </>
       }
     />
