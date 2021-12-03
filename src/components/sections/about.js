@@ -6,39 +6,30 @@ import Link from "next/link";
 
 export default function AboutSection({ about, width }) {
   return (
-    <div className="container">
-      <div className="relative md:grid grid-cols-10 2xl:grid-cols-7 items-center gap-12">
-        <div className="h-full col-span-4 2xl:col-span-3 py-6 md:py-2">
-          <span className="absolute left-[-24.1%] 2xl:left-[-30.8%] bg-primary w-[44.4%] 2xl:w-1/2 h-[30%] top-[16.1%] hidden md:block" />
-          <Img
-            image={about.image}
-            className="object-cover 2xl:max-h-[800px] 2xl:w-[86.5%]"
-            style={{
-              clipPath:
-                width >= 768
-                  ? "polygon(0% 0%, 46% 0%, 46% 84%, 0% 84%, 0% 100%, 54% 100%, 54% 16%, 100% 47%, 100% 100%, 0% 100%, 0% 0%)"
-                  : undefined,
-            }}
-          />
-        </div>
-        <div className="space-y-6 md:space-y-10 flex flex-col col-span-5 2xl:col-span-4">
-          <Logo isFull />
-          <div className="space-y-6 md:space-y-10">
-            <h3>{formatHeadline(about.headline)}</h3>
-            <ul className="list-disc list-outside marker:text-primary 2xl:space-y-4 pl-5">
-              {about.description.map((item, i) => (
-                <li key={i}>{item}</li>
-              ))}
-            </ul>
+    <>
+      <Img
+        image={about.image}
+        className="object-cover absolute right-0 bottom-0 h-[90%]"
+      />
+      <div className="container">
+        <div className="relative md:grid grid-cols-10 2xl:grid-cols-7 items-center gap-12">
+          <div className="space-y-6 md:space-y-10 flex flex-col col-span-5 2xl:col-span-4">
+            <Logo isFull />
+            <div className="space-y-6 md:space-y-10">
+              <h3>{formatHeadline(about.headline)}</h3>
+              <ul className="list-disc list-outside marker:text-primary 2xl:space-y-4 pl-5">
+                {about.description.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </div>
+            <Link href="/about" passHref>
+              <Button label="Mehr erfahren" className="mt-4 max-w-min" />
+            </Link>
           </div>
         </div>
-        <Link href="/about" passHref>
-          <Button
-            label="Mehr erfahren"
-            className="lg:!-rotate-90 block md:absolute lg:right-[-8%] xl:-right-4 2xl:-right-32 md:top-full lg:top-[60%] origin-top mt-4 w-full lg:w-auto"
-          />
-        </Link>
+        <div className="h-full col-span-4 2xl:col-span-3 py-6 md:py-2"></div>
       </div>
-    </div>
+    </>
   );
 }

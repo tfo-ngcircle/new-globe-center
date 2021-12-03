@@ -135,7 +135,7 @@ export const data = {
       "Rund-Um-Glücklich Paket mit individuellem Catering",
     ],
     image: {
-      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_auto_color,g_north,h_1920,w_1025,x_56,y_0/v1636963991/ngc/IMG_0665-web_wqibq4.webp",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_bgremoval,f_webp,g_auto:faces,h_4000,q_auto:good,w_4078/v1638432252/ngc/IMG_1056_ua2duu.webp",
       alt: "",
     },
   },
@@ -143,7 +143,7 @@ export const data = {
     headline: "Ihr Meeting. Unsere Ausstattung.",
     description: "Das bieten wir für Ihr Meeting.",
     image: {
-      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,q_auto:good/v1636972712/ngc/IMG_0387_t4t40x.webp",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,q_auto:good/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
       alt: "",
     },
     features: [
