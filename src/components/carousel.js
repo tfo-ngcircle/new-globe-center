@@ -62,7 +62,7 @@ export default function Carousel({
       <motion.img
         key={page}
         src={images[imageIndex].src}
-        alt={images[imageIndex].alt}
+        alt={images[imageIndex]?.alt}
         custom={direction}
         variants={swipeable || isMaximised ? variants : undefined}
         initial={swipeable || isMaximised ? "enter" : { opacity: 0 }}
