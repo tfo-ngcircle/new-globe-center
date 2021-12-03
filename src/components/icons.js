@@ -224,9 +224,12 @@ export const Chauffeur = ({ size = 48, className, dark }) => {
       dark={dark}
       black={
         <>
+          <circle cx="27.2" cy="27" r=".5" />
+          <circle cx="20.8" cy="27" r=".5" />
           <path d="m23 18 2-2m0 2-2-2" />
           <path d="M17 24v9l3 3h8l3-3v-9" />
           <path d="m23 18 2-2m0 2-2-2" />
+          <path d="M22 32h4" />
         </>
       }
       red={
