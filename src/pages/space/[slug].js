@@ -51,13 +51,9 @@ export default function Room({ space }) {
           </div>
         </Section>
         <Section title="Fahrservice.">
-          <Md>{`Wir bieten Ihnen die exklusive Möglichkeit, stilgerecht zu Ihrer Schulung zu erscheinen. Als Extra für Ihre Kunden, Partner oder Ihr Team können Sie unseren Shuttleservice mieten und können sich vollends auf Ihre Schulung konzentrieren.
-            
-- ###### Shuttletransfer mit einem hochwertigen Audi A8: 50,00€ inklusive 50km
-
-- ###### Shuttletransfer mit einem geräumigen VW Multivan: 45,00€ inklusive 50km
-
-Zwischen Stadt-und Landfahrten wird unterschieden. Sprechen Sie uns an für ein ausführliches Angebot`}</Md>
+          <Md>{`Mit unserem exklusiven Fahrservice haben Sie die Möglichkeit, stilgerecht zu Ihrer Schulung zu erscheinen. Als das gewisse Extra bieten wir Ihnen einen individuellen Fahrdienst mit Chauffeur, der Ihr perfektes Meeting abrundet.
+Lassen Sie Ihre Kunden vom Hotel abholen, oder sorgen Sie dafür, dass Ihr Team stressfrei vom Flughafen zur Location kommt. Unser Fahrdienst ist genau wie Sie – flexibel und hochprofessionell. Sprechen Sie uns an für ein ganz auf Sie zugeschnittenes Angebot.
+`}</Md>
         </Section>
         <Section title="Extras.">
           <p>
