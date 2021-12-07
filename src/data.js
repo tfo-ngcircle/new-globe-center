@@ -278,7 +278,7 @@ export const data = {
 Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, unser Weinpaket führt Sie durch die luxuriösesten Weinorte der Welt. Abgerundet wird das Erlebnis mit passendem Käse, Antipasti oder Knabbereien. Jedes Paket wird individuell und auf Ihre Wünsche zugeschnitten.
 
 
-##### Ab 13,95€ p.P.`,
+##### Ab 15,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
             alt: "",
@@ -290,7 +290,7 @@ Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, uns
 
 Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosphärischen Gartenanlage. Feiern Sie Ihre Definition von Erfolg stilvoll und klassisch mit unserem Luxuspaket. Führen Sie tiefgründige Gespräche und stecken Sie inspirierende Ziele mit Habano de Cuba. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
 
-##### Ab 16,65€ p.P.
+##### Ab 18,50€ p.P.
 `,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
@@ -303,7 +303,7 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
             
 Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la France gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
 
-##### Ab 19,35€ p.P.`,
+##### Ab 21,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
             alt: "",
@@ -423,7 +423,7 @@ Großes Auto **24 - 28,00€**
 Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, unser Weinpaket führt Sie durch die luxuriösesten Weinorte der Welt. Abgerundet wird das Erlebnis mit passendem Käse, Antipasti oder Knabbereien. Jedes Paket wird individuell und auf Ihre Wünsche zugeschnitten.
 
 
-##### Ab 13,95€ p.P.`,
+##### Ab 15,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
             alt: "",
@@ -435,7 +435,7 @@ Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, uns
 
 Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosphärischen Gartenanlage. Feiern Sie Ihre Definition von Erfolg stilvoll und klassisch mit unserem Luxuspaket. Führen Sie tiefgründige Gespräche und stecken Sie inspirierende Ziele mit Habano de Cuba. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
 
-##### Ab 16,65€ p.P.
+##### Ab 18,50€ p.P.
 `,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
@@ -448,7 +448,7 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
             
 Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la France gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
 
-##### Ab 19,35€ p.P.`,
+##### Ab 21,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
             alt: "",
@@ -558,7 +558,7 @@ Großes Auto **24 - 28,00€**
 Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, unser Weinpaket führt Sie durch die luxuriösesten Weinorte der Welt. Abgerundet wird das Erlebnis mit passendem Käse, Antipasti oder Knabbereien. Jedes Paket wird individuell und auf Ihre Wünsche zugeschnitten.
 
 
-##### Ab 13,95€ p.P.`,
+##### Ab 15,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
             alt: "",
@@ -570,7 +570,7 @@ Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, uns
 
 Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosphärischen Gartenanlage. Feiern Sie Ihre Definition von Erfolg stilvoll und klassisch mit unserem Luxuspaket. Führen Sie tiefgründige Gespräche und stecken Sie inspirierende Ziele mit Habano de Cuba. &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
 
-##### Ab 16,65€ p.P.
+##### Ab 18,50€ p.P.
 `,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
@@ -583,7 +583,7 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
             
 Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die Welt feiern – dazu das ein oder andere Macaron. Das Erlebnispaket Vivre la France gibt Ihnen die Möglichkeit, sich kulinarisch nach Frankreich entführen zu lassen.
 
-##### Ab 19,35€ p.P.`,
+##### Ab 21,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
             alt: "",
