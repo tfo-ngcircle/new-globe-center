@@ -146,6 +146,18 @@ export const data = {
       src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_bgremoval,f_webp,g_auto:faces,h_4000,q_auto:good,w_4078/v1638432252/ngc/IMG_1056_ua2duu.webp",
       alt: "",
     },
+    contact: [
+      {
+        name: "Nancy Migliore",
+        phone: "0162 3057907",
+        post: "Empfangsmanagement",
+      },
+      {
+        name: "Francesca Ngameni",
+        phone: "0178 3528932",
+        post: "Kundenmanagement",
+      },
+    ],
   },
   features: {
     headline: "Ihr Meeting. Unsere Ausstattung.",

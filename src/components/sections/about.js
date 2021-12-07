@@ -6,7 +6,7 @@ import Link from "next/link";
 import { MdLocalPhone } from "react-icons/md";
 import { SocialIcon } from "../socialIcon";
 
-export default function AboutSection({ about, width }) {
+export default function AboutSection({ about }) {
   return (
     <div className="overflow-hidden">
       <div className="container">
@@ -16,28 +16,19 @@ export default function AboutSection({ about, width }) {
             <div className="space-y-6 md:space-y-12">
               <h3>{formatHeadline(about.headline)}</h3>
               <div className="flex flex-wrap gap-6 lg:gap-20">
-                <div className="space-y-1">
-                  <h5>Nancy Migliore</h5>
-                  <p>Empfangsmanagement</p>
-                  <SocialIcon
-                    href={"tel:0162 3057907"}
-                    className="border-secondary border max-w-max border-opacity-10 rounded-xl"
-                  >
-                    <MdLocalPhone />
-                    <span className="text-sm pr-1">{"0162 3057907"}</span>
-                  </SocialIcon>
-                </div>
-                <div className="space-y-1">
-                  <h5>Francesca Ngameni</h5>
-                  <p>Kundenmanagement</p>
-                  <SocialIcon
-                    href={"tel:0178 3528932"}
-                    className="border-secondary border max-w-max border-opacity-10 rounded-xl"
-                  >
-                    <MdLocalPhone />
-                    <span className="text-sm pr-1">{"0178 3528932"}</span>
-                  </SocialIcon>
-                </div>
+                {about?.contact.map((item, i) => (
+                  <div className="space-y-1" key={i}>
+                    <h5>{item.name}</h5>
+                    <p>{item.post}</p>
+                    <SocialIcon
+                      href={`tel:${item?.phone}`}
+                      className="border-secondary border max-w-max border-opacity-10 rounded-xl"
+                    >
+                      <MdLocalPhone />
+                      <span className="text-sm pr-1">{item?.phone}</span>
+                    </SocialIcon>
+                  </div>
+                ))}
               </div>
             </div>
             <Link href="/about" passHref>

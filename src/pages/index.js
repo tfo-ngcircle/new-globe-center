@@ -59,7 +59,7 @@ export default function Home() {
           <LandingSection landing={data.landing} />
           <FeaturesSection features={data.features} />
           <SpacesSection spaces={data.spaces} width={width} />
-          <AboutSection about={data.about} width={width} />
+          <AboutSection about={data.about} />
           <GallerySection gallery={data.gallery} width={window.width} />
           <ContactSection
             contact={data.contact}
