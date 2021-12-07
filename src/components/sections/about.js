@@ -41,7 +41,7 @@ export default function AboutSection({ about, width }) {
               </div>
             </div>
             <Link href="/about" passHref>
-              <Button label="Mehr erfahren" className="mt-4 max-w-min" />
+              <Button label="Mehr erfahren" className="mt-4 max-w-min z-20" />
             </Link>
           </div>
         </div>
