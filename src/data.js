@@ -644,11 +644,12 @@ export const global = {
       },
     ],
     bottomLinks: [
-      { label: "Cookie Policy", destination: "#" },
-      { label: "Governance, Conduct and Ethics", destination: "#" },
-      { label: "Impressum", destination: "#" },
-      { label: "Privacy Policy", destination: "#" },
-      { label: "Terms and Conditions", destination: "#" },
+      { label: "Datenschutz", destination: "/datenschutz" },
+      { label: "Impressum", destination: "/impressum" },
+      {
+        label: "Hygienekonzept",
+        destination: require("../public/docs/AS_HygienekonzeptWarnstufe2_211202.pdf"),
+      },
     ],
     socialLinks: {
       facebook: "#",

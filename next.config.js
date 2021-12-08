@@ -10,4 +10,15 @@ module.exports = withOptimizedImages({
     process.env.DEPLOY_DIR !== undefined ? `/${process.env.DEPLOY_DIR}` : "",
   assetPrefix:
     process.env.DEPLOY_DIR !== undefined ? `/${process.env.DEPLOY_DIR}/` : "",
+  webpack: (config, options) => {
+    config.module.rules.push({
+      test: /\.pdf/,
+      type: "asset/resource",
+      generator: {
+        filename: "static/[hash][ext]",
+      },
+    });
+
+    return config;
+  },
 });
