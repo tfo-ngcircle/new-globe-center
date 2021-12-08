@@ -4,35 +4,8 @@ import { SocialIcon } from "./socialIcon";
 import Link from "./link";
 import { Md } from "./md";
 import { Img } from "./image";
-
-const partners = [
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_80,c_scale/v1635943722/ngc/digital-solutions_kysjh8.png",
-    alt: "",
-  },
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_120,c_scale/v1635943721/ngc/ngcircle_zxn73k.png",
-    alt: "",
-  },
-  {
-    src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_90,c_scale/v1635943720/ngc/1tnc_obe1pv.png",
-    alt: "",
-  },
-];
-
-const socialLinks = {
-  facebook: "#",
-  linkedin: "#",
-  twitter: "#",
-};
-
-const bottomLinks = [
-  { label: "Cookie Policy", destination: "#" },
-  { label: "Governance, Conduct and Ethics", destination: "#" },
-  { label: "Impressum", destination: "#" },
-  { label: "Privacy Policy", destination: "#" },
-  { label: "Terms and Conditions", destination: "#" },
-];
+import { useContext } from "react";
+import { GlobalContext } from "@/pages/_app";
 
 const footerItems = [
   [
@@ -56,10 +29,11 @@ const footerItems = [
 ];
 
 export default function Footer() {
+  const { footer } = useContext(GlobalContext);
   return (
     <div className="flex flex-col h-full justify-between gap-10 lg:gap-16 pt-24">
       <div className="container flex flex-wrap items-center justify-center gap-8 xl:gap-x-20 my-auto">
-        {partners.map((partner, i) => (
+        {footer.partners?.map((partner, i) => (
           <Img
             image={partner}
             key={i}
@@ -80,18 +54,18 @@ export default function Footer() {
           <div className="py-4">
             <div className="container flex flex-wrap justify-between items-center gap-3 pb-5 md:pb-0">
               <div className="flex gap-3 md:gap-8">
-                {socialLinks.facebook && (
-                  <SocialIcon href={socialLinks.facebook}>
+                {footer.socialLinks?.facebook && (
+                  <SocialIcon href={footer.socialLinks.facebook}>
                     <FaFacebookF />
                   </SocialIcon>
                 )}
-                {socialLinks.linkedin && (
-                  <SocialIcon href={socialLinks.linkedin}>
+                {footer.socialLinks?.linkedin && (
+                  <SocialIcon href={footer.socialLinks.linkedin}>
                     <FaLinkedinIn />
                   </SocialIcon>
                 )}
-                {socialLinks.twitter && (
-                  <SocialIcon href={socialLinks.twitter}>
+                {footer.socialLinks?.twitter && (
+                  <SocialIcon href={footer.socialLinks.twitter}>
                     <FaTwitter />
                   </SocialIcon>
                 )}
@@ -100,8 +74,8 @@ export default function Footer() {
                 <span>
                   © {new Date().getFullYear()} New Globe Center - NgC GmbH
                 </span>
-                {bottomLinks &&
-                  bottomLinks.map((link, i) => (
+                {footer.bottomLinks &&
+                  footer.bottomLinks.map((link, i) => (
                     <Link href={link.destination} key={i}>
                       {link.label}
                     </Link>

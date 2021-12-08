@@ -6,55 +6,42 @@ export const data = {
     images: [
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color,q_auto:eco/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969621/ngc/IMG_0622-web_vw4n2v.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969815/ngc/IMG_0420_zzgych.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969818/ngc/IMG_0422_hqwflh.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432264/ngc/IMG_1025_yo3z4t.webp",
@@ -77,59 +64,45 @@ export const data = {
     images: [
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969625/ngc/IMG_0757-web_bmnzgs.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969621/ngc/IMG_0622-web_vw4n2v.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969815/ngc/IMG_0420_zzgych.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969818/ngc/IMG_0422_hqwflh.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
-        alt: "",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1638262848/ngc/IMG_0409_grfors.webp",
-        alt: "",
       },
     ],
   },
@@ -144,7 +117,6 @@ export const data = {
     ],
     image: {
       src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_crop,e_bgremoval,f_webp,g_auto:faces,h_4000,q_auto:good,w_4078/v1638432252/ngc/IMG_1056_ua2duu.webp",
-      alt: "",
     },
     contact: [
       {
@@ -164,7 +136,6 @@ export const data = {
     description: "Das bieten wir für Ihr Meeting.",
     image: {
       src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,q_auto:good/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
-      alt: "",
     },
     features: [
       {
@@ -237,15 +208,12 @@ export const data = {
         images: [
           {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.webp",
-            alt: "",
           },
           {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.webp",
-            alt: "",
           },
           {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
-            alt: "",
           },
         ],
       },
@@ -255,11 +223,9 @@ export const data = {
         },
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969625/ngc/IMG_0757-web_bmnzgs.webp",
-          alt: "",
         },
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0761-web_i0ccl8.webp",
-          alt: "",
         },
       ],
       availability: ["Mo - Fr • 15:30 - 18:00", "Sa - So • 8:00 - 18:00"],
@@ -293,7 +259,6 @@ Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, uns
 ##### Ab 15,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
-            alt: "",
           },
         },
         {
@@ -306,7 +271,6 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
 `,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
-            alt: "",
           },
         },
         {
@@ -318,7 +282,6 @@ Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die
 ##### Ab 21,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
-            alt: "",
           },
         },
       ],
@@ -386,19 +349,15 @@ Großes Auto **24 - 28,00€**
       images: [
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
-          alt: "",
         },
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0751-web_js4hpq.webp",
-          alt: "",
         },
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0744-web_iv4lcf.webp",
-          alt: "",
         },
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
-          alt: "",
         },
       ],
       availability: ["Mo - So • 8:00 - 18:00"],
@@ -438,7 +397,6 @@ Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, uns
 ##### Ab 15,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
-            alt: "",
           },
         },
         {
@@ -451,7 +409,6 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
 `,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
-            alt: "",
           },
         },
         {
@@ -463,7 +420,6 @@ Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die
 ##### Ab 21,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
-            alt: "",
           },
         },
       ],
@@ -531,15 +487,12 @@ Großes Auto **24 - 28,00€**
       images: [
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.webp",
-          alt: "",
         },
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.webp",
-          alt: "",
         },
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0638-web_selpqq.webp",
-          alt: "",
         },
       ],
       availability: ["Mo - So • 8:00 - 18:00"],
@@ -573,7 +526,6 @@ Ob deutscher Riesling, italienischer Chianti oder französischer Chardonnay, uns
 ##### Ab 15,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/240-glass-of-wine-outline_corc7w.webp",
-            alt: "",
           },
         },
         {
@@ -586,7 +538,6 @@ Erleben Sie besten Rum, feinste Schokolade und starke Zigarren in unserer atmosp
 `,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637794284/ngc/1979-hookah-outline_e4zazv.webp",
-            alt: "",
           },
         },
         {
@@ -598,7 +549,6 @@ Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die
 ##### Ab 21,50€ p.P.`,
           image: {
             src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1637856856/ngc/bottle_pop_up2aji.svg",
-            alt: "",
           },
         },
       ],
@@ -680,5 +630,30 @@ export const global = {
     metaDescription:
       "Entdecken Sie unsere Schulungs- und Konferenzräume in Wolfsburg. Buchen Sie modernste Ausstattung und digitalen Komfort für Ihre Schulung, Tagung oder Businessmeeting. Wir bieten Ihnen Raum für sorgloses und stressfreies Arbeiten im NEW GLOBE CENTER. Genießen Sie inspirierende Atmosphäre mit hochwertigem Service, der Sie in den Mittelpunkt stellt. Wir machen Ihre Veranstaltung zum Erlebnis und freuen uns darauf, Sie kennen zu lernen.",
     shareImage: "",
+  },
+  footer: {
+    partners: [
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_80,c_scale/v1635943722/ngc/digital-solutions_kysjh8.png",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_120,c_scale/v1635943721/ngc/ngcircle_zxn73k.png",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_90,c_scale/v1635943720/ngc/1tnc_obe1pv.png",
+      },
+    ],
+    bottomLinks: [
+      { label: "Cookie Policy", destination: "#" },
+      { label: "Governance, Conduct and Ethics", destination: "#" },
+      { label: "Impressum", destination: "#" },
+      { label: "Privacy Policy", destination: "#" },
+      { label: "Terms and Conditions", destination: "#" },
+    ],
+    socialLinks: {
+      facebook: "#",
+      linkedin: "#",
+      twitter: "#",
+    },
   },
 };
