@@ -20,6 +20,12 @@ export const data = {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
       },
       {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432264/ngc/IMG_1025_yo3z4t.webp",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432255/ngc/IMG_1062_z8zjsv.webp",
+      },
+      {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color,q_auto:eco/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
       },
       {
@@ -42,12 +48,6 @@ export const data = {
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
-      },
-      {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432264/ngc/IMG_1025_yo3z4t.webp",
-      },
-      {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432255/ngc/IMG_1062_z8zjsv.webp",
       },
     ],
   },
