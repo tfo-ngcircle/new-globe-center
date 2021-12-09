@@ -15,7 +15,7 @@ export default function Room({ space }) {
         <Section title="Die Technik.">
           <Md>{space.technology.description}</Md>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
-            {space.technology.images.slice(0, 4).map((img, i) => (
+            {space.technology.images?.slice(0, 4).map((img, i) => (
               <Img
                 key={i}
                 image={img}

@@ -202,14 +202,14 @@ export const data = {
 - Highspeed Glasfaser-Internet
           `,
         items: [],
-        images: [
-          {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.webp",
-          },
-          {
-            src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.webp",
-          },
-        ],
+        // images: [
+        //   {
+        //     src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969619/ngc/IMG_0765-web_hiisg2.webp",
+        //   },
+        //   {
+        //     src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0764-web_opqeee.webp",
+        //   },
+        // ],
       },
       images: [
         {
