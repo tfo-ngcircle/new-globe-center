@@ -51,23 +51,20 @@ export default function GallerySection({ gallery, width }) {
           animate={controls}
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 my-8 2xl:my-16 space-x-[-4.3rem] gap-y-5 w-[104%]"
         >
-          {gallery.images
-            .sort(() => Math.random() - 0.5)
-            .slice(0, device * 2)
-            .map((img, i) => (
-              <Trapazoid
-                key={i}
-                className="first:-ml-16 h-[14rem] brightness-90 cursor-pointer"
-                whileHover={{
-                  scale: 1.12,
-                  filter: "brightness(1)",
-                  zIndex: 40,
-                  transition: { duration: 0.15 },
-                }}
-              >
-                <Img image={img} />
-              </Trapazoid>
-            ))}
+          {gallery.images.slice(0, device * 2).map((img, i) => (
+            <Trapazoid
+              key={i}
+              className="first:-ml-16 h-[14rem] brightness-90 cursor-pointer"
+              whileHover={{
+                scale: 1.12,
+                filter: "brightness(1)",
+                zIndex: 40,
+                transition: { duration: 0.15 },
+              }}
+            >
+              <Img image={img} />
+            </Trapazoid>
+          ))}
         </motion.div>
       ) : (
         <div className="relative h-96 md:h-[32rem] mt-8 flex w-screen items-center justify-center overflow-hidden">
