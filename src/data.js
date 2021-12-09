@@ -26,9 +26,6 @@ export const data = {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969818/ngc/IMG_0422_hqwflh.webp",
-      },
-      {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
       },
       {
@@ -76,9 +73,6 @@ export const data = {
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
-      },
-      {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969818/ngc/IMG_0422_hqwflh.webp",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
@@ -466,9 +460,6 @@ Großes Auto **24 - 28,00€**
       images: [
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.webp",
-        },
-        {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969818/ngc/IMG_0422_hqwflh.webp",
         },
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0638-web_selpqq.webp",
