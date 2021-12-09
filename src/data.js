@@ -5,6 +5,21 @@ export const data = {
       "Entdecken Sie unsere Schulungs- und Konferenzräume in Wolfsburg. Buchen Sie modernste Ausstattung und digitalen Komfort für Ihre Schulung, Tagung oder Businessmeeting. Wir bieten Ihnen Raum für sorgloses und stressfreies Arbeiten im NEW GLOBE CENTER. Genießen Sie inspirierende Atmosphäre mit hochwertigem Service, der Sie in den Mittelpunkt stellt. Wir machen Ihre Veranstaltung zum Erlebnis und freuen uns darauf, Sie kennen zu lernen.",
     images: [
       {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262848/ngc/IMG_0409_grfors.webp",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1089_cqm4xg.webp",
+      },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
+      },
+      {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color,q_auto:eco/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
       },
       {
@@ -20,13 +35,7 @@ export const data = {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969815/ngc/IMG_0420_zzgych.webp",
-      },
-      {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
-      },
-      {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
       },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
@@ -40,12 +49,6 @@ export const data = {
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432255/ngc/IMG_1062_z8zjsv.webp",
       },
-      {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
-      },
-      {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1089_cqm4xg.webp",
-      },
     ],
   },
   gallery: {
@@ -53,6 +56,9 @@ export const data = {
     description:
       "Stöbern Sie in unserer Galerie und überzeugen Sie sich von modernem Design und toller Ausstattung.",
     images: [
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
+      },
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
       },
@@ -69,14 +75,9 @@ export const data = {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969815/ngc/IMG_0420_zzgych.webp",
-      },
-      {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
       },
-      {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
-      },
+
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_scale,h_900,q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
       },
@@ -199,6 +200,12 @@ export const data = {
       images: [
         {
           src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1638432247/ngc/IMG_1089_cqm4xg.webp",
+        },
+        {
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
+        },
+        {
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
         },
       ],
       availability: ["Mo - Fr • 15:30 - 18:00", "Sa - So • 8:00 - 18:00"],
