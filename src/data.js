@@ -312,7 +312,7 @@ Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die
         equipment: [
           { name: "area", label: "Moderationskoffer", details: "**30,00€**" },
           {
-            name: "people",
+            name: "area",
             label: "E-Ladesäulen",
             details: `Kleines Auto **12 - 14,00€**
 
@@ -450,7 +450,7 @@ Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die
         equipment: [
           { name: "area", label: "Moderationskoffer", details: "**30,00€**" },
           {
-            name: "people",
+            name: "area",
             label: "E-Ladesäulen",
             details: `Kleines Auto **12 - 14,00€**
             
@@ -579,7 +579,7 @@ Anstoßen mit einem Lächeln und den Tag hinter sich lassen, sich selber und die
         equipment: [
           { name: "area", label: "Moderationskoffer", details: "**30,00€**" },
           {
-            name: "people",
+            name: "area",
             label: "E-Ladesäulen",
             details: `Kleines Auto **12 - 14,00€**
             
