@@ -648,7 +648,13 @@ export const global = {
       { label: "Impressum", destination: "/impressum" },
       {
         label: "Hygienekonzept",
-        destination: require("../public/docs/AS_HygienekonzeptWarnstufe2_211202.pdf"),
+        destination:
+          process.env.DEPLOY_DIR !== undefined
+            ? `/${require("../public/docs/AS_HygienekonzeptWarnstufe2_211202.pdf")
+                .split("/")
+                .slice(2)
+                .join("/")}`
+            : require("../public/docs/AS_HygienekonzeptWarnstufe2_211202.pdf"),
       },
     ],
     socialLinks: {
