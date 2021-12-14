@@ -1,11 +1,10 @@
 import formatHeadline from "@/lib/utils/text";
 import Carousel from "../carousel";
 import { Img } from "../image";
-import { Trapazoid } from "../trapazoid";
 import Underline from "@/components/underline";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const listVariants = {
   hidden: {
@@ -17,6 +16,17 @@ const listVariants = {
     transition: {
       staggerChildren: 0.05,
     },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    x: 256,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
   },
 };
 
@@ -33,6 +43,8 @@ export default function GallerySection({ gallery, width }) {
   useEffect(() => {
     controls.start(inView ? "visible" : "hidden");
   }, [controls, inView]);
+
+  const [maximized, setMaximized] = useState();
 
   return (
     <div className="h-full flex flex-col justify-end mt-0 md:mt-20 lg:mt-0">
@@ -52,18 +64,45 @@ export default function GallerySection({ gallery, width }) {
           className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 my-8 2xl:my-16 space-x-[-4.3rem] gap-y-5 w-[104%]"
         >
           {gallery.images.slice(0, device * 2).map((img, i) => (
-            <Trapazoid
+            <motion.div
               key={i}
-              className="first:-ml-16 h-[14rem] brightness-90 cursor-pointer"
+              className={`${
+                i === maximized
+                  ? "absolute !w-full h-full !z-50 inset-0  brightness-100"
+                  : "h-[14rem] brightness-90"
+              } first:-ml-16 cursor-pointer transition filter ease-out duration-300 scale-100`}
               whileHover={{
                 scale: 1.12,
                 filter: "brightness(1)",
                 zIndex: 40,
                 transition: { duration: 0.15 },
               }}
+              style={{
+                clipPath:
+                  i == maximized
+                    ? ""
+                    : "polygon(0.00% 0.00%,80.00% 0.00%,100% 100%,20.00% 100.00%)",
+              }}
+              variants={itemVariants}
+              transition={{ duration: 0.4, type: "tween", ease: "easeOut" }}
+              layout
             >
-              <Img image={img} />
-            </Trapazoid>
+              {i !== maximized ? (
+                <Img image={img} onClick={() => setMaximized(i)} />
+              ) : (
+                <Carousel
+                  images={gallery.images}
+                  className="absolute h-full max-w-screen object-cover"
+                  swipeable
+                  maximized
+                  onMaximizeChange={(isMaximized) => {
+                    setMaximized(!isMaximized ? -1 : i);
+                    console.log(isMaximized);
+                  }}
+                  startingIndex={i}
+                />
+              )}
+            </motion.div>
           ))}
         </motion.div>
       ) : (

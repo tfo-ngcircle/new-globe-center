@@ -38,9 +38,11 @@ export default function Carousel({
   swipeable,
   canMaximize = true,
   maximized = false,
+  startingIndex = 0,
+  onMaximizeChange = () => {},
 }) {
   const [ref, inView] = useInView();
-  const [[page, direction], setPage] = useState([0, 0]);
+  const [[page, direction], setPage] = useState([startingIndex, 0]);
   const [isMaximised, setIsMaximised] = useState(maximized);
 
   const paginate = (newDirection) => {
@@ -96,12 +98,18 @@ export default function Carousel({
       {canMaximize ? (
         <MdFullscreen
           className="bg-gray-700 text-white bg-opacity-50 text-4xl p-1 rounded-full z-10 absolute top-4 right-4"
-          onClick={() => setIsMaximised(true)}
+          onClick={() => {
+            setIsMaximised(true);
+            onMaximizeChange(true);
+          }}
         />
       ) : undefined}
       <MyDialog
         isOpen={isMaximised}
-        onClose={() => setIsMaximised(false)}
+        onClose={() => {
+          setIsMaximised(false);
+          onMaximizeChange(false);
+        }}
         className="bg-black"
       >
         {slider}
