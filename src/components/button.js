@@ -13,7 +13,7 @@ export const Button = ({ label, type = "default", className, ...props }) => {
       whileTap={{
         scale: 0.95,
         transition: {
-          duration: 0.025,
+          duration: 0.0257,
         },
       }}
       {...props}
