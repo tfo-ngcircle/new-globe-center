@@ -7,9 +7,13 @@ module.exports = withOptimizedImages({
     disableStaticImages: true,
   },
   basePath:
-    process.env.DEPLOY_DIR !== undefined ? `/${process.env.DEPLOY_DIR}` : "",
+    process.env.RELEASE_BRANCH !== undefined
+      ? `/${process.env.RELEASE_BRANCH}`
+      : "",
   assetPrefix:
-    process.env.DEPLOY_DIR !== undefined ? `/${process.env.DEPLOY_DIR}/` : "",
+    process.env.RELEASE_BRANCH !== undefined
+      ? `/${process.env.RELEASE_BRANCH}/`
+      : "",
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.pdf/,
