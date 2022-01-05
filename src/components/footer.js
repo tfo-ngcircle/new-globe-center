@@ -13,7 +13,7 @@ const footerItems = [
     { heading: "Telefon", body: "+49 5308 5231220" },
     { heading: "E-Mail", body: "info@newglobecenter.com" },
   ],
-  [{ heading: "Über", body: "[Über NGC](/about)\n\n[Galerie](/gallery)" }],
+  [{ heading: "Über", body: "[Über NGC](/about)\n\n[Galerie](/#gallery)" }],
   [
     {
       heading: "Kontakt",
