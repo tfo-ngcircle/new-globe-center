@@ -113,6 +113,20 @@ export default function Carousel({
         className="bg-black"
       >
         {slider}
+        <div
+          className="fp-controlArrow fp-prev"
+          ref={(el) =>
+            el && el.style.setProperty("border-color", "white", "important")
+          }
+          onClick={() => paginate(-1)}
+        />
+        <div
+          className="fp-controlArrow fp-next"
+          ref={(el) =>
+            el && el.style.setProperty("border-color", "white", "important")
+          }
+          onClick={() => paginate(1)}
+        />
       </MyDialog>
     </>
   );

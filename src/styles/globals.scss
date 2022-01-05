@@ -74,7 +74,8 @@ $arrowSize: 1rem;
 .fp-controlArrow {
   top: 55% !important;
 
-  border: solid #c00000 !important;
+  border: solid;
+  border-color: #c00000 !important;
   border-width: 0 $arrowThickness $arrowThickness 0 !important;
   padding: $arrowSize;
 

@@ -118,7 +118,7 @@ export const data = {
     contact: [
       {
         name: "Nancy Migliore",
-        phone: "0162 3057907",
+        phone: "5308 5231220",
         post: "Empfangsmanagement",
       },
       {
