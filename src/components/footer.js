@@ -33,13 +33,13 @@ export default function Footer() {
   return (
     <div className="flex flex-col h-full justify-between gap-10 lg:gap-16 pt-24">
       <div className="container flex flex-wrap items-center justify-center gap-8 xl:gap-x-20 my-auto">
-        {footer.partners?.map((partner, i) => (
+        {/* {footer.partners?.map((partner, i) => (
           <Img
             image={partner}
             key={i}
             className="object-contain filter contrast-0 opacity-40 hover:opacity-100 grayscale hover:filter-none transition-all duration-300 hover:-translate-y-1 cursor-pointer"
           />
-        ))}
+        ))} */}
       </div>
       <div className="bg-black text-white">
         <footer className="divide-y divide-gray-800">
