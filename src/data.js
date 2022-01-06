@@ -101,6 +101,9 @@ export const data = {
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
       },
+      {
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969618/ngc/IMG_0764-web_opqeee.webp",
+      },
     ],
   },
   about: {
