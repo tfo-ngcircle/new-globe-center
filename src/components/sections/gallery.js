@@ -32,12 +32,6 @@ const itemVariants = {
 };
 
 export default function GallerySection({ gallery, width }) {
-  var device = 1;
-  if (width >= 1536) device = 5;
-  else if (width >= 1280) device = 4;
-  else if (width >= 1024) device = 3;
-  else if (width >= 768) device = 2;
-
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -56,7 +50,7 @@ export default function GallerySection({ gallery, width }) {
         </div>
         <p className="max-w-4xl">{gallery && gallery.description}</p>
       </div>
-      {device > 2 ? (
+      {width >= 768 ? (
         <div className="relative">
           <motion.div
             id="gal"
@@ -132,5 +126,5 @@ export default function GallerySection({ gallery, width }) {
 
 function scrollGalerry(direction) {
   const him = document.getElementById("gal");
-  him.scroll({ left: him.scrollLeft + 512 * direction, behavior: "smooth" });
+  him.scroll({ left: him.scrollLeft + 720 * direction, behavior: "smooth" });
 }
