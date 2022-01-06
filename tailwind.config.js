@@ -54,6 +54,7 @@ module.exports = {
     },
     dropShadow: {
       md: "0 8px 20px rgba(0, 0, 0, 0.4)",
+      white: "0 -4px 8px rgba(255, 255, 255, 0.5)",
       none: "none",
       primary: "0 8px 20px rgba(192, 0, 0, 0.4)",
       "primary-sm": "0 4px 10px rgba(192, 0, 0, 0.4)",
@@ -77,5 +78,5 @@ module.exports = {
       borderColor: ["checked"],
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require("@tailwindcss/forms"), require("tailwind-scrollbar-hide")],
 };
