@@ -5,49 +5,49 @@ export const data = {
       "Entdecken Sie unsere Schulungs- und Konferenzräume in Wolfsburg. Buchen Sie modernste Ausstattung und digitalen Komfort für Ihre Schulung, Tagung oder Businessmeeting. Wir bieten Ihnen Raum für sorgloses und stressfreies Arbeiten im NEW GLOBE CENTER. Genießen Sie inspirierende Atmosphäre mit hochwertigem Service, der Sie in den Mittelpunkt stellt. Wir machen Ihre Veranstaltung zum Erlebnis und freuen uns darauf, Sie kennen zu lernen.",
     images: [
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262848/ngc/IMG_0409_grfors.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262848/ngc/IMG_0409_grfors.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1089_cqm4xg.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432247/ngc/IMG_1089_cqm4xg.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432264/ngc/IMG_1025_yo3z4t.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432264/ngc/IMG_1025_yo3z4t.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432255/ngc/IMG_1062_z8zjsv.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432255/ngc/IMG_1062_z8zjsv.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color,q_auto:eco/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color,c_limit,h_1080,q_auto:eco/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969621/ngc/IMG_0622-web_vw4n2v.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969621/ngc/IMG_0622-web_vw4n2v.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
       },
     ],
   },
@@ -57,49 +57,49 @@ export const data = {
       "Stöbern Sie in unserer Galerie und überzeugen Sie sich von modernem Design und toller Ausstattung.",
     images: [
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262868/ngc/IMG_0434_ml0ybj.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262848/ngc/IMG_0409_grfors.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262848/ngc/IMG_0409_grfors.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1089_cqm4xg.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432247/ngc/IMG_1089_cqm4xg.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432264/ngc/IMG_1025_yo3z4t.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432264/ngc/IMG_1025_yo3z4t.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432255/ngc/IMG_1062_z8zjsv.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432255/ngc/IMG_1062_z8zjsv.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color,q_auto:eco/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/a_hflip,e_auto_color,c_limit,h_1080,q_auto:eco/a_0/v1636969621/ngc/IMG_0753-web_rjtmay.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969621/ngc/IMG_0622-web_vw4n2v.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969621/ngc/IMG_0622-web_vw4n2v.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636968825/ngc/IMG_0587-web_jrahtg.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
       },
       {
-        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
+        src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262859/ngc/IMG_0536_h3x3wh.webp",
       },
     ],
   },
@@ -132,7 +132,7 @@ export const data = {
     headline: "Ihr Meeting. Unsere Ausstattung.",
     description: "Das bieten wir für Ihr Meeting.",
     image: {
-      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,q_auto:good/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
+      src: "https://res.cloudinary.com/ngc-gmbh/image/upload/e_auto_brightness,c_limit,h_1080,q_auto:eco/v1636968825/ngc/IMG_0585-web_vmpxse.webp",
     },
     features: [
       {
@@ -213,13 +213,13 @@ export const data = {
       },
       images: [
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1638432247/ngc/IMG_1089_cqm4xg.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432247/ngc/IMG_1089_cqm4xg.webp",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432247/ngc/IMG_1090_twcvog.webp",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432250/ngc/IMG_1084_hzjyxv.webp",
         },
       ],
       availability: ["Mo - Fr • 15:30 - 18:00", "Sa - So • 8:00 - 18:00"],
@@ -342,16 +342,16 @@ Großes Auto **24 - 28,00€**
       },
       images: [
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969620/ngc/IMG_0726-web_mipmkg.webp",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0751-web_js4hpq.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969621/ngc/IMG_0751-web_js4hpq.webp",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969621/ngc/IMG_0744-web_iv4lcf.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969621/ngc/IMG_0744-web_iv4lcf.webp",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638262861/ngc/IMG_0709_qhozsq.webp",
         },
       ],
       availability: ["Mo - So • 8:00 - 18:00"],
@@ -480,13 +480,13 @@ Großes Auto **24 - 28,00€**
       },
       images: [
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969816/ngc/IMG_0424_eaxvcf.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969816/ngc/IMG_0424_eaxvcf.webp",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1636969618/ngc/IMG_0638-web_selpqq.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1636969618/ngc/IMG_0638-web_selpqq.webp",
         },
         {
-          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/v1638432264/ngc/IMG_1025_yo3z4t.webp",
+          src: "https://res.cloudinary.com/ngc-gmbh/image/upload/c_limit,h_1080,q_auto:eco/v1638432264/ngc/IMG_1025_yo3z4t.webp",
         },
       ],
       availability: ["Mo - So • 8:00 - 18:00"],
