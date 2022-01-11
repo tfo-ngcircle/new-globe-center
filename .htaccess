@@ -1,4 +1,4 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} newglobecenter\.com [NC]
+RewriteCond %{HTTP_HOST} ngcircle\.center [NC]
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://newglobecenter.com/$1 [R,L]
+RewriteRule ^(.*)$ https://ngcircle.center/$1 [R,L]
