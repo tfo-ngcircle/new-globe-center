@@ -76,7 +76,7 @@ export default function Footer() {
                 </span>
                 {footer.bottomLinks &&
                   footer.bottomLinks.map((link, i) => (
-                    <Link href={link.destination} key={i}>
+                    <Link href={link.destination} key={i} target="_blank">
                       {link.label}
                     </Link>
                   ))}
