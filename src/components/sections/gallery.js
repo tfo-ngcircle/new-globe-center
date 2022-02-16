@@ -42,7 +42,7 @@ export default function GallerySection({ gallery, width }) {
   const [maximized, setMaximized] = useState();
 
   return (
-    <div className="h-full flex flex-col justify-end mt-0 md:mt-20 lg:mt-0">
+    <div className="h-full flex flex-col justify-center mt-0 md:mt-20 lg:mt-8 2xl:mt-0">
       <div className="container space-y-5">
         <div className="max-w-max space-y-4">
           <h2>{formatHeadline(gallery.headline)}</h2>
@@ -58,7 +58,7 @@ export default function GallerySection({ gallery, width }) {
             initial="hidden"
             variants={listVariants}
             animate={controls}
-            className="grid md:grid-rows-2 grid-flow-col my-8 2xl:my-16 space-x-[-4.3rem] gap-y-5 w-[104%] overflow-auto scrollbar-hide"
+            className="grid md:grid-rows-2 grid-flow-col my-8 2xl:my-16 space-x-[-3.5rem] 3xl:space-x-[-4.3rem] gap-y-5 overflow-auto scrollbar-hide"
           >
             {gallery.images.map((img, i) => (
               <motion.div
@@ -66,7 +66,7 @@ export default function GallerySection({ gallery, width }) {
                 className={`${
                   i === maximized
                     ? "absolute !w-full h-full !z-50 inset-0  brightness-100"
-                    : "h-[14rem] !w-[30rem] brightness-90"
+                    : "3xl:h-56 3xl:!w-[28rem] h-44 !w-96 brightness-90"
                 } first:-ml-16 cursor-pointer transition filter ease-out duration-300 scale-100`}
                 whileHover={{
                   scale: 1.12,

@@ -63,7 +63,7 @@ export default function LandingSection({ landing }) {
           classNameAlt="bg-secondary"
         />
       </div>
-      <div className="container h-full flex items-center pt-24">
+      <div className="container h-full flex items-center pt-24 2xl:pt-0 3xl:pt-24">
         <div className="space-y-8 z-10 text-white max-w-min">
           <HeadingBox>
             <h1 className="whitespace-nowrap">
@@ -71,13 +71,14 @@ export default function LandingSection({ landing }) {
             </h1>
             <Underline className="text-primary w-full h-3" />
           </HeadingBox>
-          <p className="md:w-[130%]" ref={ref}>
+          <p className="w-full sm:w-[175%] 3xl:w-[145%] text-lg" ref={ref}>
             {landing && landing.description}
           </p>
           <Button
             label="Über uns"
             type="large"
             onClick={(e) => navigateFullpage(e, "about")}
+            className="w-full sm:w-[165%] md:w-auto"
           />
         </div>
       </div>

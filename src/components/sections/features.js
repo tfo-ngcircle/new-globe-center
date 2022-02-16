@@ -38,12 +38,12 @@ export default function FeaturesSection({ features }) {
   return (
     <div className="relative">
       <div className="container">
-        <div className="lg:flex space-y-4 xl:space-x-8 lg:space-y-0 justify-between h-full items-center">
+        <div className="lg:flex space-y-4 space-x-2 3xl:space-x-8 lg:space-y-0 justify-between h-full items-center">
           <Img
             image={features.image}
-            className="object-cover relative h-[400px] w-full lg:w-[368px] lg:h-full xl:w-[510px] xl:h-[720px] shadow-lg"
+            className="object-cover relative w-full h-[400px] xl:h-auto lg:w-[368px] xl:w-[510px] shadow-lg xl:self-stretch"
           />
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-4 lg:space-y-6">
             <div className="space-y-4">
               <HeadingBox>
                 <h2>{formatHeadline(features.headline)}</h2>
@@ -56,7 +56,7 @@ export default function FeaturesSection({ features }) {
               initial="hidden"
               variants={listVariants}
               animate={controls}
-              className="grid grid-cols-2 md:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 xl:gap-y-6 overflow-hidden"
+              className="grid grid-cols-2 md:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 3xl:gap-y-6 overflow-hidden"
             >
               {features.features.map((item, i) => (
                 <FeatureItem

@@ -56,7 +56,7 @@ export const Space = ({ space, isFull, ...props }) => {
           animate={controls}
           className={`${
             isFull ? undefined : "px-5 lg:pl-12 xl:pl-36"
-          } lg:pr-10 xl:pr-20 space-y-4 lg:space-y-6 xl:space-y-8 col-span-3 overflow-hidden py-2`}
+          } lg:pr-10 3xl:pr-20 space-y-4 lg:space-y-6 3xl:space-y-8 col-span-3 overflow-hidden py-2`}
         >
           <motion.div
             variants={itemVariants}
@@ -69,13 +69,17 @@ export const Space = ({ space, isFull, ...props }) => {
               <Underline className="text-primary w-full h-3" />
             </HeadingBox>
           </motion.div>
-          <motion.p variants={itemVariants} transition={transision}>
+          <motion.p
+            variants={itemVariants}
+            transition={transision}
+            className="break-words"
+          >
             {space.description[isFull ? 1 : 0]}
           </motion.p>
           <motion.div
             variants={itemVariants}
             transition={transision}
-            className="flex gap-2 lg:gap-4 flex-wrap"
+            className="flex gap-2 3xl:gap-4 flex-wrap"
           >
             {space.characteristics.key.map((kc) => (
               <Characteristic it={kc} key={kc.name} />
@@ -87,11 +91,15 @@ export const Space = ({ space, isFull, ...props }) => {
             className="space-y-2 lg:space-y-4 divide-y"
           >
             <TagRow
-              head={<HiOutlineClock className="text-3xl text-primary" />}
+              head={
+                <HiOutlineClock className="text-2xl text-primary flex-shrink-0" />
+              }
               items={space.availability}
             />
             <TagRow
-              head={<HiOutlineCurrencyEuro className="text-3xl text-primary" />}
+              head={
+                <HiOutlineCurrencyEuro className="text-2xl text-primary flex-shrink-0" />
+              }
               items={space.price}
               className="pt-2 lg:pt-4"
             />
