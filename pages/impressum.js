@@ -1,5 +1,5 @@
-import { Md } from "@/components/md";
-import { Page } from "@/components/page";
+import { Md } from "../components/md";
+import { Page } from "../components/page";
 
 export default function Impressum({}) {
   return (
@@ -19,7 +19,7 @@ Wolfsacker 8
 
 
 Telefon: (+49) 5308 523 122 20  
-eMail: info@ngcircle.com  
+eMail: info..ngcircle.com  
 Internet: www.ngcircle.com
 
 

@@ -1,10 +1,10 @@
-import formatHeadline from "@/lib/utils/text";
-import { navigateFullpage } from "@/lib/utils/utils";
+import formatHeadline from "../../utils/text";
+import { navigateFullpage } from "../../utils/utils";
 import { Button } from "../button";
 import { HeadingBox } from "../heading";
-import Underline from "@/components/underline";
+import Underline from "../underline";
 import Carousel from "../carousel";
-import { useAnimation, motion } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
@@ -64,14 +64,14 @@ export default function LandingSection({ landing }) {
         />
       </div>
       <div className="container h-full flex items-center pt-24 2xl:pt-0 3xl:pt-24">
-        <div className="space-y-8 z-10 text-white max-w-min">
+        <div className="space-y-8 z-10 text-white">
           <HeadingBox>
             <h1 className="whitespace-nowrap">
               {landing && formatHeadline(landing.headline)}
             </h1>
             <Underline className="text-primary w-full h-3" />
           </HeadingBox>
-          <p className="w-full sm:w-[175%] 3xl:w-[145%] text-lg" ref={ref}>
+          <p className="w-full sm:w-2/3 3xl:w-2/5 text-lg" ref={ref}>
             {landing && landing.description}
           </p>
           <Button

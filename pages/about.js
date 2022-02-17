@@ -1,5 +1,5 @@
-import { Md } from "@/components/md";
-import { Page } from "@/components/page";
+import { Md } from "../components/md";
+import { Page } from "../components/page";
 import { about } from "src/data";
 
 export default function About({ about }) {

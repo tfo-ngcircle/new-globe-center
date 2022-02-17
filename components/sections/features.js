@@ -1,7 +1,7 @@
-import Underline from "@/components/underline";
+import Underline from "../underline";
 import { FeatureItem } from "../feature-item";
-import { getIcon } from "@/components/icons";
-import formatHeadline from "@/lib/utils/text";
+import { getIcon } from "../icons";
+import formatHeadline from "../../utils/text";
 import { Img } from "../image";
 import { HeadingBox } from "../heading";
 import { useAnimation, motion } from "framer-motion";

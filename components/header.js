@@ -1,11 +1,11 @@
 import Link from "./link";
 import { Logo } from "./logo";
 import { useRouter } from "next/router";
-import { Phone, Marker } from "@/components/icons";
+import { Phone, Marker } from "../components/icons";
 import { useWindowSize } from "usehooks-ts";
 import { Menu, Transition } from "@headlessui/react";
 import { AiOutlineMenu } from "react-icons/ai";
-import { navigateFullpage } from "../lib/utils/utils";
+import { navigateFullpage } from "../utils/utils";
 import React from "react";
 
 const destinations = [

@@ -1,4 +1,4 @@
-import formatHeadline from "@/lib/utils/text";
+import formatHeadline from "../utils/text";
 import { HiOutlineClock, HiOutlineCurrencyEuro } from "react-icons/hi";
 import { Button } from "./button";
 import Carousel from "./carousel";
@@ -6,7 +6,7 @@ import { Characteristic } from "./characteristic";
 import { HeadingBox } from "./heading";
 import Link from "./link";
 import { TagRow } from "./tag-row";
-import Underline from "@/components/underline";
+import Underline from "./underline";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";

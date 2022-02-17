@@ -1,4 +1,4 @@
-import formatHeadline from "@/lib/utils/text";
+import formatHeadline from "../../utils/text";
 import { Button } from "../button";
 import { Logo } from "../logo";
 import { Img } from "../image";

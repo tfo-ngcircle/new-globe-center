@@ -1,18 +1,18 @@
-import Footer from "@/components/footer";
-import { Fullpage } from "@/components/fullpage";
-import Header from "@/components/header";
-import AboutSection from "@/components/sections/about";
-import ContactSection from "@/components/sections/contact";
-import FeaturesSection from "@/components/sections/features";
-import GallerySection from "@/components/sections/gallery";
-import LandingSection from "@/components/sections/landing";
-import MapSection from "@/components/sections/map";
-import SpacesSection from "@/components/sections/spaces";
+import Footer from "../components/footer";
+import { Fullpage } from "../components/fullpage";
+import Header from "../components/header";
+import AboutSection from "../components/sections/about";
+import ContactSection from "../components/sections/contact";
+import FeaturesSection from "../components/sections/features";
+import GallerySection from "../components/sections/gallery";
+import LandingSection from "../components/sections/landing";
+import MapSection from "../components/sections/map";
+import SpacesSection from "../components/sections/spaces";
 import { useElementSize, useWindowSize } from "usehooks-ts";
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { data } from "src/data";
-import Seo from "@/components/seo";
+import { data } from "../data";
+import Seo from "../components/seo";
 
 export default function Home() {
   const headerRef = useRef();

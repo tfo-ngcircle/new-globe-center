@@ -3,9 +3,8 @@ import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { SocialIcon } from "./socialIcon";
 import Link from "./link";
 import { Md } from "./md";
-import { Img } from "./image";
 import { useContext } from "react";
-import { GlobalContext } from "@/pages/_app";
+import { GlobalContext } from "../pages/_app";
 
 const footerItems = [
   [
@@ -54,17 +53,17 @@ export default function Footer() {
           <div className="py-4">
             <div className="container flex flex-wrap justify-between items-center gap-3 pb-5 md:pb-0">
               <div className="flex gap-3 md:gap-8">
-                {footer.socialLinks?.facebook && (
+                {footer?.socialLinks?.facebook && (
                   <SocialIcon href={footer.socialLinks.facebook}>
                     <FaFacebookF />
                   </SocialIcon>
                 )}
-                {footer.socialLinks?.linkedin && (
+                {footer?.socialLinks?.linkedin && (
                   <SocialIcon href={footer.socialLinks.linkedin}>
                     <FaLinkedinIn />
                   </SocialIcon>
                 )}
-                {footer.socialLinks?.twitter && (
+                {footer?.socialLinks?.twitter && (
                   <SocialIcon href={footer.socialLinks.twitter}>
                     <FaTwitter />
                   </SocialIcon>
@@ -74,7 +73,7 @@ export default function Footer() {
                 <span>
                   © {new Date().getFullYear()} New Globe Center - NgC GmbH
                 </span>
-                {footer.bottomLinks &&
+                {footer?.bottomLinks &&
                   footer.bottomLinks.map((link, i) => (
                     <Link href={link.destination} key={i} target="_blank">
                       {link.label}

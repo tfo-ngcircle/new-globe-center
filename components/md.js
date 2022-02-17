@@ -1,4 +1,4 @@
-import formatHeadline from "@/lib/utils/text";
+import formatHeadline from "../utils/text";
 import ReactMarkdown from "react-markdown";
 import MyLink from "./link";
 

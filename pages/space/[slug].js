@@ -1,11 +1,11 @@
-import { Characteristic } from "@/components/characteristic";
-import { Img } from "@/components/image";
-import { Md } from "@/components/md";
-import { VipPackage } from "@/components/vip-package";
-import { Page } from "@/components/page";
-import { Space } from "@/components/space";
-import formatHeadline from "@/lib/utils/text";
-import { data } from "src/data";
+import { Characteristic } from "../../components/characteristic";
+import { Img } from "../../components/image";
+import { Md } from "../../components/md";
+import { VipPackage } from "../../components/vip-package";
+import { Page } from "../../components/page";
+import { Space } from "../../components/space";
+import formatHeadline from "../../utils/text";
+import { data } from "../../data";
 
 export default function Room({ space }) {
   return (

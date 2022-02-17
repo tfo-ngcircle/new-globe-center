@@ -7,7 +7,7 @@ import Head from "next/head";
 import nProgress from "nprogress";
 import { Router } from "next/router";
 import { createContext } from "react";
-import { global } from "src/data";
+import { global } from "../data";
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);

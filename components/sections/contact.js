@@ -3,8 +3,8 @@ import { Button } from "../button";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import { SocialIcon } from "../socialIcon";
 import { motion, useAnimation } from "framer-motion";
-import Input from "@/components/input";
-import formatHeadline from "@/lib/utils/text";
+import Input from "../input";
+import formatHeadline from "../../utils/text";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 

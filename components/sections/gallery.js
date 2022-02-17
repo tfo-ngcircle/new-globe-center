@@ -1,11 +1,10 @@
-import formatHeadline from "@/lib/utils/text";
+import formatHeadline from "../../utils/text";
 import Carousel from "../carousel";
 import { Img } from "../image";
-import Underline from "@/components/underline";
+import Underline from "../underline";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
-import { useElementSize } from "usehooks-ts";
 
 const listVariants = {
   hidden: {

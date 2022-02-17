@@ -1,5 +1,5 @@
-import { Md } from "@/components/md";
-import { Page } from "@/components/page";
+import { Md } from "../components/md";
+import { Page } from "../components/page";
 
 export default function Datenschutz({}) {
   return (
@@ -17,7 +17,7 @@ Grüner Ring 126
 38108 Braunschweig  
 Deutschland  
 Tel.: (+49) 531 – 239 64 190  
-E-Mail: info@ngcircle.com  
+E-Mail: info..ngcircle.com  
 Website: www.ngcircle.com
 
 ----
