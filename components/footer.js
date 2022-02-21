@@ -1,7 +1,7 @@
 import { Logo } from "./logo";
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import { SocialIcon } from "./socialIcon";
-import Link from "./link";
+import MyLink from "./link";
 import { Md } from "./md";
 import { useContext } from "react";
 import { GlobalContext } from "../pages/_app";
@@ -75,9 +75,9 @@ export default function Footer() {
                 </span>
                 {footer?.bottomLinks &&
                   footer.bottomLinks.map((link, i) => (
-                    <Link href={link.destination} key={i} target="_blank">
+                    <MyLink href={link.destination} key={i} target="_blank">
                       {link.label}
-                    </Link>
+                    </MyLink>
                   ))}
               </div>
             </div>

@@ -1,7 +1,14 @@
-import { Img } from "@/components/image";
-import { Md } from "@/components/md";
+import { ImageType } from "../typings";
+import { Img } from "./image";
+import { Md } from "./md";
 
-export const VipPackage = ({ image, title, description }) => {
+type Props = {
+  title: string;
+  description: boolean;
+  image: ImageType;
+};
+
+export const VipPackage = ({ image, title, description }: Props) => {
   return (
     <div className="border-[3px] rounded border-primary p-10 items-center gap-4 bg-white">
       <Img image={image} className="w-32 h-32" />

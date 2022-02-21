@@ -1,6 +1,6 @@
 import formatHeadline from "../../utils/text";
 import { navigateFullpage } from "../../utils/utils";
-import { Button } from "../button";
+import Button from "../button";
 import { HeadingBox } from "../heading";
 import Underline from "../underline";
 import Carousel from "../carousel";
@@ -76,7 +76,7 @@ export default function LandingSection({ landing }) {
           </p>
           <Button
             label="Über uns"
-            type="large"
+            is="large"
             onClick={(e) => navigateFullpage(e, "about")}
             className="w-full sm:w-[165%] md:w-auto"
           />

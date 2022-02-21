@@ -1,7 +1,11 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, HTMLMotionProps } from "framer-motion";
 
-const Underline = React.forwardRef(
+interface Props extends HTMLMotionProps<"div"> {
+  classNameAlt?: string;
+}
+
+const Underline = React.forwardRef<HTMLDivElement, Props>(
   ({ className, classNameAlt = "bg-primary", ...props }, ref) => {
     return (
       <motion.div

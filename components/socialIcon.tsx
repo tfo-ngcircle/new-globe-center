@@ -1,13 +1,17 @@
-import Link from "./link";
+import MyLink from "./link";
 
-export const SocialIcon = ({ href, children, className }) => {
+export const SocialIcon = ({
+  href,
+  children,
+  className,
+}: React.HTMLProps<HTMLAnchorElement>) => {
   return (
-    <Link href={href}>
+    <MyLink href={href}>
       <div
         className={`p-2 rounded-full bg-opacity-10 bg-white hover:bg-opacity-20 transition-all flex space-x-2 items-center ${className}`}
       >
         {children}
       </div>
-    </Link>
+    </MyLink>
   );
 };

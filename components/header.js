@@ -1,4 +1,4 @@
-import Link from "./link";
+import MyLink from "./link";
 import { Logo } from "./logo";
 import { useRouter } from "next/router";
 import { Phone, Marker } from "../components/icons";
@@ -31,20 +31,20 @@ const Header = React.forwardRef(
         }`}
       >
         <header className="container flex justify-between items-center py-5 md:py-7">
-          <Link
+          <MyLink
             onClick={(e) =>
               isHome ? navigateFullpage(e, "landing") : undefined
             }
             className={dark ? "text-white" : "text-black"}
           >
             <Logo height={screen.width < 1024 ? 40 : 40} isFull={true} />
-          </Link>
+          </MyLink>
           <div className="flex space-x-2 lg:space-x-24 items-center">
             <ul className="hidden lg:flex space-x-6">
               {destinations.map((it) => (
                 <li key={it.link}>
                   <h6>
-                    <Link
+                    <MyLink
                       href={it.link}
                       className={`${
                         router.asPath == it.link
@@ -58,13 +58,13 @@ const Header = React.forwardRef(
                       }
                     >
                       {it.label}
-                    </Link>
+                    </MyLink>
                   </h6>
                 </li>
               ))}
             </ul>
             <div className="flex items-center space-x-3 lg:space-x-8 text-gray-300">
-              <Link
+              <MyLink
                 href="/#contact"
                 onClick={(e) =>
                   isHome ? navigateFullpage(e, "contact") : undefined
@@ -78,9 +78,9 @@ const Header = React.forwardRef(
                       : "hover:border-opacity-60 hover:border-primary"
                   }`}
                 />
-              </Link>
+              </MyLink>
               <span className="h-14 lg:w-px bg-current" />
-              <Link
+              <MyLink
                 href="/#map"
                 onClick={(e) =>
                   isHome ? navigateFullpage(e, "map") : undefined
@@ -94,7 +94,7 @@ const Header = React.forwardRef(
                       : "hover:border-opacity-60 hover:border-primary"
                   }`}
                 />
-              </Link>
+              </MyLink>
             </div>
             <Menu
               as="div"
@@ -126,7 +126,7 @@ const Header = React.forwardRef(
                       } p-4 rounded-sm transition-all`}
                     >
                       <h6>
-                        <Link
+                        <MyLink
                           href={it.link}
                           className="w-full block"
                           onClick={(e) =>
@@ -136,7 +136,7 @@ const Header = React.forwardRef(
                           }
                         >
                           {it.label}
-                        </Link>
+                        </MyLink>
                       </h6>
                     </Menu.Item>
                   ))}

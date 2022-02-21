@@ -1,12 +1,17 @@
 import formatHeadline from "../../utils/text";
-import { Button } from "../button";
+import Button from "../button";
 import { Logo } from "../logo";
 import { Img } from "../image";
-import Link from "next/link";
+import MyLink from "next/link";
 import { MdLocalPhone } from "react-icons/md";
 import { SocialIcon } from "../socialIcon";
+import { AboutSectionData } from "../../typings";
 
-export default function AboutSection({ about }) {
+interface Props {
+  about: AboutSectionData;
+}
+
+export default function AboutSection({ about }: Props) {
   return (
     <div className="overflow-hidden">
       <div className="container">
@@ -31,9 +36,9 @@ export default function AboutSection({ about }) {
                 ))}
               </div>
             </div>
-            <Link href="/about" passHref>
+            <MyLink href="/about" passHref>
               <Button label="Mehr erfahren" className="mt-4 max-w-min z-20" />
-            </Link>
+            </MyLink>
           </div>
         </div>
         <div className="h-full col-span-4 2xl:col-span-3 py-6 md:py-2"></div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button } from "../button";
+import Button from "../button";
 import { MdEmail, MdLocalPhone } from "react-icons/md";
 import { SocialIcon } from "../socialIcon";
 import { motion, useAnimation } from "framer-motion";

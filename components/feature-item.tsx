@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { HTMLMotionProps, motion } from "framer-motion";
 
 const itemVariants = {
   hidden: {
@@ -11,7 +11,12 @@ const itemVariants = {
   },
 };
 
-export const FeatureItem = ({ icon, title, description }) => {
+interface Props extends HTMLMotionProps<"div"> {
+  icon: React.ReactNode;
+  description?: string;
+}
+
+export const FeatureItem = ({ icon, title, description }: Props) => {
   return (
     <motion.div
       className="space-y-2"

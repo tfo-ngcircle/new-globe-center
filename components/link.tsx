@@ -1,7 +1,12 @@
 import React from "react";
 import Link from "next/link";
 
-const MyLink = ({ href = "/", className, children, ...props }) => {
+export default function MyLink({
+  href = "/",
+  className,
+  children,
+  ...props
+}: React.HTMLProps<HTMLAnchorElement>) {
   return (
     <Link href={href}>
       <a className={className} {...props}>
@@ -9,6 +14,4 @@ const MyLink = ({ href = "/", className, children, ...props }) => {
       </a>
     </Link>
   );
-};
-
-export default MyLink;
+}

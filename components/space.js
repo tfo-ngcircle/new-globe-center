@@ -1,10 +1,10 @@
 import formatHeadline from "../utils/text";
 import { HiOutlineClock, HiOutlineCurrencyEuro } from "react-icons/hi";
-import { Button } from "./button";
+import Button from "./button";
 import Carousel from "./carousel";
 import { Characteristic } from "./characteristic";
 import { HeadingBox } from "./heading";
-import Link from "./link";
+import MyLink from "./link";
 import { TagRow } from "./tag-row";
 import Underline from "./underline";
 import { useAnimation, motion } from "framer-motion";
@@ -106,9 +106,9 @@ export const Space = ({ space, isFull, ...props }) => {
           </motion.div>
           {!isFull ? (
             <motion.div variants={itemVariants} transition={transision}>
-              <Link href={`/space/${space.slug}`}>
+              <MyLink href={`/space/${space.slug}`}>
                 <Button label="Mehr erfahren" />
-              </Link>
+              </MyLink>
             </motion.div>
           ) : undefined}
         </motion.div>
