@@ -636,6 +636,26 @@ export const global = {
     { label: "Kontakt", link: "/#contact" },
   ],
   footer: {
+    columns: [
+      [
+        { heading: "Adresse", body: "Wolfsacker 8\n\n38444 Wolfsburg" },
+        { heading: "Telefon", body: "+49 5308 5231220" },
+        { heading: "E-Mail", body: "info@newglobecenter.com" },
+      ],
+      [{ heading: "Über", body: "[Über NGC](/about)\n\n[Galerie](/#gallery)" }],
+      [
+        {
+          heading: "Kontakt",
+          body: "[Schreibt uns](/#contact)\n\n[Galerie](/#gallery)",
+        },
+      ],
+      [
+        {
+          heading: "Räume",
+          body: "[Connect](/space/connect)\n\n[Create](/space/create)\n\n[Inspire](/space/inspire)",
+        },
+      ],
+    ],
     partners: [
       {
         src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_80,c_scale/v1635943722/ngc/digital-solutions_kysjh8.png",
@@ -648,17 +668,17 @@ export const global = {
       },
     ],
     bottomLinks: [
-      { label: "Datenschutz", destination: "/datenschutz" },
-      { label: "Impressum", destination: "/impressum" },
+      { label: "Datenschutz", link: "/datenschutz" },
+      { label: "Impressum", link: "/impressum" },
       {
         label: "Hygienekonzept",
-        destination: "/docs/AS_HygienekonzeptWarnstufe2_211202.pdf",
+        link: "/docs/AS_HygienekonzeptWarnstufe2_211202.pdf",
       },
     ],
-    socialLinks: {
-      facebook: "#",
-      linkedin: "#",
-      twitter: "#",
-    },
+    socialLinks: [
+      { label: "facebook", link: "#" },
+      { label: "linkedin", link: "#" },
+      { label: "twitter", link: "#" },
+    ],
   },
 };

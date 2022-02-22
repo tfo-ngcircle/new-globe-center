@@ -14,7 +14,16 @@ Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
 Router.events.on("routeChangeComplete", nProgress.done);
 
-export const GlobalContext = createContext<GlobalData | null>(null);
+export const GlobalContext = createContext<GlobalData>({
+  siteName: "",
+  header: [],
+  footer: { partners: [], bottomLinks: [], socialLinks: [], columns: [[]] },
+  defaultSeo: {
+    metaTitle: "",
+    metaDescription: "",
+    shareImage: "",
+  },
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { global } = pageProps;

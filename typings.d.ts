@@ -54,6 +54,10 @@ export interface SpaceType {
   };
 }
 
+export interface FooterColumn {
+  heading: string;
+  body: string;
+}
 export interface GlobalData {
   siteName: string;
   defaultSeo: {
@@ -63,12 +67,9 @@ export interface GlobalData {
   };
   header: Linktype[];
   footer: {
+    columns: [FooterColumn[]];
     partners: ImageType[];
     bottomLinks: Linktype[];
-    socialLinks: {
-      facebook: string;
-      linkedin: string;
-      twitter: string;
-    };
+    socialLinks: Linktype[];
   };
 }
