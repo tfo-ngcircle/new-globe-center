@@ -3,8 +3,14 @@ import { BiCaretDown } from "react-icons/bi";
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { Md } from "./md";
+import { CharacteristicType } from "../typings";
 
-export const Characteristic = ({ it }) => {
+interface Props {
+  label?: React.ReactNode;
+  it: CharacteristicType;
+}
+
+export const Characteristic = ({ it }: Props) => {
   const sup = String(it.label).indexOf("^");
 
   let newLabel;
@@ -21,7 +27,7 @@ export const Characteristic = ({ it }) => {
   return it.details != undefined ? (
     <Popover className="relative">
       <Popover.Button as="div">
-        <Btn it={it} newLabel={newLabel} />
+        <Btn it={it} label={newLabel} />
       </Popover.Button>
       <Transition
         as={Fragment}
@@ -38,11 +44,11 @@ export const Characteristic = ({ it }) => {
       </Transition>
     </Popover>
   ) : (
-    <Btn it={it} newLabel={newLabel} />
+    <Btn it={it} label={newLabel} />
   );
 };
 
-const Btn = ({ it, newLabel }) => {
+const Btn = ({ it, label }: Props) => {
   return (
     <div
       className={`border border-gray-200 flex ${
@@ -51,7 +57,7 @@ const Btn = ({ it, newLabel }) => {
     >
       {getIcon(it.name, `text-2xl text-gray-500`)}
       <div className={`text-sm font-bold truncate text-gray-500 `}>
-        {newLabel}
+        {label || it.label}
       </div>
       {it.details != undefined ? (
         <BiCaretDown className={`w-4 h-4 text-gray-500`} />

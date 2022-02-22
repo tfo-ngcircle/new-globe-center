@@ -1,7 +1,7 @@
 export const Logo = ({
   classNameFlag = "text-primary",
   height = 60,
-  isFull,
+  isFull = false,
 }) => {
   const h2 = (13 * height) / 60;
   return (

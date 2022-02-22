@@ -10,6 +10,7 @@ import Underline from "./underline";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { SpaceType } from "../typings";
 
 const transision = { duration: 0.5, type: "tween", ease: "easeOut" };
 
@@ -38,7 +39,12 @@ const listVariants = {
   },
 };
 
-export const Space = ({ space, isFull, ...props }) => {
+interface SpaceProps extends React.HTMLProps<HTMLDivElement> {
+  space: SpaceType;
+  isFull?: boolean;
+}
+
+export const Space = ({ space, isFull, ...props }: SpaceProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 

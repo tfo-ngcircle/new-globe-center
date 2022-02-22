@@ -2,7 +2,7 @@ import formatHeadline from "../utils/text";
 import ReactMarkdown from "react-markdown";
 import MyLink from "./link";
 
-export const Md = ({ children, ...props }) => {
+export const Md = ({ ...props }) => {
   return (
     <ReactMarkdown
       {...props}
@@ -30,7 +30,7 @@ export const Md = ({ children, ...props }) => {
         ),
       }}
     >
-      {children}
+      {props.children}
     </ReactMarkdown>
   );
 };

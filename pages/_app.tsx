@@ -2,38 +2,30 @@ import "../styles/globals.scss";
 import "../styles/nprogress.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "moment/locale/de";
-import App from "next/app";
-import Head from "next/head";
+import App, { AppContext } from "next/app";
 import nProgress from "nprogress";
 import { Router } from "next/router";
 import { createContext } from "react";
 import { global } from "../data";
+import { AppProps } from "next/dist/shared/lib/router/router";
+import { GlobalData } from "../typings";
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
 Router.events.on("routeChangeComplete", nProgress.done);
 
-export const GlobalContext = createContext({});
+export const GlobalContext = createContext<GlobalData | null>(null);
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   const { global } = pageProps;
   return (
-    <>
-      <Head>
-        <link rel="stylesheet" href="https://use.typekit.net/edt7kka.css" />
-        <link
-          rel="shortcut icon"
-          href="https://res.cloudinary.com/ngc-gmbh/image/upload/f_ico/v1637160501/ngc/favicon_qyrde1.ico"
-        />
-      </Head>
-      <GlobalContext.Provider value={global}>
-        <Component {...pageProps} />
-      </GlobalContext.Provider>
-    </>
+    <GlobalContext.Provider value={global}>
+      <Component {...pageProps} />
+    </GlobalContext.Provider>
   );
 }
 
-MyApp.getInitialProps = async (ctx) => {
+MyApp.getInitialProps = async (ctx: AppContext) => {
   const appProps = await App.getInitialProps(ctx);
   return { ...appProps, pageProps: { global } };
 };

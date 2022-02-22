@@ -1,23 +1,23 @@
 import MyLink from "./link";
 import { Logo } from "./logo";
 import { useRouter } from "next/router";
-import { Phone, Marker } from "../components/icons";
+import { Phone, Marker } from "./icons";
 import { useWindowSize } from "usehooks-ts";
 import { Menu, Transition } from "@headlessui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { navigateFullpage } from "../utils/utils";
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../pages/_app";
 
-const destinations = [
-  { label: "Home", link: "/#landing" },
-  { label: "Ausstattung", link: "/#features" },
-  { label: "Räume", link: "/#spaces" },
-  { label: "Über uns", link: "/#about" },
-  { label: "Kontakt", link: "/#contact" },
-];
+type Props = JSX.IntrinsicElements["div"] & {
+  dark: boolean;
+  isHome: boolean;
+  isTransparent?: boolean;
+};
 
-const Header = React.forwardRef(
+const Header = React.forwardRef<HTMLDivElement, Props>(
   ({ className, dark, isHome, isTransparent = false }, ref) => {
+    const { header } = useContext(GlobalContext);
     const router = useRouter();
     const screen = useWindowSize();
 
@@ -41,7 +41,7 @@ const Header = React.forwardRef(
           </MyLink>
           <div className="flex space-x-2 lg:space-x-24 items-center">
             <ul className="hidden lg:flex space-x-6">
-              {destinations.map((it) => (
+              {header.map((it) => (
                 <li key={it.link}>
                   <h6>
                     <MyLink
@@ -53,7 +53,7 @@ const Header = React.forwardRef(
                       } ${dark ? "hover:text-white" : "hover:text-primary"}`}
                       onClick={(e) =>
                         isHome
-                          ? navigateFullpage(e, it.link.substr(2))
+                          ? navigateFullpage(e, it?.link?.substr(2))
                           : undefined
                       }
                     >
@@ -117,7 +117,7 @@ const Header = React.forwardRef(
                   as="ul"
                   className="absolute right-0 top-[4.635rem] w-56 origin-top-right bg-white shadow-xl p-6 divide-y divide-gray-100 ring-1 ring-black ring-opacity-5"
                 >
-                  {destinations.map((it) => (
+                  {header.map((it) => (
                     <Menu.Item
                       as="li"
                       key={it.link}
@@ -131,7 +131,7 @@ const Header = React.forwardRef(
                           className="w-full block"
                           onClick={(e) =>
                             isHome
-                              ? navigateFullpage(e, it.link.substr(2))
+                              ? navigateFullpage(e, it?.link?.substr(2))
                               : undefined
                           }
                         >

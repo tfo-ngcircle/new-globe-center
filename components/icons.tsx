@@ -3,7 +3,7 @@ import { GiWaterBottle, GiNetworkBars } from "react-icons/gi";
 import { RiParkingBoxLine } from "react-icons/ri";
 import { HiOutlinePresentationChartBar } from "react-icons/hi";
 
-export function getIcon(tag, className) {
+export function getIcon(tag: string, className?: string) {
   switch (tag) {
     case "phone":
       return <Phone />;
@@ -48,7 +48,7 @@ export function getIcon(tag, className) {
   }
 }
 
-export const Marker = ({ size = 48, className, dark }) => {
+export const Marker = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -64,7 +64,7 @@ export const Marker = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Phone = ({ size = 48, className, dark }) => {
+export const Phone = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -80,7 +80,7 @@ export const Phone = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Accessibility = ({ size = 48, className, dark }) => {
+export const Accessibility = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -97,7 +97,7 @@ export const Accessibility = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Charging = ({ size = 48, className, dark }) => {
+export const Charging = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -120,7 +120,7 @@ export const Charging = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Catering = ({ size = 48, className, dark }) => {
+export const Catering = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -144,7 +144,7 @@ export const Catering = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Presentation = ({ size = 48, className, dark }) => {
+export const Presentation = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -169,7 +169,7 @@ export const Presentation = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Parking = ({ size = 48, className, dark }) => {
+export const Parking = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -186,7 +186,7 @@ export const Parking = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Tree = ({ size = 48, className, dark }) => {
+export const Tree = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -200,7 +200,7 @@ export const Tree = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Diamond = ({ size = 48, className, dark }) => {
+export const Diamond = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -216,7 +216,7 @@ export const Diamond = ({ size = 48, className, dark }) => {
   );
 };
 
-export const Chauffeur = ({ size = 48, className, dark }) => {
+export const Chauffeur = ({ size = 48, className, dark }: IconProps) => {
   return (
     <Icon
       size={size}
@@ -241,7 +241,20 @@ export const Chauffeur = ({ size = 48, className, dark }) => {
   );
 };
 
-export default function Icon({ size = 48, className, dark, black, red }) {
+type IconProps = JSX.IntrinsicElements["svg"] & {
+  size?: number;
+  dark?: boolean;
+  black?: React.ReactNode;
+  red?: React.ReactNode;
+};
+
+export default function Icon({
+  size = 48,
+  className,
+  dark,
+  black,
+  red,
+}: IconProps) {
   return (
     <svg viewBox="0 0 48 48" height={size} className={className}>
       <g className="stroke-current stroke-2">

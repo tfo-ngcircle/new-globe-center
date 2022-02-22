@@ -5,9 +5,10 @@ import { useInterval } from "usehooks-ts";
 import { MdFullscreen } from "react-icons/md";
 import MyDialog from "./dialog";
 import { useInView } from "react-intersection-observer";
+import { ImageType } from "../typings";
 
 const variants = {
-  enter: (direction) => {
+  enter: (direction: number) => {
     return {
       x: direction > 0 ? 1000 : -1000,
       opacity: 0,
@@ -18,7 +19,7 @@ const variants = {
     x: 0,
     opacity: 1,
   },
-  exit: (direction) => {
+  exit: (direction: number) => {
     return {
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
@@ -28,24 +29,33 @@ const variants = {
 };
 
 const swipeConfidenceThreshold = 10000;
-const swipePower = (offset, velocity) => {
+const swipePower = (offset: number, velocity: number) => {
   return Math.abs(offset) * velocity;
 };
+
+interface Props extends React.HTMLProps<HTMLImageElement> {
+  images: ImageType[];
+  swipeable?: boolean;
+  canMaximize?: boolean;
+  maximized?: boolean;
+  startingIndex?: number;
+  onMaximizeChange?: (isMaximised: boolean) => void;
+}
 
 export default function Carousel({
   images,
   className,
-  swipeable,
+  swipeable = false,
   canMaximize = true,
   maximized = false,
   startingIndex = 0,
   onMaximizeChange = () => {},
-}) {
+}: Props) {
   const [ref, inView] = useInView();
   const [[page, direction], setPage] = useState([startingIndex, 0]);
   const [isMaximised, setIsMaximised] = useState(maximized);
 
-  const paginate = (newDirection) => {
+  const paginate = (newDirection: number) => {
     setPage([page + newDirection, newDirection]);
   };
 
