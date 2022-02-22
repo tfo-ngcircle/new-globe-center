@@ -8,6 +8,17 @@ export interface Linktype {
   link?: string;
 }
 
+export interface ContactSectionData {
+  headline: string;
+  email: string;
+  phone: string;
+  background: ImageType;
+  location: {
+    lat: number;
+    lng: number;
+  };
+}
+
 export interface AboutSectionData {
   headline: string;
   description: string;

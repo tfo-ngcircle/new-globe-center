@@ -7,6 +7,7 @@ import Input from "../input";
 import formatHeadline from "../../utils/text";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { ContactSectionData } from "../../typings";
 
 const variantsClip = {
   open: {
@@ -49,7 +50,17 @@ const transition = {
   ease: "easeOut",
 };
 
-export default function ContactSection({ contact, paddingTop, leftContact }) {
+interface Props {
+  contact: ContactSectionData;
+  paddingTop: number;
+  leftContact: boolean;
+}
+
+export default function ContactSection({
+  contact,
+  paddingTop,
+  leftContact,
+}: Props) {
   let [isOpen, setIsOpen] = useState(false);
 
   const clipControls = useAnimation();

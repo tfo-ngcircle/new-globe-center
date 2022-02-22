@@ -1,6 +1,12 @@
+import { SpaceType } from "../../typings";
 import { Space } from "../space";
 
-export default function SpacesSection({ spaces, width }) {
+interface Props {
+  spaces: SpaceType[];
+  width: number;
+}
+
+export default function SpacesSection({ spaces, width }: Props) {
   return (
     <>
       {spaces &&

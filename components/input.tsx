@@ -4,7 +4,7 @@ import { useState } from "react";
 type Props = JSX.IntrinsicElements["input"] &
   JSX.IntrinsicElements["textarea"] & {
     label: string;
-    rows: number;
+    rows?: number;
   };
 
 const Input = React.forwardRef<HTMLInputElement & HTMLTextAreaElement, Props>(
