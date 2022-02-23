@@ -3,8 +3,8 @@ import { Page } from "../components/page";
 
 export default function Datenschutz({}) {
   return (
-    <Page>
-      <div className="container space-y-4">
+    <Page seo={{ title: "Datenschutz" }}>
+      <div className="container space-y-4 mb-12">
         <Md>{`# Datenschutz
 
 ### Name und Anschrift des für die Verarbeitung Verantwortlichen.

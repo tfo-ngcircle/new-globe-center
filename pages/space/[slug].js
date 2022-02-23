@@ -10,7 +10,7 @@ import { data } from "../../data";
 export default function Room({ space }) {
   return (
     <Page seo={space.seo}>
-      <div className="container space-y-10 md:space-y-20">
+      <div className="container space-y-10 md:space-y-20 mb-12">
         <Space space={space} className="h-full" isFull />
         <Section title="Die Technik.">
           <Md>{space.technology.description}</Md>
@@ -108,9 +108,22 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const space = data.spaces.find((it) => it.slug == params.slug);
   space.seo = {
-    metaTitle: space.title,
-    metaDescription: space.description,
-    shareImage: space.images[0],
+    title: space.title,
+    description: space.description,
+    openGraph: {
+      type: "website",
+      url: "https://www.example.com/page",
+      title: "Open Graph Title",
+      description: "Open Graph Description",
+      images: [
+        {
+          url: space.images[0].src,
+          width: 800,
+          height: 600,
+          alt: "Og Image Alt",
+        },
+      ],
+    },
   };
   return {
     props: { space: space },

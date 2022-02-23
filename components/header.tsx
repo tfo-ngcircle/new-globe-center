@@ -10,8 +10,8 @@ import { GlobalContext } from "../pages/_app";
 import { useWindowSize } from "usehooks-ts";
 
 type Props = JSX.IntrinsicElements["div"] & {
-  dark: boolean;
-  isHome: boolean;
+  dark?: boolean;
+  isHome?: boolean;
   isTransparent?: boolean;
 };
 

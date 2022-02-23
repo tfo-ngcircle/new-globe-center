@@ -9,6 +9,7 @@ import { createContext } from "react";
 import { global } from "../data";
 import { AppProps } from "next/dist/shared/lib/router/router";
 import { GlobalData } from "../typings";
+import { DefaultSeo } from "next-seo";
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
@@ -29,6 +30,20 @@ function MyApp({ Component, pageProps }: AppProps) {
   const { global } = pageProps;
   return (
     <GlobalContext.Provider value={global}>
+      <DefaultSeo
+        titleTemplate="%s • New Globe Center"
+        defaultTitle="New Globe Center"
+        additionalLinkTags={[
+          {
+            rel: "shortcut icon",
+            href: "https://res.cloudinary.com/ngc-gmbh/image/upload/f_ico/v1637160501/ngc/favicon_qyrde1.ico",
+          },
+          {
+            rel: "stylesheet",
+            href: "https://use.typekit.net/edt7kka.css",
+          },
+        ]}
+      />
       <Component {...pageProps} />
     </GlobalContext.Provider>
   );

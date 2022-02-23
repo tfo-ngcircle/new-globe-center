@@ -1,4 +1,4 @@
-export default function formatHeadline(headline) {
+export default function formatHeadline(headline: string) {
   return headline.split(".").map((part, i) =>
     part.length > 0 ? (
       <span key={i}>

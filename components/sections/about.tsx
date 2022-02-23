@@ -6,6 +6,7 @@ import MyLink from "next/link";
 import { MdLocalPhone } from "react-icons/md";
 import { SocialIcon } from "../socialIcon";
 import { AboutSectionData } from "../../typings";
+import { CorporateContactJsonLd } from "next-seo";
 
 interface Props {
   about: AboutSectionData;
@@ -13,7 +14,7 @@ interface Props {
 
 export default function AboutSection({ about }: Props) {
   return (
-    <div className="overflow-hidden">
+    <div>
       <div className="container">
         <div className="relative md:grid grid-cols-10 2xl:grid-cols-7 items-center gap-12">
           <div className="space-y-6 md:space-y-10 flex flex-col col-span-5 2xl:col-span-4">

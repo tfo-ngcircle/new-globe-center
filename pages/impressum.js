@@ -1,10 +1,10 @@
 import { Md } from "../components/md";
 import { Page } from "../components/page";
 
-export default function Impressum({}) {
+export default function Impressum() {
   return (
-    <Page>
-      <div className="container space-y-4">
+    <Page seo={{ title: "Impressum" }}>
+      <div className="container space-y-4 mb-12">
         <Md>{`# Impressum
 
 ##### Angaben gemäß § 5 TeleMedienGesetz (TMG)
