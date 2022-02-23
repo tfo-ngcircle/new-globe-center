@@ -592,7 +592,7 @@ Großes Auto **24 - 28,00€**
     headline: "Überzeugt? Jetzt ein unverbindliches Angebot anfordern.",
     email: "info@newglobecenter.com",
     phone: "+49 5308 5231220",
-    background: {
+    image: {
       src: "https://res.cloudinary.com/ngc-gmbh/image/upload/h_960,c_scale/v1636962944/ngc/IMG_0695-web_hxcl6m.webp",
       alt: "About",
     },
@@ -633,7 +633,7 @@ export const global = {
     { label: "Ausstattung", link: "/#features" },
     { label: "Räume", link: "/#spaces" },
     { label: "Über uns", link: "/#about" },
-    { label: "Kontakt", link: "/#contact" },
+    { label: "Galerie", link: "/#gallery" },
   ],
   footer: {
     columns: [

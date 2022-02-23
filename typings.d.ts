@@ -8,27 +8,45 @@ export interface Linktype {
   link?: string;
 }
 
-export interface ContactSectionData {
-  headline: string;
-  email: string;
-  phone: string;
-  background: ImageType;
-  location: {
-    lat: number;
-    lng: number;
-  };
+export interface LatLng {
+  lat: number;
+  lng: number;
 }
 
-export interface AboutSectionData {
+export interface SectionData {
   headline: string;
   description: string;
   image: ImageType;
+}
+
+export interface ContactSectionData extends SectionData {
+  email: string;
+  phone: string;
+  location: LatLng;
+}
+export interface AboutSectionData extends SectionData {
   contact: {
     name?: string;
     phone?: string;
     post?: string;
   }[];
 }
+
+export interface FeaturesSectionData extends SectionData {
+  features: {
+    title: string;
+    icon: string;
+    description?: string;
+  }[];
+}
+
+export interface LandingSectionData extends SectionData {
+  images: ImageType[];
+}
+
+export interface GallerySectionData extends LandingSectionData {}
+
+export interface MapSectionData extends SectionData {}
 
 export interface CharacteristicType {
   name: string;

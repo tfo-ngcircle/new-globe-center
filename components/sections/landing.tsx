@@ -7,6 +7,7 @@ import Carousel from "../carousel";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { LandingSectionData } from "../../typings";
 
 const bluelineVariants = {
   hidden: {
@@ -28,7 +29,11 @@ const redlineVariants = {
   },
 };
 
-export default function LandingSection({ landing }) {
+interface Props {
+  landing: LandingSectionData;
+}
+
+export default function LandingSection({ landing }: Props) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 

@@ -60,7 +60,7 @@ export default function Home() {
           <FeaturesSection features={data.features} />
           <SpacesSection spaces={data.spaces} width={width} />
           <AboutSection about={data.about} />
-          <GallerySection gallery={data.gallery} width={window.width} />
+          <GallerySection gallery={data.gallery} screenWidth={window.width} />
           <ContactSection
             contact={data.contact}
             paddingTop={height}

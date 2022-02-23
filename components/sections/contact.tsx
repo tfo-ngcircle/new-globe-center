@@ -156,8 +156,8 @@ export default function ContactSection({
           initial="open"
           animate={clipControls}
           variants={variantsClip}
-          src={contact.background.src}
-          alt={contact.background.alt}
+          src={contact.image.src}
+          alt={contact.image.alt}
           className="object-cover brightness-75 h-full w-full"
           transition={{
             clipPath: { type: "spring", stiffness: 300, damping: 30 },

@@ -7,6 +7,7 @@ import { HeadingBox } from "../heading";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
+import { FeaturesSectionData } from "../../typings";
 
 const underlineVariants = {
   visible: { x: 0, scaleX: -1 },
@@ -27,7 +28,11 @@ const listVariants = {
   },
 };
 
-export default function FeaturesSection({ features }) {
+interface Props {
+  features: FeaturesSectionData;
+}
+
+export default function FeaturesSection({ features }: Props) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 

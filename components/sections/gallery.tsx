@@ -5,6 +5,7 @@ import Underline from "../underline";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
+import { GallerySectionData } from "../../typings";
 
 const listVariants = {
   hidden: {
@@ -30,7 +31,12 @@ const itemVariants = {
   },
 };
 
-export default function GallerySection({ gallery, width }) {
+interface Props {
+  gallery: GallerySectionData;
+  screenWidth: number;
+}
+
+export default function GallerySection({ gallery, screenWidth }: Props) {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -38,7 +44,7 @@ export default function GallerySection({ gallery, width }) {
     controls.start(inView ? "visible" : "hidden");
   }, [controls, inView]);
 
-  const [maximized, setMaximized] = useState();
+  const [maximized, setMaximized] = useState<number>();
 
   return (
     <div className="h-full flex flex-col justify-center mt-0 md:mt-20 lg:mt-8 2xl:mt-0">
@@ -49,7 +55,7 @@ export default function GallerySection({ gallery, width }) {
         </div>
         <p className="max-w-4xl">{gallery && gallery.description}</p>
       </div>
-      {width >= 768 ? (
+      {screenWidth >= 768 ? (
         <div className="relative">
           <motion.div
             id="gal"
@@ -57,7 +63,7 @@ export default function GallerySection({ gallery, width }) {
             initial="hidden"
             variants={listVariants}
             animate={controls}
-            className="grid md:grid-rows-2 grid-flow-col my-8 2xl:my-16 space-x-[-3.5rem] 3xl:space-x-[-4.3rem] gap-y-5 overflow-auto scrollbar-hide"
+            className="grid md:grid-rows-2 grid-flow-col my-8 2xl:my-16 space-x-[-3.5rem] 3xl:space-x-[-4.3rem] gap-y-5 overflow-visible scrollbar-hide"
           >
             {gallery.images.map((img, i) => (
               <motion.div
@@ -123,7 +129,7 @@ export default function GallerySection({ gallery, width }) {
   );
 }
 
-function scrollGalerry(direction) {
+function scrollGalerry(direction: number) {
   const him = document.getElementById("gal");
-  him.scroll({ left: him.scrollLeft + 720 * direction, behavior: "smooth" });
+  him?.scroll({ left: him.scrollLeft + 720 * direction, behavior: "smooth" });
 }

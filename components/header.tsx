@@ -2,12 +2,12 @@ import MyLink from "./link";
 import { Logo } from "./logo";
 import { useRouter } from "next/router";
 import { Phone, Marker } from "./icons";
-import { useWindowSize } from "usehooks-ts";
 import { Menu, Transition } from "@headlessui/react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { navigateFullpage } from "../utils/utils";
 import React, { useContext } from "react";
 import { GlobalContext } from "../pages/_app";
+import { useWindowSize } from "usehooks-ts";
 
 type Props = JSX.IntrinsicElements["div"] & {
   dark: boolean;
@@ -19,7 +19,7 @@ const Header = React.forwardRef<HTMLDivElement, Props>(
   ({ className, dark, isHome, isTransparent = false }, ref) => {
     const { header } = useContext(GlobalContext);
     const router = useRouter();
-    const screen = useWindowSize();
+    const window = useWindowSize();
 
     return (
       <div
@@ -39,6 +39,7 @@ const Header = React.forwardRef<HTMLDivElement, Props>(
           >
             <Logo
               isFull={true}
+              height={window.width <= 768 ? 26 : 34}
               classNameFlag={dark ? "text-white" : "text-primary"}
             />
           </MyLink>
@@ -66,7 +67,7 @@ const Header = React.forwardRef<HTMLDivElement, Props>(
                 </li>
               ))}
             </ul>
-            <div className="flex items-center space-x-3 lg:space-x-8 text-gray-300">
+            <div className="flex items-center space-x-1 lg:space-x-8 text-gray-300">
               <MyLink
                 href="/#contact"
                 onClick={(e) =>

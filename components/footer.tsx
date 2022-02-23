@@ -6,62 +6,50 @@ import { Md } from "./md";
 import { useContext } from "react";
 import { GlobalContext } from "../pages/_app";
 import { FooterColumn } from "../typings";
-import { Img } from "./image";
 
 export default function Footer() {
   const { footer } = useContext(GlobalContext);
   return (
-    <div className="flex flex-col h-full justify-between gap-10 lg:gap-16 pt-24">
-      <div className="container flex flex-wrap items-center justify-center gap-8 xl:gap-x-20 my-auto">
-        {footer.partners?.map((partner, i) => (
-          <Img
-            image={partner}
-            key={i}
-            className="object-contain filter contrast-0 opacity-40 hover:opacity-100 grayscale hover:filter-none transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-          />
-        ))}
+    <footer className="bg-black text-white divide-y divide-gray-800 h-full flex flex-col justify-end">
+      <div className="grow flex items-center">
+        <div className="container flex flex-wrap  py-16 gap-8 lg:gap-16 xl:gap-24">
+          <div className="pr-12">
+            <Logo isFull classNameFlag="text-white opacity-50" height={42} />
+          </div>
+          {footer.columns.map((item, i) => (
+            <FooterGroup key={i} items={item} />
+          ))}
+        </div>
       </div>
-      <div className="bg-black text-white">
-        <footer className="divide-y divide-gray-800">
-          <div className="container flex flex-wrap  py-16 gap-8 lg:gap-16 xl:gap-24">
-            <div className="pr-12">
-              <Logo isFull classNameFlag="text-white" />
-            </div>
-            {footer.columns.map((item, i) => (
-              <FooterGroup key={i} items={item} />
+      <div className="py-4 h-max">
+        <div className="container flex flex-wrap justify-between items-center gap-3 pb-5 md:pb-0">
+          <div className="flex gap-3 md:gap-8">
+            {footer.socialLinks.map((it) => (
+              <SocialIcon href={it.link} key={it.label}>
+                {it.label == "facebook" ? (
+                  <FaFacebookF />
+                ) : it.label == "linkedin" ? (
+                  <FaLinkedinIn />
+                ) : it.label == "twitter" ? (
+                  <FaTwitter />
+                ) : undefined}
+              </SocialIcon>
             ))}
           </div>
-          <div className="py-4">
-            <div className="container flex flex-wrap justify-between items-center gap-3 pb-5 md:pb-0">
-              <div className="flex gap-3 md:gap-8">
-                {footer.socialLinks.map((it) => (
-                  <SocialIcon href={it.link} key={it.label}>
-                    {it.label == "facebook" ? (
-                      <FaFacebookF />
-                    ) : it.label == "linkedin" ? (
-                      <FaLinkedinIn />
-                    ) : it.label == "twitter" ? (
-                      <FaTwitter />
-                    ) : undefined}
-                  </SocialIcon>
-                ))}
-              </div>
-              <div className="text-gray-500 flex flex-wrap gap-3 md:gap-6">
-                <span>
-                  © {new Date().getFullYear()} New Globe Center - NgC GmbH
-                </span>
-                {footer?.bottomLinks &&
-                  footer.bottomLinks.map((link, i) => (
-                    <MyLink href={link.link} key={i} target="_blank">
-                      {link.label}
-                    </MyLink>
-                  ))}
-              </div>
-            </div>
+          <div className="text-gray-500 flex flex-wrap gap-3 md:gap-6">
+            <span>
+              © {new Date().getFullYear()} New Globe Center - NgC GmbH
+            </span>
+            {footer?.bottomLinks &&
+              footer.bottomLinks.map((link, i) => (
+                <MyLink href={link.link} key={i} target="_blank">
+                  {link.label}
+                </MyLink>
+              ))}
           </div>
-        </footer>
+        </div>
       </div>
-    </div>
+    </footer>
   );
 }
 
