@@ -37,6 +37,7 @@ jobs:
       - name: Build project
         env:
           NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN }}
+          NEXT_PUBLIC_HOST_NAME: ${{ secrets.NEXT_PUBLIC_HOST_NAME }}
         run: npm run export
 
       - name: 📂 Sync files
