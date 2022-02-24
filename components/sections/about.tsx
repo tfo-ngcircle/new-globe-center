@@ -15,6 +15,18 @@ interface Props {
 export default function AboutSection({ about }: Props) {
   return (
     <div>
+      <CorporateContactJsonLd
+        url={`https://${process.env.NEXT_PUBLIC_HOST_NAME}`}
+        logo={`https://${process.env.NEXT_PUBLIC_HOST_NAME}/images/logo.svg`}
+        contactPoint={about.contact.map((it) => {
+          return {
+            telephone: `+49 ${it.phone}`,
+            contactType: it.post,
+            areaServed: "DE",
+            availableLanguage: ["German", "Deutsch"],
+          };
+        })}
+      />
       <div className="container">
         <div className="relative md:grid grid-cols-10 2xl:grid-cols-7 items-center gap-12">
           <div className="space-y-6 md:space-y-10 flex flex-col col-span-5 2xl:col-span-4">

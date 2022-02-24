@@ -33,6 +33,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       <DefaultSeo
         titleTemplate="%s • New Globe Center"
         defaultTitle="New Globe Center"
+        openGraph={{
+          type: "website",
+          url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}`,
+          title: global.defaultSeo.title,
+          description: global.defaultSeo.description,
+        }}
         additionalLinkTags={[
           {
             rel: "shortcut icon",

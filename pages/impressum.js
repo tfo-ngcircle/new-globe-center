@@ -19,7 +19,7 @@ Wolfsacker 8
 
 
 Telefon: (+49) 5308 523 122 20  
-eMail: info..ngcircle.com  
+eMail: info@ngcircle.com  
 Internet: www.ngcircle.com
 
 
@@ -40,7 +40,7 @@ Registergericht: Amtsgericht Braunschweig
 ##### Verbraucherinformationen
 
 
-Online-Streitbeilegung gemäß Art.14 Abs. 1 ODR-VO: Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie hier finden: http://ec.europa.eu/consumers/odr
+Online-Streitbeilegung gemäß Art.14 Abs. 1 ODR-VO: Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie [hier](http://ec.europa.eu/consumers/odr) finden
 
 `}</Md>
       </div>

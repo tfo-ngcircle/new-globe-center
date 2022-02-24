@@ -621,10 +621,10 @@ Wir stellen Ihnen gerne ein persönliches Angebot zusammen. Kontaktieren Sie uns
 `;
 
 export const global = {
-  siteName: "New Globe Center",
   defaultSeo: {
-    metaTitle: "Ihr Raum.",
-    metaDescription:
+    siteName: "New Globe Center",
+    title: "Ihr Raum.",
+    description:
       "Entdecken Sie unsere Schulungs- und Konferenzräume in Wolfsburg. Buchen Sie modernste Ausstattung und digitalen Komfort für Ihre Schulung, Tagung oder Businessmeeting. Wir bieten Ihnen Raum für sorgloses und stressfreies Arbeiten im NEW GLOBE CENTER. Genießen Sie inspirierende Atmosphäre mit hochwertigem Service, der Sie in den Mittelpunkt stellt. Wir machen Ihre Veranstaltung zum Erlebnis und freuen uns darauf, Sie kennen zu lernen.",
     shareImage: "",
   },

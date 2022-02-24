@@ -112,17 +112,15 @@ export async function getStaticProps({ params }) {
     description: space.description,
     openGraph: {
       type: "website",
-      url: "https://www.example.com/page",
-      title: "Open Graph Title",
-      description: "Open Graph Description",
-      images: [
-        {
-          url: space.images[0].src,
-          width: 800,
-          height: 600,
-          alt: "Og Image Alt",
-        },
-      ],
+      url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}/space/${space.slug}`,
+      title: space.title,
+      description: space.description,
+      images: space.images.map((it) => {
+        return {
+          url: it.src,
+          alt: it.alt || null,
+        };
+      }),
     },
   };
   return {
