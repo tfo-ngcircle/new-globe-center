@@ -109,12 +109,12 @@ export async function getStaticProps({ params }) {
   const space = data.spaces.find((it) => it.slug == params.slug);
   space.seo = {
     title: space.title,
-    description: space.description,
+    description: space.description[0],
     openGraph: {
       type: "website",
       url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}/space/${space.slug}`,
       title: space.title,
-      description: space.description,
+      description: space.description[0],
       images: space.images.map((it) => {
         return {
           url: it.src,
