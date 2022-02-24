@@ -9,14 +9,14 @@ export const Md = ({ ...props }) => {
       components={{
         h1: ({ node, ...props }) => (
           <h1 {...props} className="pb-10">
-            {formatHeadline(props.children[0])}
+            {formatHeadline(props.children[0] as string)}
           </h1>
         ),
         h2: ({ node, ...props }) => (
-          <h2 {...props}>{formatHeadline(props.children[0])}</h2>
+          <h2 {...props}>{formatHeadline(props.children[0] as string)}</h2>
         ),
         h3: ({ node, ...props }) => (
-          <h3 {...props}>{formatHeadline(props.children[0])}</h3>
+          <h3 {...props}>{formatHeadline(props.children[0] as string)}</h3>
         ),
         a: ({ node, ...props }) => <MyLink {...props} />,
         ul: ({ node, ...props }) => (
