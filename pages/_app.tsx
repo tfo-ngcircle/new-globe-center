@@ -1,5 +1,4 @@
 import "../styles/globals.scss";
-import "../styles/nprogress.css";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "moment/locale/de";
 import App, { AppContext } from "next/app";

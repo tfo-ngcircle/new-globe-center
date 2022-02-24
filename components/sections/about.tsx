@@ -14,7 +14,7 @@ interface Props {
 
 export default function AboutSection({ about }: Props) {
   return (
-    <div>
+    <div className="overflow-hidden">
       <CorporateContactJsonLd
         url={`https://${process.env.NEXT_PUBLIC_HOST_NAME}`}
         logo={`https://${process.env.NEXT_PUBLIC_HOST_NAME}/images/logo.svg`}
