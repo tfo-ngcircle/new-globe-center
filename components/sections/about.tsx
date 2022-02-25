@@ -56,10 +56,13 @@ export default function AboutSection({ about }: Props) {
         </div>
         <div className="h-full col-span-4 2xl:col-span-3 py-6 md:py-2"></div>
       </div>
-      <Img
-        image={about.image}
-        className="object-cover lg:absolute w-[150%] -mt-16 scale-125 lg:scale-100 lg:w-auto right-0 bottom-0 lg:h-[90%]"
-      />
+      <div className="lg:absolute h-[32em] w-full -mt-16 scale-125 lg:scale-100 lg:w-1/2 right-0 bottom-0 lg:h-[90%] bg-slate-300">
+        <Img
+          image={about.image}
+          objectFit="contain"
+          objectPosition="right bottom"
+        />
+      </div>
     </div>
   );
 }

@@ -1,9 +1,18 @@
+import Image, { ImageProps } from "next/image";
 import { ImageType } from "../typings";
 
-type Props = JSX.IntrinsicElements["img"] & {
+interface Props extends Partial<ImageProps> {
   image: ImageType;
-};
+}
 
 export const Img = ({ image, ...props }: Props) => {
-  return <img src={image.src} alt={image?.alt} {...props} />;
+  return (
+    <Image
+      {...props}
+      src={image.src}
+      alt={image?.alt}
+      layout={props.layout || "fill"}
+      objectFit={props.objectFit || "cover"}
+    />
+  );
 };

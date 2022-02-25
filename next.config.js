@@ -1,6 +1,4 @@
-const withOptimizedImages = require("next-optimized-images");
-
-module.exports = withOptimizedImages({
+module.exports = {
   reactStrictMode: true,
   images: {
     domains: ["res.cloudinary.com", "localhost"],
@@ -22,7 +20,6 @@ module.exports = withOptimizedImages({
         filename: "static/[hash][ext]",
       },
     });
-
     return config;
   },
-});
+};
