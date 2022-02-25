@@ -30,24 +30,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GlobalContext.Provider value={global}>
       <DefaultSeo
-        titleTemplate="%s • New Globe Center"
-        defaultTitle="New Globe Center"
+        titleTemplate={`%s • ${global.defaultSeo.title}`}
+        defaultTitle={global.defaultSeo.title}
         openGraph={{
           type: "website",
           url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}`,
           title: global.defaultSeo.title,
           description: global.defaultSeo.description,
         }}
-        additionalLinkTags={[
-          {
-            rel: "shortcut icon",
-            href: "https://res.cloudinary.com/ngc-gmbh/image/upload/f_ico/v1637160501/ngc/favicon_qyrde1.ico",
-          },
-          {
-            rel: "stylesheet",
-            href: "https://use.typekit.net/edt7kka.css",
-          },
-        ]}
       />
       <Component {...pageProps} />
     </GlobalContext.Provider>
