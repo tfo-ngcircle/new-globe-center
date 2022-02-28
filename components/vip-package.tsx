@@ -11,7 +11,7 @@ type Props = {
 export const VipPackage = ({ image, title, description }: Props) => {
   return (
     <div className="border-[3px] rounded border-primary p-10 items-center gap-4 bg-white">
-      <Img image={image} className="w-32 h-32" />
+      <Img image={image} width={128} height={120} layout="fixed" />
       <div className="space-y-3">
         <h4>{title}</h4>
         <Md>{description}</Md>

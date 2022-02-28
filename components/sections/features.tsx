@@ -44,10 +44,9 @@ export default function FeaturesSection({ features }: Props) {
     <div className="relative">
       <div className="container">
         <div className="lg:flex space-y-4 space-x-2 3xl:space-x-8 lg:space-y-0 justify-between h-full items-center">
-          <Img
-            image={features.image}
-            className="object-cover relative w-full h-[400px] xl:h-auto lg:w-[368px] xl:w-[510px] shadow-lg xl:self-stretch"
-          />
+          <div className="relative w-full h-[400px] xl:h-auto lg:w-[368px] xl:w-[510px] shadow-lg xl:self-stretch">
+            <Img image={features.image} />
+          </div>
           <div className="space-y-4 lg:space-y-6">
             <div className="space-y-4">
               <HeadingBox>
