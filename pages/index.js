@@ -1,6 +1,7 @@
 import Footer from "../components/footer";
 import { Fullpage } from "../components/fullpage";
 import Header from "../components/header";
+import ToTopHandle from "../components/to-top";
 import AboutSection from "../components/sections/about";
 import ContactSection from "../components/sections/contact";
 import FeaturesSection from "../components/sections/features";
@@ -13,6 +14,17 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { data } from "../data";
 import { NextSeo } from "next-seo";
+import { BiArrowToTop } from "react-icons/bi";
+import { motion } from "framer-motion";
+import { navigateFullpage } from "../utils/utils";
+
+const bounceTransition = {
+  y: {
+    duration: 0.8,
+    yoyo: Infinity,
+    ease: "easeInOut",
+  },
+};
 
 export default function Home() {
   const headerRef = useRef();
@@ -72,6 +84,11 @@ export default function Home() {
           <Footer />
         </Fullpage>
       ) : undefined}
+      <ToTopHandle
+        isDark={dark | isTransparent | (router.asPath == "/#footer")}
+        flip={router.asPath !== "/#landing"}
+        onClick={(e) => navigateFullpage(e, "landing")}
+      />
     </>
   );
 }
