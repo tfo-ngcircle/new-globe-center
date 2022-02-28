@@ -11,7 +11,7 @@ const bounceTransition = {
 };
 
 interface Props extends HTMLMotionProps<"span"> {
-  isDark: boolean;
+  isDark?: boolean;
   flip: boolean;
 }
 
