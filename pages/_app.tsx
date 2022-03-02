@@ -8,7 +8,7 @@ import { createContext } from "react";
 import { global } from "../data";
 import { AppProps } from "next/dist/shared/lib/router/router";
 import { GlobalData } from "../typings";
-import { DefaultSeo } from "next-seo";
+import { DefaultSeo, OrganizationJsonLd } from "next-seo";
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
@@ -18,27 +18,25 @@ export const GlobalContext = createContext<GlobalData>({
   siteName: "",
   header: [],
   footer: { partners: [], bottomLinks: [], socialLinks: [], columns: [[]] },
-  defaultSeo: {
-    metaTitle: "",
-    metaDescription: "",
-    shareImage: "",
-  },
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
   const { global } = pageProps;
+  const data = global as GlobalData;
+
   return (
-    <GlobalContext.Provider value={global}>
+    <GlobalContext.Provider value={data}>
       <DefaultSeo
-        titleTemplate={`%s • ${global.defaultSeo.title}`}
-        defaultTitle={global.defaultSeo.title}
+        titleTemplate={`%s • ${data.defaultSeo?.siteName}`}
+        defaultTitle={data.defaultSeo?.title}
         openGraph={{
           type: "website",
           url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}`,
-          title: global.defaultSeo.title,
-          description: global.defaultSeo.description,
+          title: data.defaultSeo?.title,
+          description: data.defaultSeo?.description,
         }}
       />
+      {data.organization && <OrganizationJsonLd {...data.organization} />}
       <Component {...pageProps} />
     </GlobalContext.Provider>
   );
