@@ -1,3 +1,5 @@
+import { OrganizationJsonLdProps } from "next-seo";
+
 export interface ImageType {
   src: string;
   alt?: string;
@@ -89,9 +91,10 @@ export interface FooterColumn {
 }
 export interface GlobalData {
   siteName: string;
-  defaultSeo: {
-    metaTitle: string;
-    metaDescription: string;
+  defaultSeo?: {
+    siteName: string;
+    title: string;
+    description: string;
     shareImage: string;
   };
   header: Linktype[];
@@ -101,4 +104,5 @@ export interface GlobalData {
     bottomLinks: Linktype[];
     socialLinks: Linktype[];
   };
+  organization?: OrganizationJsonLdProps;
 }

@@ -4,7 +4,7 @@ import { Md } from "./md";
 
 type Props = {
   title: string;
-  description: boolean;
+  description: string;
   image: ImageType;
 };
 
