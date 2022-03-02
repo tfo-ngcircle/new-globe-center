@@ -6,10 +6,22 @@ import { Page } from "../../components/page";
 import { Space } from "../../components/space";
 import formatHeadline from "../../utils/text";
 import { data } from "../../data";
+import { CharacteristicType, SpaceType } from "../../typings";
+import { NextSeoProps, ProductJsonLd, ProductJsonLdProps } from "next-seo";
+import React from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { ParsedUrlQuery } from "querystring";
 
-export default function Room({ space }) {
+interface Props {
+  space: SpaceType;
+  seo: NextSeoProps;
+  product?: ProductJsonLdProps;
+}
+
+export default function Room({ space, seo, product }: Props) {
   return (
-    <Page seo={space.seo}>
+    <Page seo={seo}>
+      {product && <ProductJsonLd {...product} />}
       <div className="container space-y-10 md:space-y-20 mb-12">
         <Space space={space} className="h-full" isFull />
         <Section title="Die Technik.">
@@ -74,7 +86,13 @@ Lassen Sie Ihre Kunden vom Hotel abholen, oder sorgen Sie dafür, dass Ihr Team 
   );
 }
 
-export const Section = ({ title, children }) => {
+export const Section = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => {
   return (
     <div className="space-y-6">
       <h3>{formatHeadline(title)}</h3>
@@ -83,7 +101,11 @@ export const Section = ({ title, children }) => {
   );
 };
 
-export const CharacteristicsGroup = ({ items }) => {
+export const CharacteristicsGroup = ({
+  items,
+}: {
+  items: CharacteristicType[];
+}) => {
   return (
     <div className="flex gap-4 flex-wrap">
       {items.map((kc, i) => (
@@ -93,7 +115,11 @@ export const CharacteristicsGroup = ({ items }) => {
   );
 };
 
-export async function getStaticPaths() {
+interface Params extends ParsedUrlQuery {
+  slug: string;
+}
+
+export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const spaces = data.spaces;
   return {
     paths: spaces.map((space) => ({
@@ -103,28 +129,25 @@ export async function getStaticPaths() {
     })),
     fallback: false,
   };
-}
+};
 
-export async function getStaticProps({ params }) {
-  const space = data.spaces.find((it) => it.slug == params.slug);
-  space.seo = {
-    title: space.title,
-    description: space.description[0],
+export const getStaticProps: GetStaticProps<Props, Params> = async ({
+  params,
+}) => {
+  const space = data.spaces.find((it) => it.slug == params?.slug) as SpaceType;
+  const seo = {
+    title: space?.title,
+    description: space?.description[0],
     openGraph: {
       type: "website",
       url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}/space/${space.slug}`,
-      title: space.title,
-      description: space.description[0],
-      images: space.images.map((it) => {
-        return {
-          url: it.src,
-          alt: it.alt || null,
-        };
-      }),
+      title: space?.title,
+      description: space?.description[0],
+      images: space?.images.map((it) => ({ url: it.src })),
     },
   };
   return {
-    props: { space: space },
+    props: { space, seo },
     revalidate: 30,
   };
-}
+};
