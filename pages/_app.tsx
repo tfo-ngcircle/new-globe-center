@@ -5,10 +5,10 @@ import App, { AppContext } from "next/app";
 import nProgress from "nprogress";
 import { Router } from "next/router";
 import { createContext } from "react";
-import { global } from "../data";
 import { AppProps } from "next/dist/shared/lib/router/router";
 import { GlobalData } from "../typings";
 import { DefaultSeo, OrganizationJsonLd } from "next-seo";
+import { fetchApi } from "../lib/api";
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <GlobalContext.Provider value={data}>
       <DefaultSeo
-        titleTemplate={`%s • ${data.defaultSeo?.siteName}`}
+        titleTemplate={`%s • ${data.siteName}`}
         defaultTitle={data.defaultSeo?.title}
         openGraph={{
           type: "website",
@@ -44,6 +44,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 MyApp.getInitialProps = async (ctx: AppContext) => {
   const appProps = await App.getInitialProps(ctx);
+  const global = await fetchApi<GlobalData>(`/global`);
   return { ...appProps, pageProps: { global } };
 };
 

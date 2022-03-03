@@ -92,7 +92,6 @@ export interface FooterColumn {
 export interface GlobalData {
   siteName: string;
   defaultSeo?: {
-    siteName: string;
     title: string;
     description: string;
     shareImage: string;
