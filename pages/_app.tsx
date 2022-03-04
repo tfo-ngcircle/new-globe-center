@@ -34,7 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}`,
           title: data.defaultSeo?.title,
           description: data.defaultSeo?.description,
-          images: data.defaultSeo?.images.data.map((img) => ({
+          images: data.defaultSeo?.images?.data?.map((img) => ({
             url: img.attributes.url,
             width: img.attributes.width,
             height: img.attributes.height,

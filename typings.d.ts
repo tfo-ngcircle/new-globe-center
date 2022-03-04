@@ -97,7 +97,7 @@ export interface GlobalData {
   defaultSeo?: {
     title: string;
     description: string;
-    images: Entities<MediaType>;
+    images?: Entities<MediaType>;
   };
   header: Linktype[];
   footer: {
