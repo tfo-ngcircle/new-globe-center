@@ -42,7 +42,11 @@ export default function Footer() {
             </span>
             {footer?.bottomLinks &&
               footer.bottomLinks.map((link, i) => (
-                <MyLink href={link.link} key={i} target="_blank">
+                <MyLink
+                  href={link.link}
+                  key={i}
+                  target={link.newTab ? "_blank" : "_self"}
+                >
                   {link.label}
                 </MyLink>
               ))}

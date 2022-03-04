@@ -8,6 +8,7 @@ export interface ImageType {
 export interface Linktype {
   label: string;
   link?: string;
+  newTab?: boolean;
 }
 
 export interface LatLng {
