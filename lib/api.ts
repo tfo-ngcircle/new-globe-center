@@ -1,3 +1,5 @@
+import { Data } from "../typings";
+
 export function getStrapiUrl(path = "") {
   return `${
     process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337/api"
@@ -8,7 +10,7 @@ export async function fetchApi<T>(path?: string) {
   const requestUrl = getStrapiUrl(path);
   const response = await fetch(requestUrl);
   const data = await response.json();
-  return data.data.attributes as T;
+  return data as T;
 }
 
 export async function postApi(path: string, data: any) {

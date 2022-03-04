@@ -6,7 +6,7 @@ import nProgress from "nprogress";
 import { Router } from "next/router";
 import { createContext } from "react";
 import { AppProps } from "next/dist/shared/lib/router/router";
-import { GlobalData } from "../typings";
+import { Entity, GlobalData } from "../typings";
 import { DefaultSeo, OrganizationJsonLd } from "next-seo";
 import { fetchApi } from "../lib/api";
 
@@ -50,8 +50,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
 MyApp.getInitialProps = async (ctx: AppContext) => {
   const appProps = await App.getInitialProps(ctx);
-  const global = await fetchApi<GlobalData>(`/global`);
-  return { ...appProps, pageProps: { global } };
+  const entity = await fetchApi<Entity<GlobalData>>(`/global`);
+  return { ...appProps, pageProps: { global: entity.data.attributes } };
 };
 
 export default MyApp;

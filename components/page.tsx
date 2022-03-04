@@ -1,15 +1,16 @@
 import Footer from "./footer";
 import Header from "./header";
-import { NextSeo, NextSeoProps } from "next-seo";
+import { NextSeo } from "next-seo";
 import React, { useEffect, useState } from "react";
 import ToTopHandle from "./to-top";
+import { PageType } from "../typings";
 
 interface Props {
-  seo: NextSeoProps;
+  page?: PageType;
   children: React.ReactNode;
 }
 
-export const Page = ({ seo, children }: Props) => {
+export const Page = ({ page, children }: Props) => {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
@@ -27,7 +28,22 @@ export const Page = ({ seo, children }: Props) => {
 
   return (
     <>
-      <NextSeo {...seo} />
+      <NextSeo
+        title={page?.title}
+        description={page?.seo?.description}
+        openGraph={{
+          type: "website",
+          url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}`,
+          title: page?.seo?.title,
+          description: page?.seo?.description,
+          images: page?.seo?.images?.data?.map((img) => ({
+            url: img.attributes.url,
+            width: img.attributes.width,
+            height: img.attributes.height,
+            alt: img.attributes.alternativeText,
+          })),
+        }}
+      />
       <Header className="bg-white shadow-md md:shadow-none sticky z-20 mb-8" />
       {children}
       <Footer />

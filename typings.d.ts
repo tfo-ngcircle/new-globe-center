@@ -91,14 +91,17 @@ export interface FooterColumn {
   body: string;
 }
 
+// Simple SEO
+export interface SEO {
+  title: string;
+  description: string;
+  images?: Entities<MediaType>;
+}
+
 // Data that is available on all pages
 export interface GlobalData {
   siteName: string;
-  defaultSeo?: {
-    title: string;
-    description: string;
-    images?: Entities<MediaType>;
-  };
+  defaultSeo?: SEO;
   header: Linktype[];
   footer: {
     columns: [FooterColumn[]];
@@ -142,4 +145,11 @@ export interface MediaType {
   };
   mime: string;
   url: string;
+}
+
+export interface PageType {
+  slug: string;
+  title: string;
+  markdown: string;
+  seo?: SEO;
 }
