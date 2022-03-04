@@ -90,12 +90,14 @@ export interface FooterColumn {
   heading: string;
   body: string;
 }
+
+// Data that is available on all pages
 export interface GlobalData {
   siteName: string;
   defaultSeo?: {
     title: string;
     description: string;
-    shareImage: string;
+    images: Entities<MediaType>;
   };
   header: Linktype[];
   footer: {
@@ -105,4 +107,39 @@ export interface GlobalData {
     socialLinks: Linktype[];
   };
   organization?: OrganizationJsonLdProps;
+}
+
+// Data from Backend
+
+export interface Data<T> {
+  id: number;
+  attributes: T;
+}
+
+export interface Entity<T> {
+  data: Data<T>;
+}
+
+export interface Entities<T> {
+  data: Data<T>[];
+}
+
+export interface MediaType {
+  name: string;
+  alternativeText?: string;
+  caption?: string;
+  width: number;
+  height: number;
+  formats: {
+    thumbnail: {
+      name: string;
+      mime: string;
+      width: number;
+      height: number;
+      size: number;
+      url: string;
+    };
+  };
+  mime: string;
+  url: string;
 }
