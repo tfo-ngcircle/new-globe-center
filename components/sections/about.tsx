@@ -58,7 +58,7 @@ export default function AboutSection({ about }: Props) {
       </div>
       <div className="lg:absolute h-[32em] w-full -mt-16 scale-125 lg:scale-100 lg:w-1/2 right-0 bottom-0 lg:h-[90%]">
         <Img
-          image={about.image}
+          image={{ url: about.image.src }}
           objectFit="contain"
           objectPosition="right bottom"
         />

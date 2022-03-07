@@ -8,6 +8,7 @@ import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { LandingSectionData } from "../../typings";
+import { url } from "inspector";
 
 const bluelineVariants = {
   hidden: {
@@ -45,7 +46,7 @@ export default function LandingSection({ landing }: Props) {
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-75 lg:brightness-90 overflow-hidden">
         <Carousel
-          images={landing.images}
+          images={landing.images.map((it) => ({ url: it.src }))}
           className="absolute object-cover lg:!my-5 w-full h-full bg-center"
           swipeable
           canMaximize={false}

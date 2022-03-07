@@ -92,12 +92,12 @@ export interface Entities<T> {
 }
 
 export interface MediaType {
-  name: string;
+  name?: string;
   alternativeText?: string;
   caption?: string;
-  width: number;
-  height: number;
-  formats: {
+  width?: number;
+  height?: number;
+  formats?: {
     thumbnail: {
       name: string;
       mime: string;
@@ -107,7 +107,7 @@ export interface MediaType {
       url: string;
     };
   };
-  mime: string;
+  mime?: string;
   url: string;
 }
 

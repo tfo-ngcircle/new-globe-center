@@ -90,10 +90,13 @@ export default function GallerySection({ gallery, screenWidth }: Props) {
                 layout
               >
                 {i !== maximized ? (
-                  <Img image={img} onClick={() => setMaximized(i)} />
+                  <Img
+                    image={{ url: img.src }}
+                    onClick={() => setMaximized(i)}
+                  />
                 ) : (
                   <Carousel
-                    images={gallery.images}
+                    images={gallery.images.map((it) => ({ url: it.src }))}
                     className="absolute h-full max-w-screen object-cover"
                     swipeable
                     maximized
@@ -119,7 +122,7 @@ export default function GallerySection({ gallery, screenWidth }: Props) {
       ) : (
         <div className="relative h-96 md:h-[32rem] mt-8 flex w-screen items-center justify-center overflow-hidden">
           <Carousel
-            images={gallery.images}
+            images={gallery.images.map((it) => ({ url: it.src }))}
             className="absolute h-full max-w-screen object-cover"
             swipeable
           />

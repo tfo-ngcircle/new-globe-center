@@ -18,7 +18,12 @@ export const Md = ({ ...props }) => {
         h3: ({ node, ...props }) => (
           <h3 {...props}>{formatHeadline(props.children[0] as string)}</h3>
         ),
-        a: ({ node, ...props }) => <MyLink {...props} />,
+        a: ({ node, ...props }) => (
+          <MyLink
+            {...props}
+            className="border-dotted border-b border-gray-900 hover:border-gray-500"
+          />
+        ),
         ul: ({ node, ...props }) => (
           <ul className="list-disc pl-5 lg:pl-6 space-y-2" {...props} />
         ),
