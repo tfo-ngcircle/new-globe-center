@@ -80,15 +80,15 @@ export const Space = ({ space, isFull, ...props }: SpaceProps) => {
             transition={transision}
             className="break-words"
           >
-            {space.description[isFull ? 1 : 0]}
+            {isFull ? space.longDescription : space.shortDescription}
           </motion.p>
           <motion.div
             variants={itemVariants}
             transition={transision}
             className="flex gap-2 3xl:gap-4 flex-wrap"
           >
-            {space.characteristics.key.map((kc) => (
-              <Characteristic it={kc} key={kc.name} />
+            {space.characteristics.key.data?.map((kc) => (
+              <Characteristic it={kc.attributes} key={kc.id} />
             ))}
           </motion.div>
           <motion.div
@@ -106,7 +106,10 @@ export const Space = ({ space, isFull, ...props }: SpaceProps) => {
               head={
                 <HiOutlineCurrencyEuro className="text-2xl text-primary flex-shrink-0" />
               }
-              items={space.price}
+              items={space.prices?.data?.map(
+                (price) =>
+                  `${price.attributes.name} **${price.attributes.amount}€**`
+              )}
               className="pt-2 lg:pt-4"
             />
           </motion.div>
@@ -124,10 +127,12 @@ export const Space = ({ space, isFull, ...props }: SpaceProps) => {
           transition={{ duration: 0.8, type: "tween", ease: "easeOut" }}
           className="col-span-4 h-80 md:h-[30rem] xl:h-full relative bg-secondary"
         >
-          <Carousel
-            className="w-full h-full object-cover absolute"
-            images={space.images}
-          />
+          {space.images.data && (
+            <Carousel
+              className="w-full h-full object-cover absolute"
+              images={space.images.data?.map((img) => img.attributes)}
+            />
+          )}
         </motion.div>
       </div>
     </div>

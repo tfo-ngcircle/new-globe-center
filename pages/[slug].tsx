@@ -3,6 +3,7 @@ import { Md } from "../components/md";
 import { Page } from "../components/page";
 import { fetchApi } from "../lib/api";
 import { Entities, PageType } from "../typings";
+import { stringify } from "qs";
 
 interface Props {
   page?: PageType;
@@ -22,10 +23,27 @@ export const getServerSideProps: GetServerSideProps = async ({
   locale,
   params,
 }) => {
-  const pages = await fetchApi<Entities<PageType>>(
-    `/pages?filters[slug][$eq]=${params?.slug}&_locale=${locale}&populate=%2A`
+  const query = stringify(
+    {
+      filters: {
+        slug: {
+          $eq: params?.slug,
+        },
+      },
+      populate: "*",
+      _locale: locale,
+    },
+    {
+      encodeValuesOnly: true,
+    }
   );
+
+  const pages = await fetchApi<Entities<PageType>>(`/pages?${query}`);
+
+  if (pages.data!.length < 1)
+    return { redirect: { destination: "/", permanent: false } };
+
   return {
-    props: { page: pages.data[0].attributes },
+    props: { page: pages.data![0].attributes },
   };
 };

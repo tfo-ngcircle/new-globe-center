@@ -1,7 +1,11 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["res.cloudinary.com", "localhost"],
+    domains: [
+      "res.cloudinary.com",
+      "localhost",
+      "alvfgoaeahuczkhwwktu.supabase.co",
+    ],
     disableStaticImages: true,
   },
   basePath:

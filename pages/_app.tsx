@@ -17,7 +17,7 @@ Router.events.on("routeChangeComplete", nProgress.done);
 export const GlobalContext = createContext<GlobalData>({
   siteName: "",
   header: [],
-  footer: { partners: [], bottomLinks: [], socialLinks: [], columns: [[]] },
+  footer: { bottomLinks: [], socialLinks: [], columns: [[]] },
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -51,7 +51,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 MyApp.getInitialProps = async (ctx: AppContext) => {
   const appProps = await App.getInitialProps(ctx);
   const entity = await fetchApi<Entity<GlobalData>>(`/global`);
-  return { ...appProps, pageProps: { global: entity.data.attributes } };
+  return { ...appProps, pageProps: { global: entity.data?.attributes } };
 };
 
 export default MyApp;

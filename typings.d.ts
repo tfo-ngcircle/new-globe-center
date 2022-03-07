@@ -51,41 +51,6 @@ export interface GallerySectionData extends LandingSectionData {}
 
 export interface MapSectionData extends SectionData {}
 
-export interface CharacteristicType {
-  name: string;
-  label: string;
-  details?: string;
-}
-
-export interface VipPackagetype {
-  title: string;
-  description: string;
-  image: ImageType;
-}
-
-export interface SpaceType {
-  slug: string;
-  title: string;
-  subtitle: string;
-  description: string[];
-  images: ImageType[];
-  availability: string[];
-  price: string[];
-  vip: VipPackagetype[];
-  characteristics: {
-    key: CharacteristicType[];
-    equipment: CharacteristicType[];
-  };
-  extras: {
-    catering: CharacteristicType[];
-    equipment: CharacteristicType[];
-  };
-  technology: {
-    description: string;
-    images?: ImageType[];
-  };
-}
-
 export interface FooterColumn {
   heading: string;
   body: string;
@@ -105,7 +70,6 @@ export interface GlobalData {
   header: Linktype[];
   footer: {
     columns: [FooterColumn[]];
-    partners: ImageType[];
     bottomLinks: Linktype[];
     socialLinks: Linktype[];
   };
@@ -120,11 +84,11 @@ export interface Data<T> {
 }
 
 export interface Entity<T> {
-  data: Data<T>;
+  data?: Data<T>;
 }
 
 export interface Entities<T> {
-  data: Data<T>[];
+  data?: Data<T>[];
 }
 
 export interface MediaType {
@@ -150,6 +114,47 @@ export interface MediaType {
 export interface PageType {
   slug: string;
   title: string;
-  markdown: string;
+  markdown?: string;
   seo?: SEO;
+}
+
+export interface PriceType {
+  name: string;
+  amount: number;
+}
+
+export interface VipPackagetype {
+  title: string;
+  description: string;
+  image: Enitiy<MediaType>;
+}
+
+export interface SpaceType {
+  slug: string;
+  title: string;
+  subtitle: string;
+  shortDescription: string;
+  longDescription: string;
+  images: Entities<MediaType>;
+  availability: string[];
+  prices: Entities<PriceType>;
+  vip_packages: Entities<VipPackagetype>;
+  characteristics: {
+    key: Entities<CharacteristicType>;
+    equipment: Entities<CharacteristicType>;
+  };
+  extras: {
+    key: Entities<CharacteristicType>;
+    equipment: Entities<CharacteristicType>;
+  };
+  technology: {
+    description: string;
+    images?: Entities<MediaType>;
+  };
+}
+
+export interface CharacteristicType {
+  name: string;
+  label: string;
+  details?: string;
 }

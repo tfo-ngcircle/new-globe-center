@@ -1,11 +1,11 @@
-import { ImageType } from "../typings";
+import { MediaType } from "../typings";
 import { Img } from "./image";
 import { Md } from "./md";
 
 type Props = {
   title: string;
   description: string;
-  image: ImageType;
+  image: MediaType;
 };
 
 export const VipPackage = ({ image, title, description }: Props) => {

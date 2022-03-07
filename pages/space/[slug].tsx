@@ -5,32 +5,37 @@ import { VipPackage } from "../../components/vip-package";
 import { Page } from "../../components/page";
 import { Space } from "../../components/space";
 import formatHeadline from "../../utils/text";
-import { data } from "../../data";
-import { CharacteristicType, SpaceType } from "../../typings";
-import { NextSeoProps, ProductJsonLd, ProductJsonLdProps } from "next-seo";
+import {
+  CharacteristicType,
+  Entities,
+  PageType,
+  SpaceType,
+} from "../../typings";
+import { ProductJsonLd, ProductJsonLdProps } from "next-seo";
 import React from "react";
-import { GetStaticPaths, GetStaticProps } from "next";
-import { ParsedUrlQuery } from "querystring";
+import { GetServerSideProps } from "next";
+import { stringify } from "qs";
+import { fetchApi } from "../../lib/api";
 
 interface Props {
   space: SpaceType;
-  seo: NextSeoProps;
+  page: PageType;
   product?: ProductJsonLdProps;
 }
 
-export default function Room({ space, seo, product }: Props) {
+export default function Room({ space, page, product }: Props) {
   return (
-    <Page seo={seo}>
+    <Page page={page}>
       {product && <ProductJsonLd {...product} />}
       <div className="container space-y-10 md:space-y-20 mb-12">
         <Space space={space} className="h-full" isFull />
         <Section title="Die Technik.">
           <Md>{space.technology.description}</Md>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
-            {space.technology.images?.slice(0, 4).map((img, i) => (
+            {space.technology.images?.data?.slice(0, 4).map((img, i) => (
               <Img
                 key={i}
-                image={img}
+                image={img.attributes}
                 className="object-cover w-full h-32 md:h-full inline"
               />
             ))}
@@ -41,7 +46,11 @@ export default function Room({ space, seo, product }: Props) {
             Bei uns finden Sie 47 Parkplätze und einen großzügigen Stellplatz
             für Fahrräder. In Ihrer Tagung sind die Basics inkludiert.
           </p>
-          <CharacteristicsGroup items={space.characteristics.equipment} />
+          <CharacteristicsGroup
+            items={space.characteristics.equipment.data!.map(
+              (it) => it.attributes
+            )}
+          />
         </Section>
         <Section title="Erlebnispaket.">
           <p>
@@ -52,12 +61,12 @@ export default function Room({ space, seo, product }: Props) {
             unsere Terrasse für ein Genusserlebnis vor.
           </p>
           <div className="grid lg:grid-cols-3 gap-7">
-            {space.vip.map((it) => (
+            {space.vip_packages.data?.map((it) => (
               <VipPackage
-                key={it.title}
-                title={it.title}
-                description={it.description}
-                image={it.image}
+                key={it.id}
+                title={it.attributes.title}
+                description={it.attributes.description}
+                image={it.attributes.image.data.attributes}
               />
             ))}
           </div>
@@ -74,10 +83,14 @@ Lassen Sie Ihre Kunden vom Hotel abholen, oder sorgen Sie dafür, dass Ihr Team 
           </p>
           <div className="grid lg:grid-cols-2 gap-8">
             <div>
-              <CharacteristicsGroup items={space.extras.catering} />
+              <CharacteristicsGroup
+                items={space.extras.key.data!.map((it) => it.attributes)}
+              />
             </div>
             <div>
-              <CharacteristicsGroup items={space.extras.equipment} />
+              <CharacteristicsGroup
+                items={space.extras.equipment.data!.map((it) => it.attributes)}
+              />
             </div>
           </div>
         </Section>
@@ -115,39 +128,65 @@ export const CharacteristicsGroup = ({
   );
 };
 
-interface Params extends ParsedUrlQuery {
-  slug: string;
-}
-
-export const getStaticPaths: GetStaticPaths<Params> = async () => {
-  const spaces = data.spaces;
-  return {
-    paths: spaces.map((space) => ({
-      params: {
-        slug: space.slug,
-      },
-    })),
-    fallback: false,
-  };
-};
-
-export const getStaticProps: GetStaticProps<Props, Params> = async ({
+export const getServerSideProps: GetServerSideProps = async ({
+  locale,
   params,
 }) => {
-  const space = data.spaces.find((it) => it.slug == params?.slug) as SpaceType;
-  const seo = {
-    title: space?.title,
-    description: space?.description[0],
-    openGraph: {
-      type: "website",
-      url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}/space/${space.slug}`,
-      title: space?.title,
-      description: space?.description[0],
-      images: space?.images.map((it) => ({ url: it.src })),
+  const query = stringify(
+    {
+      fields: [
+        "title",
+        "slug",
+        "subtitle",
+        "shortDescription",
+        "longDescription",
+        "availability",
+      ],
+      filters: {
+        slug: {
+          $eq: params?.slug,
+        },
+      },
+      populate: {
+        characteristics: {
+          populate: "*",
+        },
+        extras: {
+          populate: "*",
+        },
+        technology: {
+          populate: "*",
+        },
+        images: {
+          populate: "*",
+        },
+        prices: {
+          populate: "*",
+        },
+        vip_packages: {
+          populate: "*",
+        },
+      },
+      _locale: locale,
     },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const spaces = await fetchApi<Entities<SpaceType>>(`/spaces?${query}`);
+
+  if (spaces.data!.length < 1) return { notFound: true };
+
+  const space = spaces.data![0].attributes;
+
+  const page = {
+    title: space.title,
+    description: space.shortDescription,
+    images: space.images,
   };
+
   return {
-    props: { space, seo },
-    revalidate: 30,
+    props: { space, page },
   };
 };

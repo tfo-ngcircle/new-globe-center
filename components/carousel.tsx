@@ -5,7 +5,7 @@ import { useInterval } from "usehooks-ts";
 import { MdFullscreen } from "react-icons/md";
 import MyDialog from "./dialog";
 import { useInView } from "react-intersection-observer";
-import { ImageType } from "../typings";
+import { MediaType } from "../typings";
 
 const variants = {
   enter: (direction: number) => {
@@ -34,7 +34,7 @@ const swipePower = (offset: number, velocity: number) => {
 };
 
 interface Props extends React.HTMLProps<HTMLImageElement> {
-  images: ImageType[];
+  images: MediaType[];
   swipeable?: boolean;
   canMaximize?: boolean;
   maximized?: boolean;
@@ -73,8 +73,8 @@ export default function Carousel({
       <div ref={ref} className="w-full h-[90%] absolute" />
       <motion.img
         key={page}
-        src={images[imageIndex].src}
-        alt={images[imageIndex]?.alt}
+        src={images[imageIndex].url}
+        alt={images[imageIndex].alternativeText || images[imageIndex].caption}
         custom={direction}
         variants={swipeable || isMaximised ? variants : undefined}
         initial={swipeable || isMaximised ? "enter" : { opacity: 0 }}
