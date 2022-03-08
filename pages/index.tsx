@@ -82,7 +82,7 @@ export default function Home({ sections }: Props) {
             leftContact={leftContact}
           />
           {window.width >= 1024 ? (
-            <MapSection location={data.contact.location} />
+            <MapSection location={sections?.find((it) => it.anchor == "map")} />
           ) : undefined}
           <Footer />
         </Fullpage>

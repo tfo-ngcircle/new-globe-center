@@ -1,19 +1,19 @@
 import React, { useRef, useEffect, useState } from "react";
 import mapboxgl, { Map, Marker, Popup } from "mapbox-gl";
 import { useInView } from "react-intersection-observer";
-import { LatLng } from "../../typings";
+import { LatLng, Section } from "../../typings";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN || "";
 
 interface Props {
-  location: LatLng;
+  location?: Section<LatLng>;
 }
 
 export default function MapSection({ location }: Props) {
   const mapContainer = useRef<HTMLDivElement | null>(null);
   const map = useRef<Map | undefined>();
-  const [lng, setLng] = useState(location.lng);
-  const [lat, setLat] = useState(location.lat);
+  const [lng, setLng] = useState(location?.content![0].lng!);
+  const [lat, setLat] = useState(location?.content![0].lat!);
   const [zoom, setZoom] = useState(16);
   const [ref, inView] = useInView();
 
