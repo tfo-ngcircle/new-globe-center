@@ -77,7 +77,7 @@ export default function Home({ sections }: Props) {
           />
           <FeaturesSection features={data.features} />
           {/* <SpacesSection spaces={data.spaces} width={width} /> */}
-          <AboutSection about={data.about} />
+          <AboutSection about={sections?.find((it) => it.anchor == "about")} />
           <GallerySection
             gallery={sections?.find((it) => it.anchor == "gallery")}
             screenWidth={window.width}
@@ -108,6 +108,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
       fields: ["headline", "description", "anchor"],
       populate: {
         content: { populate: "*" },
+        image: { populate: "*" },
       },
       _locale: locale,
     },
@@ -115,6 +116,8 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
       encodeValuesOnly: true,
     }
   );
+
+  console.log(query);
 
   const sections = await fetchApi<Entities<Section<any>>>(`/sections?${query}`);
 

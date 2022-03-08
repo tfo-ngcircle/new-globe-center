@@ -20,7 +20,7 @@ export interface Section<T> {
   anchor: string;
   headline: string;
   description?: string;
-  image?: Entity<ImageType>;
+  image?: Entity<MediaType>;
   content?: T[];
 }
 
@@ -28,17 +28,18 @@ export interface ImagesSection {
   image: Entity<MediaType>;
 }
 
+export interface Contact {
+  name?: string;
+  telephone?: string;
+  contactType?: string;
+  areaServed: string;
+  availableLanguage?: string;
+}
+
 export interface ContactSectionData extends SectionData {
   email: string;
   phone: string;
   location: LatLng;
-}
-export interface AboutSectionData extends SectionData {
-  contact: {
-    name?: string;
-    phone?: string;
-    post?: string;
-  }[];
 }
 
 export interface FeaturesSectionData extends SectionData {
