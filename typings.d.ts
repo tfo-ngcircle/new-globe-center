@@ -16,10 +16,16 @@ export interface LatLng {
   lng: number;
 }
 
-export interface SectionData {
+export interface Section<T> {
+  anchor: string;
   headline: string;
-  description: string;
-  image: ImageType;
+  description?: string;
+  image?: Entity<ImageType>;
+  content?: T[];
+}
+
+export interface ImagesSection {
+  image: Entity<MediaType>;
 }
 
 export interface ContactSectionData extends SectionData {
@@ -42,14 +48,6 @@ export interface FeaturesSectionData extends SectionData {
     description?: string;
   }[];
 }
-
-export interface LandingSectionData extends SectionData {
-  images: ImageType[];
-}
-
-export interface GallerySectionData extends LandingSectionData {}
-
-export interface MapSectionData extends SectionData {}
 
 export interface FooterColumn {
   heading: string;

@@ -14,24 +14,28 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import { data } from "../data";
 import { NextSeo } from "next-seo";
-import { BiArrowToTop } from "react-icons/bi";
-import { motion } from "framer-motion";
 import { navigateFullpage } from "../utils/utils";
+import { GetServerSideProps } from "next";
+import { stringify } from "qs";
+import { fetchApi } from "../lib/api";
+import {
+  Entities,
+  Entity,
+  ImagesSection,
+  MediaType,
+  Section,
+} from "../typings";
 
-const bounceTransition = {
-  y: {
-    duration: 0.8,
-    yoyo: Infinity,
-    ease: "easeInOut",
-  },
-};
+interface Props {
+  sections?: Section<any>[];
+}
 
-export default function Home() {
-  const headerRef = useRef();
+export default function Home({ sections }: Props) {
+  const headerRef = useRef<HTMLDivElement | null>(null);
   const [dark, setDark] = useState(false);
   const [leftContact, setLeftContact] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
-  const { width, height } = useElementSize(headerRef);
+  const { width, height } = useElementSize<HTMLDivElement>(headerRef);
 
   const router = useRouter();
   const window = useWindowSize();
@@ -42,7 +46,7 @@ export default function Home() {
       <Header
         ref={headerRef}
         className={`z-40 fixed`}
-        dark={dark & (window.width >= 1024)}
+        dark={dark && window.width >= 1024}
         isHome
         isTransparent={isTransparent}
       />
@@ -68,11 +72,16 @@ export default function Home() {
             "footer",
           ]}
         >
-          <LandingSection landing={data.landing} />
+          <LandingSection
+            landing={sections?.find((it) => it.anchor == "landing")}
+          />
           <FeaturesSection features={data.features} />
-          <SpacesSection spaces={data.spaces} width={width} />
+          {/* <SpacesSection spaces={data.spaces} width={width} /> */}
           <AboutSection about={data.about} />
-          <GallerySection gallery={data.gallery} screenWidth={window.width} />
+          <GallerySection
+            gallery={sections?.find((it) => it.anchor == "gallery")}
+            screenWidth={window.width}
+          />
           <ContactSection
             contact={data.contact}
             paddingTop={height}
@@ -85,10 +94,31 @@ export default function Home() {
         </Fullpage>
       ) : undefined}
       <ToTopHandle
-        isDark={dark | isTransparent | (router.asPath == "/#footer")}
+        isDark={dark || isTransparent || router.asPath == "/#footer"}
         flip={router.asPath !== "/#landing"}
         onClick={(e) => navigateFullpage(e, "landing")}
       />
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+  const query = stringify(
+    {
+      fields: ["headline", "description", "anchor"],
+      populate: {
+        content: { populate: "*" },
+      },
+      _locale: locale,
+    },
+    {
+      encodeValuesOnly: true,
+    }
+  );
+
+  const sections = await fetchApi<Entities<Section<any>>>(`/sections?${query}`);
+
+  return {
+    props: { sections: sections.data?.map((it) => it.attributes) },
+  };
+};
