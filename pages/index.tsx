@@ -18,13 +18,7 @@ import { navigateFullpage } from "../utils/utils";
 import { GetServerSideProps } from "next";
 import { stringify } from "qs";
 import { fetchApi } from "../lib/api";
-import {
-  Entities,
-  Entity,
-  ImagesSection,
-  MediaType,
-  Section,
-} from "../typings";
+import { Entities, Section } from "../typings";
 
 interface Props {
   sections?: Section<any>[];
@@ -83,7 +77,7 @@ export default function Home({ sections }: Props) {
             screenWidth={window.width}
           />
           <ContactSection
-            contact={data.contact}
+            contact={sections?.find((it) => it.anchor == "contact")}
             paddingTop={height}
             leftContact={leftContact}
           />

@@ -7,7 +7,7 @@ import Input from "../input";
 import formatHeadline from "../../utils/text";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { ContactSectionData } from "../../typings";
+import { Contact, Section } from "../../typings";
 
 const variantsClip = {
   open: {
@@ -51,7 +51,7 @@ const transition = {
 };
 
 interface Props {
-  contact: ContactSectionData;
+  contact?: Section<Contact>;
   paddingTop: number;
   leftContact: boolean;
 }
@@ -98,27 +98,32 @@ export default function ContactSection({
           animate={clipControls}
         >
           <motion.h2 variants={variantsText} transition={transition}>
-            {formatHeadline(contact.headline)}
+            {formatHeadline(contact?.headline || "")}
           </motion.h2>
           <motion.div variants={variantsText} transition={transition}>
-            <Button
-              label="jetzt anfragen"
-              onTap={(e, i) => setIsOpen(!isOpen)}
-            />
+            <Button label="jetzt anfragen" onTap={() => setIsOpen(!isOpen)} />
           </motion.div>
           <motion.div
             className="flex flex-wrap gap-4"
             variants={variantsText}
             transition={transition}
           >
-            <SocialIcon href={"mailto:" + contact.email}>
-              <MdEmail />
-              <span className="text-sm opacity-70 pr-1">{contact.email}</span>
-            </SocialIcon>
-            <SocialIcon href={"tel:" + contact.phone}>
-              <MdLocalPhone />
-              <span className="text-sm opacity-70 pr-1">{contact.phone}</span>
-            </SocialIcon>
+            {contact?.content && (
+              <>
+                <SocialIcon href={"mailto:" + contact.content[0].email}>
+                  <MdEmail />
+                  <span className="text-sm opacity-70 pr-1">
+                    {contact?.content[0]?.email}
+                  </span>
+                </SocialIcon>
+                <SocialIcon href={"tel:" + contact.content[0].telephone}>
+                  <MdLocalPhone />
+                  <span className="text-sm opacity-70 pr-1">
+                    {contact.content[0].telephone}
+                  </span>
+                </SocialIcon>
+              </>
+            )}
           </motion.div>
         </motion.div>
       </div>
@@ -156,8 +161,8 @@ export default function ContactSection({
           initial="open"
           animate={clipControls}
           variants={variantsClip}
-          src={contact.image.src}
-          alt={contact.image.alt}
+          src={contact?.image?.data?.attributes.url}
+          alt={contact?.image?.data?.attributes.alternativeText}
           className="object-cover brightness-75 h-full w-full"
           transition={{
             clipPath: { type: "spring", stiffness: 300, damping: 30 },

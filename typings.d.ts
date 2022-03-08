@@ -34,12 +34,7 @@ export interface Contact {
   contactType?: string;
   areaServed: string;
   availableLanguage?: string;
-}
-
-export interface ContactSectionData extends SectionData {
-  email: string;
-  phone: string;
-  location: LatLng;
+  email?: string;
 }
 
 export interface FeaturesSectionData extends SectionData {
