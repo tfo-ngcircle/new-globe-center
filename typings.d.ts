@@ -22,6 +22,7 @@ export interface Section<T> {
   description?: string;
   image?: Entity<MediaType>;
   content?: T[];
+  spaces?: Entities<SpaceType>;
 }
 
 export interface ImagesSection {

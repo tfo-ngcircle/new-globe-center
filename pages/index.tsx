@@ -11,13 +11,13 @@ import MapSection from "../components/sections/map";
 import { useElementSize, useWindowSize } from "usehooks-ts";
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
-import { data } from "../data";
 import { NextSeo } from "next-seo";
 import { navigateFullpage } from "../utils/utils";
 import { GetServerSideProps } from "next";
 import { stringify } from "qs";
 import { fetchApi } from "../lib/api";
 import { Entities, Section } from "../typings";
+import SpacesSection from "../components/sections/spaces";
 
 interface Props {
   sections?: Section<any>[];
@@ -71,7 +71,12 @@ export default function Home({ sections }: Props) {
           <FeaturesSection
             features={sections?.find((it) => it.anchor == "features")}
           />
-          {/* <SpacesSection spaces={data.spaces} width={width} /> */}
+          <SpacesSection
+            spaces={sections
+              ?.find((it) => it.anchor == "spaces")
+              ?.spaces?.data?.map((it) => it.attributes)}
+            width={width}
+          />
           <AboutSection about={sections?.find((it) => it.anchor == "about")} />
           <GallerySection
             gallery={sections?.find((it) => it.anchor == "gallery")}
@@ -104,6 +109,28 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
       populate: {
         content: { populate: "*" },
         image: { populate: "*" },
+        spaces: {
+          populate: {
+            characteristics: {
+              populate: "*",
+            },
+            extras: {
+              populate: "*",
+            },
+            technology: {
+              populate: "*",
+            },
+            images: {
+              populate: "*",
+            },
+            prices: {
+              populate: "*",
+            },
+            vip_packages: {
+              populate: "*",
+            },
+          },
+        },
       },
       _locale: locale,
     },
@@ -111,8 +138,6 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
       encodeValuesOnly: true,
     }
   );
-
-  console.log(query);
 
   const sections = await fetchApi<Entities<Section<any>>>(`/sections?${query}`);
 

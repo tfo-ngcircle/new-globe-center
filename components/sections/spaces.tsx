@@ -2,7 +2,7 @@ import { SpaceType } from "../../typings";
 import { Space } from "../space";
 
 interface Props {
-  spaces: SpaceType[];
+  spaces?: SpaceType[];
   width: number;
 }
 
