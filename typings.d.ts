@@ -37,12 +37,10 @@ export interface Contact {
   email?: string;
 }
 
-export interface FeaturesSectionData extends SectionData {
-  features: {
-    title: string;
-    icon: string;
-    description?: string;
-  }[];
+export interface Feature {
+  title: string;
+  icon: string;
+  description?: string;
 }
 
 export interface FooterColumn {

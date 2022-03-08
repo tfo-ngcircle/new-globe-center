@@ -7,7 +7,7 @@ import { HeadingBox } from "../heading";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { FeaturesSectionData } from "../../typings";
+import { Feature, Section } from "../../typings";
 
 const underlineVariants = {
   visible: { x: 0, scaleX: -1 },
@@ -29,7 +29,7 @@ const listVariants = {
 };
 
 interface Props {
-  features: FeaturesSectionData;
+  features?: Section<Feature>;
 }
 
 export default function FeaturesSection({ features }: Props) {
@@ -45,15 +45,17 @@ export default function FeaturesSection({ features }: Props) {
       <div className="container">
         <div className="lg:flex space-y-4 space-x-2 3xl:space-x-8 lg:space-y-0 justify-between h-full items-center">
           <div className="relative w-full h-[400px] xl:h-auto lg:w-[368px] xl:w-[510px] shadow-lg xl:self-stretch">
-            <Img image={{ url: features.image.src }} />
+            {features?.image?.data && (
+              <Img image={features?.image?.data?.attributes} />
+            )}
           </div>
           <div className="space-y-4 lg:space-y-6">
             <div className="space-y-4">
               <HeadingBox>
-                <h2>{formatHeadline(features.headline)}</h2>
+                <h2>{formatHeadline(features?.headline || "")}</h2>
                 <Underline className="text-primary w-full h-3" />
               </HeadingBox>
-              <p>{features.description}</p>
+              <p>{features?.description}</p>
             </div>
             <motion.div
               ref={ref}
@@ -62,7 +64,7 @@ export default function FeaturesSection({ features }: Props) {
               animate={controls}
               className="grid grid-cols-2 md:grid-cols-3 gap-x-5 xl:gap-x-8 gap-y-4 3xl:gap-y-6 overflow-hidden"
             >
-              {features.features.map((item, i) => (
+              {features?.content?.map((item, i) => (
                 <FeatureItem
                   key={i}
                   title={item.title}

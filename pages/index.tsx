@@ -8,7 +8,6 @@ import FeaturesSection from "../components/sections/features";
 import GallerySection from "../components/sections/gallery";
 import LandingSection from "../components/sections/landing";
 import MapSection from "../components/sections/map";
-import SpacesSection from "../components/sections/spaces";
 import { useElementSize, useWindowSize } from "usehooks-ts";
 import { useRef, useState } from "react";
 import { useRouter } from "next/router";
@@ -69,7 +68,9 @@ export default function Home({ sections }: Props) {
           <LandingSection
             landing={sections?.find((it) => it.anchor == "landing")}
           />
-          <FeaturesSection features={data.features} />
+          <FeaturesSection
+            features={sections?.find((it) => it.anchor == "features")}
+          />
           {/* <SpacesSection spaces={data.spaces} width={width} /> */}
           <AboutSection about={sections?.find((it) => it.anchor == "about")} />
           <GallerySection
