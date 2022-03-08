@@ -34,7 +34,7 @@ const swipePower = (offset: number, velocity: number) => {
 };
 
 interface Props extends React.HTMLProps<HTMLImageElement> {
-  images: MediaType[];
+  images?: MediaType[];
   swipeable?: boolean;
   canMaximize?: boolean;
   maximized?: boolean;
@@ -59,7 +59,7 @@ export default function Carousel({
     setPage([page + newDirection, newDirection]);
   };
 
-  const imageIndex = wrap(0, images.length, page);
+  const imageIndex = wrap(0, images?.length || 0, page);
 
   useInterval(
     () => {
@@ -71,34 +71,38 @@ export default function Carousel({
   const slider = (
     <AnimatePresence initial={false} custom={direction}>
       <div ref={ref} className="w-full h-[90%] absolute" />
-      <motion.img
-        key={page}
-        src={images[imageIndex].url}
-        alt={images[imageIndex].alternativeText || images[imageIndex].caption}
-        custom={direction}
-        variants={swipeable || isMaximised ? variants : undefined}
-        initial={swipeable || isMaximised ? "enter" : { opacity: 0 }}
-        animate={swipeable || isMaximised ? "center" : { opacity: 1 }}
-        exit={swipeable || isMaximised ? "exit" : { opacity: 0 }}
-        transition={{
-          x: { type: "spring", stiffness: 300, damping: 30 },
-          opacity: { duration: swipeable || isMaximised ? 0.2 : 1 },
-        }}
-        className={`${
-          isMaximised ? "object-contain w-full h-full inset-0 fixed" : className
-        }`}
-        drag={swipeable || isMaximised ? "x" : undefined}
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={1}
-        onDragEnd={(e, { offset, velocity }) => {
-          const swipe = swipePower(offset.x, velocity.x);
-          if (swipe < -swipeConfidenceThreshold) {
-            paginate(1);
-          } else if (swipe > swipeConfidenceThreshold) {
-            paginate(-1);
-          }
-        }}
-      />
+      {images && (
+        <motion.img
+          key={page}
+          src={images[imageIndex].url}
+          alt={images[imageIndex].alternativeText || images[imageIndex].caption}
+          custom={direction}
+          variants={swipeable || isMaximised ? variants : undefined}
+          initial={swipeable || isMaximised ? "enter" : { opacity: 0 }}
+          animate={swipeable || isMaximised ? "center" : { opacity: 1 }}
+          exit={swipeable || isMaximised ? "exit" : { opacity: 0 }}
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: swipeable || isMaximised ? 0.2 : 1 },
+          }}
+          className={`${
+            isMaximised
+              ? "object-contain w-full h-full inset-0 fixed"
+              : className
+          }`}
+          drag={swipeable || isMaximised ? "x" : undefined}
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={1}
+          onDragEnd={(e, { offset, velocity }) => {
+            const swipe = swipePower(offset.x, velocity.x);
+            if (swipe < -swipeConfidenceThreshold) {
+              paginate(1);
+            } else if (swipe > swipeConfidenceThreshold) {
+              paginate(-1);
+            }
+          }}
+        />
+      )}
     </AnimatePresence>
   );
 
