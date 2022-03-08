@@ -4,7 +4,7 @@ export const Fullpage = ({
   paddingTop,
   className,
   anchors,
-  onLeave = () => {},
+  onLeave = (ori, dest, dir) => {},
   children,
 }) => {
   return (
