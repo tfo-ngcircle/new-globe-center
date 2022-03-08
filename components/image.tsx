@@ -3,13 +3,14 @@ import { MediaType } from "../typings";
 
 interface Props extends Partial<ImageProps> {
   image: MediaType;
+  useThumbnail?: boolean;
 }
 
-export const Img = ({ image, ...props }: Props) => {
+export const Img = ({ image, useThumbnail, ...props }: Props) => {
   return (
     <Image
       {...props}
-      src={image.url}
+      src={useThumbnail ? image.formats?.thumbnail.url : image.url}
       alt={image.alternativeText || image.caption}
       layout={props.layout || "fill"}
       objectFit={props.objectFit || "cover"}
