@@ -5,7 +5,7 @@ import Underline from "../underline";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
-import { ImagesSection, Section } from "../../typings";
+import { Section } from "../../typings";
 
 const listVariants = {
   hidden: {
@@ -32,7 +32,7 @@ const itemVariants = {
 };
 
 interface Props {
-  gallery?: Section<ImagesSection>;
+  gallery?: Section<any>;
   screenWidth: number;
 }
 
@@ -65,7 +65,7 @@ export default function GallerySection({ gallery, screenWidth }: Props) {
             animate={controls}
             className="grid md:grid-rows-2 grid-flow-col my-8 2xl:my-16 space-x-[-3.5rem] 3xl:space-x-[-4.3rem] gap-y-5 overflow-visible scrollbar-hide"
           >
-            {gallery?.content?.map((it, i) => (
+            {gallery?.image?.data?.map((it, i) => (
               <motion.div
                 key={i}
                 className={`${
@@ -90,10 +90,7 @@ export default function GallerySection({ gallery, screenWidth }: Props) {
                 layout
               >
                 {i !== maximized ? (
-                  <Img
-                    image={it.image.data!.attributes}
-                    onClick={() => setMaximized(i)}
-                  />
+                  <Img image={it.attributes} onClick={() => setMaximized(i)} />
                 ) : (
                   <Carousel
                     images={gallery?.content?.map(
@@ -124,7 +121,7 @@ export default function GallerySection({ gallery, screenWidth }: Props) {
       ) : (
         <div className="relative h-96 md:h-[32rem] mt-8 flex w-screen items-center justify-center overflow-hidden">
           <Carousel
-            images={gallery?.content?.map((it) => it.image.data!.attributes)}
+            images={gallery?.image?.data?.map((it) => it.attributes)}
             className="absolute h-full max-w-screen object-cover"
             swipeable
           />

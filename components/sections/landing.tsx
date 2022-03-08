@@ -7,7 +7,7 @@ import Carousel from "../carousel";
 import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-import { ImagesSection, Section } from "../../typings";
+import { Section } from "../../typings";
 
 const bluelineVariants = {
   hidden: {
@@ -30,7 +30,7 @@ const redlineVariants = {
 };
 
 interface Props {
-  landing?: Section<ImagesSection>;
+  landing?: Section<null>;
 }
 
 export default function LandingSection({ landing }: Props) {
@@ -45,7 +45,7 @@ export default function LandingSection({ landing }: Props) {
     <div className="h-full relative">
       <div className="w-full h-full absolute brightness-75 lg:brightness-90 overflow-hidden">
         <Carousel
-          images={landing?.content?.map((it) => it.image.data!.attributes)}
+          images={landing?.image?.data?.map((it) => it.attributes)}
           className="absolute object-cover lg:!my-5 w-full h-full bg-center"
           swipeable
           canMaximize={false}

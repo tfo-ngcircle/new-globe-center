@@ -20,13 +20,9 @@ export interface Section<T> {
   anchor: string;
   headline: string;
   description?: string;
-  image?: Entity<MediaType>;
+  image?: Entities<MediaType>;
   content?: T[];
   spaces?: Entities<SpaceType>;
-}
-
-export interface ImagesSection {
-  image: Entity<MediaType>;
 }
 
 export interface Contact {
