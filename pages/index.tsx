@@ -46,7 +46,7 @@ export default function Home({ sections }: Props) {
       {height !== 0 ? (
         <Fullpage
           className="space-y-20 lg:space-y-0"
-          paddingTop={window.width < 1024 ? 0 : height}
+          paddingTop={window.width < 1024 ? 0 : height > 124 ? 118.19 : height}
           onLeave={(ori, dest, dir) => {
             setDark(dest.anchor === "contact");
             setIsTransparent(dest.anchor === "landing");
