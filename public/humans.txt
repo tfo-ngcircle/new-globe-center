@@ -1,0 +1,10 @@
+﻿/* TEAM */
+	Developer: Thomasforntoh
+	Twitter: @forntoh
+	From: Yaounde, Cameroon
+
+/* SITE */
+	Language: Deutsch
+	Doctype:HTML5
+	Editor: VScode
+	Programming Stack: NextJS, Strapi, Supabase, Heroku, Git, TailwindCSS, MapBox, Framer Motion, Markdown, React
