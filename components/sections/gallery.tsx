@@ -63,7 +63,7 @@ export default function GallerySection({ gallery, screenWidth }: Props) {
             initial="hidden"
             variants={listVariants}
             animate={controls}
-            className="grid md:grid-rows-2 grid-flow-col my-8 2xl:my-16 space-x-[-3.5rem] 3xl:space-x-[-4.3rem] gap-y-5 overflow-visible scrollbar-hide"
+            className="grid md:grid-rows-2 grid-flow-col my-8 2xl:my-16 space-x-[-3.5rem] 3xl:space-x-[-4.3rem] gap-y-5 overflow-auto scrollbar-hide"
           >
             {gallery?.image?.data?.map((it, i) => (
               <motion.div
