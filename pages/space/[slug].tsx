@@ -186,7 +186,27 @@ export const getServerSideProps: GetServerSideProps = async ({
     images: space.images,
   };
 
+  const product = {
+    productName: space.title,
+    slogan: space.subtitle,
+    images: space.images.data?.map((it) => it.attributes.url),
+    description: space.shortDescription,
+    disambiguatingDescription: space.longDescription,
+    manufacturerName: "NgC GmbH",
+    releaseDate: "2021-12-25T08:00:00+01:00",
+    offers: space.prices.data?.map((it) => ({
+      price: it.attributes.amount,
+      priceCurrency: "EUR",
+      itemCondition: "https://schema.org/NewCondition",
+      availability: "https://schema.org/InStock",
+      url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}/spaces/${space.slug}`,
+      seller: {
+        name: "New Globe Center",
+      },
+    })),
+  };
+
   return {
-    props: { space, page },
+    props: { space, page, product },
   };
 };
