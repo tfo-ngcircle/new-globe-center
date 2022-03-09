@@ -56,14 +56,24 @@ export default function LandingSection({ landing }: Props) {
           initial="hidden"
           animate={controls}
           variants={redlineVariants}
-          transition={{ duration: 0.5, type: "tween", ease: "easeOut" }}
+          transition={{
+            duration: 0.5,
+            type: "tween",
+            ease: "easeOut",
+            delay: 0.25,
+          }}
           className="absolute h-80 w-[500px] right-0 top-0 text-primary space-x-[-1px] drop-shadow-primary"
         />
         <Underline
           initial="hidden"
           animate={controls}
           variants={bluelineVariants}
-          transition={{ duration: 0.4, type: "tween", ease: "easeOut" }}
+          transition={{
+            duration: 0.4,
+            type: "tween",
+            ease: "easeOut",
+            delay: 0.25,
+          }}
           className="absolute w-full md:h-full lg:w-[768px] xl:w-[960px] 2xl:w-[1300px] left-0 bottom-0 text-secondary space-x-[-1px] drop-shadow-secondary rotate-180"
           classNameAlt="bg-secondary"
         />

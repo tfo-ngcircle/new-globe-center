@@ -22,7 +22,7 @@ export default function MapSection({ location }: Props) {
   }, [inView]);
 
   useEffect(() => {
-    if (map.current) return; // initialize map only once
+    if (map.current || !inView) return; // initialize map only once
 
     map.current = new Map({
       container: mapContainer.current!,
@@ -55,7 +55,7 @@ export default function MapSection({ location }: Props) {
     });
 
     map.current.scrollZoom.disable();
-  });
+  }, [inView, lat, lng, zoom]);
   return (
     <div ref={mapContainer} className="w-full !h-screen absolute top-0">
       <div ref={ref} className="h-1/2 w-4 relative translate-y-1/2" />
