@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { wrap } from "popmotion";
 import { useInterval } from "usehooks-ts";
@@ -6,32 +6,7 @@ import { MdFullscreen } from "react-icons/md";
 import MyDialog from "./dialog";
 import { useInView } from "react-intersection-observer";
 import { MediaType } from "../typings";
-
-const variants = {
-  enter: (direction: number) => {
-    return {
-      x: direction > 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-  center: {
-    zIndex: 1,
-    x: 0,
-    opacity: 1,
-  },
-  exit: (direction: number) => {
-    return {
-      zIndex: 0,
-      x: direction < 0 ? 1000 : -1000,
-      opacity: 0,
-    };
-  },
-};
-
-const swipeConfidenceThreshold = 10000;
-const swipePower = (offset: number, velocity: number) => {
-  return Math.abs(offset) * velocity;
-};
+import Slider from "./Slider";
 
 interface Props extends React.HTMLProps<HTMLImageElement> {
   images?: MediaType[];
@@ -52,96 +27,58 @@ export default function Carousel({
   onMaximizeChange = () => {},
 }: Props) {
   const [ref, inView] = useInView();
-  const [[page, direction], setPage] = useState([startingIndex, 0]);
   const [isMaximised, setIsMaximised] = useState(maximized);
 
-  const paginate = (newDirection: number) => {
-    setPage([page + newDirection, newDirection]);
-  };
-
-  const imageIndex = wrap(0, images?.length || 0, page);
+  const paginate = useRef<(dir: number) => void>();
 
   useInterval(
-    () => {
-      paginate(1);
-    },
+    () => paginate?.current?.(1),
     !isMaximised && inView ? 5000 : null
-  );
-
-  const slider = (
-    <AnimatePresence initial={false} custom={direction}>
-      <div ref={ref} className="w-full h-[90%] absolute" />
-      {images && (
-        <motion.img
-          key={page}
-          src={images[imageIndex].url}
-          alt={images[imageIndex].alternativeText || images[imageIndex].caption}
-          custom={direction}
-          variants={swipeable || isMaximised ? variants : undefined}
-          initial={swipeable || isMaximised ? "enter" : { opacity: 0 }}
-          animate={swipeable || isMaximised ? "center" : { opacity: 1 }}
-          exit={swipeable || isMaximised ? "exit" : { opacity: 0 }}
-          transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
-            opacity: { duration: swipeable || isMaximised ? 0.2 : 1 },
-          }}
-          className={`${
-            isMaximised
-              ? "object-contain w-full h-full inset-0 fixed"
-              : className
-          }`}
-          drag={swipeable || isMaximised ? "x" : undefined}
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={1}
-          onDragEnd={(e, { offset, velocity }) => {
-            const swipe = swipePower(offset.x, velocity.x);
-            if (swipe < -swipeConfidenceThreshold) {
-              paginate(1);
-            } else if (swipe > swipeConfidenceThreshold) {
-              paginate(-1);
-            }
-          }}
-        />
-      )}
-    </AnimatePresence>
   );
 
   return (
     <>
-      {slider}
+      <Slider
+        ref={ref}
+        startingIndex={startingIndex}
+        images={images}
+        isMaximised={isMaximised}
+        swipeable={swipeable}
+        className={className}
+        paginate={paginate}
+      />
       {canMaximize ? (
-        <MdFullscreen
-          className="bg-gray-700 text-white bg-opacity-50 text-4xl p-1 rounded-full z-10 absolute top-4 right-4"
-          onClick={() => {
-            setIsMaximised(true);
-            onMaximizeChange(true);
-          }}
-        />
+        <>
+          <MdFullscreen
+            className="bg-gray-700 text-white bg-opacity-50 text-4xl p-1 rounded-full z-10 absolute top-4 right-4"
+            onClick={() => {
+              setIsMaximised(true);
+              onMaximizeChange(true);
+            }}
+          />
+
+          <MyDialog
+            isOpen={isMaximised}
+            onClose={() => {
+              setIsMaximised(false);
+              onMaximizeChange(false);
+            }}
+            className="bg-black"
+          >
+            {isMaximised ? (
+              <Slider
+                ref={ref}
+                startingIndex={startingIndex}
+                images={images}
+                isMaximised={isMaximised}
+                swipeable={swipeable}
+                className={className}
+                paginate={paginate}
+              />
+            ) : undefined}
+          </MyDialog>
+        </>
       ) : undefined}
-      <MyDialog
-        isOpen={isMaximised}
-        onClose={() => {
-          setIsMaximised(false);
-          onMaximizeChange(false);
-        }}
-        className="bg-black"
-      >
-        {slider}
-        <div
-          className="fp-controlArrow fp-prev"
-          ref={(el) =>
-            el && el.style.setProperty("border-color", "white", "important")
-          }
-          onClick={() => paginate(-1)}
-        />
-        <div
-          className="fp-controlArrow fp-next"
-          ref={(el) =>
-            el && el.style.setProperty("border-color", "white", "important")
-          }
-          onClick={() => paginate(1)}
-        />
-      </MyDialog>
     </>
   );
 }
