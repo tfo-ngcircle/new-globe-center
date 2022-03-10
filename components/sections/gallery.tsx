@@ -6,6 +6,7 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react";
 import { Section } from "../../typings";
+import { Arrow } from "../Arrow";
 
 const listVariants = {
   hidden: {
@@ -107,13 +108,15 @@ export default function GallerySection({ gallery, screenWidth }: Props) {
               </motion.div>
             ))}
           </motion.div>
-          <div
-            className="hidden md:inline-block fp-controlArrow fp-prev !z-50 drop-shadow-md"
+          <Arrow
+            action="prev"
             onClick={() => scrollGalerry(-1)}
+            color="#c00000"
           />
-          <div
-            className="hidden md:inline-block fp-controlArrow fp-next !z-50 drop-shadow-md"
+          <Arrow
+            action="next"
             onClick={() => scrollGalerry(1)}
+            color="#c00000"
           />
         </div>
       ) : (

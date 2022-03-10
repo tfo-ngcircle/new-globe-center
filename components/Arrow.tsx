@@ -8,7 +8,7 @@ interface Props extends React.HTMLProps<HTMLDivElement> {
 export function Arrow(props: Props) {
   return (
     <div
-      className={`fp-controlArrow fp-${props.action}`}
+      className={`fp-controlArrow fp-${props.action} !z-50`}
       ref={(el) =>
         el &&
         el.style.setProperty(
