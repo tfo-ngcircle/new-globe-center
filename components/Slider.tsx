@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useState } from "react";
+import React, { MutableRefObject, useEffect, useState } from "react";
 import { AnimatePresence, HTMLMotionProps, motion } from "framer-motion";
 import { MediaType } from "../typings";
 import { Arrow } from "./Arrow";
@@ -35,11 +35,14 @@ interface Props extends HTMLMotionProps<"img"> {
   images?: MediaType[];
   isMaximised?: boolean;
   swipeable?: boolean;
-  paginate: MutableRefObject<((dir: number) => void) | undefined>;
+  paginateRef: MutableRefObject<((dir: number) => void) | undefined>;
 }
 
 const Slider = React.forwardRef<HTMLDivElement, Props>(
-  ({ images, startingIndex, isMaximised, swipeable, className }, ref) => {
+  (
+    { images, startingIndex, isMaximised, swipeable, className, paginateRef },
+    ref
+  ) => {
     const [[page, direction], setPage] = useState([startingIndex || 0, 0]);
 
     const paginate = (newDirection: number) => {
@@ -47,6 +50,10 @@ const Slider = React.forwardRef<HTMLDivElement, Props>(
     };
 
     const imageIndex = wrap(0, images?.length || 0, page);
+
+    useEffect(() => {
+      paginateRef.current = paginate;
+    });
 
     return (
       <>

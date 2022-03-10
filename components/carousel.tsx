@@ -1,6 +1,4 @@
 import { useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { wrap } from "popmotion";
 import { useInterval } from "usehooks-ts";
 import { MdFullscreen } from "react-icons/md";
 import MyDialog from "./dialog";
@@ -45,7 +43,7 @@ export default function Carousel({
         isMaximised={isMaximised}
         swipeable={swipeable}
         className={className}
-        paginate={paginate}
+        paginateRef={paginate}
       />
       {canMaximize ? (
         <>
@@ -73,7 +71,7 @@ export default function Carousel({
                 isMaximised={isMaximised}
                 swipeable={swipeable}
                 className={className}
-                paginate={paginate}
+                paginateRef={paginate}
               />
             ) : undefined}
           </MyDialog>
