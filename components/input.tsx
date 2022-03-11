@@ -27,7 +27,7 @@ const Input = React.forwardRef<HTMLInputElement & HTMLTextAreaElement, Props>(
               props.onChange && props.onChange(event);
               setIsEmpty(event.target.value.trim().length <= 0);
             }}
-            className="border-0 bg-transparent outline-none focus:ring-0 border-b-2 focus:border-primary w-full transition-all duration-150 p-0"
+            className="border-0 bg-transparent outline-none focus:ring-0 border-b-2 border-gray-300 focus:border-primary w-full transition-all duration-150 p-0"
           />
         ) : props.type == "checkbox" ? (
           <input
