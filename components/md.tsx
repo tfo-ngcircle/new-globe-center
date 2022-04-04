@@ -1,8 +1,9 @@
-import formatHeadline from "../utils/text";
 import ReactMarkdown from "react-markdown";
+import formatHeadline from "../utils/text";
+import { navigateFullpage } from "../utils/utils";
 import MyLink from "./link";
 
-export const Md = ({ ...props }) => {
+export const Md = ({ isHome = false, ...props }) => {
   return (
     <ReactMarkdown
       {...props}
@@ -22,6 +23,12 @@ export const Md = ({ ...props }) => {
           <MyLink
             {...props}
             className="border-dotted border-b border-gray-900 hover:border-gray-500"
+            onClick={(e) => {
+              const link = (e.target as HTMLAnchorElement).getAttribute("href");
+              isHome && link?.charAt(1) == `#`
+                ? navigateFullpage(e, link.slice(2))
+                : undefined;
+            }}
           />
         ),
         ul: ({ node, ...props }) => (

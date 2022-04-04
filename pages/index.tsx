@@ -1,23 +1,23 @@
+import { GetServerSideProps } from "next";
+import { NextSeo } from "next-seo";
+import { useRouter } from "next/router";
+import { stringify } from "qs";
+import { useRef, useState } from "react";
+import { useElementSize, useWindowSize } from "usehooks-ts";
 import Footer from "../components/footer";
 import { Fullpage } from "../components/fullpage";
 import Header from "../components/header";
-import ToTopHandle from "../components/to-top";
 import AboutSection from "../components/sections/about";
 import ContactSection from "../components/sections/contact";
 import FeaturesSection from "../components/sections/features";
 import GallerySection from "../components/sections/gallery";
 import LandingSection from "../components/sections/landing";
 import MapSection from "../components/sections/map";
-import { useElementSize, useWindowSize } from "usehooks-ts";
-import { useRef, useState } from "react";
-import { useRouter } from "next/router";
-import { NextSeo } from "next-seo";
-import { navigateFullpage } from "../utils/utils";
-import { GetServerSideProps } from "next";
-import { stringify } from "qs";
+import SpacesSection from "../components/sections/spaces";
+import ToTopHandle from "../components/to-top";
 import { fetchApi } from "../lib/api";
 import { Entities, Section } from "../typings";
-import SpacesSection from "../components/sections/spaces";
+import { navigateFullpage } from "../utils/utils";
 
 interface Props {
   sections?: Section<any>[];
@@ -90,7 +90,7 @@ export default function Home({ sections }: Props) {
           {window.width >= 1024 ? (
             <MapSection location={sections?.find((it) => it.anchor == "map")} />
           ) : undefined}
-          <Footer />
+          <Footer isHome />
         </Fullpage>
       ) : undefined}
       <ToTopHandle
@@ -110,6 +110,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
         content: { populate: "*" },
         image: { populate: "*" },
         spaces: {
+          sort: ["id"],
           populate: {
             characteristics: {
               populate: "*",

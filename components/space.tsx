@@ -1,5 +1,9 @@
-import formatHeadline from "../utils/text";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 import { HiOutlineClock, HiOutlineCurrencyEuro } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
+import { SpaceType } from "../typings";
+import formatHeadline from "../utils/text";
 import Button from "./button";
 import Carousel from "./carousel";
 import { Characteristic } from "./characteristic";
@@ -7,10 +11,6 @@ import { HeadingBox } from "./heading";
 import MyLink from "./link";
 import { TagRow } from "./tag-row";
 import Underline from "./underline";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
-import { SpaceType } from "../typings";
 
 const transision = { duration: 0.5, type: "tween", ease: "easeOut" };
 
