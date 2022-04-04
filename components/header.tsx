@@ -1,13 +1,13 @@
+import { Menu, Transition } from "@headlessui/react";
+import { useRouter } from "next/router";
+import React, { useContext } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
+import { useWindowSize } from "usehooks-ts";
+import { GlobalContext } from "../pages/_app";
+import { navigateFullpage } from "../utils/utils";
+import { Marker, Phone } from "./icons";
 import MyLink from "./link";
 import { Logo } from "./logo";
-import { useRouter } from "next/router";
-import { Phone, Marker } from "./icons";
-import { Menu, Transition } from "@headlessui/react";
-import { AiOutlineMenu } from "react-icons/ai";
-import { navigateFullpage } from "../utils/utils";
-import React, { useContext } from "react";
-import { GlobalContext } from "../pages/_app";
-import { useWindowSize } from "usehooks-ts";
 
 type Props = JSX.IntrinsicElements["div"] & {
   dark?: boolean;
@@ -32,9 +32,7 @@ const Header = React.forwardRef<HTMLDivElement, Props>(
       >
         <header className="container flex justify-between items-center py-5 md:py-7">
           <MyLink
-            onClick={(e) =>
-              isHome ? navigateFullpage(e, "landing") : undefined
-            }
+            onClick={(e) => (isHome ? navigateFullpage(e) : undefined)}
             className={dark ? "text-white" : "text-black"}
           >
             <Logo
@@ -56,9 +54,7 @@ const Header = React.forwardRef<HTMLDivElement, Props>(
                           : "text-current"
                       } ${dark ? "hover:text-white" : "hover:text-primary"}`}
                       onClick={(e) =>
-                        isHome
-                          ? navigateFullpage(e, it?.link?.substr(2))
-                          : undefined
+                        isHome ? navigateFullpage(e) : undefined
                       }
                     >
                       {it.label}
@@ -134,9 +130,7 @@ const Header = React.forwardRef<HTMLDivElement, Props>(
                           href={it.link}
                           className="w-full block"
                           onClick={(e) =>
-                            isHome
-                              ? navigateFullpage(e, it?.link?.substr(2))
-                              : undefined
+                            isHome ? navigateFullpage(e) : undefined
                           }
                         >
                           {it.label}

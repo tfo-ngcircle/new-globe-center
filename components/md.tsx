@@ -26,7 +26,7 @@ export const Md = ({ isHome = false, ...props }) => {
             onClick={(e) => {
               const link = (e.target as HTMLAnchorElement).getAttribute("href");
               isHome && link?.charAt(1) == `#`
-                ? navigateFullpage(e, link.slice(2))
+                ? navigateFullpage(e)
                 : undefined;
             }}
           />

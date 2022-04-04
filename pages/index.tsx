@@ -96,7 +96,7 @@ export default function Home({ sections }: Props) {
       <ToTopHandle
         isDark={dark || isTransparent || router.asPath == "/#footer"}
         flip={router.asPath !== "/#landing"}
-        onClick={(e) => navigateFullpage(e, "landing")}
+        onClick={(e) => navigateFullpage(e)}
       />
     </>
   );
