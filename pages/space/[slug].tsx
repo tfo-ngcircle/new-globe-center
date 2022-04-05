@@ -1,21 +1,21 @@
+import { GetServerSideProps } from "next";
+import { ProductJsonLd, ProductJsonLdProps } from "next-seo";
+import { stringify } from "qs";
+import React from "react";
 import { Characteristic } from "../../components/characteristic";
 import { Img } from "../../components/image";
 import { Md } from "../../components/md";
-import { VipPackage } from "../../components/vip-package";
 import { Page } from "../../components/page";
 import { Space } from "../../components/space";
-import formatHeadline from "../../utils/text";
+import { VipPackage } from "../../components/vip-package";
+import { fetchApi } from "../../lib/api";
 import {
   CharacteristicType,
   Entities,
   PageType,
   SpaceType,
 } from "../../typings";
-import { ProductJsonLd, ProductJsonLdProps } from "next-seo";
-import React from "react";
-import { GetServerSideProps } from "next";
-import { stringify } from "qs";
-import { fetchApi } from "../../lib/api";
+import formatHeadline from "../../utils/text";
 
 interface Props {
   space: SpaceType;
@@ -24,6 +24,8 @@ interface Props {
 }
 
 export default function Room({ space, page, product }: Props) {
+  console.log(page);
+
   return (
     <Page page={page}>
       {product && <ProductJsonLd {...product} />}
@@ -182,8 +184,10 @@ export const getServerSideProps: GetServerSideProps = async ({
 
   const page = {
     title: space.title,
-    description: space.shortDescription,
-    images: space.images,
+    seo: {
+      description: space.shortDescription,
+      images: space.images,
+    },
   };
 
   const product = {

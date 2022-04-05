@@ -1,9 +1,9 @@
-import Footer from "./footer";
-import Header from "./header";
 import { NextSeo } from "next-seo";
 import React, { useEffect, useState } from "react";
-import ToTopHandle from "./to-top";
 import { PageType } from "../typings";
+import Footer from "./footer";
+import Header from "./header";
+import ToTopHandle from "./to-top";
 
 interface Props {
   page?: PageType;
@@ -34,7 +34,7 @@ export const Page = ({ page, children }: Props) => {
         openGraph={{
           type: "website",
           url: `https://${process.env.NEXT_PUBLIC_HOST_NAME}`,
-          title: page?.seo?.title,
+          title: page?.seo?.title || page?.title,
           description: page?.seo?.description,
           images: page?.seo?.images?.data?.map((img) => ({
             url: img.attributes.url,
