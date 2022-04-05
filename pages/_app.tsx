@@ -1,14 +1,14 @@
-import "../styles/globals.scss";
 import "mapbox-gl/dist/mapbox-gl.css";
 import "moment/locale/de";
-import App, { AppContext } from "next/app";
-import nProgress from "nprogress";
-import { Router } from "next/router";
-import { createContext } from "react";
-import { AppProps } from "next/dist/shared/lib/router/router";
-import { Entity, GlobalData } from "../typings";
 import { DefaultSeo, OrganizationJsonLd } from "next-seo";
+import App, { AppContext } from "next/app";
+import { AppProps } from "next/dist/shared/lib/router/router";
+import { Router } from "next/router";
+import nProgress from "nprogress";
+import { createContext } from "react";
 import { fetchApi } from "../lib/api";
+import "../styles/globals.scss";
+import { Entity, GlobalData } from "../typings";
 
 Router.events.on("routeChangeStart", nProgress.start);
 Router.events.on("routeChangeError", nProgress.done);
@@ -40,6 +40,9 @@ function MyApp({ Component, pageProps }: AppProps) {
             height: img.attributes.height,
             alt: img.attributes.alternativeText,
           })),
+        }}
+        twitter={{
+          cardType: "summary_large_image",
         }}
       />
       {data.organization && <OrganizationJsonLd {...data.organization} />}
