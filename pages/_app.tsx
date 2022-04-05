@@ -40,6 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             height: img.attributes.height,
             alt: img.attributes.alternativeText,
           })),
+          site_name: data.siteName,
         }}
         twitter={{
           cardType: "summary_large_image",
