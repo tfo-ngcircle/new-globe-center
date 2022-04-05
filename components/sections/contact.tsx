@@ -1,13 +1,17 @@
-import { useState } from "react";
-import Button from "../button";
-import { MdEmail, MdLocalPhone } from "react-icons/md";
-import { SocialIcon } from "../socialIcon";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { motion, useAnimation } from "framer-motion";
-import Input from "../input";
-import formatHeadline from "../../utils/text";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { MdEmail, MdLocalPhone } from "react-icons/md";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import * as Yup from "yup";
+import { postApi } from "../../lib/api";
 import { Contact, Section } from "../../typings";
+import formatHeadline from "../../utils/text";
+import Button from "../button";
+import MyDialog from "../dialog";
+import Input from "../input";
+import { SocialIcon } from "../socialIcon";
 
 const variantsClip = {
   open: {
@@ -50,6 +54,17 @@ const transition = {
   ease: "easeOut",
 };
 
+const validationSchema = Yup.object().shape({
+  name: Yup.string().min(3).required(),
+  email: Yup.string().email().required(),
+  subject: Yup.string().min(3).required(),
+  message: Yup.string().min(20).required(),
+  terms: Yup.boolean().oneOf(
+    [true],
+    "Sie müssen die Allgemeinen Geschäftsbedingungen akzeptieren"
+  ),
+});
+
 interface Props {
   contact?: Section<Contact>;
   paddingTop: number;
@@ -62,6 +77,8 @@ export default function ContactSection({
   leftContact,
 }: Props) {
   let [isOpen, setIsOpen] = useState(false);
+
+  let [isDialogOpen, setDialogOpen] = useState(false);
 
   const clipControls = useAnimation();
   const formControls = useAnimation();
@@ -81,6 +98,16 @@ export default function ContactSection({
     clipControls.start(inView ? "visible" : "hidden");
   }, [clipControls, inView]);
 
+  const {
+    control,
+    register,
+    handleSubmit,
+    reset,
+    formState: { isDirty, isValid, errors },
+  } = useForm({
+    resolver: yupResolver(validationSchema),
+  });
+
   return (
     <div className="lg:absolute top-0 h-full lg:h-screen w-full bg-secondary text-white flex overflow-hidden">
       <div
@@ -90,6 +117,21 @@ export default function ContactSection({
           paddingBottom: paddingTop / 1.75,
         }}
       >
+        <MyDialog isOpen={isDialogOpen} onClose={() => setDialogOpen(false)}>
+          <div className="h-screen w-screen flex items-center justify-center bg-black bg-opacity-50">
+            <h4
+              className="text-center bg-white px-16 pt-10 pb-12 drop-shadow-primary"
+              style={{
+                clipPath:
+                  "polygon(0.00% 0.00%,90.00% 0.00%,100% 100%,10.00% 100.00%)",
+              }}
+            >
+              {formatHeadline(
+                "Vielen Dank für Ihre Nachricht. Wir werden Sie in Kürze kontaktieren."
+              )}
+            </h4>
+          </div>
+        </MyDialog>
         <motion.div
           className="max-w-lg space-y-10 py-16 lg:mt-16"
           ref={ref}
@@ -134,7 +176,7 @@ export default function ContactSection({
         transition={transition}
       >
         <div className="absolute right-0 px-10 flex items-center h-full w-full justify-center">
-          <motion.div
+          <motion.form
             initial="close"
             animate={formControls}
             variants={variantsForm}
@@ -143,19 +185,35 @@ export default function ContactSection({
               duration: 0.5,
             }}
             className="space-y-10 bg-white p-10 mt-12 w-96 flex flex-col justify-end text-gray-600 shadow-3xl"
+            onSubmit={handleSubmit((d) => {
+              postApi("/messages", { data: d }).then(() => {
+                setDialogOpen(true);
+                setTimeout(() => {
+                  setDialogOpen(false);
+                  setIsOpen(false);
+                }, 3000);
+                reset();
+              });
+            })}
           >
             <h5>Jetzt Anfrage stellen</h5>
-            <Input id="name" label="Name" />
-            <Input id="email" label="Email" />
-            <Input id="subject" label="Betreff" />
-            <Input id="message" label="Nachricht" type="textarea" />
+            <Input id="name" label="Name" {...register("name")} />
+            <Input id="email" label="Email" {...register("email")} />
+            <Input id="subject" label="Betreff" {...register("subject")} />
+            <Input
+              id="message"
+              label="Nachricht"
+              type="textarea"
+              {...register("message")}
+            />
             <Input
               id="terms"
               label="Ich habe die Datenschutzerklärung gelesen und stimme zu."
               type="checkbox"
+              {...register("terms")}
             />
-            <Button label="Absenden" />
-          </motion.div>
+            <Button label="Absenden" type="submit" />
+          </motion.form>
         </div>
         <motion.img
           initial="open"

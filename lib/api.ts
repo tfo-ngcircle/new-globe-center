@@ -1,9 +1,5 @@
-import { Data } from "../typings";
-
 export function getStrapiUrl(path = "") {
-  return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL || "http://localhost:1337/api"
-  }${path}`;
+  return `${"http://localhost:1337/api"}${path}`;
 }
 
 export async function fetchApi<T>(path?: string) {

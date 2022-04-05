@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 type Props = JSX.IntrinsicElements["input"] &
   JSX.IntrinsicElements["textarea"] & {
@@ -31,7 +30,7 @@ const Input = React.forwardRef<HTMLInputElement & HTMLTextAreaElement, Props>(
           />
         ) : props.type == "checkbox" ? (
           <input
-            className="!text-secondary w-6 h-6 mr-4 focus:ring-secondary focus:ring-opacity-25 border border-gray-300 rounded"
+            className="!text-primary w-6 h-6 mr-4 focus:ring-primary border border-gray-300 rounded"
             type={props.type}
             name={props.id}
             id={props.id}
