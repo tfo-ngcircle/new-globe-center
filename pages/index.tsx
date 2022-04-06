@@ -2,7 +2,7 @@ import { GetServerSideProps } from "next";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { stringify } from "qs";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useElementSize, useWindowSize } from "usehooks-ts";
 import Footer from "../components/footer";
 import { Fullpage } from "../components/fullpage";
@@ -24,11 +24,10 @@ interface Props {
 }
 
 export default function Home({ sections }: Props) {
-  const headerRef = useRef<HTMLDivElement | null>(null);
   const [dark, setDark] = useState(false);
   const [leftContact, setLeftContact] = useState(false);
   const [isTransparent, setIsTransparent] = useState(true);
-  const { width, height } = useElementSize<HTMLDivElement>(headerRef);
+  const [headerRef, { width, height }] = useElementSize<HTMLDivElement>();
 
   const router = useRouter();
   const window = useWindowSize();

@@ -24,8 +24,6 @@ interface Props {
 }
 
 export default function Room({ space, page, product }: Props) {
-  console.log(page);
-
   return (
     <Page page={page}>
       {product && <ProductJsonLd {...product} />}

@@ -1,5 +1,7 @@
 import { Dialog } from "@headlessui/react";
+import { useEffect } from "react";
 import { MdFullscreenExit } from "react-icons/md";
+import { useLockedBody } from "usehooks-ts";
 
 interface Props extends React.HTMLProps<HTMLDivElement> {
   isOpen?: boolean;
@@ -12,6 +14,12 @@ export default function MyDialog({
   isOpen,
   onClose = () => {},
 }: Props) {
+  const [, setLocked] = useLockedBody();
+
+  useEffect(() => {
+    setLocked(isOpen ?? false);
+  });
+
   return (
     <Dialog
       open={isOpen}

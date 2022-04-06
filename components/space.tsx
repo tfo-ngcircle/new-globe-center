@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
 import { HiOutlineClock, HiOutlineCurrencyEuro } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
+import { useIsomorphicLayoutEffect } from "usehooks-ts";
 import { SpaceType } from "../typings";
 import formatHeadline from "../utils/text";
 import Button from "./button";
@@ -48,7 +48,7 @@ export const Space = ({ space, isFull, ...props }: SpaceProps) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
-  useEffect(() => {
+  useIsomorphicLayoutEffect(() => {
     controls.start(inView ? "visible" : "hidden");
   }, [controls, inView]);
 
