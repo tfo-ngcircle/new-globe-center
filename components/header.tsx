@@ -54,7 +54,7 @@ const Header = React.forwardRef<HTMLDivElement, Props>(
                           : "text-current"
                       } ${dark ? "hover:text-white" : "hover:text-primary"}`}
                       onClick={(e) =>
-                        isHome ? navigateFullpage(e) : undefined
+                        isHome && !it.newTab ? navigateFullpage(e) : undefined
                       }
                     >
                       {it.label}
