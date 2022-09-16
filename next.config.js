@@ -5,7 +5,7 @@ module.exports = {
     domains: [
       "res.cloudinary.com",
       "localhost",
-      "alvfgoaeahuczkhwwktu.supabase.co",
+      "zhnniwbcigufqckcxrob.supabase.co",
     ],
     disableStaticImages: true,
   },
