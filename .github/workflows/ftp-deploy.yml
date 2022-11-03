@@ -1,7 +1,7 @@
 name: Publish Website
 
 on:
-  push:
+  workflow_dispatch:
 
   pull_request:
     types: [closed]
@@ -22,10 +22,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}-
 
-      - name: Set deploy dir
-        if: ${{ github.ref != 'refs/heads/main' }}
-        run: echo "RELEASE_BRANCH=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
-
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
@@ -38,6 +34,7 @@ jobs:
         env:
           NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: ${{ secrets.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN }}
           NEXT_PUBLIC_HOST_NAME: ${{ secrets.NEXT_PUBLIC_HOST_NAME }}
+          NEXT_PUBLIC_STRAPI_API_URL: ${{ secrets.NEXT_PUBLIC_STRAPI_API_URL }}
         run: npm run export
 
       - name: 📂 Sync files

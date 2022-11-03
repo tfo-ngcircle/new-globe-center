@@ -131,8 +131,6 @@ export const CharacteristicsGroup = ({
 export async function getStaticPaths() {
   const query = stringify({ fields: "slug" }, { encodeValuesOnly: true });
   const pages = await fetchApi<Entities<PageType>>(`/spaces?${query}`);
-  console.log(pages.data);
-
   return {
     paths: pages.data?.map((page) => {
       return { params: { slug: page.attributes.slug } };
