@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { stringify } from "qs";
@@ -101,7 +101,7 @@ export default function Home({ sections }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
   const query = stringify(
     {
       fields: ["headline", "description", "anchor"],

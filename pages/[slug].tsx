@@ -1,9 +1,9 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
+import { stringify } from "qs";
 import { Md } from "../components/md";
 import { Page } from "../components/page";
 import { fetchApi } from "../lib/api";
 import { Entities, PageType } from "../typings";
-import { stringify } from "qs";
 
 interface Props {
   page?: PageType;
@@ -19,10 +19,18 @@ export default function SimplePage({ page }: Props) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async ({
-  locale,
-  params,
-}) => {
+export async function getStaticPaths() {
+  const query = stringify({ fields: "slug" }, { encodeValuesOnly: true });
+  const pages = await fetchApi<Entities<PageType>>(`/pages?${query}`);
+  return {
+    paths: pages.data?.map((page) => {
+      return { params: { slug: page.attributes.slug } };
+    }),
+    fallback: false,
+  };
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
   const query = stringify(
     {
       filters: {

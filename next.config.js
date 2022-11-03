@@ -8,6 +8,8 @@ module.exports = {
       "zhnniwbcigufqckcxrob.supabase.co",
     ],
     disableStaticImages: true,
+    loader: "akamai",
+    path: "",
   },
   basePath:
     process.env.RELEASE_BRANCH !== undefined

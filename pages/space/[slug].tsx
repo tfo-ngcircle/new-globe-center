@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 import { ProductJsonLd, ProductJsonLdProps } from "next-seo";
 import { stringify } from "qs";
 import React from "react";
@@ -128,10 +128,20 @@ export const CharacteristicsGroup = ({
   );
 };
 
-export const getServerSideProps: GetServerSideProps = async ({
-  locale,
-  params,
-}) => {
+export async function getStaticPaths() {
+  const query = stringify({ fields: "slug" }, { encodeValuesOnly: true });
+  const pages = await fetchApi<Entities<PageType>>(`/spaces?${query}`);
+  console.log(pages.data);
+
+  return {
+    paths: pages.data?.map((page) => {
+      return { params: { slug: page.attributes.slug } };
+    }),
+    fallback: false,
+  };
+}
+
+export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
   const query = stringify(
     {
       fields: [
