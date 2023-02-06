@@ -62,7 +62,7 @@ export const Space = ({ space, isFull, ...props }: SpaceProps) => {
           animate={controls}
           className={`${
             isFull ? undefined : "px-5 lg:pl-12 xl:pl-36"
-          } lg:pr-10 3xl:pr-20 space-y-4 lg:space-y-6 3xl:space-y-8 col-span-3 overflow-hidden py-2`}
+          } lg:pr-10 3xl:pr-20 space-y-4 lg:space-y-6 3xl:space-y-8 col-span-3 py-2`}
         >
           <motion.div
             variants={itemVariants}
