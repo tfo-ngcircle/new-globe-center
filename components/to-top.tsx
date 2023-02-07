@@ -1,6 +1,5 @@
-import React from "react";
-import { BiArrowToTop } from "react-icons/bi";
 import { HTMLMotionProps, motion } from "framer-motion";
+import { BiCaretUp } from "react-icons/bi";
 
 const bounceTransition = {
   y: {
@@ -19,7 +18,7 @@ function ToTopHandle(props: Props) {
   return (
     <motion.span
       className={`fixed bottom-0 inset-x-0 mx-auto max-w-fit mb-0 cursor-pointer p-3 ${
-        props.isDark ? "text-white" : "text-slate-500"
+        props.isDark ? "text-white" : "text-black"
       }`}
       transition={bounceTransition}
       animate={{
@@ -28,7 +27,7 @@ function ToTopHandle(props: Props) {
       whileHover={{ y: ["0%", "0%"] }}
       {...props}
     >
-      <BiArrowToTop
+      <BiCaretUp
         className={`w-10 h-10 transition-all ${props.flip ? "" : "rotate-180"}`}
       />
     </motion.span>

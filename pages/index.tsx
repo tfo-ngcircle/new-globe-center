@@ -17,7 +17,7 @@ import SpacesSection from "../components/sections/spaces";
 import ToTopHandle from "../components/to-top";
 import { fetchApi } from "../lib/api";
 import { Entities, Section } from "../typings";
-import { navigateFullpage } from "../utils/utils";
+import { navigateDown, navigateFullpage } from "../utils/utils";
 
 interface Props {
   sections?: Section<any>[];
@@ -94,8 +94,12 @@ export default function Home({ sections }: Props) {
       ) : undefined}
       <ToTopHandle
         isDark={dark || isTransparent || router.asPath == "/#footer"}
-        flip={router.asPath !== "/#landing"}
-        onClick={(e) => navigateFullpage(e)}
+        flip={router.asPath !== "/#landing" && router.asPath !== "/"}
+        onClick={(e) => {
+          if (router.asPath !== "/#landing" && router.asPath !== "/")
+            navigateFullpage(e);
+          else navigateDown(e);
+        }}
       />
     </>
   );

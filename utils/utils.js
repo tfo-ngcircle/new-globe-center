@@ -3,3 +3,8 @@ export function navigateFullpage(e, handle = "landing") {
   e.preventDefault();
   window.window.fullpage_api.moveTo(target?.slice(2) || handle, 0);
 }
+
+export function navigateDown(e) {
+  e.preventDefault();
+  window.window.fullpage_api.moveSectionDown();
+}
