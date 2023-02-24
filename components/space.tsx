@@ -108,7 +108,9 @@ export const Space = ({ space, isFull, ...props }: SpaceProps) => {
               }
               items={space.prices?.data?.map(
                 (price) =>
-                  `${price.attributes.name} **${price.attributes.amount}€**`
+                  `${price.attributes.name} **${
+                    price.attributes.amount ?? 0
+                  }€**`
               )}
               className="pt-2 lg:pt-4"
             />
